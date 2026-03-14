@@ -178,7 +178,7 @@
       <div class="theme-card">
         <div class="theme-header">
           <div class="theme-icon" style="background:${t.color || 'var(--accent-soft)'}">${t.icon || '🔍'}</div>
-          <h3>${t.title}</h3>
+          <h3>${t.title || t.name}</h3>
         </div>
         <div class="description">${t.description || ''}</div>
         ${t.keyQuestions ? `
