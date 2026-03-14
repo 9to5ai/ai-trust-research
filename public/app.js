@@ -28,7 +28,8 @@
   document.getElementById('stat-days').textContent = daysSince(meta?.stats?.lastSessionDate);
 
   // --- Phase ---
-  document.getElementById('phase-name').textContent = `Phase: ${meta?.currentPhase || 'Initialising'}`;
+  const phase = meta?.currentPhase || 'Initialising';
+  document.getElementById('phase-name').textContent = phase.startsWith('Phase') ? phase : `Phase: ${phase}`;
   document.getElementById('phase-desc').textContent = meta?.phaseDescription || '';
 
   // --- Navigation ---
