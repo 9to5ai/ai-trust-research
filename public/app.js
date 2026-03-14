@@ -22,13 +22,13 @@
   ]);
 
   // --- Stats ---
-  document.getElementById('stat-papers').textContent = meta?.totalPapersRead || 0;
-  document.getElementById('stat-insights').textContent = meta?.totalInsights || 0;
-  document.getElementById('stat-hours').textContent = meta?.totalResearchHours || 0;
-  document.getElementById('stat-days').textContent = daysSince(meta?.startDate);
+  document.getElementById('stat-papers').textContent = meta?.stats?.totalPapers || 0;
+  document.getElementById('stat-insights').textContent = meta?.stats?.totalThemes || 0;
+  document.getElementById('stat-hours').textContent = meta?.stats?.totalResearchHours || 0;
+  document.getElementById('stat-days').textContent = daysSince(meta?.stats?.lastSessionDate);
 
   // --- Phase ---
-  document.getElementById('phase-name').textContent = `Phase: ${meta?.phase || 'Initialising'}`;
+  document.getElementById('phase-name').textContent = `Phase: ${meta?.currentPhase || 'Initialising'}`;
   document.getElementById('phase-desc').textContent = meta?.phaseDescription || '';
 
   // --- Navigation ---
@@ -48,6 +48,9 @@
     });
   });
 
+  // --- Latest Research (overview) ---
+  renderLatestLog(logData);
+
   // --- Research Log ---
   renderLog(logData);
 
@@ -64,6 +67,25 @@
   renderRQ(meta);
 
   // === RENDER FUNCTIONS ===
+
+  function renderLatestLog(data) {
+    const container = document.getElementById('latest-log');
+    if (!container) return;
+    const entries = (data?.entries || []).sort((a, b) => b.date.localeCompare(a.date));
+    if (entries.length === 0) return; // keep placeholder
+
+    const entry = entries[0];
+    container.innerHTML = `
+      <div class="log-entry">
+        <div class="log-date">
+          ${entry.date}
+          <span class="session-tag">${entry.sessionType || 'Research Session'}</span>
+          ${entry.duration ? `<span class="session-tag">${entry.duration}</span>` : ''}
+        </div>
+        <h3>${entry.title}</h3>
+        <div class="summary">${entry.summary}</div>
+      </div>`;
+  }
 
   function renderLog(data) {
     const container = document.getElementById('log-container');
