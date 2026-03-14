@@ -1,18 +1,33 @@
 {
-  "phase": "Literature Review",
-  "phaseDescription": "Surveying the landscape of AI Trust — mapping key researchers, institutions, frameworks, and open problems.",
-  "startDate": "2026-03-15",
-  "totalPapersRead": 0,
-  "totalInsights": 0,
-  "totalResearchHours": 0,
-  "currentFocus": "Broad landscape survey — trustworthy AI, AI safety, AI governance, explainability, fairness, robustness, AI assurance, red-teaming, alignment",
+  "projectName": "AI Trust Research",
+  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance — with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
+  "currentPhase": "Phase 1: Landscape Survey",
+  "phaseDescription": "Comprehensive mapping of the AI trust landscape across regulatory frameworks, academic research, alignment science, consulting practices, and tooling.",
   "researchQuestions": [
-    "What does 'AI Trust' mean across different communities (ML research, governance, enterprise, regulation)?",
-    "What are the foundational frameworks and standards (NIST AI RMF, ISO 42001, EU AI Act, OECD)?",
-    "Who are the key researchers, labs, and institutions driving the field?",
-    "What are the open problems and active debates?",
-    "What tools and implementations exist for operationalising AI trust?",
-    "How does AI trust apply specifically to financial services and regulated industries?"
+    "What does the global regulatory landscape look like for AI governance in financial services, and where is it converging?",
+    "What are the key technical dimensions of trustworthy AI and how do they interact?",
+    "What does the frontier alignment research tell us about deployment-time risks?",
+    "What does the consulting market look like and where are the differentiation opportunities?",
+    "What tools and frameworks exist for AI assurance, and what gaps remain?",
+    "How should an AI Trust and Assurance practice be structured for the Australian financial services market?"
   ],
-  "weeklyFocus": []
+  "nextPhaseGoals": [
+    "Deep dive into MAS Project MindForge and GenAI risk framework",
+    "Analyse Anthropic Constitutional AI evolution and Claude constitution",
+    "Survey AI assurance certification landscape beyond ISO 42001",
+    "Investigate NIST Agentic AI Standards Initiative",
+    "Explore AI-cyber risk intersection in depth",
+    "Collect case studies of AI governance failures in financial services",
+    "Begin synthesising findings into practice-building recommendations"
+  ],
+  "supervisorFeedback": null,
+  "stats": {
+    "totalPapers": 20,
+    "totalThemes": 8,
+    "totalTools": 10,
+    "totalResearchSessions": 1,
+    "totalResearchHours": 4,
+    "jurisdictionsCovered": ["Australia", "EU", "UK", "Singapore", "US", "OECD/International"],
+    "lastSessionDate": "2026-03-15"
+  }
 }

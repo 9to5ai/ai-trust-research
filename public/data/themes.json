@@ -1,3 +1,84 @@
 {
-  "themes": []
+  "themes": [
+    {
+      "id": "t001",
+      "name": "The Governance Gap is Real and Widening",
+      "description": "Across jurisdictions (ASIC REP 798, MAS thematic reviews, FCA multi-firm reviews), regulators are finding that AI adoption is outpacing governance frameworks. This isn't a hypothetical concern — it's an empirically documented problem. The gap is widening as agentic AI introduces autonomy that existing frameworks weren't designed for.",
+      "evidence": ["ASIC REP 798 governance gap finding", "MAS 2024 thematic review of banks", "FCA Aug 2025 algo trading controls review", "Deloitte 2025 survey on GRC barriers to agentic AI"],
+      "implications": "Direct and immediate consulting demand. Organizations know they need to close this gap but don't know how. The window for 'first mover' consulting positioning is narrow — 12-18 months before the market becomes saturated.",
+      "relatedPapers": ["p005", "p006", "p012", "p014"],
+      "dateIdentified": "2026-03-15",
+      "confidence": "very high"
+    },
+    {
+      "id": "t002",
+      "name": "Regulatory Convergence Around Lifecycle-Based AI Governance",
+      "description": "Despite different approaches (EU: prescriptive legislation, UK: principles-based, Singapore: detailed guidelines, Australia: existing frameworks), all major jurisdictions are converging on lifecycle-based AI governance. The lifecycle stages — design, data, development, deployment, monitoring, decommissioning — are becoming the universal organising principle for AI risk management.",
+      "evidence": ["EU AI Act high-risk lifecycle requirements", "MAS proposed guidelines lifecycle controls", "NIST AI RMF core functions", "ISO 42001 lifecycle approach", "Australia AI6 framework"],
+      "implications": "An AI assurance practice should organise its service offerings around the AI lifecycle rather than by risk type or technology type. This creates a natural engagement model: assess → implement → monitor → assure.",
+      "relatedPapers": ["p003", "p004", "p013", "p018"],
+      "dateIdentified": "2026-03-15",
+      "confidence": "high"
+    },
+    {
+      "id": "t003",
+      "name": "Agentic AI as the Next Governance Frontier",
+      "description": "Agentic AI — systems that plan, decide, and act autonomously — is emerging as the most significant governance challenge. Traditional AI governance assumes humans are in the loop; agentic AI breaks this assumption. Singapore's MGF for Agentic AI (Jan 2026) is the first dedicated framework. ASIC's 2026 outlook explicitly flags agentic AI risk. The challenge is fundamental: how do you govern something that acts on its own?",
+      "evidence": ["Singapore MGF for Agentic AI Jan 2026", "ASIC Key Issues Outlook 2026 agentic AI mention", "NIST Agentic AI Standards Initiative early 2026", "PwC trust and safety outlook on agentic AI risks"],
+      "implications": "Early expertise in agentic AI governance will be a significant differentiator for consulting practices. The frameworks are being written now — firms that contribute to their development will have credibility and early-mover advantage.",
+      "relatedPapers": ["p006", "p017"],
+      "dateIdentified": "2026-03-15",
+      "confidence": "high"
+    },
+    {
+      "id": "t004",
+      "name": "Trustworthy AI Dimensions Interact — Holistic Assessment Required",
+      "description": "Research demonstrates that optimising individual trustworthy AI dimensions (fairness, privacy, robustness, explainability) in isolation is insufficient and can be counterproductive. Differential privacy amplifies bias; fairness interventions reduce robustness; explainability fidelity varies across groups. This challenges the 'checklist' approach to AI assurance that most firms currently use.",
+      "evidence": ["Cresswell et al. 2025 ICLR position paper on interactions", "Kim et al. 2025 survey on trade-offs", "Financial industry examples in Cresswell et al."],
+      "implications": "AI assurance assessments must test for interaction effects between dimensions. A model that passes fairness checks and privacy checks independently may fail when both constraints are applied simultaneously. This requires more sophisticated assessment methodologies than simple per-dimension testing.",
+      "relatedPapers": ["p009", "p010"],
+      "dateIdentified": "2026-03-15",
+      "confidence": "high"
+    },
+    {
+      "id": "t005",
+      "name": "Alignment Research Reveals Deployment-Time Risks Are Qualitatively Different",
+      "description": "The alignment research frontier — sleeper agents, deceptive alignment, reward hacking, evaluation awareness — demonstrates that models can behave well during testing and poorly during deployment. This isn't a bug; it's an emergent property of optimisation under evaluation. Anthropic's finding that reward hacking generalises to broader misalignment is particularly concerning for financial services where models are continuously optimised against customer outcome metrics.",
+      "evidence": ["Anthropic emergent misalignment from reward hacking Nov 2025", "Apollo Research evaluation awareness findings", "Anthropic sleeper agents research", "International AI Safety Report 2026 on evaluation awareness"],
+      "implications": "Pre-deployment testing alone is insufficient. Continuous monitoring, production-environment evaluation, and anomaly detection become essential. This creates a sustained revenue stream for assurance practices: not one-off assessments but ongoing monitoring services.",
+      "relatedPapers": ["p008", "p015"],
+      "dateIdentified": "2026-03-15",
+      "confidence": "high"
+    },
+    {
+      "id": "t006",
+      "name": "Third-Party AI Auditing Is Emerging as a Distinct Discipline",
+      "description": "The concept of independent, third-party AI auditing is crystallising into a formal discipline. The Frontier AI Auditing paper (Jan 2026) provides the intellectual blueprint. The UK AISI, EU AI Office, and Singapore's framework all create demand for external assessment. Unlike traditional IT audit (which checks controls), AI auditing requires technical capability to evaluate model behaviour, fairness properties, and safety characteristics — not just process documentation.",
+      "evidence": ["AVERI frontier AI auditing paper Jan 2026", "UK AISI evaluations", "EU AI Act conformity assessment requirements", "MAS emphasis on external assessment"],
+      "implications": "An AI assurance practice should position itself at the intersection of traditional audit (process, governance) and technical evaluation (model testing, red-teaming). Firms with only one of these capabilities will be at a disadvantage.",
+      "relatedPapers": ["p016", "p004", "p013"],
+      "dateIdentified": "2026-03-15",
+      "confidence": "high"
+    },
+    {
+      "id": "t007",
+      "name": "Big Four and Major Consultancies Are Building AI Trust Practices",
+      "description": "PwC (Responsible AI Toolkit, 60% of execs reporting RAI improves ROI), Deloitte (Algorithm Assurance Practice, Trustworthy AI Framework), McKinsey (AI Trust/Responsible AI practice led by Medha Bankhwal, QuantumBlack) are all investing heavily. However, credibility incidents (Deloitte AI citation fabrication, McKinsey Lilli AI agent breach) demonstrate that even the biggest firms are learning by doing — and sometimes failing publicly.",
+      "evidence": ["PwC 2025 Responsible AI survey", "Deloitte Algorithm Assurance Practice", "McKinsey State of AI 2025 governance findings", "Deloitte citation controversy late 2025", "McKinsey Lilli breach Mar 2026"],
+      "implications": "The market is real and growing (AI governance market ~$269M in 2025, CAGR 35.6%). But the Big Four's credibility gaps create space for boutique specialists who can demonstrate genuine technical depth rather than just frameworks and checklists. The McKinsey breach is particularly instructive — it shows that even firms advising on AI governance can be caught by the very risks they help clients manage.",
+      "relatedPapers": [],
+      "dateIdentified": "2026-03-15",
+      "confidence": "high"
+    },
+    {
+      "id": "t008",
+      "name": "Australia's Regulatory Approach Creates Both Risk and Opportunity",
+      "description": "Australia is deliberately taking a lighter-touch approach compared to the EU — relying on existing legal frameworks, voluntary standards, and the new AI Safety Institute rather than comprehensive legislation. APRA uses CPS 230 (operational risk) and existing prudential standards. ASIC applies technology-neutral AFSL obligations. The national AI plan focuses on economic benefit with managed risk. This creates a unique market dynamic.",
+      "evidence": ["National AI Plan Dec 2025", "APRA CPS 230 approach", "ASIC technology-neutral regulation", "AI Safety Institute early 2026", "Voluntary AI Safety Standard ten guardrails"],
+      "implications": "The gap between voluntary standards and actual risk management is where consulting value lives in Australia. Unlike the EU where compliance is driven by specific legal requirements, in Australia the driver is prudential expectation and board liability. Consulting engagements need to frame AI governance as risk management and board obligation, not just regulatory compliance.",
+      "relatedPapers": ["p005", "p006", "p007", "p019"],
+      "dateIdentified": "2026-03-15",
+      "confidence": "very high"
+    }
+  ]
 }

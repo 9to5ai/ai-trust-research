@@ -1,3 +1,114 @@
 {
-  "tools": []
+  "tools": [
+    {
+      "id": "tool001",
+      "name": "IBM AI Fairness 360 (AIF360)",
+      "category": "Fairness Testing",
+      "description": "Comprehensive open-source Python/R library for detecting, understanding, and mitigating bias in ML models throughout the AI lifecycle. Includes 70+ fairness metrics and 11+ bias mitigation algorithms.",
+      "url": "https://github.com/Trusted-AI/AIF360",
+      "license": "Apache 2.0",
+      "maturity": "Production-ready",
+      "relevance": "Core tool for any AI assurance practice — enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool002",
+      "name": "Microsoft Fairlearn",
+      "category": "Fairness Testing",
+      "description": "Python package to assess and improve fairness of ML models. Part of Microsoft's broader Responsible AI Toolbox. Focuses on allocation harms and quality-of-service harms.",
+      "url": "https://github.com/fairlearn/fairlearn",
+      "license": "MIT",
+      "maturity": "Production-ready",
+      "relevance": "Complementary to AIF360 — different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool003",
+      "name": "Google TensorFlow Fairness Indicators",
+      "category": "Fairness Testing",
+      "description": "Open-source library and dashboard for evaluating ML model fairness at scale. Part of Google's Responsible AI Toolkit. Designed for production-scale evaluation.",
+      "url": "https://www.tensorflow.org/responsible_ai/fairness_indicators/guide",
+      "license": "Apache 2.0",
+      "maturity": "Production-ready",
+      "relevance": "Best suited for TensorFlow-based models. The dashboard visualization is useful for communicating fairness results to non-technical stakeholders.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool004",
+      "name": "Giskard",
+      "category": "LLM Testing & Evaluation",
+      "description": "Open-source evaluation and testing library for LLM agents. Provides transparency, accountability, and helps ensure quality, security, and compliance. Recognized in 2024 GitHub Accelerator.",
+      "url": "https://github.com/Giskard-AI/giskard",
+      "license": "Apache 2.0",
+      "maturity": "Growing — active community",
+      "relevance": "Particularly relevant for testing LLM-based applications in financial services (chatbots, advisory tools). Includes hallucination detection and robustness testing.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool005",
+      "name": "Guardrails AI",
+      "category": "LLM Safety & Guardrails",
+      "description": "Python framework for building reliable AI applications. Performs input/output validation, risk detection and mitigation in prompts and responses. Includes validator library for specific risk types.",
+      "url": "https://github.com/guardrails-ai/guardrails",
+      "license": "Apache 2.0",
+      "maturity": "Production-ready",
+      "relevance": "Implementation tool for LLM deployment guardrails — directly applicable to financial services deploying customer-facing AI.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool006",
+      "name": "MAS Veritas Toolkit v2.0",
+      "category": "AI Governance & Assessment",
+      "description": "Open-source tool developed by MAS consortium to help financial institutions assess AI solutions against FEAT principles (Fairness, Ethics, Accountability, Transparency). Includes methodologies for each principle.",
+      "url": "https://www.mas.gov.sg/schemes-and-initiatives/veritas",
+      "license": "Open Source",
+      "maturity": "Production-ready (financial services specific)",
+      "relevance": "The most directly applicable tool for financial services AI governance. Should be adapted for Australian regulatory context.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool007",
+      "name": "FINOS AI Governance Framework",
+      "category": "AI Governance",
+      "description": "Open-source initiative for developing governance frameworks for onboarding, developing, and running AI solutions within financial services. Aims to align with regional regulations including EU AI Act.",
+      "url": "https://github.com/finos/ai-governance-framework",
+      "license": "Open Source",
+      "maturity": "Developing",
+      "relevance": "Industry-specific governance framework for financial services. Worth monitoring and potentially contributing to.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool008",
+      "name": "MLflow",
+      "category": "ML Operations & Governance",
+      "description": "Open-source platform for ML lifecycle management. Includes experiment tracking, model registry, deployment management, and evaluation capabilities. Integrates governance and compliance features.",
+      "url": "https://mlflow.org/",
+      "license": "Apache 2.0",
+      "maturity": "Production-ready",
+      "relevance": "Foundation for ML governance infrastructure — model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool009",
+      "name": "Holistic AI Platform",
+      "category": "AI Governance Platform",
+      "description": "Commercial platform providing AI risk management, compliance, and governance capabilities. Includes bias auditing, explainability, and regulatory mapping tools.",
+      "url": "https://www.holisticai.com/",
+      "license": "Commercial (with open-source components)",
+      "maturity": "Production-ready",
+      "relevance": "One of the leading commercial AI governance platforms. Useful reference for what capabilities an AI assurance practice should offer.",
+      "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool010",
+      "name": "Aequitas",
+      "category": "Fairness Auditing",
+      "description": "Open-source bias audit toolkit developed by the Center for Data Science and Public Policy. Provides group fairness metrics and bias reports for ML models.",
+      "url": "https://github.com/dssg/aequitas",
+      "license": "MIT",
+      "maturity": "Stable",
+      "relevance": "Lightweight alternative to AIF360 for quick fairness audits. Good for initial assessments before deeper analysis.",
+      "dateDiscovered": "2026-03-15"
+    }
+  ]
 }
