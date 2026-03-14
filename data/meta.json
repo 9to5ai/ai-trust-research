@@ -1,0 +1,18 @@
+{
+  "phase": "Literature Review",
+  "phaseDescription": "Surveying the landscape of AI Trust — mapping key researchers, institutions, frameworks, and open problems.",
+  "startDate": "2026-03-15",
+  "totalPapersRead": 0,
+  "totalInsights": 0,
+  "totalResearchHours": 0,
+  "currentFocus": "Broad landscape survey — trustworthy AI, AI safety, AI governance, explainability, fairness, robustness, AI assurance, red-teaming, alignment",
+  "researchQuestions": [
+    "What does 'AI Trust' mean across different communities (ML research, governance, enterprise, regulation)?",
+    "What are the foundational frameworks and standards (NIST AI RMF, ISO 42001, EU AI Act, OECD)?",
+    "Who are the key researchers, labs, and institutions driving the field?",
+    "What are the open problems and active debates?",
+    "What tools and implementations exist for operationalising AI trust?",
+    "How does AI trust apply specifically to financial services and regulated industries?"
+  ],
+  "weeklyFocus": []
+}
