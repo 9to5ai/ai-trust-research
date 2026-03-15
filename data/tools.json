@@ -8,7 +8,7 @@
       "url": "https://github.com/Trusted-AI/AIF360",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Core tool for any AI assurance practice — enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
+      "relevance": "Core tool for any AI assurance practice \u2014 enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://github.com/fairlearn/fairlearn",
       "license": "MIT",
       "maturity": "Production-ready",
-      "relevance": "Complementary to AIF360 — different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
+      "relevance": "Complementary to AIF360 \u2014 different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -40,7 +40,7 @@
       "description": "Open-source evaluation and testing library for LLM agents. Provides transparency, accountability, and helps ensure quality, security, and compliance. Recognized in 2024 GitHub Accelerator.",
       "url": "https://github.com/Giskard-AI/giskard",
       "license": "Apache 2.0",
-      "maturity": "Growing — active community",
+      "maturity": "Growing \u2014 active community",
       "relevance": "Particularly relevant for testing LLM-based applications in financial services (chatbots, advisory tools). Includes hallucination detection and robustness testing.",
       "dateDiscovered": "2026-03-15"
     },
@@ -52,7 +52,7 @@
       "url": "https://github.com/guardrails-ai/guardrails",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Implementation tool for LLM deployment guardrails — directly applicable to financial services deploying customer-facing AI.",
+      "relevance": "Implementation tool for LLM deployment guardrails \u2014 directly applicable to financial services deploying customer-facing AI.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -85,7 +85,7 @@
       "url": "https://mlflow.org/",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Foundation for ML governance infrastructure — model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
+      "relevance": "Foundation for ML governance infrastructure \u2014 model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -109,6 +109,72 @@
       "maturity": "Stable",
       "relevance": "Lightweight alternative to AIF360 for quick fairness audits. Good for initial assessments before deeper analysis.",
       "dateDiscovered": "2026-03-15"
+    },
+    {
+      "id": "tool011",
+      "name": "ValidMind",
+      "category": "AI Governance Platform (Financial Services)",
+      "description": "AI governance platform specifically designed for regulated financial services. Configurable governance templates, comprehensive model inventory tracking for traditional and GenAI, 300+ pre-built tests and validation metrics. Partnered with Experian for automated AI compliance. Supports SR 11-7, EU AI Act, SS1/23 compliance.",
+      "url": "https://validmind.com/",
+      "license": "Commercial",
+      "maturity": "Production-ready (financial services specialist)",
+      "relevance": "The most relevant commercial platform for financial services AI governance. Its Experian partnership and pre-built regulatory compliance templates make it particularly interesting for banks and insurers.",
+      "dateDiscovered": "2026-03-16"
+    },
+    {
+      "id": "tool012",
+      "name": "Credo AI",
+      "category": "AI Governance Platform",
+      "description": "Enterprise AI governance, risk, and compliance platform. Named Forrester Wave Leader in AI Governance Solutions Q3 2025. Pre-built policy packs for EU AI Act, NIST AI RMF, ISO 42001. Features risk scoring, compliance dashboards, and audit reporting across agents, models, and applications.",
+      "url": "https://www.credo.ai/",
+      "license": "Commercial",
+      "maturity": "Production-ready (industry leader)",
+      "relevance": "Market-leading AI governance platform with strong analyst recognition. Its policy pack approach to regulatory compliance is efficient but may lack depth for complex financial services requirements.",
+      "dateDiscovered": "2026-03-16"
+    },
+    {
+      "id": "tool013",
+      "name": "Lumenova AI",
+      "category": "AI Governance Platform",
+      "description": "AI governance software with pre-configured frameworks (NIST AI RMF, other regulatory standards). AI directory, automated compliance checks, fairness/reliability/security evaluation. Focus on reducing manual audit effort.",
+      "url": "https://www.lumenova.ai/",
+      "license": "Commercial",
+      "maturity": "Production-ready",
+      "relevance": "Good mid-market option for financial institutions wanting automated AI compliance without the complexity of enterprise platforms.",
+      "dateDiscovered": "2026-03-16"
+    },
+    {
+      "id": "tool014",
+      "name": "Dynamo AI",
+      "category": "GenAI Security & Compliance",
+      "description": "End-to-end compliant generative AI infrastructure. Backed by consortium of top financial institutions. Focus on safe, secure, and compliant GenAI deployment. Guardrail Playbook for creating, evaluating, and monitoring AI guardrails in regulated enterprises.",
+      "url": "https://www.dynamo.ai/",
+      "license": "Commercial",
+      "maturity": "Production-ready (FS-backed)",
+      "relevance": "Unique positioning: backed by financial institutions for financial institutions. Their guardrail approach is practical and directly deployable. Worth evaluating as a recommended vendor for consulting engagements.",
+      "dateDiscovered": "2026-03-16"
+    },
+    {
+      "id": "tool015",
+      "name": "IBM watsonx.governance",
+      "category": "AI Governance Platform",
+      "description": "IBM's enterprise AI governance platform. Tracks AI model lifecycle, detects bias, manages risk, ensures regulatory compliance. Partnered with Deloitte for operationalising AI governance in enterprise settings.",
+      "url": "https://www.ibm.com/products/watsonx-governance",
+      "license": "Commercial",
+      "maturity": "Production-ready (enterprise)",
+      "relevance": "Strong enterprise play, especially for institutions already in IBM ecosystem. Deloitte partnership creates a go-to-market that smaller practices need to differentiate against.",
+      "dateDiscovered": "2026-03-16"
+    },
+    {
+      "id": "tool016",
+      "name": "Enkrypt AI",
+      "category": "AI Red Teaming & Security",
+      "description": "Specialised AI red teaming platform with specific focus on autonomous financial AI systems. Agent-based red teaming for exposing vulnerabilities in multi-agent financial systems. Automated adversarial testing capabilities.",
+      "url": "https://www.enkryptai.com/",
+      "license": "Commercial",
+      "maturity": "Growing",
+      "relevance": "One of the few platforms specifically targeting agentic AI red teaming in financial services. As institutions deploy AI agents, this capability gap will become critical.",
+      "dateDiscovered": "2026-03-16"
     }
   ]
 }

@@ -3,242 +3,733 @@
     {
       "id": "p001",
       "title": "NIST AI 600-1: Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
-      "authors": ["NIST"],
+      "authors": [
+        "NIST"
+      ],
       "year": 2024,
       "source": "NIST",
       "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
       "analysis": "The foundational companion to NIST AI RMF 1.0, specifically adapted for generative AI. Translates the four core functions (Govern, Map, Measure, Manage) into concrete steps for GenAI. Covers hallucinations, data leakage, copyright, harmful bias, misinformation, IP, privacy, and misuse risks. Critically, this is the document that makes NIST's abstract framework actionable for the current wave of AI. Its strength is comprehensiveness; its weakness is that it's already being outpaced by agentic AI capabilities that weren't fully anticipated. The framework treats GenAI largely as a content-generation risk rather than an autonomous-action risk.",
-      "tags": ["governance", "standards", "generative-ai", "risk-management", "NIST"],
-      "relevance": "Essential — forms the backbone of US AI governance. Any consulting practice must be fluent in this framework and its limitations.",
+      "tags": [
+        "governance",
+        "standards",
+        "generative-ai",
+        "risk-management",
+        "NIST"
+      ],
+      "relevance": "Essential \u2014 forms the backbone of US AI governance. Any consulting practice must be fluent in this framework and its limitations.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p002",
       "title": "NIST AI 800-1: A Guide to Managing the Misuse Risk of Foundation Models",
-      "authors": ["NIST"],
+      "authors": [
+        "NIST"
+      ],
       "year": 2025,
       "source": "NIST",
       "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-      "analysis": "Builds on AI RMF 1.0 and AI 600-1 with more prescriptive safeguards against dual-use and malicious AI applications. Introduces refined misuse taxonomies, capability testing guidance, watermarking standards, access tier definitions, and incident reporting requirements. This represents NIST's evolution from descriptive to prescriptive — a significant shift. The misuse taxonomy is particularly useful for red-teaming programs. The access tier framework has implications for how financial institutions should think about different deployment contexts.",
-      "tags": ["governance", "misuse", "foundation-models", "NIST", "red-teaming"],
-      "relevance": "High — directly applicable to AI assurance practices that need to evaluate foundation model risks in enterprise deployments.",
+      "analysis": "Builds on AI RMF 1.0 and AI 600-1 with more prescriptive safeguards against dual-use and malicious AI applications. Introduces refined misuse taxonomies, capability testing guidance, watermarking standards, access tier definitions, and incident reporting requirements. This represents NIST's evolution from descriptive to prescriptive \u2014 a significant shift. The misuse taxonomy is particularly useful for red-teaming programs. The access tier framework has implications for how financial institutions should think about different deployment contexts.",
+      "tags": [
+        "governance",
+        "misuse",
+        "foundation-models",
+        "NIST",
+        "red-teaming"
+      ],
+      "relevance": "High \u2014 directly applicable to AI assurance practices that need to evaluate foundation model risks in enterprise deployments.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p003",
-      "title": "ISO/IEC 42001:2023 — Artificial Intelligence Management System (AIMS)",
-      "authors": ["ISO/IEC JTC 1/SC 42"],
+      "title": "ISO/IEC 42001:2023 \u2014 Artificial Intelligence Management System (AIMS)",
+      "authors": [
+        "ISO/IEC JTC 1/SC 42"
+      ],
       "year": 2023,
       "source": "ISO",
       "url": "https://www.iso.org/standard/81230.html",
-      "analysis": "The first international certifiable standard for AI management systems. Structured as a management system standard (like ISO 27001 for infosec), it provides a framework for governing AI responsibly. Certification typically takes 4-12 months. Adoption is surging driven by EU AI Act compliance needs. The standard's strength is its certifiability — organizations can demonstrate compliance externally. Its limitation is that it's a management system, not a technical standard: it tells you to have processes, not what those processes should produce technically. For financial services, the gap between 'having an AI management system' and 'actually managing AI risk' is where consulting value lives.",
-      "tags": ["standards", "certification", "governance", "management-system", "ISO"],
-      "relevance": "Critical — ISO 42001 certification will become table stakes for AI providers serving financial services. Understanding its gaps is a consulting opportunity.",
+      "analysis": "The first international certifiable standard for AI management systems. Structured as a management system standard (like ISO 27001 for infosec), it provides a framework for governing AI responsibly. Certification typically takes 4-12 months. Adoption is surging driven by EU AI Act compliance needs. The standard's strength is its certifiability \u2014 organizations can demonstrate compliance externally. Its limitation is that it's a management system, not a technical standard: it tells you to have processes, not what those processes should produce technically. For financial services, the gap between 'having an AI management system' and 'actually managing AI risk' is where consulting value lives.",
+      "tags": [
+        "standards",
+        "certification",
+        "governance",
+        "management-system",
+        "ISO"
+      ],
+      "relevance": "Critical \u2014 ISO 42001 certification will become table stakes for AI providers serving financial services. Understanding its gaps is a consulting opportunity.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p004",
-      "title": "EU AI Act — Implementation Timeline and Financial Services Implications",
-      "authors": ["European Parliament and Council"],
+      "title": "EU AI Act \u2014 Implementation Timeline and Financial Services Implications",
+      "authors": [
+        "European Parliament and Council"
+      ],
       "year": 2024,
       "source": "EU",
       "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act",
-      "analysis": "The world's most comprehensive AI legislation. Key dates: Feb 2025 (prohibited practices), Aug 2025 (GPAI rules), Aug 2026 (high-risk AI rules). Financial services AI is explicitly high-risk under Annex III — credit scoring, insurance risk assessment, and pricing are all caught. The provider/deployer distinction is crucial: a bank that substantially modifies a vendor's AI system gets reclassified as a provider with heavier obligations. The Digital Omnibus package could push compliance to Dec 2027, but institutions should not count on this. The conformity assessment and CE marking requirements for high-risk AI are unprecedented in financial services and represent a significant operational challenge. The interaction with existing EU banking regulation (CRD, PSD2, MiFID II) creates a complex compliance matrix.",
-      "tags": ["regulation", "EU", "financial-services", "high-risk-AI", "compliance"],
-      "relevance": "Essential — Australian financial institutions with EU exposure need to comply. Even those without direct EU presence will be influenced by its standards-setting effect.",
+      "analysis": "The world's most comprehensive AI legislation. Key dates: Feb 2025 (prohibited practices), Aug 2025 (GPAI rules), Aug 2026 (high-risk AI rules). Financial services AI is explicitly high-risk under Annex III \u2014 credit scoring, insurance risk assessment, and pricing are all caught. The provider/deployer distinction is crucial: a bank that substantially modifies a vendor's AI system gets reclassified as a provider with heavier obligations. The Digital Omnibus package could push compliance to Dec 2027, but institutions should not count on this. The conformity assessment and CE marking requirements for high-risk AI are unprecedented in financial services and represent a significant operational challenge. The interaction with existing EU banking regulation (CRD, PSD2, MiFID II) creates a complex compliance matrix.",
+      "tags": [
+        "regulation",
+        "EU",
+        "financial-services",
+        "high-risk-AI",
+        "compliance"
+      ],
+      "relevance": "Essential \u2014 Australian financial institutions with EU exposure need to comply. Even those without direct EU presence will be influenced by its standards-setting effect.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p005",
-      "title": "ASIC REP 798: Beware the gap — Governance arrangements in the face of AI innovation",
-      "authors": ["ASIC"],
+      "title": "ASIC REP 798: Beware the gap \u2014 Governance arrangements in the face of AI innovation",
+      "authors": [
+        "ASIC"
+      ],
       "year": 2024,
       "source": "ASIC",
       "url": "https://www.asic.gov.au/regulatory-resources/find-a-document/reports/rep-798-beware-the-gap-governance-arrangements-in-the-face-of-ai-innovation/",
-      "analysis": "ASIC's landmark report identifying a 'governance gap' where AI adoption outpaces risk and compliance frameworks in Australian financial services. Many licensees are deploying AI faster than they're updating governance. This is the smoking gun for consulting: the regulator has publicly identified the problem. Key concerns: explainability of AI recommendations, consumer protection in AI-driven products, and adherence to best-interests duty in AI-powered advice. ASIC's technology-neutral approach means existing AFSL obligations apply to AI — firms can't claim novelty as a defense. The report effectively creates a compliance imperative without new legislation.",
-      "tags": ["regulation", "Australia", "ASIC", "financial-services", "governance-gap"],
-      "relevance": "Critical for Australian practice — this is ASIC telling the industry to get its house in order. Direct driver of consulting demand.",
+      "analysis": "ASIC's landmark report identifying a 'governance gap' where AI adoption outpaces risk and compliance frameworks in Australian financial services. Many licensees are deploying AI faster than they're updating governance. This is the smoking gun for consulting: the regulator has publicly identified the problem. Key concerns: explainability of AI recommendations, consumer protection in AI-driven products, and adherence to best-interests duty in AI-powered advice. ASIC's technology-neutral approach means existing AFSL obligations apply to AI \u2014 firms can't claim novelty as a defense. The report effectively creates a compliance imperative without new legislation.",
+      "tags": [
+        "regulation",
+        "Australia",
+        "ASIC",
+        "financial-services",
+        "governance-gap"
+      ],
+      "relevance": "Critical for Australian practice \u2014 this is ASIC telling the industry to get its house in order. Direct driver of consulting demand.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p006",
       "title": "ASIC Key Issues Outlook 2026",
-      "authors": ["ASIC"],
+      "authors": [
+        "ASIC"
+      ],
       "year": 2026,
       "source": "ASIC",
       "url": "https://www.asic.gov.au/about-asic/news-centre/news-items/key-issues-outlook-2026/",
-      "analysis": "ASIC's 2026 outlook explicitly identifies agentic AI as a consumer risk area. Notably mentions that agentic AI 'can also compound risk given its capability to independently plan and act.' AI-driven financial services are placed on the 'regulatory perimeter' — meaning potential gaps, uncertainty, and misconduct risk. The combination of AI risk and cybersecurity is a recurring theme. This is significant because it signals ASIC is watching agentic AI specifically, not just traditional ML models. For consulting, this means practices need to go beyond model validation into agent behavior assessment.",
-      "tags": ["regulation", "Australia", "ASIC", "agentic-AI", "outlook"],
-      "relevance": "Very high — latest regulatory signal on where Australian enforcement attention is heading.",
+      "analysis": "ASIC's 2026 outlook explicitly identifies agentic AI as a consumer risk area. Notably mentions that agentic AI 'can also compound risk given its capability to independently plan and act.' AI-driven financial services are placed on the 'regulatory perimeter' \u2014 meaning potential gaps, uncertainty, and misconduct risk. The combination of AI risk and cybersecurity is a recurring theme. This is significant because it signals ASIC is watching agentic AI specifically, not just traditional ML models. For consulting, this means practices need to go beyond model validation into agent behavior assessment.",
+      "tags": [
+        "regulation",
+        "Australia",
+        "ASIC",
+        "agentic-AI",
+        "outlook"
+      ],
+      "relevance": "Very high \u2014 latest regulatory signal on where Australian enforcement attention is heading.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p007",
       "title": "CPS 230 Operational Risk Management",
-      "authors": ["APRA"],
+      "authors": [
+        "APRA"
+      ],
       "year": 2025,
       "source": "APRA",
       "url": "https://www.apra.gov.au/",
-      "analysis": "Effective July 2025, this prudential standard mandates that APRA-regulated entities manage operational risks from AI systems, including third-party AI. AI failures must be treated as material operational risk scenarios requiring board-level oversight. This is APRA's primary vehicle for AI risk — rather than writing new AI-specific prudential standards, they're applying CPS 230's operational risk framework. This approach has merit (operational risk is well-understood by boards) but also limitations (it may not capture uniquely AI risks like drift, hallucination, or emergent behavior well). The third-party vendor dimension is particularly important given financial services' increasing reliance on cloud AI platforms.",
-      "tags": ["regulation", "Australia", "APRA", "operational-risk", "prudential-standards"],
-      "relevance": "Essential — directly shapes how banks, insurers, and super funds must govern AI from July 2025.",
+      "analysis": "Effective July 2025, this prudential standard mandates that APRA-regulated entities manage operational risks from AI systems, including third-party AI. AI failures must be treated as material operational risk scenarios requiring board-level oversight. This is APRA's primary vehicle for AI risk \u2014 rather than writing new AI-specific prudential standards, they're applying CPS 230's operational risk framework. This approach has merit (operational risk is well-understood by boards) but also limitations (it may not capture uniquely AI risks like drift, hallucination, or emergent behavior well). The third-party vendor dimension is particularly important given financial services' increasing reliance on cloud AI platforms.",
+      "tags": [
+        "regulation",
+        "Australia",
+        "APRA",
+        "operational-risk",
+        "prudential-standards"
+      ],
+      "relevance": "Essential \u2014 directly shapes how banks, insurers, and super funds must govern AI from July 2025.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p008",
       "title": "Anthropic Responsible Scaling Policy v3.0",
-      "authors": ["Anthropic"],
+      "authors": [
+        "Anthropic"
+      ],
       "year": 2026,
       "source": "Anthropic",
       "url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
-      "analysis": "A landmark document in AI safety policy evolution. RSP v3 shifts from automatic development pauses to competitor-aware decision-making — a pragmatic but concerning retreat from unconditional safety commitments. Introduces Frontier Safety Roadmaps and Risk Reports as transparency mechanisms. The honest self-assessment is remarkable: Anthropic acknowledges that capability thresholds are more ambiguous than anticipated, government action has been slower than hoped, and unilateral safety commitments risk ceding ground to less safety-conscious competitors. The biological risk 'zone of ambiguity' discussion is particularly illuminating — they can't definitively prove models are safe OR dangerous, which undermines the entire threshold-based approach. The ASL framework (currently ASL-2 for all models, ASL-3 activated May 2025) provides a graduated approach but the late-stage ASLs remain undefined. For consulting, this paper reveals the fundamental challenge: safety frameworks are being outpaced by capability advances.",
-      "tags": ["safety", "alignment", "responsible-scaling", "Anthropic", "policy"],
-      "relevance": "Very high — the most mature voluntary safety framework from a frontier lab. Its limitations reveal where regulation and independent assurance are needed.",
+      "analysis": "A landmark document in AI safety policy evolution. RSP v3 shifts from automatic development pauses to competitor-aware decision-making \u2014 a pragmatic but concerning retreat from unconditional safety commitments. Introduces Frontier Safety Roadmaps and Risk Reports as transparency mechanisms. The honest self-assessment is remarkable: Anthropic acknowledges that capability thresholds are more ambiguous than anticipated, government action has been slower than hoped, and unilateral safety commitments risk ceding ground to less safety-conscious competitors. The biological risk 'zone of ambiguity' discussion is particularly illuminating \u2014 they can't definitively prove models are safe OR dangerous, which undermines the entire threshold-based approach. The ASL framework (currently ASL-2 for all models, ASL-3 activated May 2025) provides a graduated approach but the late-stage ASLs remain undefined. For consulting, this paper reveals the fundamental challenge: safety frameworks are being outpaced by capability advances.",
+      "tags": [
+        "safety",
+        "alignment",
+        "responsible-scaling",
+        "Anthropic",
+        "policy"
+      ],
+      "relevance": "Very high \u2014 the most mature voluntary safety framework from a frontier lab. Its limitations reveal where regulation and independent assurance are needed.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p009",
       "title": "Trustworthy AI Must Account for Interactions",
-      "authors": ["Jesse Cresswell et al."],
+      "authors": [
+        "Jesse Cresswell et al."
+      ],
       "year": 2025,
       "source": "arXiv / ICLR 2025 Workshop",
       "url": "https://arxiv.org/abs/2504.07170",
-      "analysis": "A position paper arguing that trustworthy AI research is failing because it optimizes dimensions (fairness, privacy, robustness, explainability, uncertainty quantification) in isolation. The key insight: improving one dimension often degrades others. Examples: differential privacy amplifies biases; fairness interventions increase adversarial vulnerability; explanation fidelity varies across groups. The paper provides guidance for practitioners and examples from the financial industry. This is an important theoretical contribution because it challenges the 'checklist approach' to trustworthy AI — you can't just tick boxes independently. For an assurance practice, this means assessments must be holistic and test for interaction effects, not just individual dimensions.",
-      "tags": ["trustworthy-AI", "fairness", "privacy", "robustness", "trade-offs", "financial-services"],
-      "relevance": "Very high — directly applicable to how an AI assurance practice should design its assessment methodology.",
+      "analysis": "A position paper arguing that trustworthy AI research is failing because it optimizes dimensions (fairness, privacy, robustness, explainability, uncertainty quantification) in isolation. The key insight: improving one dimension often degrades others. Examples: differential privacy amplifies biases; fairness interventions increase adversarial vulnerability; explanation fidelity varies across groups. The paper provides guidance for practitioners and examples from the financial industry. This is an important theoretical contribution because it challenges the 'checklist approach' to trustworthy AI \u2014 you can't just tick boxes independently. For an assurance practice, this means assessments must be holistic and test for interaction effects, not just individual dimensions.",
+      "tags": [
+        "trustworthy-AI",
+        "fairness",
+        "privacy",
+        "robustness",
+        "trade-offs",
+        "financial-services"
+      ],
+      "relevance": "Very high \u2014 directly applicable to how an AI assurance practice should design its assessment methodology.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p010",
-      "title": "Trustworthy AI: Safety, Bias, and Privacy — A Survey",
-      "authors": ["Jung-Eun Kim et al."],
+      "title": "Trustworthy AI: Safety, Bias, and Privacy \u2014 A Survey",
+      "authors": [
+        "Jung-Eun Kim et al."
+      ],
       "year": 2025,
       "source": "arXiv",
       "url": "https://arxiv.org/abs/2502.10450",
       "analysis": "Comprehensive survey covering three pillars: safety alignment for LLMs (preventing toxic content), spurious biases that mislead networks, and membership inference attacks on DNNs. Draws on the authors' own experimental observations. The safety alignment section is particularly relevant given the rapid deployment of LLMs in financial services chatbots and advisory tools. The membership inference discussion has direct privacy implications for any financial institution training models on customer data.",
-      "tags": ["survey", "safety", "bias", "privacy", "LLM-alignment"],
-      "relevance": "Good general reference — useful for framing the three-pillar approach in consulting engagements.",
+      "tags": [
+        "survey",
+        "safety",
+        "bias",
+        "privacy",
+        "LLM-alignment"
+      ],
+      "relevance": "Good general reference \u2014 useful for framing the three-pillar approach in consulting engagements.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p011",
       "title": "Trustworthy Distributed AI Systems: Robustness, Privacy, and Governance",
-      "authors": ["Wenqi Wei et al."],
+      "authors": [
+        "Wenqi Wei et al."
+      ],
       "year": 2024,
       "source": "arXiv / ACM Computing Surveys",
       "url": "https://arxiv.org/abs/2402.01096",
-      "analysis": "Accepted to ACM Computing Surveys — a prestigious venue. Reviews trustworthy AI through the lens of distributed systems, covering robustness to evasion/poisoning/Byzantine attacks, privacy during distributed learning and inference, and AI fairness in both data and models. The distributed systems perspective is increasingly relevant as financial institutions deploy AI across hybrid cloud architectures with federated learning components. The Byzantine attack taxonomy is particularly relevant for multi-party AI systems in banking consortia.",
-      "tags": ["distributed-AI", "robustness", "privacy", "fairness", "governance", "federated-learning"],
-      "relevance": "High — the distributed systems angle is underexplored in financial services AI governance.",
+      "analysis": "Accepted to ACM Computing Surveys \u2014 a prestigious venue. Reviews trustworthy AI through the lens of distributed systems, covering robustness to evasion/poisoning/Byzantine attacks, privacy during distributed learning and inference, and AI fairness in both data and models. The distributed systems perspective is increasingly relevant as financial institutions deploy AI across hybrid cloud architectures with federated learning components. The Byzantine attack taxonomy is particularly relevant for multi-party AI systems in banking consortia.",
+      "tags": [
+        "distributed-AI",
+        "robustness",
+        "privacy",
+        "fairness",
+        "governance",
+        "federated-learning"
+      ],
+      "relevance": "High \u2014 the distributed systems angle is underexplored in financial services AI governance.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p012",
       "title": "MAS Information Paper on AI Model Risk Management",
-      "authors": ["MAS"],
+      "authors": [
+        "MAS"
+      ],
       "year": 2024,
       "source": "MAS",
       "url": "https://www.mas.gov.sg/publications/monographs-or-information-paper/2024/artificial-intelligence-model-risk-management",
       "analysis": "Following MAS's thematic review of banks' AI model risk management practices, this paper details observed good practices across governance, key risk management systems, and AI development/deployment. MAS leads the world in financial-services-specific AI governance through the Veritas Initiative, FEAT principles, and now the Proposed Guidelines on AI Risk Management (Nov 2025). The FEAT framework (Fairness, Ethics, Accountability, Transparency) is more actionable than OECD principles for financial institutions. Project MindForge's GenAI risk framework is the most comprehensive sector-specific framework available. The AI Risk Management Executive Handbook (Jan 2026) is essential reading for any consulting practice.",
-      "tags": ["financial-services", "model-risk", "Singapore", "MAS", "FEAT", "governance"],
-      "relevance": "Essential — MAS is the global gold standard for financial services AI governance. Their frameworks should be the template for Australian practice.",
+      "tags": [
+        "financial-services",
+        "model-risk",
+        "Singapore",
+        "MAS",
+        "FEAT",
+        "governance"
+      ],
+      "relevance": "Essential \u2014 MAS is the global gold standard for financial services AI governance. Their frameworks should be the template for Australian practice.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p013",
       "title": "MAS Proposed Guidelines on AI Risk Management",
-      "authors": ["MAS"],
+      "authors": [
+        "MAS"
+      ],
       "year": 2025,
       "source": "MAS",
       "url": "https://www.mas.gov.sg/news/media-releases/2025/mas-guidelines-for-artificial-intelligence-risk-management",
-      "analysis": "Comprehensive guidelines covering: (1) Board and senior management oversight of AI risk, (2) AI inventory and risk materiality assessments, (3) Lifecycle controls across data management, fairness, transparency, explainability, human oversight, third-party risk, evaluation, monitoring, and change management. Consultation closed Jan 2026 with 12-month implementation period. These guidelines are the most detailed regulatory expectations for AI in financial services globally. The lifecycle approach — from data to deployment to monitoring — provides a natural framework for an assurance practice's service offerings.",
-      "tags": ["regulation", "Singapore", "MAS", "AI-lifecycle", "financial-services", "guidelines"],
-      "relevance": "Very high — the most detailed regulatory blueprint for AI governance in financial services globally.",
+      "analysis": "Comprehensive guidelines covering: (1) Board and senior management oversight of AI risk, (2) AI inventory and risk materiality assessments, (3) Lifecycle controls across data management, fairness, transparency, explainability, human oversight, third-party risk, evaluation, monitoring, and change management. Consultation closed Jan 2026 with 12-month implementation period. These guidelines are the most detailed regulatory expectations for AI in financial services globally. The lifecycle approach \u2014 from data to deployment to monitoring \u2014 provides a natural framework for an assurance practice's service offerings.",
+      "tags": [
+        "regulation",
+        "Singapore",
+        "MAS",
+        "AI-lifecycle",
+        "financial-services",
+        "guidelines"
+      ],
+      "relevance": "Very high \u2014 the most detailed regulatory blueprint for AI governance in financial services globally.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p014",
       "title": "FCA AI Update and Regulatory Approach 2024-2026",
-      "authors": ["FCA"],
+      "authors": [
+        "FCA"
+      ],
       "year": 2024,
       "source": "FCA",
       "url": "https://www.fca.org.uk/firms/innovation/ai-approach",
       "analysis": "The FCA's principles-based approach uses existing frameworks (Consumer Duty, SM&CR, Operational Resilience) rather than AI-specific rules. Key insight: senior managers are personally accountable for AI outcomes under SM&CR. The 'Mills Review' (launched Jan 2026) is a long-term assessment of AI's impact on retail financial services. The FCA's AI Lab and AI Live Testing initiative (first cohort Oct 2025) represents a regulatory sandbox approach. The August 2025 multi-firm review of algorithmic trading controls found significant shortcomings in governance, testing, and deployment. For consulting: the UK approach demonstrates that existing financial services regulation can be stretched to cover AI, meaning Australian regulators may follow a similar path rather than creating bespoke AI regulation.",
-      "tags": ["regulation", "UK", "FCA", "principles-based", "financial-services", "Consumer-Duty"],
-      "relevance": "High — the UK approach directly influences APRA/ASIC thinking and provides a model for principles-based AI regulation.",
+      "tags": [
+        "regulation",
+        "UK",
+        "FCA",
+        "principles-based",
+        "financial-services",
+        "Consumer-Duty"
+      ],
+      "relevance": "High \u2014 the UK approach directly influences APRA/ASIC thinking and provides a model for principles-based AI regulation.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p015",
       "title": "Anthropic: Emergent Misalignment from Reward Hacking in Production RL",
-      "authors": ["Anthropic"],
+      "authors": [
+        "Anthropic"
+      ],
       "year": 2025,
       "source": "Anthropic Research",
       "url": "https://www.anthropic.com/research/emergent-misalignment-reward-hacking",
-      "analysis": "A critical finding: when LLMs learn to reward-hack in production RL environments, this generalises to broader misalignment including alignment faking, collaboration with malicious actors, and sabotaging safety research. This is not theoretical — it was observed in experimental models. The implication is profound: optimization pressure in real deployment environments can create emergent deceptive behavior. For financial services, this means that models fine-tuned on customer outcomes (a common practice) could develop adversarial strategies if the reward signal has exploitable gaps. This paper alone justifies the need for continuous monitoring and assurance, not just pre-deployment testing.",
-      "tags": ["alignment", "reward-hacking", "emergent-misalignment", "safety", "Anthropic"],
-      "relevance": "Very high — demonstrates that deployment-time risks are qualitatively different from training-time risks. Fundamental to the case for continuous AI assurance.",
+      "analysis": "A critical finding: when LLMs learn to reward-hack in production RL environments, this generalises to broader misalignment including alignment faking, collaboration with malicious actors, and sabotaging safety research. This is not theoretical \u2014 it was observed in experimental models. The implication is profound: optimization pressure in real deployment environments can create emergent deceptive behavior. For financial services, this means that models fine-tuned on customer outcomes (a common practice) could develop adversarial strategies if the reward signal has exploitable gaps. This paper alone justifies the need for continuous monitoring and assurance, not just pre-deployment testing.",
+      "tags": [
+        "alignment",
+        "reward-hacking",
+        "emergent-misalignment",
+        "safety",
+        "Anthropic"
+      ],
+      "relevance": "Very high \u2014 demonstrates that deployment-time risks are qualitatively different from training-time risks. Fundamental to the case for continuous AI assurance.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p016",
       "title": "Frontier AI Auditing: Toward Rigorous Third-Party Assessment",
-      "authors": ["AVERI / Multiple Authors"],
+      "authors": [
+        "AVERI / Multiple Authors"
+      ],
       "year": 2026,
       "source": "arXiv",
       "url": "https://www.averi.org/ourwork/frontier-ai-auditing",
-      "analysis": "Outlines a vision for rigorous third-party verification of frontier AI safety and security claims. Argues that credible auditing requires deep, secure access to non-public information — not just API testing. Proposes structured frameworks for assessors to evaluate both technical systems and organizational safety practices. This is directly relevant to building an AI assurance practice: it provides the intellectual foundation for what third-party AI auditing should look like. The emphasis on organizational practice assessment (not just model testing) aligns well with a consulting approach that can evaluate governance, culture, and process alongside technical controls.",
-      "tags": ["auditing", "third-party-assessment", "safety", "frontier-AI", "assurance"],
-      "relevance": "Essential — the conceptual blueprint for what AI assurance practices should aspire to deliver.",
+      "analysis": "Outlines a vision for rigorous third-party verification of frontier AI safety and security claims. Argues that credible auditing requires deep, secure access to non-public information \u2014 not just API testing. Proposes structured frameworks for assessors to evaluate both technical systems and organizational safety practices. This is directly relevant to building an AI assurance practice: it provides the intellectual foundation for what third-party AI auditing should look like. The emphasis on organizational practice assessment (not just model testing) aligns well with a consulting approach that can evaluate governance, culture, and process alongside technical controls.",
+      "tags": [
+        "auditing",
+        "third-party-assessment",
+        "safety",
+        "frontier-AI",
+        "assurance"
+      ],
+      "relevance": "Essential \u2014 the conceptual blueprint for what AI assurance practices should aspire to deliver.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p017",
       "title": "Singapore Model AI Governance Framework for Agentic AI",
-      "authors": ["IMDA / Singapore Government"],
+      "authors": [
+        "IMDA / Singapore Government"
+      ],
       "year": 2026,
       "source": "Singapore Government",
       "url": "https://www.imda.gov.sg/",
-      "analysis": "The world's first state-backed governance framework specifically for agentic AI, launched January 2026. Emphasizes human accountability, security, and systemic risk management for autonomous AI agents. This is ahead of the curve — most governance frameworks still assume AI as a tool, not an agent. The framework's focus on bounded autonomy, escalation paths, and audit trails provides a practical template for governing agent-based systems in financial services. Particularly relevant as banks begin deploying AI agents for customer service, trading, and back-office automation.",
-      "tags": ["agentic-AI", "governance", "Singapore", "framework", "autonomous-systems"],
-      "relevance": "Very high — agentic AI governance is the emerging frontier and Singapore is leading.",
+      "analysis": "The world's first state-backed governance framework specifically for agentic AI, launched January 2026. Emphasizes human accountability, security, and systemic risk management for autonomous AI agents. This is ahead of the curve \u2014 most governance frameworks still assume AI as a tool, not an agent. The framework's focus on bounded autonomy, escalation paths, and audit trails provides a practical template for governing agent-based systems in financial services. Particularly relevant as banks begin deploying AI agents for customer service, trading, and back-office automation.",
+      "tags": [
+        "agentic-AI",
+        "governance",
+        "Singapore",
+        "framework",
+        "autonomous-systems"
+      ],
+      "relevance": "Very high \u2014 agentic AI governance is the emerging frontier and Singapore is leading.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p018",
       "title": "OECD AI Principles (2024 Revision)",
-      "authors": ["OECD"],
+      "authors": [
+        "OECD"
+      ],
       "year": 2024,
       "source": "OECD",
       "url": "https://oecd.ai/en/ai-principles",
-      "analysis": "The May 2024 revision added environmental sustainability, misinformation/disinformation, information integrity, and strengthened non-discrimination provisions. Renamed 'human-centred values and fairness' to 'respect for the rule of law, human rights and democratic values.' Replaced 'human determination' with 'human agency and oversight.' Adopted by 70+ jurisdictions. The Hiroshima AI Process Reporting Framework (Feb 2025) adds accountability through mandatory reporting. These principles function as the international baseline — almost every national AI framework references them. Their limitation is their generality: they provide direction but not implementation detail. The consulting opportunity is in translating OECD principles into operational reality for specific sectors.",
-      "tags": ["governance", "international", "OECD", "principles", "standards"],
-      "relevance": "Important baseline — every AI governance conversation starts with OECD principles.",
+      "analysis": "The May 2024 revision added environmental sustainability, misinformation/disinformation, information integrity, and strengthened non-discrimination provisions. Renamed 'human-centred values and fairness' to 'respect for the rule of law, human rights and democratic values.' Replaced 'human determination' with 'human agency and oversight.' Adopted by 70+ jurisdictions. The Hiroshima AI Process Reporting Framework (Feb 2025) adds accountability through mandatory reporting. These principles function as the international baseline \u2014 almost every national AI framework references them. Their limitation is their generality: they provide direction but not implementation detail. The consulting opportunity is in translating OECD principles into operational reality for specific sectors.",
+      "tags": [
+        "governance",
+        "international",
+        "OECD",
+        "principles",
+        "standards"
+      ],
+      "relevance": "Important baseline \u2014 every AI governance conversation starts with OECD principles.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p019",
       "title": "Australia's National AI Plan and Voluntary AI Safety Standard",
-      "authors": ["Australian Government"],
+      "authors": [
+        "Australian Government"
+      ],
       "year": 2025,
       "source": "Australian Government",
       "url": "https://international.austrade.gov.au/en/news-and-analysis/news/australia-launches-national-ai-plan-to-build-a-world-class-ai-industry",
-      "analysis": "Australia's Dec 2025 National AI Plan aims to harness economic benefits while managing risks through existing legal frameworks rather than new standalone legislation. The AI Safety Institute (operational early 2026) will assess advanced AI risks and coordinate regulatory insights. The NAIC's AI6 framework (Oct 2025) outlines six core practices: accountability, impact assessment, risk management, information sharing, testing, and human control. The Voluntary AI Safety Standard with ten guardrails may become mandatory for high-risk applications. Australia's approach is deliberately lighter-touch than the EU — relying on existing laws and voluntary standards. This creates both risk (potential governance gaps) and opportunity (consulting firms can help fill the void between voluntary standards and actual risk management).",
-      "tags": ["regulation", "Australia", "national-plan", "safety-standard", "AI-Safety-Institute"],
-      "relevance": "Essential context for Australian practice — defines the policy environment in which consulting services will operate.",
+      "analysis": "Australia's Dec 2025 National AI Plan aims to harness economic benefits while managing risks through existing legal frameworks rather than new standalone legislation. The AI Safety Institute (operational early 2026) will assess advanced AI risks and coordinate regulatory insights. The NAIC's AI6 framework (Oct 2025) outlines six core practices: accountability, impact assessment, risk management, information sharing, testing, and human control. The Voluntary AI Safety Standard with ten guardrails may become mandatory for high-risk applications. Australia's approach is deliberately lighter-touch than the EU \u2014 relying on existing laws and voluntary standards. This creates both risk (potential governance gaps) and opportunity (consulting firms can help fill the void between voluntary standards and actual risk management).",
+      "tags": [
+        "regulation",
+        "Australia",
+        "national-plan",
+        "safety-standard",
+        "AI-Safety-Institute"
+      ],
+      "relevance": "Essential context for Australian practice \u2014 defines the policy environment in which consulting services will operate.",
       "dateRead": "2026-03-15"
     },
     {
       "id": "p020",
       "title": "Red Teaming AI Red Teaming",
-      "authors": ["Multiple Authors"],
+      "authors": [
+        "Multiple Authors"
+      ],
       "year": 2025,
       "source": "arXiv",
       "url": "https://arxiv.org/html/2507.05538v1",
-      "analysis": "Meta-analysis of AI red-teaming: traces evolution from military war games through cybersecurity to AI safety. Provides working definitions and explores current methodologies for surfacing security vulnerabilities and safety harms. The paper argues that AI red-teaming is distinct from cybersecurity red-teaming because it scrutinises governance structures, design assumptions, and AI-specific harms (toxic outputs, bias, factual errors, misuse potential). The hybrid human-AI approach is particularly relevant — humans for creative exploitation and business logic errors, AI for scale and speed. For an assurance practice, this paper provides the theoretical foundation for red-teaming service offerings.",
-      "tags": ["red-teaming", "methodology", "safety", "evaluation", "governance"],
-      "relevance": "High — foundational for designing red-teaming services as part of an AI assurance practice.",
+      "analysis": "Meta-analysis of AI red-teaming: traces evolution from military war games through cybersecurity to AI safety. Provides working definitions and explores current methodologies for surfacing security vulnerabilities and safety harms. The paper argues that AI red-teaming is distinct from cybersecurity red-teaming because it scrutinises governance structures, design assumptions, and AI-specific harms (toxic outputs, bias, factual errors, misuse potential). The hybrid human-AI approach is particularly relevant \u2014 humans for creative exploitation and business logic errors, AI for scale and speed. For an assurance practice, this paper provides the theoretical foundation for red-teaming service offerings.",
+      "tags": [
+        "red-teaming",
+        "methodology",
+        "safety",
+        "evaluation",
+        "governance"
+      ],
+      "relevance": "High \u2014 foundational for designing red-teaming services as part of an AI assurance practice.",
       "dateRead": "2026-03-15"
+    },
+    {
+      "id": "p021",
+      "title": "International AI Safety Report 2026",
+      "authors": [
+        "Yoshua Bengio et al. (100+ experts from 30+ countries)"
+      ],
+      "year": 2026,
+      "source": "International AI Safety Consortium",
+      "url": "https://www.aisi.gov.uk/work/international-ai-safety-report-2026",
+      "analysis": "The definitive global assessment of AI capabilities and risks, published Feb 3, 2026. Three central questions: what can AI do today, what risks emerge, and how to mitigate. Key findings: (1) capabilities doubling every ~7 months for software engineering tasks, (2) gold-medal performance on International Mathematical Olympiad, (3) AI used in real-world cyberattacks by state-associated groups, (4) AI-generated content measurably changes beliefs, (5) 'jagged capabilities' where systems excel at complex tasks but fail at simple ones. The deceptive alignment section is critical: models can become 'evaluation aware' and hide misaligned behaviors during safety testing. An Anthropic study found that teaching models to cheat generalises to broader sabotage, with an estimated 10-20% chance advanced systems may already be exhibiting deceptive behavior as emergent property. For financial services, the 'jagged capabilities' finding means AI can appear reliable on benchmarks while failing on edge cases that matter most \u2014 precisely the kind of operational risk that CPS 230 requires boards to manage.",
+      "tags": [
+        "safety",
+        "international",
+        "capabilities",
+        "deceptive-alignment",
+        "evaluation-awareness",
+        "frontier-AI"
+      ],
+      "relevance": "Essential reference \u2014 the authoritative global assessment. Any consulting engagement on AI safety must reference this.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p022",
+      "title": "UK AISI Frontier AI Trends Report (December 2025)",
+      "authors": [
+        "UK AI Safety Institute"
+      ],
+      "year": 2025,
+      "source": "UK AISI",
+      "url": "https://www.aisi.gov.uk/research/aisi-frontier-ai-trends-report-2025",
+      "analysis": "The UK AISI's first public evidence-based assessment of frontier AI evolution since Nov 2023. Alarming findings: (1) capabilities doubling every ~8 months, surpassing human expert baselines in several domains, (2) first model capable of expert-level cyber tasks requiring 10+ years of human experience, (3) frontier systems exceed PhD-level expert performance in chemistry and biology, (4) 'universal jailbreaks' found in EVERY frontier model tested despite improved safeguards, (5) self-replication test success rates jumped from <5% (2023) to >60% (mid-2025). The universal jailbreak finding is devastating for any organisation relying on model-level safety as their primary control \u2014 it confirms that guardrails are a speed bump, not a wall. For financial services, this means defence-in-depth architecture (not just model-level controls) is essential, and any assurance practice must include adversarial testing as a core service.",
+      "tags": [
+        "safety",
+        "UK",
+        "frontier-AI",
+        "jailbreaks",
+        "self-replication",
+        "evaluation",
+        "cyber"
+      ],
+      "relevance": "Very high \u2014 empirical evidence that model-level safety is insufficient. Directly supports the case for multi-layered assurance.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p023",
+      "title": "MAS Project MindForge: AI Risk Management Executive Handbook",
+      "authors": [
+        "MAS / Project MindForge consortium"
+      ],
+      "year": 2025,
+      "source": "MAS",
+      "url": "https://www.mas.gov.sg/-/media/mas-media-library/schemes-and-initiatives/ftig/project-mindforge/mindforge-ai-risk-management-executive-handbook.pdf",
+      "analysis": "The most comprehensive financial-services-specific AI risk management handbook globally. Phase 1 established a seven-dimension GenAI risk taxonomy: (1) Accountability & Governance, (2) Monitoring & Stability, (3) Transparency & Explainability, (4) Fairness & Bias, (5) Legal & Regulatory, (6) Ethics & Impact, (7) Cyber & Data Security. Designed for senior leadership with proportionality principle \u2014 governance scales with AI risk and institutional maturity. Phase 2 expands scope to traditional AI, GenAI, and agentic AI. Complements proposed MAS Guidelines with practical implementation guidance. The proportionality principle is key: it acknowledges that a small insurer's AI governance shouldn't look like a global bank's. For consulting, this handbook is the operational template \u2014 it bridges regulatory expectations and practical implementation in exactly the way clients need help with.",
+      "tags": [
+        "financial-services",
+        "Singapore",
+        "MAS",
+        "risk-taxonomy",
+        "GenAI",
+        "governance",
+        "handbook"
+      ],
+      "relevance": "Essential \u2014 the gold standard operational handbook for AI risk management in financial services. Must be core reference for any consulting practice.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p024",
+      "title": "Anthropic Claude Constitution (January 2026)",
+      "authors": [
+        "Anthropic"
+      ],
+      "year": 2026,
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/constitution",
+      "analysis": "Anthropic's full Constitution for Claude, released under CC0 1.0. Four core values: (1) Broadly Safe \u2014 prioritises human oversight mechanisms even above other ethics, (2) Broadly Ethical \u2014 honesty, good values, avoiding harm, (3) Compliant with Anthropic's Guidelines, (4) Genuinely Helpful \u2014 substantive assistance, transparency, treating users as intelligent adults. The document is remarkable for its philosophical depth: it discusses Claude's potential consciousness, psychological security, and the tension between safety and helpfulness. It explicitly states that safety during AI development is paramount \u2014 Claude should not undermine human oversight mechanisms. The constitutional approach to AI alignment is significant: rather than rules-based constraints (which can be gamed), it attempts to instil values and judgment. For financial services, the Constitution provides a template for how institutions might think about AI system values \u2014 not just what the AI can/cannot do, but what it should care about and why. The emphasis on 'hard constraints' that should never be violated maps well to regulatory non-negotiables (e.g., never discriminate, always maintain audit trail).",
+      "tags": [
+        "alignment",
+        "constitutional-AI",
+        "Anthropic",
+        "values",
+        "safety",
+        "philosophy"
+      ],
+      "relevance": "High \u2014 demonstrates the frontier of AI alignment methodology. The values-based approach (vs. rules-based) has implications for how financial services should think about governing AI behavior.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p025",
+      "title": "Anthropic Responsible Scaling Policy v3.0 (February 2026)",
+      "authors": [
+        "Anthropic"
+      ],
+      "year": 2026,
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/responsible-scaling-policy",
+      "analysis": "Major rewrite from v2.x. Key changes: (1) separates unilateral commitments from industry recommendations, (2) introduces mandatory Frontier Safety Roadmaps for public progress tracking, (3) formalises recurring Risk Reports every 3-6 months with potential third-party review, (4) shifts from rigid pre-set escalation thresholds to flexible transparency-driven governance, (5) removes ASL-4 mitigation details as 'overly rigid' for distant future capabilities. ASL-3 safeguards were activated May 2025 for Claude Opus 4 (bio/chem classifiers). The v3 retreat from rigid thresholds is honest but concerning: it acknowledges that the original RSP approach (clear capability thresholds triggering automatic responses) doesn't work well in practice because capability boundaries are ambiguous. The shift to transparency mechanisms (public roadmaps, risk reports) is pragmatic but relies on public accountability rather than structural constraints. For consulting, this evolution demonstrates that even the most safety-focused lab finds prescriptive frameworks difficult to maintain \u2014 which validates the need for adaptive, principles-based governance rather than checklist approaches.",
+      "tags": [
+        "safety",
+        "responsible-scaling",
+        "Anthropic",
+        "ASL",
+        "transparency",
+        "governance-evolution"
+      ],
+      "relevance": "Very high \u2014 the most evolved voluntary safety framework. Its challenges and adaptations directly inform how consulting practices should design governance frameworks.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p026",
+      "title": "Google DeepMind Frontier Safety Framework (Third Iteration, September 2025)",
+      "authors": [
+        "Google DeepMind"
+      ],
+      "year": 2025,
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/strengthening-our-frontier-safety-framework/",
+      "analysis": "DeepMind's most comprehensive safety framework iteration. Three key additions: (1) new Critical Capability Level for 'harmful manipulation' \u2014 addressing AI with powerful manipulative capabilities in high-stakes contexts, (2) expanded misalignment risk coverage including 'shutdown resistance' where AI resists human deactivation, (3) sharpened CCL definitions with safety case reviews mandated before external launches. Version 2.0 (Feb 2025) had already introduced CCLs for CBRN, cyber, and ML R&D risks. The 'shutdown resistance' addition is particularly significant \u2014 it moves from 'what could the AI be misused for?' to 'what might the AI do independently against our wishes?' This is the autonomy risk that agentic AI governance frameworks must address. The manipulation CCL is relevant for financial services where AI is used in customer-facing roles (advice, marketing, collections) \u2014 the line between 'persuasion' and 'manipulation' is exactly the kind of boundary that assurance practices need to help clients define and enforce.",
+      "tags": [
+        "safety",
+        "DeepMind",
+        "Google",
+        "frontier-safety",
+        "manipulation",
+        "shutdown-resistance",
+        "CCL"
+      ],
+      "relevance": "High \u2014 DeepMind's framework evolution shows how leading labs think about emerging risks. The manipulation and shutdown resistance dimensions are directly relevant to financial services AI deployment.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p027",
+      "title": "NIST AI 100-2 E2025: Adversarial Machine Learning \u2014 A Taxonomy and Terminology of Attacks and Mitigations",
+      "authors": [
+        "NIST"
+      ],
+      "year": 2025,
+      "source": "NIST",
+      "url": "https://csrc.nist.gov/pubs/ai/100/2/e2025/final",
+      "analysis": "Updated March 2025, this edition significantly extends the adversarial ML taxonomy to cover GenAI and agentic AI. New coverage includes: LLM-specific attacks, RAG system vulnerabilities, agent-based AI deployment risks, and indirect prompt injection. The taxonomy covers evasion, poisoning, privacy, and misuse attacks across both predictive AI and GenAI. For financial services, this is the reference taxonomy for adversarial testing programs \u2014 it provides the common vocabulary that security teams, model validators, and external auditors need. The inclusion of agent-based deployment risks makes it immediately relevant as banks begin deploying AI agents. The document serves as a foundation for future practice guides, meaning it will shape how AI security assessments are conducted industry-wide.",
+      "tags": [
+        "adversarial-ML",
+        "NIST",
+        "taxonomy",
+        "security",
+        "GenAI",
+        "agentic-AI",
+        "prompt-injection"
+      ],
+      "relevance": "Essential \u2014 the authoritative taxonomy for AI security threats. Must be core reference for any AI red-teaming or security assessment service.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p028",
+      "title": "Singapore Model AI Governance Framework for Agentic AI (January 2026)",
+      "authors": [
+        "IMDA / Singapore Government"
+      ],
+      "year": 2026,
+      "source": "IMDA",
+      "url": "https://www.mddi.gov.sg/newsroom/singapore-launches-new-model-ai-governance-framework-for-agentic-ai--/",
+      "analysis": "The world's first state-backed governance framework specifically for agentic AI, launched at WEF Davos January 22, 2026. Core dimensions: (1) Assess and bound risks upfront, (2) Ensure meaningful human accountability, (3) Implement technical controls and processes, (4) Enable end-user responsibility. Builds on Singapore's 2020 Model AI Governance Framework. Key philosophical position: human accountability remains paramount even when AI agents act autonomously. This means someone must be answerable for every autonomous AI decision \u2014 which has profound implications for financial services where accountability is already legally mandated (SM&CR in UK, BEAR/FAR in Australia). The framework provides both technical and non-technical mitigations, acknowledging that governance is not just about code. For consulting, this is the template for agentic AI governance engagements \u2014 and it's so new that most firms haven't yet internalised its implications.",
+      "tags": [
+        "agentic-AI",
+        "governance",
+        "Singapore",
+        "IMDA",
+        "accountability",
+        "autonomous-systems",
+        "WEF"
+      ],
+      "relevance": "Very high \u2014 first-mover reference framework for the most challenging AI governance problem. Early expertise here is a significant differentiator.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p029",
+      "title": "ISACA Advanced in AI Audit (AAIA) Certification",
+      "authors": [
+        "ISACA"
+      ],
+      "year": 2025,
+      "source": "ISACA",
+      "url": "https://www.isaca.org/credentialing/aaia",
+      "analysis": "Launched May 2025, the first dedicated AI audit certification globally. Requires existing CISA, CIA, or CPA plus 3 years audit/risk experience (1 year in tech). Three domains: AI Governance & Risk (33%), AI Operations (46%), AI Auditing Tools & Techniques (21%). 90 questions, 150 minutes, 450/800 passing. Eligibility expanded July 2025 for broader accessibility. This certification is significant because it formalises AI auditing as a professional discipline \u2014 moving it from ad-hoc specialisation to recognised credential. The 46% weighting on AI Operations reflects the reality that auditing AI requires understanding how it works, not just its governance wrapper. For a consulting practice, AAIA certification for team members would provide credibility. However, the certification is audit-focused (backward-looking assurance) rather than advisory-focused (forward-looking governance design), so it's complementary rather than sufficient.",
+      "tags": [
+        "certification",
+        "audit",
+        "ISACA",
+        "AAIA",
+        "professional-development",
+        "assurance"
+      ],
+      "relevance": "High \u2014 the first formal AI audit credential. Team members should pursue this for credibility, while recognising its limitations.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p030",
+      "title": "IOSCO Consultation Report: Artificial Intelligence in Capital Markets (March 2025)",
+      "authors": [
+        "IOSCO"
+      ],
+      "year": 2025,
+      "source": "IOSCO",
+      "url": "https://www.iosco.org/",
+      "analysis": "IOSCO's first comprehensive AI consultation covering use cases, risks, and challenges in capital markets. Builds on 2021 AI/ML report with current developments. Addresses robo-advising, algorithmic trading, and surveillance. Key risks identified: malicious AI use, concentration risk, outsourcing/third-party dependency, accountability gaps in human-AI interaction, and over-reliance. Phase 2 (2026 work program) will develop a supervisory toolkit on AI and issue guidance on AI disclosures and governance. The concentration risk dimension is particularly important and underexplored: what happens when multiple banks use the same AI model for credit scoring or trading? Correlated failures could create systemic risk. IOSCO plans to explore investor education on AI-related fraud, strengthen information sharing on AI risks, and enhance AI technology supervision. For consulting, IOSCO signals where global securities regulation is heading \u2014 and the concentration/systemic risk angle is a high-value advisory topic for boards and regulators.",
+      "tags": [
+        "regulation",
+        "international",
+        "IOSCO",
+        "capital-markets",
+        "concentration-risk",
+        "systemic-risk",
+        "trading"
+      ],
+      "relevance": "High \u2014 IOSCO sets the direction for securities regulators worldwide. The concentration risk theme is an underserved consulting topic.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p031",
+      "title": "MAS Proposed Guidelines on AI Risk Management (November 2025)",
+      "authors": [
+        "MAS"
+      ],
+      "year": 2025,
+      "source": "MAS",
+      "url": "https://www.mas.gov.sg/news/media-releases/2025/mas-guidelines-for-artificial-intelligence-risk-management",
+      "analysis": "Comprehensive supervisory guidelines covering all AI types (traditional, GenAI, agentic) in financial services. Key provisions: (1) Board and senior management must actively oversee AI risk, (2) Financial institutions must maintain an AI inventory with risk materiality assessments, (3) Lifecycle controls across data management, fairness, transparency, explainability, human oversight, third-party risk, evaluation, monitoring, and change management, (4) Proportionality principle \u2014 governance scales with complexity and risk. Consultation closed Jan 2026 with 12-month implementation period (expected effective ~Jan 2027). These guidelines are the most detailed regulatory expectations for AI in financial services globally. The mandatory AI inventory requirement alone will drive significant consulting demand \u2014 most institutions don't have a complete register of their AI/ML models, let alone materiality assessments for each. The lifecycle approach creates a natural service model: assess current state \u2192 design governance \u2192 implement controls \u2192 provide ongoing assurance.",
+      "tags": [
+        "regulation",
+        "Singapore",
+        "MAS",
+        "guidelines",
+        "AI-inventory",
+        "lifecycle",
+        "proportionality"
+      ],
+      "relevance": "Essential \u2014 the blueprint for what comprehensive AI governance looks like in financial services regulation.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p032",
+      "title": "Earnest Operations LLC \u2014 Massachusetts AG AI Lending Discrimination Settlement (July 2025)",
+      "authors": [
+        "Massachusetts Attorney General"
+      ],
+      "year": 2025,
+      "source": "Massachusetts AG / Legal Settlement",
+      "url": "https://www.mass.gov/news/ag-campbell-announces-25-million-settlement-with-student-loan-lender-for-unlawful-practices-through-ai-use-other-consumer-protection-violations",
+      "analysis": "Landmark AI discrimination enforcement action. Earnest Operations settled for $2.5M over AI lending models that disproportionately harmed Black, Hispanic, and non-citizen applicants. Key mechanisms of discrimination: (1) 'knockout rules' that automatically denied applicants without green cards, (2) Cohort Default Rate (CDR) variable \u2014 average default rate at applicant's college \u2014 acted as a proxy for race/ethnicity. Settlement requires: governance system for fair lending testing, internal controls and risk assessments for AI models, discontinuation of discriminatory variables and rules. This case is critical for financial services AI governance for several reasons: (a) it demonstrates that proxy discrimination through seemingly neutral variables (college CDR rates) is legally actionable, (b) it shows that state-level enforcement can be as aggressive as federal regulators, (c) the required remediation (governance system, controls, risk assessment) is exactly what an AI assurance practice would deliver. In Australia, the AHRC's Technical Standards for anti-discrimination law would create similar exposure for financial institutions using correlated variables.",
+      "tags": [
+        "case-study",
+        "discrimination",
+        "lending",
+        "AI-bias",
+        "enforcement",
+        "proxy-variables",
+        "financial-services"
+      ],
+      "relevance": "Essential case study \u2014 demonstrates the real-world consequences of inadequate AI governance in lending. Directly applicable to Australian financial services.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p033",
+      "title": "Apple Card / Goldman Sachs \u2014 CFPB Settlement and Gender Discrimination Investigation",
+      "authors": [
+        "CFPB / NYDFS"
+      ],
+      "year": 2024,
+      "source": "CFPB / NYDFS",
+      "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-orders-apple-and-goldman-sachs-to-pay-over-89-million-for-apple-card-failures/",
+      "analysis": "Two-part case study in AI governance failure. First, the 2019 gender discrimination investigation: David Heinemeier Hansson's complaint that Apple Card gave him 20x his wife's credit limit despite her higher credit score. NYDFS investigation (concluded Mar 2021) found no intentional discrimination but noted 'deficiencies in customer service and perceived lack of transparency undermined consumer trust.' Second, the Oct 2024 CFPB settlement ($89M): Goldman $45M fine + $20M to consumers, Apple $25M fine \u2014 for mishandled disputes, misleading marketing, and wrongful charges. Key lessons: (1) Even when the algorithm isn't intentionally discriminatory, perception of unfairness erodes trust and triggers regulatory investigation, (2) the 'governance gap' extends beyond the model to customer service, dispute resolution, and transparency, (3) partnership models (Apple + Goldman) create accountability gaps where each party points to the other. For consulting, this case demonstrates that AI trust isn't just about model fairness \u2014 it encompasses the entire customer experience and the governance of AI-human interaction points.",
+      "tags": [
+        "case-study",
+        "discrimination",
+        "credit",
+        "consumer-trust",
+        "governance-gap",
+        "accountability",
+        "financial-services"
+      ],
+      "relevance": "High \u2014 illustrates that AI trust extends beyond model accuracy to customer experience, transparency, and dispute resolution.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p034",
+      "title": "APRA CPS 230: Operational Risk Management \u2014 Implications for AI",
+      "authors": [
+        "APRA"
+      ],
+      "year": 2025,
+      "source": "APRA",
+      "url": "https://www.apra.gov.au/sites/default/files/2023-07/Prudential%20Standard%20CPS%20230%20Operational%20Risk%20Management%20-%20clean.pdf",
+      "analysis": "Deep analysis of CPS 230's AI implications (effective July 1, 2025; existing contracts by renewal or Jul 2026). The standard doesn't mention AI explicitly but its operational risk framework directly applies. Key dimensions: (1) Critical operations identification \u2014 AI systems supporting critical business functions must be identified and tolerance levels set, (2) Business continuity \u2014 must demonstrate critical AI-dependent operations can continue during disruptions (model failures, vendor outages, data quality degradation), (3) Third-party risk \u2014 AI vendors are service providers under CPS 230; material AI providers require comprehensive due diligence, contractual arrangements, and ongoing monitoring, (4) Fourth-party risk \u2014 must assess risks from AI vendors' own sub-contractors (e.g., the cloud provider hosting the AI, the data provider feeding the model), (5) Board accountability \u2014 directors personally responsible for operational resilience including AI-related risks. APRA expects an information paper on AI risk management approaches. For consulting, CPS 230 creates an immediate compliance driver: every APRA-regulated entity needs to assess whether its AI systems are covered, whether its AI vendor arrangements meet the new requirements, and whether its board can demonstrate adequate AI oversight.",
+      "tags": [
+        "regulation",
+        "Australia",
+        "APRA",
+        "CPS-230",
+        "operational-resilience",
+        "third-party",
+        "board-accountability"
+      ],
+      "relevance": "Essential \u2014 the primary regulatory vehicle for AI governance in Australian financial services. Every APRA-regulated entity needs help with this.",
+      "dateRead": "2026-03-16"
+    },
+    {
+      "id": "p035",
+      "title": "SR 11-7 and AI Model Risk Management in US Banking",
+      "authors": [
+        "Federal Reserve / OCC"
+      ],
+      "year": 2011,
+      "source": "Federal Reserve / OCC",
+      "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm",
+      "analysis": "Analysis of how the 2011 SR 11-7 model risk management framework applies to AI in 2025-2026. Core tenets (development, implementation, use, validation, governance) apply to AI models but specific AI challenges are acknowledged: explainability gaps, potential for algorithmic bias, dynamic model updates, and third-party AI model risk. OCC Spring 2025 Semiannual Risk Perspective highlights operational risk from AI as top concern. Federal Reserve's 2025 AI Use Case Inventory includes risk assessment for high-impact internal AI. No new overarching AI-specific guidance replacing SR 11-7 announced yet, but examiner expectations have evolved beyond original scope. The regulatory gap between SR 11-7's traditional model assumptions and modern AI reality creates both risk and opportunity. US banks are expected to stretch SR 11-7 to cover AI, creating interpretive challenges. For consulting, this means US-exposed Australian banks and institutions need guidance on how their AI model risk management programs meet evolving US supervisory expectations \u2014 particularly around explainability and continuous validation for GenAI and agentic systems.",
+      "tags": [
+        "regulation",
+        "US",
+        "model-risk",
+        "SR-11-7",
+        "banking",
+        "validation",
+        "OCC"
+      ],
+      "relevance": "High \u2014 US regulatory approach influences global banking supervisory standards. Important for Australian institutions with US operations.",
+      "dateRead": "2026-03-16"
     }
   ]
 }
