@@ -13,9 +13,13 @@
     "How do deceptive alignment and evaluation awareness change the assurance model?",
     "What does the convergence of AI risk and cyber risk mean for practice design?",
     "How should AI concentration and systemic risk be assessed and governed?",
-    "What can values-based alignment approaches teach us about governance framework design?"
+    "What can values-based alignment approaches teach us about governance framework design?",
+    "How should agentic AI systems be governed \u2014 what frameworks exist and what gaps remain for autonomous multi-step agents?",
+    "What are the risks, methodologies, and limitations of using LLMs as judges for AI evaluation and assurance?"
   ],
   "nextPhaseGoals": [
+    "Deep dive: Agentic AI governance frameworks (Singapore Agentic AI Framework, emerging standards)",
+    "Deep dive: LLM-as-a-judge \u2014 evaluation paradigms, biases, reliability, and implications for AI assurance",
     "Read full MAS Project MindForge handbooks (Operationalisation Handbook)",
     "Survey Australian financial institution AI governance maturity",
     "Analyse EU Digital Omnibus implications for AI Act timelines",
@@ -27,7 +31,7 @@
     "Investigate AI insurance and PI implications for consulting",
     "Develop service line specifications and methodology frameworks"
   ],
-  "supervisorFeedback": null,
+  "supervisorFeedback": "Add more focus on agentic governance and LLM-as-a-judge (16 Mar 2026)",
   "stats": {
     "totalPapers": 35,
     "totalThemes": 14,
