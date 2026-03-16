@@ -8,7 +8,7 @@
       "url": "https://github.com/Trusted-AI/AIF360",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Core tool for any AI assurance practice \u2014 enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
+      "relevance": "Core tool for any AI assurance practice — enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://github.com/fairlearn/fairlearn",
       "license": "MIT",
       "maturity": "Production-ready",
-      "relevance": "Complementary to AIF360 \u2014 different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
+      "relevance": "Complementary to AIF360 — different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -40,7 +40,7 @@
       "description": "Open-source evaluation and testing library for LLM agents. Provides transparency, accountability, and helps ensure quality, security, and compliance. Recognized in 2024 GitHub Accelerator.",
       "url": "https://github.com/Giskard-AI/giskard",
       "license": "Apache 2.0",
-      "maturity": "Growing \u2014 active community",
+      "maturity": "Growing — active community",
       "relevance": "Particularly relevant for testing LLM-based applications in financial services (chatbots, advisory tools). Includes hallucination detection and robustness testing.",
       "dateDiscovered": "2026-03-15"
     },
@@ -52,7 +52,7 @@
       "url": "https://github.com/guardrails-ai/guardrails",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Implementation tool for LLM deployment guardrails \u2014 directly applicable to financial services deploying customer-facing AI.",
+      "relevance": "Implementation tool for LLM deployment guardrails — directly applicable to financial services deploying customer-facing AI.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -85,7 +85,7 @@
       "url": "https://mlflow.org/",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Foundation for ML governance infrastructure \u2014 model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
+      "relevance": "Foundation for ML governance infrastructure — model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -175,6 +175,50 @@
       "maturity": "Growing",
       "relevance": "One of the few platforms specifically targeting agentic AI red teaming in financial services. As institutions deploy AI agents, this capability gap will become critical.",
       "dateDiscovered": "2026-03-16"
+    },
+    {
+      "id": "tool017",
+      "name": "FINOS AI Governance Framework v2 (with Agentic AI Extension)",
+      "category": "AI Governance (Financial Services)",
+      "description": "Open-source, machine-readable AI governance framework specifically for financial services. Version 2 covers 25 risks and mitigations including agentic AI. Backed by BMO, Citibank, Morgan Stanley, RBC, Microsoft, Google Cloud, AWS. Designed for programmatic compliance checking and CI/CD integration.",
+      "url": "https://air-governance-framework.finos.org/",
+      "license": "Open Source (FINOS)",
+      "maturity": "Production-ready (v2, active development)",
+      "relevance": "The most credible open-source FS-specific AI governance framework. Machine-readable format enables automation. Contributing positions a practice as an industry participant.",
+      "dateDiscovered": "2026-03-17"
+    },
+    {
+      "id": "tool018",
+      "name": "US Treasury FS AI RMF Control Framework",
+      "category": "AI Governance (Financial Services)",
+      "description": "230 control objectives across four NIST AI RMF functions (Govern, Map, Measure, Manage) tailored for financial services. Includes AI Adoption Stage Questionnaire, Risk and Control Matrix, Implementation Guidebook, and Control Objective Reference Guide.",
+      "url": "https://cyberriskinstitute.org/artificial-intelligence-risk-management/",
+      "license": "Public (US Government)",
+      "maturity": "Production-ready (released Feb 2026)",
+      "relevance": "The most comprehensive control framework for FS AI governance. 230 objectives provide natural gap assessment baseline. Will become de facto US bank examination standard.",
+      "dateDiscovered": "2026-03-17"
+    },
+    {
+      "id": "tool019",
+      "name": "NeuralTrust AI Red Teaming Platform",
+      "category": "AI Red Teaming & Security",
+      "description": "Platform for automated adversarial testing of GenAI systems in banking and financial services. Supports prompt injection testing, data exfiltration detection, bias probing, and continuous security monitoring integrated into MLOps pipelines.",
+      "url": "https://neuraltrust.ai/",
+      "license": "Commercial",
+      "maturity": "Growing (FS-focused)",
+      "relevance": "Specialised AI security testing for banking. Integrates into existing DevSecOps workflows which is important for enterprise adoption.",
+      "dateDiscovered": "2026-03-17"
+    },
+    {
+      "id": "tool020",
+      "name": "CALM: Comprehensive Assessment of LLM-as-a-Judge Biases",
+      "category": "LLM Evaluation & Bias Testing",
+      "description": "Automated framework for systematically quantifying biases in LLM-as-a-judge applications. Tests for position bias, verbosity bias, self-enhancement bias, and other systematic evaluation errors. Essential for validating LLM-based evaluation pipelines.",
+      "url": "https://arxiv.org/abs/2406.07791",
+      "license": "Research (open)",
+      "maturity": "Research prototype — active development",
+      "relevance": "Critical for any assurance practice using LLM-based evaluation. Without bias quantification, LLM-as-judge results are unreliable. Builds toward production-grade evaluation validation.",
+      "dateDiscovered": "2026-03-17"
     }
   ]
 }

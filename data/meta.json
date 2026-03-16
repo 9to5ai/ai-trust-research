@@ -1,8 +1,8 @@
 {
   "projectName": "AI Trust Research",
-  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance \u2014 with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
-  "currentPhase": "Phase 2: Deep Dives and Synthesis",
-  "phaseDescription": "Deep investigation of specific domains identified in Phase 1, including frontier safety science, regulatory evolution, enforcement case studies, governance platform market, and practice architecture synthesis.",
+  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance — with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
+  "currentPhase": "Phase 3: Synthesis and Practice Architecture",
+  "phaseDescription": "Moving from research accumulation to strategic synthesis. Sufficient foundational research now exists across regulatory frameworks, technical AI safety, governance tools, and competitive landscape. Next phase focuses on synthesising findings into actionable practice-building recommendations, drafting service line methodologies, and beginning the 'state of the art' synthesis document.",
   "researchQuestions": [
     "What does the global regulatory landscape look like for AI governance in financial services, and where is it converging?",
     "What are the key technical dimensions of trustworthy AI and how do they interact?",
@@ -14,39 +14,41 @@
     "What does the convergence of AI risk and cyber risk mean for practice design?",
     "How should AI concentration and systemic risk be assessed and governed?",
     "What can values-based alignment approaches teach us about governance framework design?",
-    "How should agentic AI systems be governed \u2014 what frameworks exist and what gaps remain for autonomous multi-step agents?",
-    "What are the risks, methodologies, and limitations of using LLMs as judges for AI evaluation and assurance?"
+    "How should agentic AI systems be governed — what frameworks exist and what gaps remain for autonomous multi-step agents?",
+    "What are the risks, methodologies, and limitations of using LLMs as judges for AI evaluation and assurance?",
+    "How does AI model homogenisation create systemic risk and how should it be assessed?",
+    "What does reliable AI evaluation look like when LLM judges are systematically biased?",
+    "How should the practice's service lines be structured and what methodologies underpin each?"
   ],
   "nextPhaseGoals": [
-    "Deep dive: Agentic AI governance frameworks (Singapore Agentic AI Framework, emerging standards)",
-    "Deep dive: LLM-as-a-judge \u2014 evaluation paradigms, biases, reliability, and implications for AI assurance",
-    "Read full MAS Project MindForge handbooks (Operationalisation Handbook)",
-    "Survey Australian financial institution AI governance maturity",
-    "Analyse EU Digital Omnibus implications for AI Act timelines",
-    "Investigate AI-privacy regulation intersection (GDPR Art 22, AU Privacy Act reform)",
-    "Explore Australian AI Safety Institute initial focus areas",
-    "Survey AI incident databases for FS case studies",
-    "Analyse Consumer Duty (UK) and DDO (AU) interaction with AI",
-    "Begin drafting practice-building recommendations",
-    "Investigate AI insurance and PI implications for consulting",
-    "Develop service line specifications and methodology frameworks"
+    "Draft 'State of AI Trust 2026' synthesis document pulling together all 19 themes",
+    "Draft service line specifications with methodology frameworks for each of 7 proposed services",
+    "Draft practice positioning paper: differentiation strategy for Australian market",
+    "Survey Australian FI AI governance maturity (who is ahead, who is behind)",
+    "EU Digital Omnibus implications analysis",
+    "AI-privacy regulation intersection deep dive",
+    "Multi-agent system governance gap analysis",
+    "AI insurance and PI implications research",
+    "Draft client-ready maturity assessment framework",
+    "Develop AI red teaming methodology specification",
+    "Create LLM evaluation bias mitigation protocol for assurance engagements"
   ],
-  "supervisorFeedback": "Add more focus on agentic governance and LLM-as-a-judge (16 Mar 2026)",
+  "supervisorFeedback": "Session 3 addressed agentic governance and LLM-as-judge per supervisor request (17 Mar 2026). Ready for synthesis phase.",
   "stats": {
-    "totalPapers": 35,
-    "totalThemes": 14,
-    "totalTools": 16,
-    "totalResearchSessions": 2,
-    "totalResearchHours": 8,
+    "totalPapers": 49,
+    "totalThemes": 19,
+    "totalTools": 20,
+    "totalResearchSessions": 3,
+    "totalResearchHours": 12,
     "jurisdictionsCovered": [
-      "Australia",
-      "EU",
-      "UK",
-      "Singapore",
-      "US",
-      "OECD/International",
-      "Massachusetts (state-level)"
+      "Australia (APRA, ASIC)",
+      "EU (AI Act, ESMA, EBA)",
+      "UK (FCA, AISI)",
+      "Singapore (MAS, IMDA)",
+      "US (NIST, Treasury, OCC, Fed, CFPB)",
+      "OECD/International (FSB, IOSCO, ISO)",
+      "Massachusetts (state-level enforcement)"
     ],
-    "lastSessionDate": "2026-03-16"
+    "lastSessionDate": "2026-03-17"
   }
 }
