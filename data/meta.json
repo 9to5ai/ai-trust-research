@@ -1,8 +1,8 @@
 {
   "projectName": "AI Trust Research",
   "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance \u2014 with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
-  "currentPhase": "Phase 3: Synthesis and Practice Architecture",
-  "phaseDescription": "Moving from research accumulation to strategic synthesis. Session 4 added critical frontier safety science (emergent misalignment, agentic sabotage, disempowerment) that completes the technical safety picture. Sufficient foundational research now exists for synthesis. Next: State of AI Trust 2026 document and service line methodology drafting.",
+  "currentPhase": "Phase 2: First Principles of AI Trust",
+  "phaseDescription": "Deep examination of trust provenance, accountability frameworks, human oversight feasibility, and the certification chain from ground truth to operational proxies.",
   "researchQuestions": [
     "What does the global regulatory landscape look like for AI governance in financial services, and where is it converging?",
     "What are the key technical dimensions of trustworthy AI and how do they interact?",
@@ -36,7 +36,18 @@
     "Develop AI red teaming methodology specification",
     "Create LLM evaluation bias mitigation protocol for assurance engagements"
   ],
-  "supervisorFeedback": "Session 4 addressed emergent misalignment, agent autonomy, and human disempowerment (17 Mar 2026). Two original hypotheses formulated. Ready for synthesis document drafting.",
+  "supervisorFeedback": {
+    "date": "2026-03-17",
+    "direction": "Go deeper before synthesis. Not ready for maturity frameworks yet.",
+    "priorities": [
+      "First principles of trust: provenance, ground truth, assumptions and proxies that sit on top of ground truth, continuous recertification, control degradation monitoring",
+      "Meaningful human-in-the-loop: what does it actually mean? How do you oversee agentic systems at scale when human review is infeasible?",
+      "Liability and accountability restructuring: if humans cant oversee, how should consequences frameworks change? Who is liable?",
+      "Success case studies: any real examples of organisations getting AI trust/governance right?",
+      "The certification chain: which trust properties are certified once vs continuously monitored? What degrades and how?"
+    ],
+    "note": "Defer maturity assessment and service line specs until foundational research is deeper"
+  },
   "stats": {
     "totalPapers": 60,
     "totalThemes": 23,
