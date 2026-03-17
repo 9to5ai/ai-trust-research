@@ -21,12 +21,14 @@
     loadJSON('tools.json'),
   ]);
 
+  // --- Determine latest session date for NEW badges ---
+  const logEntries = (logData?.entries || []).sort((a, b) => b.date.localeCompare(a.date));
+  const latestSessionDate = logEntries.length > 0 ? logEntries[0].date : null;
+
   // --- Stats ---
   document.getElementById('stat-papers').textContent = meta?.stats?.totalPapers || 0;
   document.getElementById('stat-insights').textContent = meta?.stats?.totalThemes || 0;
   document.getElementById('stat-hours').textContent = meta?.stats?.totalResearchHours || 0;
-  document.getElementById('stat-days').textContent = daysSince(meta?.stats?.lastSessionDate);
-
   // --- Phase ---
   const phase = meta?.currentPhase || 'Initialising';
   document.getElementById('phase-name').textContent = phase.startsWith('Phase') ? phase : `Phase: ${phase}`;
@@ -56,13 +58,13 @@
   renderLog(logData);
 
   // --- Papers ---
-  renderPapers(papersData);
+  renderPapers(papersData, latestSessionDate);
 
   // --- Themes ---
-  renderThemes(themesData);
+  renderThemes(themesData, latestSessionDate);
 
   // --- Tools ---
-  renderTools(toolsData);
+  renderTools(toolsData, latestSessionDate);
 
   // --- Research Questions ---
   renderRQ(meta);
@@ -126,7 +128,7 @@
     `).join('');
   }
 
-  function renderPapers(data) {
+  function renderPapers(data, latestDate) {
     const container = document.getElementById('papers-container');
     const papers = data?.papers || [];
     document.getElementById('papers-count').textContent = `${papers.length} papers`;
@@ -141,12 +143,15 @@
       return;
     }
 
-    container.innerHTML = papers.sort((a, b) => (b.dateRead || '').localeCompare(a.dateRead || '')).map(p => `
-      <div class="paper-card">
+    container.innerHTML = papers.sort((a, b) => (b.dateRead || '').localeCompare(a.dateRead || '')).map(p => {
+      const isNew = latestDate && p.dateRead === latestDate;
+      return `
+      <div class="paper-card${isNew ? ' is-new' : ''}">
         <div class="paper-meta">
           <span class="paper-year">${p.year || 'N/A'}</span>
           <span class="paper-source">${p.source || ''}</span>
           ${p.dateRead ? `<span class="paper-source">Read: ${p.dateRead}</span>` : ''}
+          ${isNew ? '<span class="new-badge">NEW</span>' : ''}
         </div>
         <h3>${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title}</h3>
         <div class="paper-authors">${p.authors || ''}</div>
@@ -155,11 +160,11 @@
           ${(p.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}
           ${p.relevance ? `<span class="tag tag-primary">${p.relevance}</span>` : ''}
         </div>
-      </div>
-    `).join('');
+      </div>`;
+    }).join('');
   }
 
-  function renderThemes(data) {
+  function renderThemes(data, latestDate) {
     const container = document.getElementById('themes-container');
     const themes = data?.themes || [];
     document.getElementById('themes-count').textContent = `${themes.length} themes`;
@@ -174,11 +179,13 @@
       return;
     }
 
-    container.innerHTML = themes.map(t => `
-      <div class="theme-card">
+    container.innerHTML = themes.map(t => {
+      const isNew = latestDate && (t.dateAdded === latestDate || t.lastUpdated === latestDate);
+      return `
+      <div class="theme-card${isNew ? ' is-new' : ''}">
         <div class="theme-header">
           <div class="theme-icon" style="background:${t.color || 'var(--accent-soft)'}">${t.icon || '🔍'}</div>
-          <h3>${t.title || t.name}</h3>
+          <h3>${t.title || t.name}${isNew ? ' <span class="new-badge">NEW</span>' : ''}</h3>
         </div>
         <div class="description">${t.description || ''}</div>
         ${t.keyQuestions ? `
@@ -193,11 +200,11 @@
             <h4>Key Papers</h4>
             <ul>${t.keyPapers.map(p => `<li>${p}</li>`).join('')}</ul>
           </div>` : ''}
-      </div>
-    `).join('');
+      </div>`;
+    }).join('');
   }
 
-  function renderTools(data) {
+  function renderTools(data, latestDate) {
     const container = document.getElementById('tools-container');
     const tools = data?.tools || [];
     document.getElementById('tools-count').textContent = `${tools.length} tools`;
@@ -212,16 +219,18 @@
       return;
     }
 
-    container.innerHTML = tools.map(t => `
-      <div class="tool-card">
+    container.innerHTML = tools.map(t => {
+      const isNew = latestDate && (t.dateAdded === latestDate || t.lastUpdated === latestDate);
+      return `
+      <div class="tool-card${isNew ? ' is-new' : ''}">
         <div class="tool-icon">${t.icon || '🛠'}</div>
         <div class="tool-info">
-          <h3>${t.url ? `<a href="${t.url}" target="_blank" rel="noopener">${t.name}</a>` : t.name}</h3>
+          <h3>${t.url ? `<a href="${t.url}" target="_blank" rel="noopener">${t.name}</a>` : t.name}${isNew ? ' <span class="new-badge">NEW</span>' : ''}</h3>
           <div class="tool-desc">${t.description || ''}</div>
           ${t.tags ? `<div class="paper-tags" style="margin-top:0.75rem">${t.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
         </div>
-      </div>
-    `).join('');
+      </div>`;
+    }).join('');
   }
 
   function renderRQ(meta) {
@@ -235,10 +244,4 @@
     `).join('');
   }
 
-  function daysSince(dateStr) {
-    if (!dateStr) return 0;
-    const start = new Date(dateStr);
-    const now = new Date();
-    return Math.max(0, Math.floor((now - start) / (1000 * 60 * 60 * 24)));
-  }
 })();
