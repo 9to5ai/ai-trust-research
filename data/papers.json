@@ -1367,6 +1367,294 @@
         "Australian FIs with EU operations need cross-jurisdictional compliance frameworks",
         "GPAI Code of Practice provides baseline but voluntary \u2014 enforcement gap"
       ]
+    },
+    {
+      "id": "p061",
+      "title": "Trust (Stanford Encyclopedia of Philosophy)",
+      "authors": [
+        "Carolyn McLeod"
+      ],
+      "year": 2025,
+      "type": "encyclopedia",
+      "url": "https://plato.stanford.edu/entries/trust/",
+      "themes": [
+        "t024",
+        "t025"
+      ],
+      "keyInsight": "Trust is fundamentally about vulnerability and optimism about the goodwill of the trusted party. The philosophical literature distinguishes trust from mere reliance \u2014 trust involves normative expectations (betrayal is possible), while reliance does not (a broken machine disappoints but doesn't betray). This distinction is critical for AI: can AI systems be trusted, or only relied upon? If trust requires goodwill, AI cannot be trusted \u2014 only the institutions deploying it can be.",
+      "relevance": "Essential \u2014 foundational to the research program and directly applicable to consulting practice.",
+      "sessionAdded": 5,
+      "analysis": "Trust is fundamentally about vulnerability and optimism about the goodwill of the trusted party. The philosophical literature distinguishes trust from mere reliance \u2014 trust involves normative expectations (betrayal is possible), while reliance does not (a broken machine disappoints but doesn't betray). This distinction is critical for AI: can AI systems be trusted, or only relied upon? If trust requires goodwill, AI cannot be trusted \u2014 only the institutions deploying it can be.",
+      "tags": [
+        "trust-foundations",
+        "human-oversight",
+        "encyclopedia"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p062",
+      "title": "AI and Trust (RSA 2025 Keynote)",
+      "authors": [
+        "Bruce Schneier"
+      ],
+      "year": 2025,
+      "type": "essay",
+      "url": "https://www.schneier.com/essays/archives/2025/06/ai-and-trust-2.html",
+      "themes": [
+        "t024",
+        "t025",
+        "t026"
+      ],
+      "keyInsight": "Schneier distinguishes interpersonal trust (based on morals and reputation) from social trust (based on laws and technologies). AI will be mistaken for the former when it is actually the latter \u2014 a category error corporations will exploit. The critical security challenge is integrity, not confidentiality: ensuring AI outputs haven't been manipulated. Social trust scales through institutional mechanisms; AI trust requires the same \u2014 laws, verification technologies, and accountability structures.",
+      "relevance": "Essential \u2014 foundational to the research program and directly applicable to consulting practice.",
+      "sessionAdded": 5,
+      "analysis": "Schneier distinguishes interpersonal trust (based on morals and reputation) from social trust (based on laws and technologies). AI will be mistaken for the former when it is actually the latter \u2014 a category error corporations will exploit. The critical security challenge is integrity, not confidentiality: ensuring AI outputs haven't been manipulated. Social trust scales through institutional mechanisms; AI trust requires the same \u2014 laws, verification technologies, and accountability structures.",
+      "tags": [
+        "trust-foundations",
+        "human-oversight",
+        "accountability",
+        "essay"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p063",
+      "title": "EDPS TechDispatch #2/2025: Human Oversight of Automated Decision-Making",
+      "authors": [
+        "European Data Protection Supervisor"
+      ],
+      "year": 2025,
+      "type": "regulatory_guidance",
+      "url": "https://www.edps.europa.eu/data-protection/our-work/publications/techdispatch/2025-09-23-techdispatch-22025-human-oversight-automated-making_en",
+      "themes": [
+        "t025",
+        "t027"
+      ],
+      "keyInsight": "Comprehensively debunks seven flawed assumptions about human oversight: that ADM systems will operate within predetermined conditions, that they will transfer control to humans at boundaries, that human operators will detect all errors, that they can override in time, etc. Defines 'meaningful' oversight as that which actually improves decision quality (not mere procedural formality) and 'effective' oversight as that which has tangible positive impact on outcomes. Simply adding a human is insufficient and may even create false confidence.",
+      "relevance": "Essential \u2014 foundational to the research program and directly applicable to consulting practice.",
+      "sessionAdded": 5,
+      "analysis": "Comprehensively debunks seven flawed assumptions about human oversight: that ADM systems will operate within predetermined conditions, that they will transfer control to humans at boundaries, that human operators will detect all errors, that they can override in time, etc. Defines 'meaningful' oversight as that which actually improves decision quality (not mere procedural formality) and 'effective' oversight as that which has tangible positive impact on outcomes. Simply adding a human is insufficient and may even create false confidence.",
+      "tags": [
+        "human-oversight",
+        "liability",
+        "regulatory-guidance"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p064",
+      "title": "Autonomous AI: Who Is Responsible When AI Acts Autonomously and Things Go Wrong?",
+      "authors": [
+        "Global Legal Insights"
+      ],
+      "year": 2025,
+      "type": "legal_analysis",
+      "url": "https://www.globallegalinsights.com/practice-areas/ai-machine-learning-and-big-data-laws-and-regulations/autonomous-ai-who-is-responsible-when-ai-acts-autonomously-and-things-go-wrong/",
+      "themes": [
+        "t026",
+        "t027"
+      ],
+      "keyInsight": "Maps the liability gap created when AI operates autonomously: traditional product liability requires a traceable defect, but AI's learned behavior makes attribution to a specific human decision nearly impossible. Proposes that foreseeability of failure modes \u2014 not traceability of specific errors \u2014 should ground liability. The Uber Arizona fatality case shows how human oversight + autonomous AI creates a 'responsibility diffusion' where neither the machine nor the human clearly holds accountability.",
+      "relevance": "Very high \u2014 significant contribution to understanding AI trust with clear practice implications.",
+      "sessionAdded": 5,
+      "analysis": "Maps the liability gap created when AI operates autonomously: traditional product liability requires a traceable defect, but AI's learned behavior makes attribution to a specific human decision nearly impossible. Proposes that foreseeability of failure modes \u2014 not traceability of specific errors \u2014 should ground liability. The Uber Arizona fatality case shows how human oversight + autonomous AI creates a 'responsibility diffusion' where neither the machine nor the human clearly holds accountability.",
+      "tags": [
+        "accountability",
+        "liability",
+        "legal-analysis"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p065",
+      "title": "Anthropic Responsible Scaling Policy v3.0",
+      "authors": [
+        "Anthropic"
+      ],
+      "year": 2025,
+      "type": "industry_policy",
+      "url": "https://www.anthropic.com/news/responsible-scaling-policy-v3",
+      "themes": [
+        "t024",
+        "t028"
+      ],
+      "keyInsight": "Honest self-assessment of what worked and what didn't in capability-threshold-based safety governance. Key admission: capability thresholds create 'zones of ambiguity' where risk is neither clearly low nor clearly high, making multilateral coordination difficult. The science of model evaluation isn't mature enough for dispositive answers. Separates unilateral commitments (what one company can achieve) from industry-wide recommendations \u2014 acknowledging that some higher-ASL safeguards are literally impossible without government coordination.",
+      "relevance": "Very high \u2014 significant contribution to understanding AI trust with clear practice implications.",
+      "sessionAdded": 5,
+      "analysis": "Honest self-assessment of what worked and what didn't in capability-threshold-based safety governance. Key admission: capability thresholds create 'zones of ambiguity' where risk is neither clearly low nor clearly high, making multilateral coordination difficult. The science of model evaluation isn't mature enough for dispositive answers. Separates unilateral commitments (what one company can achieve) from industry-wide recommendations \u2014 acknowledging that some higher-ASL safeguards are literally impossible without government coordination.",
+      "tags": [
+        "trust-foundations",
+        "safety-cases",
+        "industry-policy"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p066",
+      "title": "AI Governance Must Move from Point-in-Time Audits to Living Compliance",
+      "authors": [
+        "Vikram Singh"
+      ],
+      "year": 2026,
+      "type": "journal_article",
+      "url": "https://blogs.lse.ac.uk/businessreview/2026/02/19/ai-governance-must-move-from-point-in-time-audits-to-living-compliance/",
+      "themes": [
+        "t024",
+        "t028"
+      ],
+      "keyInsight": "Identifies the 'velocity trap' in financial services: AI-driven business outruns manual compliance speed. An audit conducted Tuesday is obsolete by Wednesday when AI agents iterate in real-time. Proposes 'living compliance' \u2014 governance as a continuous data stream, not periodic manual event. Key concept: the shift from 'trust me' to 'verify me' through immutable automated audit logs. Distinguishes abdication from delegation: reasoning traces provide forensic narrative of automated decisions.",
+      "relevance": "Essential \u2014 foundational to the research program and directly applicable to consulting practice.",
+      "sessionAdded": 5,
+      "analysis": "Identifies the 'velocity trap' in financial services: AI-driven business outruns manual compliance speed. An audit conducted Tuesday is obsolete by Wednesday when AI agents iterate in real-time. Proposes 'living compliance' \u2014 governance as a continuous data stream, not periodic manual event. Key concept: the shift from 'trust me' to 'verify me' through immutable automated audit logs. Distinguishes abdication from delegation: reasoning traces provide forensic narrative of automated decisions.",
+      "tags": [
+        "trust-foundations",
+        "safety-cases",
+        "journal-article"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p067",
+      "title": "Making the Case: How Can We Know When AI Is Safe?",
+      "authors": [
+        "AI Policy Bulletin"
+      ],
+      "year": 2025,
+      "type": "research_paper",
+      "url": "https://www.aipolicybulletin.org/articles/making-the-case-how-can-we-know-when-ai-is-safe-7nglg",
+      "themes": [
+        "t024",
+        "t028"
+      ],
+      "keyInsight": "Adapts safety case methodology from aviation/nuclear to AI. Identifies two fundamental problems: the confidence problem (how much to trust a safety case) and the updating problem (safety cases become stale as systems evolve). Proposes Dynamic Safety Case Management Systems with Safety Performance Indicators that trigger automatic review when thresholds are breached. Uses LLM-based Delphi method for probability estimation of safety sub-claims \u2014 a novel approach to quantifying trust confidence.",
+      "relevance": "Very high \u2014 significant contribution to understanding AI trust with clear practice implications.",
+      "sessionAdded": 5,
+      "analysis": "Adapts safety case methodology from aviation/nuclear to AI. Identifies two fundamental problems: the confidence problem (how much to trust a safety case) and the updating problem (safety cases become stale as systems evolve). Proposes Dynamic Safety Case Management Systems with Safety Performance Indicators that trigger automatic review when thresholds are breached. Uses LLM-based Delphi method for probability estimation of safety sub-claims \u2014 a novel approach to quantifying trust confidence.",
+      "tags": [
+        "trust-foundations",
+        "safety-cases",
+        "research-paper"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p068",
+      "title": "The Flight to Safety-Critical AI: Lessons from the Aviation Industry",
+      "authors": [
+        "Will Hunt"
+      ],
+      "year": 2020,
+      "type": "research_report",
+      "url": "https://cltc.berkeley.edu/publication/new-report-the-flight-to-safety-critical-ai-lessons-in-ai-safety-from-the-aviation-industry/",
+      "themes": [
+        "t028",
+        "t029"
+      ],
+      "keyInsight": "Aviation's approach to AI safety represents a 'race to the top' \u2014 the lack of AI-specific certification standards has actually slowed adoption, forcing the industry to develop rigorous approaches before deployment. Key finding: extensive regulation, high regulatory capacity, and cross-regulator cooperation make it hard for firms to cut corners. The industry learns slowly and deliberately, experimenting first with least safety-critical applications. This contrasts sharply with the 'move fast' approach in financial services AI.",
+      "relevance": "High \u2014 valuable perspective that enriches the research framework.",
+      "sessionAdded": 5,
+      "analysis": "Aviation's approach to AI safety represents a 'race to the top' \u2014 the lack of AI-specific certification standards has actually slowed adoption, forcing the industry to develop rigorous approaches before deployment. Key finding: extensive regulation, high regulatory capacity, and cross-regulator cooperation make it hard for firms to cut corners. The industry learns slowly and deliberately, experimenting first with least safety-critical applications. This contrasts sharply with the 'move fast' approach in financial services AI.",
+      "tags": [
+        "safety-cases",
+        "governance-practice",
+        "research-report"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p069",
+      "title": "DBS Bank: Responsible AI in Banking - PURE Framework",
+      "authors": [
+        "DBS Bank"
+      ],
+      "year": 2025,
+      "type": "case_study",
+      "url": "https://www.dbs.com/artificial-intelligence-machine-learning/artificial-intelligence/responsible-ai-in-banking-gaining-a-competitive-edge.html",
+      "themes": [
+        "t029",
+        "t025"
+      ],
+      "keyInsight": "DBS's PURE framework (Purposeful, Unsurprising, Respectful, Explainable) is one of the few documented success cases of AI governance at scale in financial services. 1,500+ AI models across 370 use cases generating SGD 1B value. Key architectural decisions: centralized data platform as single source of truth, senior-level AI oversight committee, co-pilot approach ensuring human-in-the-loop. Reduced time-to-market from 15 months to 3 months through governance-by-design rather than governance-as-friction.",
+      "relevance": "Very high \u2014 significant contribution to understanding AI trust with clear practice implications.",
+      "sessionAdded": 5,
+      "analysis": "DBS's PURE framework (Purposeful, Unsurprising, Respectful, Explainable) is one of the few documented success cases of AI governance at scale in financial services. 1,500+ AI models across 370 use cases generating SGD 1B value. Key architectural decisions: centralized data platform as single source of truth, senior-level AI oversight committee, co-pilot approach ensuring human-in-the-loop. Reduced time-to-market from 15 months to 3 months through governance-by-design rather than governance-as-friction.",
+      "tags": [
+        "governance-practice",
+        "human-oversight",
+        "case-study"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p070",
+      "title": "Ironies of Automation (Bainbridge 1983) and the Vigilance Decrement Problem",
+      "authors": [
+        "Lisanne Bainbridge"
+      ],
+      "year": 1983,
+      "type": "seminal_paper",
+      "url": "https://en.wikipedia.org/wiki/Ironies_of_automation",
+      "themes": [
+        "t025",
+        "t027"
+      ],
+      "keyInsight": "The foundational paradox of human oversight: the more reliable the automation, the less the human monitor has to do, the worse they become at detecting failures when they occur. Humans tasked with monitoring highly reliable systems experience vigilance decrement \u2014 their skills atrophy, attention wanders, and they develop automation complacency. This directly undermines the regulatory assumption that 'human in the loop' provides meaningful safety \u2014 the very reliability that justified deploying AI makes human oversight progressively less effective.",
+      "relevance": "Essential \u2014 foundational to the research program and directly applicable to consulting practice.",
+      "sessionAdded": 5,
+      "analysis": "The foundational paradox of human oversight: the more reliable the automation, the less the human monitor has to do, the worse they become at detecting failures when they occur. Humans tasked with monitoring highly reliable systems experience vigilance decrement \u2014 their skills atrophy, attention wanders, and they develop automation complacency. This directly undermines the regulatory assumption that 'human in the loop' provides meaningful safety \u2014 the very reliability that justified deploying AI makes human oversight progressively less effective.",
+      "tags": [
+        "human-oversight",
+        "liability",
+        "seminal-paper"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p071",
+      "title": "Fiduciary Duties and the Business Judgment Rule 2.0 in the AI Act Age",
+      "authors": [
+        "Oxford Law Blog"
+      ],
+      "year": 2026,
+      "type": "legal_analysis",
+      "url": "https://blogs.law.ox.ac.uk/oblb/blog-post/2026/01/fiduciary-duties-and-business-judgment-rule-20-ai-act-age",
+      "themes": [
+        "t026",
+        "t029"
+      ],
+      "keyInsight": "Extends fiduciary duty framework to AI: directors must exercise 'AI due care' including cognitive adequacy to question, understand, and monitor AI tools shaping corporate decisions. The Business Judgment Rule is being re-evaluated \u2014 a 'black box defence' (claiming the algorithm was too complex to understand) is no longer legally viable. Proposes the concept of 'algorithmic fiduciary' where AI systems operating in trust-bearing roles (financial advice, healthcare) should be held to loyalty and care standards analogous to human fiduciaries.",
+      "relevance": "Very high \u2014 significant contribution to understanding AI trust with clear practice implications.",
+      "sessionAdded": 5,
+      "analysis": "Extends fiduciary duty framework to AI: directors must exercise 'AI due care' including cognitive adequacy to question, understand, and monitor AI tools shaping corporate decisions. The Business Judgment Rule is being re-evaluated \u2014 a 'black box defence' (claiming the algorithm was too complex to understand) is no longer legally viable. Proposes the concept of 'algorithmic fiduciary' where AI systems operating in trust-bearing roles (financial advice, healthcare) should be held to loyalty and care standards analogous to human fiduciaries.",
+      "tags": [
+        "accountability",
+        "governance-practice",
+        "legal-analysis"
+      ],
+      "dateRead": "2026-03-18"
+    },
+    {
+      "id": "p072",
+      "title": "Luhmann's Trust as Complexity Reduction: Applied to AI Systems",
+      "authors": [
+        "Niklas Luhmann"
+      ],
+      "year": 1979,
+      "type": "theoretical_framework",
+      "url": "https://en.wikipedia.org/wiki/Niklas_Luhmann",
+      "themes": [
+        "t024"
+      ],
+      "keyInsight": "Luhmann's systems theory treats trust as a mechanism for reducing social complexity \u2014 a way of making the world predictable enough to act in. Trust is not about knowledge (that would be certainty) but about acting despite incomplete knowledge. Applied to AI: we trust AI systems not because we understand them but because trusting them reduces the complexity of decisions we'd otherwise have to make ourselves. Trust is therefore a functional substitute for understanding \u2014 which explains why it is both essential and fragile in AI contexts.",
+      "relevance": "Very high \u2014 significant contribution to understanding AI trust with clear practice implications.",
+      "sessionAdded": 5,
+      "analysis": "Luhmann's systems theory treats trust as a mechanism for reducing social complexity \u2014 a way of making the world predictable enough to act in. Trust is not about knowledge (that would be certainty) but about acting despite incomplete knowledge. Applied to AI: we trust AI systems not because we understand them but because trusting them reduces the complexity of decisions we'd otherwise have to make ourselves. Trust is therefore a functional substitute for understanding \u2014 which explains why it is both essential and fragile in AI contexts.",
+      "tags": [
+        "trust-foundations",
+        "theoretical-framework"
+      ],
+      "dateRead": "2026-03-18"
     }
   ]
 }
