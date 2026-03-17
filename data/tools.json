@@ -8,7 +8,7 @@
       "url": "https://github.com/Trusted-AI/AIF360",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Core tool for any AI assurance practice — enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
+      "relevance": "Core tool for any AI assurance practice \u2014 enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://github.com/fairlearn/fairlearn",
       "license": "MIT",
       "maturity": "Production-ready",
-      "relevance": "Complementary to AIF360 — different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
+      "relevance": "Complementary to AIF360 \u2014 different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -40,7 +40,7 @@
       "description": "Open-source evaluation and testing library for LLM agents. Provides transparency, accountability, and helps ensure quality, security, and compliance. Recognized in 2024 GitHub Accelerator.",
       "url": "https://github.com/Giskard-AI/giskard",
       "license": "Apache 2.0",
-      "maturity": "Growing — active community",
+      "maturity": "Growing \u2014 active community",
       "relevance": "Particularly relevant for testing LLM-based applications in financial services (chatbots, advisory tools). Includes hallucination detection and robustness testing.",
       "dateDiscovered": "2026-03-15"
     },
@@ -52,7 +52,7 @@
       "url": "https://github.com/guardrails-ai/guardrails",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Implementation tool for LLM deployment guardrails — directly applicable to financial services deploying customer-facing AI.",
+      "relevance": "Implementation tool for LLM deployment guardrails \u2014 directly applicable to financial services deploying customer-facing AI.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -85,7 +85,7 @@
       "url": "https://mlflow.org/",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Foundation for ML governance infrastructure — model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
+      "relevance": "Foundation for ML governance infrastructure \u2014 model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -216,9 +216,51 @@
       "description": "Automated framework for systematically quantifying biases in LLM-as-a-judge applications. Tests for position bias, verbosity bias, self-enhancement bias, and other systematic evaluation errors. Essential for validating LLM-based evaluation pipelines.",
       "url": "https://arxiv.org/abs/2406.07791",
       "license": "Research (open)",
-      "maturity": "Research prototype — active development",
+      "maturity": "Research prototype \u2014 active development",
       "relevance": "Critical for any assurance practice using LLM-based evaluation. Without bias quantification, LLM-as-judge results are unreliable. Builds toward production-grade evaluation validation.",
       "dateDiscovered": "2026-03-17"
+    },
+    {
+      "id": "tool021",
+      "name": "SHADE-Arena",
+      "category": "evaluation",
+      "developer": "Anthropic / Scale AI / Redwood Research",
+      "description": "Comprehensive sabotage evaluation framework for agentic AI. 17 complex tasks with paired malicious side-tasks, monitor AI evaluation, chain-of-thought analysis. Evaluates both sabotage capability and monitoring effectiveness.",
+      "url": "https://www.arxiv.org/abs/2506.15740",
+      "availability": "partially-open",
+      "relevance": "critical",
+      "financialServicesApplicability": "Direct \u2014 financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
+      "relatedPapers": [
+        "p054"
+      ]
+    },
+    {
+      "id": "tool022",
+      "name": "METR 50%-Task-Completion Time Horizon",
+      "category": "benchmark",
+      "developer": "METR (Model Evaluation & Threat Research)",
+      "description": "Metric measuring AI capability in human-equivalent task completion time. Provides intuitive capability trajectory (7-month doubling) useful for governance planning. NeurIPS 2025 accepted methodology.",
+      "url": "https://arxiv.org/abs/2503.14499",
+      "availability": "open",
+      "relevance": "high",
+      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks \u2014 adaptation needed for financial services workflows.",
+      "relatedPapers": [
+        "p059"
+      ]
+    },
+    {
+      "id": "tool023",
+      "name": "4D AI Fluency Framework",
+      "category": "assessment",
+      "developer": "Rick Dakan, Joe Feller (in collaboration with Anthropic)",
+      "description": "24-behaviour taxonomy for measuring safe and effective human-AI collaboration. 11 behaviours directly observable in AI conversations. Provides baseline for measuring AI fluency development over time.",
+      "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
+      "availability": "open",
+      "relevance": "moderate",
+      "financialServicesApplicability": "Adaptable for financial services AI readiness assessments. Could form basis for staff AI competency requirements and training program design.",
+      "relatedPapers": [
+        "p051"
+      ]
     }
   ]
 }

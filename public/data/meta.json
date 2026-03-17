@@ -1,8 +1,8 @@
 {
   "projectName": "AI Trust Research",
-  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance — with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
+  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance \u2014 with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
   "currentPhase": "Phase 3: Synthesis and Practice Architecture",
-  "phaseDescription": "Moving from research accumulation to strategic synthesis. Sufficient foundational research now exists across regulatory frameworks, technical AI safety, governance tools, and competitive landscape. Next phase focuses on synthesising findings into actionable practice-building recommendations, drafting service line methodologies, and beginning the 'state of the art' synthesis document.",
+  "phaseDescription": "Moving from research accumulation to strategic synthesis. Session 4 added critical frontier safety science (emergent misalignment, agentic sabotage, disempowerment) that completes the technical safety picture. Sufficient foundational research now exists for synthesis. Next: State of AI Trust 2026 document and service line methodology drafting.",
   "researchQuestions": [
     "What does the global regulatory landscape look like for AI governance in financial services, and where is it converging?",
     "What are the key technical dimensions of trustworthy AI and how do they interact?",
@@ -14,11 +14,14 @@
     "What does the convergence of AI risk and cyber risk mean for practice design?",
     "How should AI concentration and systemic risk be assessed and governed?",
     "What can values-based alignment approaches teach us about governance framework design?",
-    "How should agentic AI systems be governed — what frameworks exist and what gaps remain for autonomous multi-step agents?",
+    "How should agentic AI systems be governed \u2014 what frameworks exist and what gaps remain for autonomous multi-step agents?",
     "What are the risks, methodologies, and limitations of using LLMs as judges for AI evaluation and assurance?",
     "How does AI model homogenisation create systemic risk and how should it be assessed?",
     "What does reliable AI evaluation look like when LLM judges are systematically biased?",
-    "How should the practice's service lines be structured and what methodologies underpin each?"
+    "How should the practice's service lines be structured and what methodologies underpin each?",
+    "How does emergent misalignment from reward hacking affect financial services AI assurance models?",
+    "What is the relationship between AI capability growth and human oversight quality degradation?",
+    "How should AI insider threat management be structured for financial services?"
   ],
   "nextPhaseGoals": [
     "Draft 'State of AI Trust 2026' synthesis document pulling together all 19 themes",
@@ -33,13 +36,13 @@
     "Develop AI red teaming methodology specification",
     "Create LLM evaluation bias mitigation protocol for assurance engagements"
   ],
-  "supervisorFeedback": "Session 3 addressed agentic governance and LLM-as-judge per supervisor request (17 Mar 2026). Ready for synthesis phase.",
+  "supervisorFeedback": "Session 4 addressed emergent misalignment, agent autonomy, and human disempowerment (17 Mar 2026). Two original hypotheses formulated. Ready for synthesis document drafting.",
   "stats": {
-    "totalPapers": 49,
-    "totalThemes": 19,
-    "totalTools": 20,
-    "totalResearchSessions": 3,
-    "totalResearchHours": 12,
+    "totalPapers": 60,
+    "totalThemes": 23,
+    "totalTools": 23,
+    "totalResearchSessions": 4,
+    "totalResearchHours": 16,
     "jurisdictionsCovered": [
       "Australia (APRA, ASIC)",
       "EU (AI Act, ESMA, EBA)",
