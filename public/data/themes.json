@@ -413,6 +413,113 @@
       "status": "active",
       "maturity": "established-research",
       "consultingRelevance": "critical"
+    },
+    {
+      "id": "t024",
+      "title": "Trust Provenance & Epistemology",
+      "description": "What is the origin and nature of trust? Distinguishing ground truth from assumptions from proxy signals. How do we know what we think we know about AI system safety? The philosophical foundations \u2014 trust as vulnerability (Baier), complexity reduction (Luhmann), social mechanism (Schneier) \u2014 and how these map to AI certification, assurance, and monitoring regimes.",
+      "papers": [
+        "p061",
+        "p062",
+        "p065",
+        "p066",
+        "p067",
+        "p072"
+      ],
+      "keyQuestions": [
+        "Is trust in AI actually trust, or mere reliance? What are the philosophical implications?",
+        "What constitutes ground truth for AI system behavior vs what are proxy signals?",
+        "Which trust properties can be certified once vs require continuous monitoring?",
+        "How does trust degrade over time as systems drift, data shifts, and environments change?"
+      ],
+      "sessionAdded": 5
+    },
+    {
+      "id": "t025",
+      "title": "Meaningful Human Oversight at Scale",
+      "description": "The paradox of human-in-the-loop for agentic AI operating at speed and scale. Bainbridge's ironies of automation applied to AI oversight. The gap between regulatory assumptions about human control and operational reality. What 'meaningful' and 'effective' oversight actually requires vs what is physically possible.",
+      "papers": [
+        "p061",
+        "p063",
+        "p069",
+        "p070"
+      ],
+      "keyQuestions": [
+        "If humans can't review every AI action at scale, what oversight model actually works?",
+        "How do we prevent oversight from becoming performative ('rubber-stamping')?",
+        "What is the minimum viable oversight that preserves accountability without becoming a bottleneck?",
+        "How does automation complacency undermine the very premise of human oversight?"
+      ],
+      "sessionAdded": 5
+    },
+    {
+      "id": "t026",
+      "title": "Liability & Accountability for Autonomous AI",
+      "description": "When AI acts autonomously and harm results, who bears responsibility? The insufficiency of existing product liability, negligence, and agency law for AI-caused harms. Emerging concepts: algorithmic fiduciary, foreseeability-based liability, organizational duty of AI care, the 'responsibility gap' between capability emergence and regulatory response.",
+      "papers": [
+        "p064",
+        "p071",
+        "p062"
+      ],
+      "keyQuestions": [
+        "Should liability be based on traceability of error or foreseeability of failure mode?",
+        "Can the concept of 'algorithmic fiduciary' create workable accountability for AI agents?",
+        "How should the 'responsibility gap' between AI capability and regulation be managed?",
+        "What consequences framework makes sense when no single human caused the harm?"
+      ],
+      "sessionAdded": 5
+    },
+    {
+      "id": "t027",
+      "title": "The Oversight Paradox (Bainbridge's Ironies Applied to AI)",
+      "description": "The more reliable automation becomes, the worse human monitors perform \u2014 creating a fundamental tension in regulatory frameworks that assume human oversight as a safety mechanism. Vigilance decrement, automation complacency, skill atrophy, and the false confidence created by nominal oversight roles.",
+      "papers": [
+        "p070",
+        "p063",
+        "p064"
+      ],
+      "keyQuestions": [
+        "Does mandating human oversight for highly reliable AI actually decrease safety?",
+        "What evidence exists for vigilance decrement in AI monitoring contexts?",
+        "How should regulatory frameworks account for the oversight paradox?",
+        "Are there alternative oversight models that don't rely on sustained human attention?"
+      ],
+      "sessionAdded": 5
+    },
+    {
+      "id": "t028",
+      "title": "Continuous Assurance vs Point-in-Time Certification",
+      "description": "The fundamental inadequacy of snapshot audits for dynamic AI systems. Safety cases as living documents. The '365-day gap problem'. Continuous monitoring, dynamic safety case management, and the shift from 'trust me' to 'verify me'. How aviation and nuclear safety approaches translate (and fail to translate) to AI.",
+      "papers": [
+        "p066",
+        "p067",
+        "p065",
+        "p068"
+      ],
+      "keyQuestions": [
+        "What trust properties degrade between audit cycles and how fast?",
+        "Can continuous monitoring actually replace human judgment, or does it just automate the same blind spots?",
+        "What does a 'living safety case' look like operationally for an AI system?",
+        "How should the 'confidence problem' in safety cases be quantified?"
+      ],
+      "sessionAdded": 5
+    },
+    {
+      "id": "t029",
+      "title": "Success Case Studies in AI Governance",
+      "description": "Documented examples of organisations getting AI trust and governance right. DBS Bank's PURE framework in financial services. Aviation industry's deliberate, slow approach to safety-critical AI. Lessons from industries that have navigated the tension between innovation speed and safety requirements.",
+      "papers": [
+        "p069",
+        "p068",
+        "p071"
+      ],
+      "keyQuestions": [
+        "What distinguishes organisations that have succeeded at AI governance from those that haven't?",
+        "Is DBS's 'co-pilot' approach scalable as AI becomes more agentic?",
+        "Can aviation's 'race to the top' dynamics be replicated in financial services?",
+        "What role does governance-by-design (vs governance-as-friction) play in success?"
+      ],
+      "sessionAdded": 5
     }
   ]
 }

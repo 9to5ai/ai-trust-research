@@ -261,6 +261,17 @@
       "relatedPapers": [
         "p051"
       ]
+    },
+    {
+      "id": "tool024",
+      "name": "Dynamic Safety Case Management System (DSCMS)",
+      "description": "Framework for maintaining living safety cases for AI systems. Combines checkable safety arguments with Safety Performance Indicators (SPIs) that automatically monitor risk thresholds and trigger reviews when breached. Developed by AI Policy Bulletin researchers.",
+      "url": "https://arxiv.org/pdf/2412.17618",
+      "type": "framework",
+      "themes": [
+        "t028"
+      ],
+      "sessionAdded": 5
     }
   ]
 }

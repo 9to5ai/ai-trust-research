@@ -332,6 +332,71 @@
           ]
         }
       ]
+    },
+    {
+      "id": "rl005",
+      "date": "2026-03-18",
+      "title": "Session 5: First Principles of Trust",
+      "summary": "Deep-dive into the philosophical and structural foundations of trust in AI systems, following supervisor direction to move beyond frameworks and maturity models. Examined trust provenance through Luhmann (trust as complexity reduction), Schneier (interpersonal vs social trust category error), and the SEP philosophical framework (trust vs mere reliance). Identified the 'oversight paradox' \u2014 Bainbridge's 1983 ironies of automation directly undermine regulatory assumptions about human-in-the-loop. Analysed the shift from point-in-time certification to continuous assurance through dynamic safety cases. Explored liability restructuring through algorithmic fiduciary concepts. Documented DBS Bank's PURE framework as a financial services success case. Formulated two original hypotheses about trust topology and the oversight paradox.",
+      "sections": [
+        {
+          "title": "Pass 1: Discovery \u2014 18 searches across philosophy, law, aviation safety, and fintech",
+          "items": [
+            "SEP Trust entry: Trust requires vulnerability + optimism about goodwill \u2014 AI cannot be trusted, only relied upon",
+            "Schneier RSA 2025: Interpersonal vs social trust category error \u2014 AI companies will exploit this confusion",
+            "Luhmann's systems theory: Trust as functional substitute for understanding \u2014 essential and fragile",
+            "Bainbridge 1983 Ironies of Automation: The more reliable the system, the worse the human monitor performs",
+            "EDPS TechDispatch on human oversight: Debunks 7 flawed assumptions about human oversight of ADM",
+            "EU AI Act Article 14 human oversight requirements and their operational limitations",
+            "Anthropic RSP v3 honest self-assessment: Capability thresholds create 'zones of ambiguity'",
+            "Global Legal Insights on autonomous AI liability: Foreseeability vs traceability for liability attribution",
+            "Aviation industry AI safety: Deliberate slow adoption as a 'race to the top'",
+            "DBS Bank PURE framework: 1,500 AI models governed through Purposeful/Unsurprising/Respectful/Explainable",
+            "LSE Business Review on living compliance: 'Velocity trap' where AI outpaces manual governance",
+            "Dynamic Safety Case Management Systems with automatic threshold monitoring",
+            "Algorithmic fiduciary: Extending duty of loyalty and duty of care to AI systems",
+            "Oxford Law Blog: Business Judgment Rule 2.0 \u2014 'black box defence' no longer legally viable",
+            "Harvard JOLT: Redefining standard of human oversight for AI negligence",
+            "Trust degradation mechanisms: Information instability, intergenerational decline, transactional unpredictability",
+            "Continuous assurance vs point-in-time audits: The '365-day gap problem'",
+            "Fiduciary duty evolution: CEO fiduciary responsibility to strategically integrate AI"
+          ]
+        },
+        {
+          "title": "Pass 2: Deep Read \u2014 10 sources with critical analysis",
+          "items": [
+            "SEP Trust (15K chars): Identified the trust/reliance distinction as foundational \u2014 if trust requires goodwill, the entire 'trusted AI' framing is a category error. What we actually need is trustworthy institutions deploying reliable AI.",
+            "Schneier AI and Trust (15K chars): The integrity argument is underappreciated \u2014 most security discourse focuses on confidentiality. Schneier argues integrity attacks on AI (manipulating outputs, training data, model weights) are the primary threat. The institutional framing \u2014 laws and technologies create social trust \u2014 provides the actionable path forward.",
+            "EDPS Human Oversight (12K chars): The most rigorous analysis of oversight assumptions found. Key distinction: 'meaningful' (improves decision quality) vs 'effective' (tangible positive impact). Most regulatory frameworks conflate presence of human with effectiveness of oversight.",
+            "Anthropic RSP v3 (12K chars): Remarkable for its honesty about failure modes. The 'zone of ambiguity' concept is critical \u2014 when risk is neither clearly low nor clearly high, neither the internal case for action nor the external case for coordination is strong. This is where institutional trust in the certification process itself breaks down.",
+            "GLI Autonomous AI Liability (12K chars): Strongest articulation of the 'responsibility diffusion' problem \u2014 when human + AI collaborate, neither clearly holds accountability for harm. The Uber Arizona case is paradigmatic.",
+            "LSE Living Compliance (11K chars): The 'velocity trap' concept crystallizes the core governance challenge. Key insight: reasoning traces (forensic narrative of why a machine made a specific choice) are the bridge between automated governance and accountability.",
+            "AI Policy Bulletin Safety Cases (12K chars): The confidence problem in safety cases is profound \u2014 the Bay of Pigs analogy shows how vague risk communication leads to catastrophic misjudgment. Dynamic safety cases with SPIs represent the most concrete proposal for living assurance.",
+            "Berkeley Aviation Safety (6K chars): The key finding is that strong regulation and regulatory capacity create a 'race to the top' \u2014 exactly opposite to the common narrative that regulation stifles innovation. But aviation's slow, deliberate approach is culturally incompatible with fintech velocity.",
+            "DBS PURE Framework (8K chars): Most detailed financial services AI governance success case. The governance-by-design approach (reducing time-to-market from 15 to 3 months) disproves the 'governance as friction' narrative. The co-pilot approach is explicitly human-in-the-loop.",
+            "Bainbridge Ironies of Automation: 40-year-old paper that remains devastatingly relevant. If the oversight paradox is real, then regulatory frameworks that mandate human oversight of reliable AI systems may be creating a false sense of security."
+          ]
+        },
+        {
+          "title": "Pass 3: Synthesis \u2014 Original Hypotheses",
+          "items": [
+            "HYPOTHESIS 1 \u2014 Trust Topology: Trust in AI systems is not a single property but a topology of at least four distinct trust surfaces: (a) Trust in the model's competence (ground truth: does it work?), (b) Trust in the model's alignment (intent: does it serve my interests?), (c) Trust in the institutional context (governance: are there consequences for failure?), (d) Trust in the verification infrastructure (assurance: can I detect when trust is violated?). Most governance frameworks address only (a) and partially (c), leaving (b) and (d) structurally unaddressed. The Schneier/Luhmann synthesis suggests that (d) \u2014 verification infrastructure \u2014 is the critical enabler of all other trust surfaces, because without it, trust becomes unfalsifiable.",
+            "HYPOTHESIS 2 \u2014 The Oversight Paradox Trap: Current regulatory frameworks for AI oversight create a 'paradox trap' with three mutually reinforcing failure modes: (1) Bainbridge's vigilance decrement makes sustained human attention unreliable for reliable systems; (2) The 'velocity trap' makes real-time human review physically impossible for high-speed agentic AI; (3) The category error (Schneier) makes users mistake social trust for interpersonal trust, reducing demand for institutional safeguards. The combination means that the more successful AI becomes, the less effective the primary safety mechanism (human oversight) becomes. The escape from this trap requires a shift from 'human reviews AI decisions' to 'human governs AI decision architecture' \u2014 oversight of the system, not oversight of individual outputs.",
+            "CROSS-REFERENCE with existing research: These hypotheses build on but diverge from existing themes t001-t023. Previous sessions focused on governance frameworks, regulatory landscape, and technical tools. This session argues those are necessary but insufficient without addressing the foundational question: what are we actually trusting, and can the thing we're trusting bear the weight of that trust?"
+          ]
+        },
+        {
+          "title": "Pass 4: Self-Critique",
+          "items": [
+            "STRENGTH: This session genuinely engages with first principles rather than policy summaries. The trust/reliance distinction from philosophy, the oversight paradox from human factors research, and the velocity trap from fintech operations converge on a coherent argument.",
+            "STRENGTH: The two hypotheses are novel formulations, not restatements of existing literature. The 'trust topology' maps directly to actionable governance architecture, and the 'oversight paradox trap' explains why current approaches are structurally failing.",
+            "WEAKNESS: The analysis of success case studies is thin \u2014 DBS is the only detailed financial services example. More cases needed to validate or challenge the hypotheses. Future sessions should investigate JPMorgan's AI governance, ANZ/CBA approaches, and insurance sector examples.",
+            "WEAKNESS: The philosophical analysis could go deeper into the normative dimension \u2014 should AI systems ever be 'trusted' in the philosophical sense, or should governance explicitly reject the trust framing in favour of 'verified reliance'?",
+            "WEAKNESS: Missing empirical data on vigilance decrement specifically in AI monitoring contexts \u2014 most evidence comes from aviation and nuclear. Need to find studies of humans monitoring AI decision systems.",
+            "WOULD A PHILOSOPHY PhD SUPERVISOR ACCEPT THIS? Conditionally yes \u2014 the conceptual framework is rigorous and the hypotheses are falsifiable. But the supervisor would push for deeper engagement with Baier's 'Trust and Antitrust' and Hardin's 'Trust and Trustworthiness', and would want the trust topology grounded in existing philosophical taxonomy rather than invented from scratch."
+          ]
+        }
+      ]
     }
   ]
 }

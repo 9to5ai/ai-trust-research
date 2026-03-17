@@ -49,9 +49,9 @@
     "note": "Defer maturity assessment and service line specs until foundational research is deeper"
   },
   "stats": {
-    "totalPapers": 60,
-    "totalThemes": 23,
-    "totalTools": 23,
+    "totalPapers": 72,
+    "totalThemes": 29,
+    "totalTools": 24,
     "totalResearchSessions": 4,
     "totalResearchHours": 16,
     "jurisdictionsCovered": [
@@ -63,6 +63,8 @@
       "OECD/International (FSB, IOSCO, ISO)",
       "Massachusetts (state-level enforcement)"
     ],
-    "lastSessionDate": "2026-03-17"
-  }
+    "lastSessionDate": "2026-03-17",
+    "totalSessions": 5
+  },
+  "lastSessionDate": "2026-03-18"
 }
