@@ -13,12 +13,13 @@
     }
   }
 
-  const [meta, logData, papersData, themesData, toolsData] = await Promise.all([
+  const [meta, logData, papersData, themesData, toolsData, sowhatData] = await Promise.all([
     loadJSON('meta.json'),
     loadJSON('research-log.json'),
     loadJSON('papers.json'),
     loadJSON('themes.json'),
     loadJSON('tools.json'),
+    loadJSON('sowhat.json'),
   ]);
 
   // --- Determine latest session date for NEW badges ---
@@ -68,6 +69,9 @@
 
   // --- Research Questions ---
   renderRQ(meta);
+
+  // --- So What ---
+  renderSoWhat(sowhatData, papersData, themesData);
 
   // === RENDER FUNCTIONS ===
 
@@ -242,6 +246,83 @@
     container.innerHTML = questions.map((q, i) => `
       <li><span class="rq-number">RQ${i + 1}</span>${q}</li>
     `).join('');
+  }
+
+  function renderSoWhat(data, papersData, themesData) {
+    const container = document.getElementById('sowhat-container');
+    const updatedEl = document.getElementById('sowhat-updated');
+    if (!container) return;
+
+    const sections = data?.sections || [];
+    if (sections.length === 0) {
+      container.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon">🎯</div>
+          <h3>Coming soon</h3>
+          <p>Actionable insights will appear here as the research corpus grows.</p>
+        </div>`;
+      return;
+    }
+
+    const paperMap = {};
+    (papersData?.papers || []).forEach(p => { paperMap[p.id] = p; });
+    const themeMap = {};
+    (themesData?.themes || []).forEach(t => { themeMap[t.id] = t; });
+
+    const urgencyLabel = {
+      'act-now': '🔴 Act Now',
+      'watch': '🟡 Watch',
+      'awareness': '🟢 Awareness'
+    };
+
+    const totalAdvice = sections.reduce((sum, s) => sum + (s.advice?.length || 0), 0);
+    document.getElementById('sowhat-count').textContent = `${totalAdvice} recommendations`;
+
+    container.innerHTML = sections.map(section => `
+      <div class="sowhat-section">
+        <div class="sowhat-section-header">
+          <span class="sowhat-icon">${section.icon || '📌'}</span>
+          <div>
+            <h3>${section.title}</h3>
+            <p class="sowhat-section-intro">${section.intro}</p>
+          </div>
+        </div>
+        <div class="sowhat-cards">
+          ${(section.advice || []).map(item => `
+            <div class="sowhat-card urgency-${item.urgency || 'watch'}">
+              <div class="sowhat-card-header">
+                <span class="urgency-badge ${item.urgency || 'watch'}">${urgencyLabel[item.urgency] || '🟡 Watch'}</span>
+              </div>
+              <h4>${item.headline}</h4>
+              <p>${item.body}</p>
+              ${item.prompt ? `
+              <div class="sowhat-prompt">
+                <div class="prompt-label">💬 Reflect</div>
+                <p class="prompt-text">${item.prompt}</p>
+              </div>` : ''}
+              <div class="sowhat-citations">
+                ${(item.citations || []).map(cid => {
+                  const paper = paperMap[cid];
+                  if (!paper) return '';
+                  return `<a href="${paper.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${paper.title}">${paper.title.length > 60 ? paper.title.substring(0, 57) + '...' : paper.title} (${paper.year || ''})</a>`;
+                }).join('')}
+              </div>
+              ${(item.themes || []).length > 0 ? `
+                <div class="sowhat-themes">
+                  ${item.themes.map(tid => {
+                    const theme = themeMap[tid];
+                    return theme ? `<span class="tag">${theme.title || theme.name}</span>` : '';
+                  }).join('')}
+                </div>` : ''}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('');
+
+    if (updatedEl && data?.lastUpdated) {
+      updatedEl.textContent = `Last updated: ${data.lastUpdated}`;
+    }
   }
 
 })();

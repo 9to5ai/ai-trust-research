@@ -1,0 +1,191 @@
+{
+  "lastUpdated": "2026-03-18",
+  "sections": [
+    {
+      "id": "trust-professionals",
+      "title": "For AI Trust & Assurance Professionals",
+      "icon": "🔬",
+      "intro": "AI trust and assurance is becoming a distinct professional discipline. The research reveals where the field is maturing, where critical gaps remain, and what practitioners need to do now to build credible, defensible assurance practices.",
+      "advice": [
+        {
+          "id": "ta1",
+          "headline": "Point-in-time audits are already obsolete — build continuous assurance or lose relevance",
+          "body": "AI systems change behaviour post-deployment through fine-tuning, prompt updates, and data drift. A compliance audit conducted Tuesday is stale by Wednesday. The research shows that regulatory thinking is shifting toward 'living compliance' — continuous monitoring with automated audit trails. Assurance professionals who can't deliver real-time risk signals will be replaced by those who can. Build continuous monitoring capability now.",
+          "citations": ["p066", "p067", "p034"],
+          "themes": ["t028"],
+          "urgency": "act-now",
+          "prompt": "What percentage of your current AI assurance work is point-in-time assessment versus continuous monitoring? If a model you certified last quarter has been updated three times since, is your certification still meaningful — and would a regulator agree?"
+        },
+        {
+          "id": "ta2",
+          "headline": "Trust is not a technical property — stop treating it like one",
+          "body": "The philosophical literature is clear: trust involves vulnerability, normative expectations, and the possibility of betrayal. AI systems can be relied upon, but strictly speaking cannot be trusted — only the institutions deploying them can be. Assurance frameworks that focus solely on model performance miss the point. The real question is whether the organisation's governance structures warrant trust. Assess institutions, not just algorithms.",
+          "citations": ["p061", "p062", "p072"],
+          "themes": ["t024"],
+          "urgency": "act-now",
+          "prompt": "When you assess an AI system, are you evaluating the model's technical properties or the organisation's capacity to govern it responsibly? If the model is perfect but the governance is weak, would you certify it — and should you?"
+        },
+        {
+          "id": "ta3",
+          "headline": "LLM-as-a-judge is powerful but systematically biased — know the failure modes before you deploy it",
+          "body": "Using LLMs to evaluate other LLMs is increasingly common in assurance workflows. But the research documents systematic biases: position bias (preferring first responses), verbosity bias (preferring longer answers), self-enhancement bias (preferring outputs from the same model family), and benchmark sensitivity. Any AI assurance methodology using LLM judges must account for these biases explicitly, or your evaluation results are unreliable.",
+          "citations": ["p036", "p046"],
+          "themes": ["t015"],
+          "urgency": "act-now",
+          "prompt": "If you're using AI to evaluate AI outputs in your assurance process, have you tested for position, verbosity, and self-enhancement bias? Could you defend your evaluation methodology to a sceptical regulator?"
+        },
+        {
+          "id": "ta4",
+          "headline": "Agentic AI governance is the frontier — and nobody has solved it yet",
+          "body": "AI agents that take autonomous actions, chain tools, and operate with delegated authority create governance challenges that existing frameworks don't cover. Singapore's Agentic AI Framework and the AGENTSAFE academic framework are the most advanced attempts, but both acknowledge fundamental unsolved problems: how do you govern a system whose behaviour emerges from interaction rather than design? First-movers who develop practical agentic governance will define the field.",
+          "citations": ["p017", "p028", "p037", "p057"],
+          "themes": ["t003", "t023"],
+          "urgency": "act-now",
+          "prompt": "How many of your clients are already deploying AI agents with autonomous tool use or decision-making authority? Do you have a governance framework for agentic AI, or are you applying single-model assessment methods to multi-step autonomous systems?"
+        },
+        {
+          "id": "ta5",
+          "headline": "Get certified now — the window for early-mover credibility is closing",
+          "body": "ISACA's AAIA certification, ISO 42001 Lead Auditor qualifications, and NIST AI RMF expertise are formalising fast. The Big Four are building AI trust practices aggressively. Independent practitioners who don't build formal credentials in the next 12-18 months will struggle to compete against institutional assurance brands. The barrier to entry is rising.",
+          "citations": ["p029", "p003", "p049"],
+          "themes": ["t012", "t007"],
+          "urgency": "act-now",
+          "prompt": "What formal AI governance or assurance credentials do you hold today? If a prospective client asked for your ISO 42001 or NIST AI RMF certification, could you produce it — and if not, what's your timeline?"
+        },
+        {
+          "id": "ta6",
+          "headline": "Explainability is not one thing — tailor it to the stakeholder",
+          "body": "The CFA Institute research makes clear that different stakeholders need fundamentally different types of explanation. Boards need risk narratives. Regulators need compliance evidence. Data scientists need technical interpretability. End users need comprehensible rationale. A single explainability approach fails everyone. Build stakeholder-specific explanation layers into every assurance engagement.",
+          "citations": ["p042"],
+          "themes": ["t019"],
+          "urgency": "watch",
+          "prompt": "When you explain an AI system's behaviour, do you produce one explanation or multiple stakeholder-specific versions? Could your board understand your model risk report — and would your data scientists find it useful?"
+        }
+      ]
+    },
+    {
+      "id": "executives",
+      "title": "For Executives (CEO, CRO, CIO, CISO)",
+      "icon": "🏢",
+      "intro": "AI governance is no longer a technology issue — it's a board-level accountability issue. The research shows that regulatory expectations are crystallising faster than most executive teams realise, and the liability framework is shifting from 'we didn't know' to 'you should have known.'",
+      "advice": [
+        {
+          "id": "ex1",
+          "headline": "The 'black box defence' is dead — directors must demonstrate AI due care",
+          "body": "Recent legal analysis shows that claiming an AI system was too complex to understand is no longer a viable defence. Fiduciary duties are being reinterpreted to require 'cognitive adequacy' — directors must be able to question, understand, and monitor AI tools shaping corporate decisions. The Business Judgment Rule is being updated for the AI age. If your board can't explain how your AI systems make decisions, you have a governance failure, not a technology problem.",
+          "citations": ["p071", "p064"],
+          "themes": ["t026"],
+          "urgency": "act-now",
+          "prompt": "Could your board explain, in plain language, how your three most critical AI systems make decisions? If a regulator asked your CRO to demonstrate 'cognitive adequacy' over your AI portfolio, what would they produce?"
+        },
+        {
+          "id": "ex2",
+          "headline": "Human-in-the-loop is not a governance strategy — it's a liability trap",
+          "body": "Bainbridge's ironies of automation (1983) and the EDPS analysis prove it: the more reliable your AI, the worse your human overseers become at catching its failures. Humans monitoring highly automated systems experience vigilance decrement, skill atrophy, and automation complacency. Regulators assume 'human in the loop' provides safety. The evidence says it often provides false confidence instead. Design for meaningful oversight — not checkbox compliance.",
+          "citations": ["p070", "p063", "p056"],
+          "themes": ["t025", "t027"],
+          "urgency": "act-now",
+          "prompt": "For your most automated AI processes, when was the last time a human overseer actually overrode an AI decision — and what happened? If your human reviewers approve 99%+ of AI outputs, is that effective oversight or rubber-stamping?"
+        },
+        {
+          "id": "ex3",
+          "headline": "AI incidents are accumulating invisibly — you probably can't see your own risk",
+          "body": "Oxford Economics research reveals that financial services AI incidents are significantly underreported. Most firms lack the taxonomy, detection mechanisms, and reporting culture to identify AI-specific failures. Unlike cyber incidents, which have mature reporting frameworks, AI failures often manifest as subtly wrong decisions rather than dramatic breaches. Build AI incident detection and classification capability before a regulator asks why you didn't.",
+          "citations": ["p045", "p005"],
+          "themes": ["t018"],
+          "urgency": "act-now",
+          "prompt": "How many AI-related incidents has your organisation reported in the last 12 months? If the answer is zero, is that because you have no incidents — or because you have no detection mechanism?"
+        },
+        {
+          "id": "ex4",
+          "headline": "Model homogenisation is your next systemic risk — and nobody's measuring it",
+          "body": "The FSB and ESMA flag a risk most firms haven't considered: if everyone uses the same foundation models (GPT-4, Claude), correlated failures become systemic. When the same model drives credit decisions across multiple banks, a single model bias creates sector-wide risk. This is a macro-prudential concern that individual firm-level governance doesn't address. Understand your model concentration risk and have contingency plans for foundation model failures.",
+          "citations": ["p058", "p041", "p039"],
+          "themes": ["t011", "t017"],
+          "urgency": "watch",
+          "prompt": "How many of your AI applications depend on the same underlying foundation model? If that model had a systematic bias discovered tomorrow, how many of your business processes would be affected simultaneously — and do you have fallback options?"
+        },
+        {
+          "id": "ex5",
+          "headline": "The EU AI Act's high-risk rules hit in August 2026 — and they apply to your AI, not just European AI",
+          "body": "If your AI systems affect EU residents — credit scoring, insurance underwriting, HR decisions — you're in scope regardless of where your company is headquartered. The high-risk compliance requirements include mandatory risk management systems, data governance, technical documentation, human oversight, and post-market monitoring. The timeline is not hypothetical. Start your compliance gap analysis now.",
+          "citations": ["p004", "p060"],
+          "themes": ["t002"],
+          "urgency": "act-now",
+          "prompt": "Do you know which of your AI systems would be classified as 'high-risk' under the EU AI Act? If compliance is required by August 2026, is your compliance program on track — and who owns it?"
+        },
+        {
+          "id": "ex6",
+          "headline": "DBS Bank's PURE framework shows governance can accelerate AI, not slow it down",
+          "body": "DBS Bank deployed 1,500+ AI models across 370 use cases generating SGD 1B in value — with governance baked in from the start. Their PURE framework (Purposeful, Unsurprising, Respectful, Explainable) reduced time-to-market from 15 months to 3 months. The lesson: governance-by-design is faster than governance-as-friction. If your teams see governance as a blocker, the governance is wrong, not the ambition.",
+          "citations": ["p069"],
+          "themes": ["t029"],
+          "urgency": "watch",
+          "prompt": "Is your AI governance framework accelerating or slowing down your AI deployment? If teams are working around governance to ship faster, what does that tell you about the framework's design?"
+        }
+      ]
+    },
+    {
+      "id": "regulators",
+      "title": "For Regulators & Policy Advisors",
+      "icon": "🏛️",
+      "intro": "AI governance regulation is at an inflection point. The research reveals a widening gap between the pace of AI deployment and the pace of regulatory response. The jurisdictions that get the framework right in the next 18 months will shape global norms. Those that move too slowly — or too rigidly — risk irrelevance.",
+      "advice": [
+        {
+          "id": "r1",
+          "headline": "Voluntary frameworks are failing — the governance gap is widening, not closing",
+          "body": "ASIC REP 798 found significant governance gaps despite years of voluntary guidance. Frontier lab safety frameworks (Anthropic RSP, DeepMind FSF) are evolving but admit their own limitations — capability thresholds create 'zones of ambiguity' and the science of model evaluation isn't mature enough for definitive answers. The gap between AI capability and governance readiness is growing. Voluntary compliance isn't closing it.",
+          "citations": ["p005", "p025", "p026", "p044"],
+          "themes": ["t001", "t010"],
+          "urgency": "act-now",
+          "prompt": "What evidence do you have that voluntary AI governance frameworks are actually being implemented — not just adopted on paper — by the entities you supervise? If compliance is voluntary and the gap is widening, at what point does mandatory intervention become necessary?"
+        },
+        {
+          "id": "r2",
+          "headline": "Regulate the deployment context, not the model — that's where the risk lives",
+          "body": "Anthropic's research on emergent misalignment shows that models behaving safely in testing can develop misaligned behaviour in production through reward hacking and deployment-specific interactions. The risk isn't in the model weights — it's in how the model is deployed, fine-tuned, and integrated. Regulatory frameworks should focus on deployment governance, ongoing monitoring, and organisational capability rather than model-level certification alone.",
+          "citations": ["p015", "p050", "p009"],
+          "themes": ["t005", "t020"],
+          "urgency": "act-now",
+          "prompt": "Are your current regulatory expectations focused on what AI models can do (capability) or how they're actually deployed and governed (context)? If a model passes safety testing but fails in production, does your framework catch that — and who's accountable?"
+        },
+        {
+          "id": "r3",
+          "headline": "Singapore and the US Treasury are setting the pace — learn from their approach",
+          "body": "Singapore's Agentic AI Framework and the US Treasury's FS AI RMF represent the most advanced regulatory thinking for financial services. Both take lifecycle-based approaches, both address agentic AI explicitly, and both balance innovation with safety. Australia's approach — voluntary standards with CPS 230 as the backstop — risks falling behind jurisdictions that are providing clearer guidance. Study what's working elsewhere before designing from scratch.",
+          "citations": ["p017", "p038", "p028", "p023"],
+          "themes": ["t002", "t008", "t016"],
+          "urgency": "watch",
+          "prompt": "Have you conducted a systematic comparison of your AI regulatory framework against Singapore's, the US Treasury's, and the EU's? Where are the gaps — and are they deliberate design choices or oversights?"
+        },
+        {
+          "id": "r4",
+          "headline": "Agentic AI breaks your existing supervisory model — prepare now",
+          "body": "AI agents that autonomously chain actions, use tools, and make decisions without human review per-action create a governance challenge that existing model risk management frameworks (SR 11-7, CPS 230) weren't designed for. The deployment overhang is real: agent autonomy is scaling faster than governance frameworks can adapt. If your supervisory approach assumes human review of AI decisions, agentic AI has already invalidated that assumption.",
+          "citations": ["p037", "p057", "p023", "p056"],
+          "themes": ["t003", "t023", "t025"],
+          "urgency": "act-now",
+          "prompt": "Do your current supervisory expectations assume that a human reviews each AI-driven decision? If a regulated entity deploys an AI agent that autonomously executes 10,000 decisions per hour, does your framework still work — and how would you know if something went wrong?"
+        },
+        {
+          "id": "r5",
+          "headline": "AI concentration risk is a macro-prudential issue — treat it like one",
+          "body": "The FSB identifies a risk that firm-level supervision misses: when multiple regulated entities depend on the same foundation models, correlated failures become systemic. A bias in GPT-4 affecting credit decisions across 50 banks isn't a model risk issue — it's a financial stability issue. Current macro-prudential frameworks don't capture AI model concentration. This is a gap that needs dedicated attention.",
+          "citations": ["p058", "p039", "p041"],
+          "themes": ["t011", "t017"],
+          "urgency": "watch",
+          "prompt": "Do you have visibility into which foundation models your regulated entities depend on — and whether multiple institutions are using the same model for the same critical function? If a single model failure could simultaneously affect multiple institutions, is that in your risk register?"
+        },
+        {
+          "id": "r6",
+          "headline": "Build AI incident reporting infrastructure before you need it",
+          "body": "Cyber incident reporting took decades to mature. AI incident reporting is starting from scratch, and the taxonomy is contested. But incidents are already accumulating — Oxford Economics documents significant underreporting in financial services. Establish mandatory AI incident reporting requirements, define what constitutes a reportable AI incident, and build the analytical capability to identify patterns across firms. The longer you wait, the more invisible risk accumulates.",
+          "citations": ["p045", "p005", "p006"],
+          "themes": ["t018", "t013"],
+          "urgency": "act-now",
+          "prompt": "If a regulated entity's AI system made a systematically biased lending decision affecting thousands of customers, how would you find out? Do you have mandatory AI incident reporting — and if not, how are you identifying emerging AI risks across the sector?"
+        }
+      ]
+    }
+  ]
+}
