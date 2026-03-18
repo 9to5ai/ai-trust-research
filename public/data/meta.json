@@ -1,6 +1,6 @@
 {
   "projectName": "AI Trust Research",
-  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance \u2014 with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
+  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance — with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
   "currentPhase": "Phase 2: First Principles of AI Trust",
   "phaseDescription": "Deep examination of trust provenance, accountability frameworks, human oversight feasibility, and the certification chain from ground truth to operational proxies.",
   "researchQuestions": [
@@ -14,7 +14,7 @@
     "What does the convergence of AI risk and cyber risk mean for practice design?",
     "How should AI concentration and systemic risk be assessed and governed?",
     "What can values-based alignment approaches teach us about governance framework design?",
-    "How should agentic AI systems be governed \u2014 what frameworks exist and what gaps remain for autonomous multi-step agents?",
+    "How should agentic AI systems be governed — what frameworks exist and what gaps remain for autonomous multi-step agents?",
     "What are the risks, methodologies, and limitations of using LLMs as judges for AI evaluation and assurance?",
     "How does AI model homogenisation create systemic risk and how should it be assessed?",
     "What does reliable AI evaluation look like when LLM judges are systematically biased?",
@@ -49,11 +49,11 @@
     "note": "Defer maturity assessment and service line specs until foundational research is deeper"
   },
   "stats": {
-    "totalPapers": 72,
-    "totalThemes": 29,
-    "totalTools": 24,
-    "totalResearchSessions": 4,
-    "totalResearchHours": 16,
+    "totalPapers": 79,
+    "totalThemes": 30,
+    "totalTools": 25,
+    "totalResearchSessions": 6,
+    "totalResearchHours": 20,
     "jurisdictionsCovered": [
       "Australia (APRA, ASIC)",
       "EU (AI Act, ESMA, EBA)",
@@ -63,8 +63,7 @@
       "OECD/International (FSB, IOSCO, ISO)",
       "Massachusetts (state-level enforcement)"
     ],
-    "lastSessionDate": "2026-03-17",
-    "totalSessions": 5
+    "lastSessionDate": "2026-03-19"
   },
-  "lastSessionDate": "2026-03-18"
+  "lastUpdated": "2026-03-19"
 }

@@ -8,7 +8,7 @@
       "url": "https://github.com/Trusted-AI/AIF360",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Core tool for any AI assurance practice \u2014 enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
+      "relevance": "Core tool for any AI assurance practice — enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://github.com/fairlearn/fairlearn",
       "license": "MIT",
       "maturity": "Production-ready",
-      "relevance": "Complementary to AIF360 \u2014 different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
+      "relevance": "Complementary to AIF360 — different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -40,7 +40,7 @@
       "description": "Open-source evaluation and testing library for LLM agents. Provides transparency, accountability, and helps ensure quality, security, and compliance. Recognized in 2024 GitHub Accelerator.",
       "url": "https://github.com/Giskard-AI/giskard",
       "license": "Apache 2.0",
-      "maturity": "Growing \u2014 active community",
+      "maturity": "Growing — active community",
       "relevance": "Particularly relevant for testing LLM-based applications in financial services (chatbots, advisory tools). Includes hallucination detection and robustness testing.",
       "dateDiscovered": "2026-03-15"
     },
@@ -52,7 +52,7 @@
       "url": "https://github.com/guardrails-ai/guardrails",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Implementation tool for LLM deployment guardrails \u2014 directly applicable to financial services deploying customer-facing AI.",
+      "relevance": "Implementation tool for LLM deployment guardrails — directly applicable to financial services deploying customer-facing AI.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -85,7 +85,7 @@
       "url": "https://mlflow.org/",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Foundation for ML governance infrastructure \u2014 model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
+      "relevance": "Foundation for ML governance infrastructure — model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -216,7 +216,7 @@
       "description": "Automated framework for systematically quantifying biases in LLM-as-a-judge applications. Tests for position bias, verbosity bias, self-enhancement bias, and other systematic evaluation errors. Essential for validating LLM-based evaluation pipelines.",
       "url": "https://arxiv.org/abs/2406.07791",
       "license": "Research (open)",
-      "maturity": "Research prototype \u2014 active development",
+      "maturity": "Research prototype — active development",
       "relevance": "Critical for any assurance practice using LLM-based evaluation. Without bias quantification, LLM-as-judge results are unreliable. Builds toward production-grade evaluation validation.",
       "dateDiscovered": "2026-03-17"
     },
@@ -229,7 +229,7 @@
       "url": "https://www.arxiv.org/abs/2506.15740",
       "availability": "partially-open",
       "relevance": "critical",
-      "financialServicesApplicability": "Direct \u2014 financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
+      "financialServicesApplicability": "Direct — financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
       "relatedPapers": [
         "p054"
       ]
@@ -243,7 +243,7 @@
       "url": "https://arxiv.org/abs/2503.14499",
       "availability": "open",
       "relevance": "high",
-      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks \u2014 adaptation needed for financial services workflows.",
+      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks — adaptation needed for financial services workflows.",
       "relatedPapers": [
         "p059"
       ]
@@ -261,6 +261,28 @@
       "relatedPapers": [
         "p051"
       ]
+    },
+    {
+      "id": "tool024",
+      "name": "OECD AI Incidents and Hazards Monitor",
+      "category": "AI Governance & Monitoring",
+      "description": "OECD's publicly accessible database tracking and categorising AI-related incidents and hazards globally. Provides taxonomised incident data useful for risk assessment, benchmarking, and learning from real-world AI failures.",
+      "url": "https://oecd.ai/en/incidents",
+      "license": "Public",
+      "maturity": "Production-ready (continuously updated)",
+      "relevance": "Valuable reference for AI incident readiness assessments. Can benchmark institutional AI incident taxonomy against the OECD's classification. Useful for identifying patterns and emerging risk categories.",
+      "dateDiscovered": "2026-03-19"
+    },
+    {
+      "id": "tool025",
+      "name": "Dynamic Safety Case Management System (DSCMS)",
+      "category": "AI Safety Assurance",
+      "description": "Proposed framework combining checkable safety arguments with Safety Performance Indicators (SPIs) for continuous AI safety assurance. Uses LLM-based Delphi method for probability estimation of safety sub-claims. Automates safety case monitoring and triggers reviews when thresholds are breached.",
+      "url": "https://arxiv.org/pdf/2412.17618",
+      "license": "Research (open)",
+      "maturity": "Research prototype — active development",
+      "relevance": "Represents the frontier of continuous AI safety assurance methodology. The SPI approach is directly applicable to financial services AI monitoring. The LLM-based Delphi method for confidence estimation could transform how safety cases are evaluated.",
+      "dateDiscovered": "2026-03-19"
     }
   ]
 }
