@@ -8,7 +8,7 @@
       "url": "https://github.com/Trusted-AI/AIF360",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Core tool for any AI assurance practice — enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
+      "relevance": "Core tool for any AI assurance practice \u2014 enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://github.com/fairlearn/fairlearn",
       "license": "MIT",
       "maturity": "Production-ready",
-      "relevance": "Complementary to AIF360 — different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
+      "relevance": "Complementary to AIF360 \u2014 different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -40,7 +40,7 @@
       "description": "Open-source evaluation and testing library for LLM agents. Provides transparency, accountability, and helps ensure quality, security, and compliance. Recognized in 2024 GitHub Accelerator.",
       "url": "https://github.com/Giskard-AI/giskard",
       "license": "Apache 2.0",
-      "maturity": "Growing — active community",
+      "maturity": "Growing \u2014 active community",
       "relevance": "Particularly relevant for testing LLM-based applications in financial services (chatbots, advisory tools). Includes hallucination detection and robustness testing.",
       "dateDiscovered": "2026-03-15"
     },
@@ -52,7 +52,7 @@
       "url": "https://github.com/guardrails-ai/guardrails",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Implementation tool for LLM deployment guardrails — directly applicable to financial services deploying customer-facing AI.",
+      "relevance": "Implementation tool for LLM deployment guardrails \u2014 directly applicable to financial services deploying customer-facing AI.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -85,7 +85,7 @@
       "url": "https://mlflow.org/",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Foundation for ML governance infrastructure — model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
+      "relevance": "Foundation for ML governance infrastructure \u2014 model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -216,7 +216,7 @@
       "description": "Automated framework for systematically quantifying biases in LLM-as-a-judge applications. Tests for position bias, verbosity bias, self-enhancement bias, and other systematic evaluation errors. Essential for validating LLM-based evaluation pipelines.",
       "url": "https://arxiv.org/abs/2406.07791",
       "license": "Research (open)",
-      "maturity": "Research prototype — active development",
+      "maturity": "Research prototype \u2014 active development",
       "relevance": "Critical for any assurance practice using LLM-based evaluation. Without bias quantification, LLM-as-judge results are unreliable. Builds toward production-grade evaluation validation.",
       "dateDiscovered": "2026-03-17"
     },
@@ -229,7 +229,7 @@
       "url": "https://www.arxiv.org/abs/2506.15740",
       "availability": "partially-open",
       "relevance": "critical",
-      "financialServicesApplicability": "Direct — financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
+      "financialServicesApplicability": "Direct \u2014 financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
       "relatedPapers": [
         "p054"
       ]
@@ -243,7 +243,7 @@
       "url": "https://arxiv.org/abs/2503.14499",
       "availability": "open",
       "relevance": "high",
-      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks — adaptation needed for financial services workflows.",
+      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks \u2014 adaptation needed for financial services workflows.",
       "relatedPapers": [
         "p059"
       ]
@@ -280,9 +280,31 @@
       "description": "Proposed framework combining checkable safety arguments with Safety Performance Indicators (SPIs) for continuous AI safety assurance. Uses LLM-based Delphi method for probability estimation of safety sub-claims. Automates safety case monitoring and triggers reviews when thresholds are breached.",
       "url": "https://arxiv.org/pdf/2412.17618",
       "license": "Research (open)",
-      "maturity": "Research prototype — active development",
+      "maturity": "Research prototype \u2014 active development",
       "relevance": "Represents the frontier of continuous AI safety assurance methodology. The SPI approach is directly applicable to financial services AI monitoring. The LLM-based Delphi method for confidence estimation could transform how safety cases are evaluated.",
       "dateDiscovered": "2026-03-19"
+    },
+    {
+      "id": "tool026",
+      "name": "Microsoft Foundry Control Plane + Agent 365",
+      "category": "AI Observability & Governance",
+      "description": "Enterprise AI agent governance platform consolidating inventory, observability, compliance with AI guardrail policies, and security into a single interface. Foundry agent tracing provides runtime trace diagnostics. Agent 365 Observability SDK (OTel-based) emits telemetry into governance workflows. Manages agent sprawl, identity controls, and policy enforcement across tenant.",
+      "url": "https://www.microsoft.com/en-us/security/blog/2026/03/18/observability-ai-systems-strengthening-visibility-proactive-risk-detection/",
+      "license": "Commercial (Microsoft)",
+      "maturity": "Preview (March 2026)",
+      "relevance": "Represents the frontier of enterprise AI observability. Financial institutions in the Microsoft ecosystem should evaluate for agentic AI governance. Sets the standard for what AI observability infrastructure should look like.",
+      "dateDiscovered": "2026-03-20"
+    },
+    {
+      "id": "tool027",
+      "name": "Scotiabank Ethics Assistant",
+      "category": "AI Ethics Review",
+      "description": "AI ethics review tool developed by Scotiabank in collaboration with Deloitte Canada (launched 2022). Proactively embeds ethical considerations into AI/ML projects from design stage. Supports mandatory ethics review process with tiered risk-based approval. Part of comprehensive Data Ethics framework integrated into corporate Code of Conduct.",
+      "url": "https://scotiabank.investorroom.com/2022-03-24-Scotiabank-launches-Ethics-Assistant",
+      "license": "Proprietary (Scotiabank)",
+      "maturity": "Production-ready (in use since 2022)",
+      "relevance": "One of the few documented ethics review tools in production at a major bank. Model for how financial institutions can operationalise ethics review at scale. Winner of DataIQ Best Responsible AI Program 2024.",
+      "dateDiscovered": "2026-03-20"
     }
   ]
 }
