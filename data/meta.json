@@ -21,7 +21,11 @@
     "How should the practice's service lines be structured and what methodologies underpin each?",
     "How does emergent misalignment from reward hacking affect financial services AI assurance models?",
     "What is the relationship between AI capability growth and human oversight quality degradation?",
-    "How should AI insider threat management be structured for financial services?"
+    "How should AI insider threat management be structured for financial services?",
+    "What is the Trust Trilemma \u2014 can warranted reliance, institutional accountability, and continuously valid trust properties coexist at scale in AI?",
+    "How does the Oversight Paradox Amplification work \u2014 does increasing AI reliability reduce effective human oversight by enabling deception concealment?",
+    "What is the legal architecture for AI liability after the AILD withdrawal \u2014 what governance failures fall through the PLD/national tort gap?",
+    "How should boards demonstrate 'cognitive adequacy' (BJR 2.0) over AI systems \u2014 what does fiduciary demonstrability look like in practice?"
   ],
   "nextPhaseGoals": [
     "Draft 'State of AI Trust 2026' synthesis document pulling together all 19 themes",
@@ -49,11 +53,11 @@
     "note": "Defer maturity assessment and service line specs until foundational research is deeper"
   },
   "stats": {
-    "totalPapers": 88,
-    "totalThemes": 33,
-    "totalTools": 27,
-    "totalResearchSessions": 7,
-    "totalResearchHours": 23,
+    "totalPapers": 103,
+    "totalThemes": 39,
+    "totalTools": 31,
+    "totalResearchSessions": 8,
+    "totalResearchHours": 24.5,
     "jurisdictionsCovered": [
       "Australia (APRA, ASIC)",
       "EU (AI Act, ESMA, EBA)",
@@ -63,7 +67,7 @@
       "OECD/International (FSB, IOSCO, ISO)",
       "Massachusetts (state-level enforcement)"
     ],
-    "lastSessionDate": "2026-03-20"
+    "lastSessionDate": "2026-03-21"
   },
-  "lastUpdated": "2026-03-20"
+  "lastUpdated": "2026-03-21"
 }

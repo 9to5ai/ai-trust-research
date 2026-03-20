@@ -305,6 +305,50 @@
       "maturity": "Production-ready (in use since 2022)",
       "relevance": "One of the few documented ethics review tools in production at a major bank. Model for how financial institutions can operationalise ethics review at scale. Winner of DataIQ Best Responsible AI Program 2024.",
       "dateDiscovered": "2026-03-20"
+    },
+    {
+      "id": "tool028",
+      "name": "ETSI TS 104 008 \u2014 Continuous Auditing Based Conformity Assessment (CABCA)",
+      "category": "Standards / Continuous Compliance",
+      "description": "ETSI's January 2026 technical specification for continuous auditing-based conformity assessment (CABCA) of AI-enabled systems. Defines recurring assessment cycles, automated evidence collection, machine-readable conformity metrics, and dynamic conformity status updates. Supports self-assessment, third-party assessment, and certification use cases. Directly aligned with EU AI Act post-market monitoring obligations. The framework operationalises 'living compliance' for dynamic AI systems that evolve through retraining and data pipeline changes.",
+      "url": "https://www.etsi.org/deliver/etsi_ts/104000_104099/104008/01.01.01_60/ts_104008v010101p.pdf",
+      "license": "ETSI standard (available via ETSI)",
+      "maturity": "Published standard (January 2026)",
+      "relevance": "The technical infrastructure for continuous AI compliance \u2014 operationalises post-market monitoring obligations under EU AI Act and replaces point-in-time audit models",
+      "dateDiscovered": "2026-03-21"
+    },
+    {
+      "id": "tool029",
+      "name": "MAS MindForge AI Risk Management Toolkit (Phase 2)",
+      "category": "Industry Framework / Financial Services",
+      "description": "Comprehensive AI risk management toolkit developed by a 24-firm consortium under MAS's Project MindForge, published March 20, 2026. Includes: AI Risk Management Operationalisation Handbook (four sections: scope/oversight, AI risk management, AI lifecycle management, enablers); AI Risk Management Implementation Examples (case studies from financial institutions); AI Risk Management Executive Handbook. Covers traditional AI, generative AI, and agentic AI. Periodically updated through the BuildFin.ai workgroup.",
+      "url": "https://www.mas.gov.sg/schemes-and-initiatives/project-mindforge",
+      "license": "Public (MAS publication)",
+      "maturity": "Published (March 2026) \u2014 updated periodically",
+      "relevance": "Most operationally detailed AI risk management toolkit for financial services globally \u2014 applicable directly to Australian bank, insurer, and asset manager AI governance programs",
+      "dateDiscovered": "2026-03-21"
+    },
+    {
+      "id": "tool030",
+      "name": "DNV-RP-0671: Recommended Practice for Assurance of AI-Enabled Systems",
+      "category": "Assurance Framework / Technical Standard",
+      "description": "DNV's recommended practice for assuring AI-enabled systems, part of DNV's Digital Trust documentation suite. Lifecycle-based framework covering design, development, testing, deployment, and ongoing monitoring of AI systems. Distinguishes institutional trust from technical reliability. Treats data quality as foundational to AI assurance. Provides structured vocabulary for AI-specific failure modes including distributional shift, model degradation, and adversarial robustness. Supports independent third-party AI assurance.",
+      "url": "https://www.dnv.com/digital-trust/recommended-practices/assurance-of-ai-enabled-systems-dnv-rp-0671/",
+      "license": "DNV publication (available via DNV)",
+      "maturity": "Current (2024-2026)",
+      "relevance": "Credible independent AI assurance framework from a technically respected institution \u2014 provides methodology for sector-specific AI assurance engagements in banking and finance",
+      "dateDiscovered": "2026-03-21"
+    },
+    {
+      "id": "tool031",
+      "name": "OECD Six-Step Due Diligence Framework for Responsible AI",
+      "category": "Policy Framework / Due Diligence",
+      "description": "OECD's voluntary six-step responsible business conduct due diligence framework applied to AI, published February 19, 2026. Steps: (1) embed RBC into policies/management systems; (2) identify/assess actual and potential adverse impacts; (3) cease/prevent/mitigate impacts; (4) track implementation and results; (5) communicate actions taken; (6) provide/cooperate in remediation. Risk-agnostic and applicable across all AI systems and sectors. Provides interoperability mapping to EU AI Act, ASEAN AI Governance Guide, and Korean AI Basic Act. For multinational enterprises involved in the AI value chain.",
+      "url": "https://www.oecd.org/en/publications/oecd-due-diligence-guidance-for-responsible-ai_41671712-en.html",
+      "license": "Public (OECD publication)",
+      "maturity": "Published (February 2026)",
+      "relevance": "International baseline for AI due diligence expectations across multinational enterprises \u2014 soft law that may harden; relevant for Australian firms with international operations or clients",
+      "dateDiscovered": "2026-03-21"
     }
   ]
 }

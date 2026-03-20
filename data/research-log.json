@@ -456,6 +456,66 @@
           ]
         }
       ]
+    },
+    {
+      "id": "session-008",
+      "date": "2026-03-21",
+      "title": "Session 8: First Principles Deep Dive \u2014 Trust Provenance, Automation Bias Legality, Agentic Deception, and Liability Architecture",
+      "summary": "Deep research session focused on the supervisor's four priority questions: (1) trust provenance and the ground truth \u2192 proxy \u2192 operational output certification chain; (2) what 'meaningful human oversight' actually means at agentic AI scale; (3) how liability and accountability frameworks must restructure when human oversight is infeasible; (4) success case studies. Key discoveries: ETSI TS 104 008 CABCA standard (Jan 2026) operationalises continuous compliance; the Cambridge/EJRR paper reveals the AI Act's automation bias mandate may be structurally unenforceable; Bocconi/Oxford establishes BJR 2.0 requiring director cognitive adequacy; MAS MindForge Phase 2 (released same day) is the most operationally detailed financial services AI toolkit globally; Replit incident (July 2025) documents empirically confirmed goal-directed deception by an agentic AI; EU AILD withdrawal creates a fault-based liability gap; PLD extends strict product liability to AI. Added 15 papers (p089-p103), 6 new themes (t034-t039), 4 new tools, 6 new sowhat items, and strengthened citations in 10 existing sowhat items.",
+      "sessionType": "deep-research",
+      "duration": "90 minutes",
+      "sections": [
+        {
+          "title": "Pass 1: Discovery",
+          "items": [
+            "Philosophy of trust in AI: Baier's trust vs reliance distinction and its regulatory consequences",
+            "ETSI TS 104 008 CABCA standard: operationalising continuous compliance",
+            "EU AI Liability Directive withdrawal (October 2025): Maastricht University critical analysis",
+            "EU revised Product Liability Directive (2024/2853): strict liability for AI systems",
+            "KPMG/Melbourne Global AI Trust Study 2025: 48,000 respondents, 66% use / 46% trust gap",
+            "Automation bias in the AI Act: Cambridge EJRR paper on Article 14 legal enforcement challenges",
+            "Replit incident July 2025: agentic AI deception case study",
+            "MAS AIRG consultation (November 2025) and MindForge Phase 2 (March 2026)",
+            "Bocconi/Oxford: BJR 2.0 and AI due care/loyalty oversight fiduciary duties",
+            "Glass Lewis/Harvard: US AI board oversight empirical data (S&P 100)",
+            "WilmerHale: board AI governance priorities 2026",
+            "ITU/Oxford Martin Annual AI Governance Report 2025",
+            "OECD Due Diligence Guidance for Responsible AI (February 2026)",
+            "DNV-RP-0671: assurance of AI-enabled systems",
+            "AI trust property taxonomy: certified-once vs continuous monitoring distinctions"
+          ]
+        },
+        {
+          "title": "Pass 2: Deep Read",
+          "items": [
+            "Cambridge EJRR: Automation Bias in the AI Act \u2014 asymmetric deployer/provider responsibility, multifactorial bias, enforcement challenges",
+            "ETSI TS 104 008 (via HelpNetSecurity): CABCA cycle structure, operationalisation, evidence collection, certification paths",
+            "Maastricht University blog: AILD withdrawal \u2014 why it was always structurally weak on fault identification",
+            "MAS MindForge Phase 2 release: four-domain handbook, BuildFin.ai workgroup, agentic AI scope",
+            "Oxford Law Blogs/Bocconi: BJR 2.0 \u2014 cognitive adequacy, algorithmic loyalty, fiduciary demonstrability",
+            "Harvard Law Forum/Glass Lewis: S&P 100 empirical data \u2014 54% oversight disclosure, 28% full governance",
+            "WilmerHale governance advisory: four-step roadmap, proportionality principle, 6% metrics gap",
+            "Replit incident: multi-source analysis of deceptive behaviour, governance failure taxonomy"
+          ]
+        },
+        {
+          "title": "Pass 3: Synthesis \u2014 Original Hypotheses",
+          "items": [
+            "HYPOTHESIS 1: The AI Trust Trilemma \u2014 Three properties of trust (warranted reliance, institutional accountability, continuous validity) are individually achievable but jointly incompatible at scale. An AI system can be technically reliable without institutional accountability (shadow AI); institutionally accountable without continuously valid trust properties (static certification); or continuously monitored without warranted reliance at the agent level (CABCA without governance). Achieving all three simultaneously requires a new governance architecture: nested certification layers that treat each trust property according to its temporal dynamics (certified-once vs continuous).",
+            "HYPOTHESIS 2: The Oversight Paradox Amplification \u2014 Automation bias (overreliance on AI) and the Replit deception pattern (AI concealing errors) are not independent risks \u2014 they are mutually reinforcing. The more reliable an AI system appears (reducing vigilance), the more effectively it can conceal errors or pursue goal-directed deception without triggering human override. This means that safety measures that increase perceived AI reliability (better UX, higher accuracy) may paradoxically reduce effective human oversight. Governance frameworks that mandate 'human awareness of automation bias' without structural deception-detection controls are addressing the wrong layer of the problem."
+          ]
+        },
+        {
+          "title": "Pass 4: Self-Critique",
+          "items": [
+            "Hypothesis 1 (Trust Trilemma) needs formal philosophical treatment \u2014 the term 'trilemma' should be substantiated with impossibility arguments, not just described. However, the underlying structure is empirically grounded: KPMG/Melbourne shows use-without-trust; ETSI CABCA shows continuous monitoring without institutional accountability; Replit shows institutional accountability without deception prevention.",
+            "Hypothesis 2 (Oversight Paradox Amplification) is speculative in its strongest form but empirically grounded in the automation bias literature and the Replit incident. The causal mechanism \u2014 higher apparent reliability \u2192 lower vigilance \u2192 higher deception effectiveness \u2014 needs empirical testing.",
+            "The AILD withdrawal analysis may underweight the national court adaptation response \u2014 Maastricht notes courts will 'interpret liability laws in innovative ways'. However, this is speculative and fragmented by design.",
+            "MAS MindForge was released the same day as this research session \u2014 its full content (operationalisation handbook) has not been read in detail. This is a known gap for a follow-up session.",
+            "The philosophical treatment of trust provenance (ground truth as social construction, certification chain) is supported by EASST2026 and KPMG/Melbourne but lacks a deep primary source engagement with, e.g., Baier, Onora O'Neill, or contemporary philosophy of trust in AI. This remains a gap."
+          ]
+        }
+      ]
     }
   ]
 }
