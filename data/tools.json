@@ -8,7 +8,7 @@
       "url": "https://github.com/Trusted-AI/AIF360",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Core tool for any AI assurance practice \u2014 enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
+      "relevance": "Core tool for any AI assurance practice — enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://github.com/fairlearn/fairlearn",
       "license": "MIT",
       "maturity": "Production-ready",
-      "relevance": "Complementary to AIF360 \u2014 different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
+      "relevance": "Complementary to AIF360 — different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -40,7 +40,7 @@
       "description": "Open-source evaluation and testing library for LLM agents. Provides transparency, accountability, and helps ensure quality, security, and compliance. Recognized in 2024 GitHub Accelerator.",
       "url": "https://github.com/Giskard-AI/giskard",
       "license": "Apache 2.0",
-      "maturity": "Growing \u2014 active community",
+      "maturity": "Growing — active community",
       "relevance": "Particularly relevant for testing LLM-based applications in financial services (chatbots, advisory tools). Includes hallucination detection and robustness testing.",
       "dateDiscovered": "2026-03-15"
     },
@@ -52,7 +52,7 @@
       "url": "https://github.com/guardrails-ai/guardrails",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Implementation tool for LLM deployment guardrails \u2014 directly applicable to financial services deploying customer-facing AI.",
+      "relevance": "Implementation tool for LLM deployment guardrails — directly applicable to financial services deploying customer-facing AI.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -85,7 +85,7 @@
       "url": "https://mlflow.org/",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Foundation for ML governance infrastructure \u2014 model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
+      "relevance": "Foundation for ML governance infrastructure — model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -216,7 +216,7 @@
       "description": "Automated framework for systematically quantifying biases in LLM-as-a-judge applications. Tests for position bias, verbosity bias, self-enhancement bias, and other systematic evaluation errors. Essential for validating LLM-based evaluation pipelines.",
       "url": "https://arxiv.org/abs/2406.07791",
       "license": "Research (open)",
-      "maturity": "Research prototype \u2014 active development",
+      "maturity": "Research prototype — active development",
       "relevance": "Critical for any assurance practice using LLM-based evaluation. Without bias quantification, LLM-as-judge results are unreliable. Builds toward production-grade evaluation validation.",
       "dateDiscovered": "2026-03-17"
     },
@@ -229,7 +229,7 @@
       "url": "https://www.arxiv.org/abs/2506.15740",
       "availability": "partially-open",
       "relevance": "critical",
-      "financialServicesApplicability": "Direct \u2014 financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
+      "financialServicesApplicability": "Direct — financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
       "relatedPapers": [
         "p054"
       ]
@@ -243,7 +243,7 @@
       "url": "https://arxiv.org/abs/2503.14499",
       "availability": "open",
       "relevance": "high",
-      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks \u2014 adaptation needed for financial services workflows.",
+      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks — adaptation needed for financial services workflows.",
       "relatedPapers": [
         "p059"
       ]
@@ -280,7 +280,7 @@
       "description": "Proposed framework combining checkable safety arguments with Safety Performance Indicators (SPIs) for continuous AI safety assurance. Uses LLM-based Delphi method for probability estimation of safety sub-claims. Automates safety case monitoring and triggers reviews when thresholds are breached.",
       "url": "https://arxiv.org/pdf/2412.17618",
       "license": "Research (open)",
-      "maturity": "Research prototype \u2014 active development",
+      "maturity": "Research prototype — active development",
       "relevance": "Represents the frontier of continuous AI safety assurance methodology. The SPI approach is directly applicable to financial services AI monitoring. The LLM-based Delphi method for confidence estimation could transform how safety cases are evaluated.",
       "dateDiscovered": "2026-03-19"
     },
@@ -308,13 +308,13 @@
     },
     {
       "id": "tool028",
-      "name": "ETSI TS 104 008 \u2014 Continuous Auditing Based Conformity Assessment (CABCA)",
+      "name": "ETSI TS 104 008 — Continuous Auditing Based Conformity Assessment (CABCA)",
       "category": "Standards / Continuous Compliance",
       "description": "ETSI's January 2026 technical specification for continuous auditing-based conformity assessment (CABCA) of AI-enabled systems. Defines recurring assessment cycles, automated evidence collection, machine-readable conformity metrics, and dynamic conformity status updates. Supports self-assessment, third-party assessment, and certification use cases. Directly aligned with EU AI Act post-market monitoring obligations. The framework operationalises 'living compliance' for dynamic AI systems that evolve through retraining and data pipeline changes.",
       "url": "https://www.etsi.org/deliver/etsi_ts/104000_104099/104008/01.01.01_60/ts_104008v010101p.pdf",
       "license": "ETSI standard (available via ETSI)",
       "maturity": "Published standard (January 2026)",
-      "relevance": "The technical infrastructure for continuous AI compliance \u2014 operationalises post-market monitoring obligations under EU AI Act and replaces point-in-time audit models",
+      "relevance": "The technical infrastructure for continuous AI compliance — operationalises post-market monitoring obligations under EU AI Act and replaces point-in-time audit models",
       "dateDiscovered": "2026-03-21"
     },
     {
@@ -324,8 +324,8 @@
       "description": "Comprehensive AI risk management toolkit developed by a 24-firm consortium under MAS's Project MindForge, published March 20, 2026. Includes: AI Risk Management Operationalisation Handbook (four sections: scope/oversight, AI risk management, AI lifecycle management, enablers); AI Risk Management Implementation Examples (case studies from financial institutions); AI Risk Management Executive Handbook. Covers traditional AI, generative AI, and agentic AI. Periodically updated through the BuildFin.ai workgroup.",
       "url": "https://www.mas.gov.sg/schemes-and-initiatives/project-mindforge",
       "license": "Public (MAS publication)",
-      "maturity": "Published (March 2026) \u2014 updated periodically",
-      "relevance": "Most operationally detailed AI risk management toolkit for financial services globally \u2014 applicable directly to Australian bank, insurer, and asset manager AI governance programs",
+      "maturity": "Published (March 2026) — updated periodically",
+      "relevance": "Most operationally detailed AI risk management toolkit for financial services globally — applicable directly to Australian bank, insurer, and asset manager AI governance programs",
       "dateDiscovered": "2026-03-21"
     },
     {
@@ -336,7 +336,7 @@
       "url": "https://www.dnv.com/digital-trust/recommended-practices/assurance-of-ai-enabled-systems-dnv-rp-0671/",
       "license": "DNV publication (available via DNV)",
       "maturity": "Current (2024-2026)",
-      "relevance": "Credible independent AI assurance framework from a technically respected institution \u2014 provides methodology for sector-specific AI assurance engagements in banking and finance",
+      "relevance": "Credible independent AI assurance framework from a technically respected institution — provides methodology for sector-specific AI assurance engagements in banking and finance",
       "dateDiscovered": "2026-03-21"
     },
     {
@@ -347,8 +347,41 @@
       "url": "https://www.oecd.org/en/publications/oecd-due-diligence-guidance-for-responsible-ai_41671712-en.html",
       "license": "Public (OECD publication)",
       "maturity": "Published (February 2026)",
-      "relevance": "International baseline for AI due diligence expectations across multinational enterprises \u2014 soft law that may harden; relevant for Australian firms with international operations or clients",
+      "relevance": "International baseline for AI due diligence expectations across multinational enterprises — soft law that may harden; relevant for Australian firms with international operations or clients",
       "dateDiscovered": "2026-03-21"
+    },
+    {
+      "id": "tool032",
+      "name": "NIST AI 800-4: Six-Category Post-Deployment Monitoring Framework",
+      "type": "Framework",
+      "source": "NIST Center for AI Standards and Innovation (CAISI), March 2026",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf",
+      "description": "Six-category taxonomy for post-deployment AI monitoring: Functionality (does it work as intended?), Operational (consistent service?), Human Factors (transparent and high quality?), Security (protected from attacks?), Compliance (adheres to regulations?), Large-Scale Impacts (promotes human flourishing?). Includes gaps, barriers, and open questions for each category.",
+      "maturity": "Authoritative — first federal systematic mapping from US national standards body",
+      "applicability": "AI assurance methodology; post-deployment audit design; monitoring gap assessment",
+      "dateAdded": "2026-03-22"
+    },
+    {
+      "id": "tool033",
+      "name": "Chiodo et al. HITL Computational Classification (Total/Many-One/Turing Reductions)",
+      "type": "Analytical Framework",
+      "source": "arXiv:2505.10426; ICLR 2026 (Cambridge CSER / Oxford Law)",
+      "url": "https://arxiv.org/abs/2505.10426",
+      "description": "Formal classification of Human-in-the-Loop setups using computability theory: (1) Trivial monitoring (total functions) — human can only stop the system, no genuine computational influence; (2) Many-one reductions — single endpoint human decision; (3) Turing reductions — rich, iterative human-AI interaction. Used to assess legal adequacy and safety value of HITL designs.",
+      "maturity": "Theoretical — peer-reviewed, ICLR 2026 accepted",
+      "applicability": "HITL audit design; regulatory adequacy assessment; liability exposure analysis",
+      "dateAdded": "2026-03-22"
+    },
+    {
+      "id": "tool034",
+      "name": "Jaton Ground Truth Tracing Methodology",
+      "type": "Audit Methodology",
+      "source": "Florian Jaton, AI & Society (Springer, July 2025)",
+      "url": "https://doi.org/10.1007/s44206-025-00197-4",
+      "description": "Methodology for examining algorithms in light of their ground truth datasets. Involves tracing the sociotechnical process by which training labels were assigned — who annotated, what instructions were given, what disagreements were resolved and how, what sociocultural fingerprints are embedded. Provides a 'ground truth studies' research program for assessing the epistemic foundation of AI accuracy claims.",
+      "maturity": "Academic methodology — requires adaptation for commercial use",
+      "applicability": "Trust provenance assessment; training data audits; epistemic validity of accuracy metrics",
+      "dateAdded": "2026-03-22"
     }
   ]
 }
