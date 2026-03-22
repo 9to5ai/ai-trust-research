@@ -26,6 +26,27 @@
   const logEntries = (logData?.entries || []).sort((a, b) => b.date.localeCompare(a.date));
   const latestSessionDate = logEntries.length > 0 ? logEntries[0].date : null;
 
+  // === SHARED HELPERS (must be before render calls) ===
+  const _paperMap = {};
+  (papersData?.papers || []).forEach(p => { _paperMap[p.id] = p; });
+
+  function paperLink(pidOrTitle, opts = {}) {
+    const p = _paperMap[pidOrTitle];
+    if (p) {
+      const title = opts.short && p.title.length > 60 ? p.title.substring(0, 57) + '...' : p.title;
+      const label = opts.showYear !== false ? `${title} (${p.year || ''})` : title;
+      return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="paper-link" title="${p.title}">${label}</a>`;
+    }
+    const match = (papersData?.papers || []).find(pp =>
+      pidOrTitle.toLowerCase().includes(pp.title.toLowerCase().substring(0, 30)) ||
+      pp.title.toLowerCase().includes(pidOrTitle.toLowerCase().substring(0, 30))
+    );
+    if (match && match.url) {
+      return `<a href="${match.url}" target="_blank" rel="noopener" class="paper-link" title="${match.title}">${pidOrTitle}</a>`;
+    }
+    return pidOrTitle;
+  }
+
   // --- Stats ---
   document.getElementById('stat-papers').textContent = meta?.stats?.totalPapers || 0;
   document.getElementById('stat-insights').textContent = meta?.stats?.totalThemes || 0;
@@ -99,31 +120,6 @@
   }
 
   initViewToggles(ensureThemesGraph, ensureSoWhatMatrix);
-
-  // === SHARED HELPERS ===
-
-  // Build global paper lookup map
-  const _paperMap = {};
-  (papersData?.papers || []).forEach(p => { _paperMap[p.id] = p; });
-
-  // Render a paper ID or title as a hyperlink. Falls back to plain text.
-  function paperLink(pidOrTitle, opts = {}) {
-    const p = _paperMap[pidOrTitle];
-    if (p) {
-      const title = opts.short && p.title.length > 60 ? p.title.substring(0, 57) + '...' : p.title;
-      const label = opts.showYear !== false ? `${title} (${p.year || ''})` : title;
-      return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="paper-link" title="${p.title}">${label}</a>`;
-    }
-    // Not an ID — it's a plain title string. Try fuzzy match by title substring.
-    const match = (papersData?.papers || []).find(pp =>
-      pidOrTitle.toLowerCase().includes(pp.title.toLowerCase().substring(0, 30)) ||
-      pp.title.toLowerCase().includes(pidOrTitle.toLowerCase().substring(0, 30))
-    );
-    if (match && match.url) {
-      return `<a href="${match.url}" target="_blank" rel="noopener" class="paper-link" title="${match.title}">${pidOrTitle}</a>`;
-    }
-    return pidOrTitle; // plain text fallback
-  }
 
   // === RENDER FUNCTIONS ===
 
