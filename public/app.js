@@ -100,6 +100,31 @@
 
   initViewToggles(ensureThemesGraph, ensureSoWhatMatrix);
 
+  // === SHARED HELPERS ===
+
+  // Build global paper lookup map
+  const _paperMap = {};
+  (papersData?.papers || []).forEach(p => { _paperMap[p.id] = p; });
+
+  // Render a paper ID or title as a hyperlink. Falls back to plain text.
+  function paperLink(pidOrTitle, opts = {}) {
+    const p = _paperMap[pidOrTitle];
+    if (p) {
+      const title = opts.short && p.title.length > 60 ? p.title.substring(0, 57) + '...' : p.title;
+      const label = opts.showYear !== false ? `${title} (${p.year || ''})` : title;
+      return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="paper-link" title="${p.title}">${label}</a>`;
+    }
+    // Not an ID — it's a plain title string. Try fuzzy match by title substring.
+    const match = (papersData?.papers || []).find(pp =>
+      pidOrTitle.toLowerCase().includes(pp.title.toLowerCase().substring(0, 30)) ||
+      pp.title.toLowerCase().includes(pidOrTitle.toLowerCase().substring(0, 30))
+    );
+    if (match && match.url) {
+      return `<a href="${match.url}" target="_blank" rel="noopener" class="paper-link" title="${match.title}">${pidOrTitle}</a>`;
+    }
+    return pidOrTitle; // plain text fallback
+  }
+
   // === RENDER FUNCTIONS ===
 
   function renderLatestLog(data) {
@@ -229,7 +254,17 @@
         ${t.keyPapers ? `
           <div class="log-subsection" style="margin-top:1rem">
             <h4>Key Papers</h4>
-            <ul>${t.keyPapers.map(p => `<li>${p}</li>`).join('')}</ul>
+            <ul>${t.keyPapers.map(p => `<li>${paperLink(p)}</li>`).join('')}</ul>
+          </div>` : ''}
+        ${!t.keyPapers && t.relatedPapers && t.relatedPapers.length ? `
+          <div class="theme-papers" style="margin-top:1rem">
+            <div class="sowhat-citations">
+              ${t.relatedPapers.map(pid => {
+                const p = _paperMap[pid];
+                if (!p) return '';
+                return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${p.title}">${p.title.length > 55 ? p.title.substring(0, 52) + '...' : p.title}</a>`;
+              }).join('')}
+            </div>
           </div>` : ''}
       </div>`;
     }).join('');
@@ -329,9 +364,9 @@
               </div>` : ''}
               <div class="sowhat-citations">
                 ${(item.citations || []).map(cid => {
-                  const paper = paperMap[cid];
-                  if (!paper) return '';
-                  return `<a href="${paper.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${paper.title}">${paper.title.length > 60 ? paper.title.substring(0, 57) + '...' : paper.title} (${paper.year || ''})</a>`;
+                  const p = _paperMap[cid];
+                  if (!p) return '';
+                  return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${p.title}">${p.title.length > 60 ? p.title.substring(0, 57) + '...' : p.title} (${p.year || ''})</a>`;
                 }).join('')}
               </div>
               ${(item.themes || []).length > 0 ? `
@@ -514,12 +549,7 @@
 
     // Click — show detail panel
     node.on('click', function(event, d) {
-      const paperMap = {};
-      (papersData?.papers || []).forEach(p => { paperMap[p.id] = p; });
-      const paperNames = d.relatedPapers.map(pid => {
-        const p = paperMap[pid];
-        return p ? p.title : pid;
-      });
+      const relatedPaperLinks = d.relatedPapers.map(pid => paperLink(pid, { showYear: true }));
 
       detailPanel.innerHTML = `
         <div class="graph-detail-panel">
@@ -536,10 +566,10 @@
               <h4>Evidence</h4>
               <ul>${d.evidence.map(e => `<li>${e}</li>`).join('')}</ul>
             </div>` : ''}
-          ${paperNames.length ? `
+          ${relatedPaperLinks.length ? `
             <div class="detail-section">
-              <h4>Related Papers (${paperNames.length})</h4>
-              <ul>${paperNames.map(p => `<li>${p}</li>`).join('')}</ul>
+              <h4>Related Papers (${relatedPaperLinks.length})</h4>
+              <ul>${relatedPaperLinks.map(p => `<li>${p}</li>`).join('')}</ul>
             </div>` : ''}
           ${d.implications ? `
             <div class="detail-section">
