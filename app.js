@@ -73,10 +73,32 @@
   // --- So What ---
   renderSoWhat(sowhatData, papersData, themesData);
 
-  // --- Visual Views ---
-  renderThemesGraph(themesData, papersData);
-  renderSoWhatMatrix(sowhatData, papersData, themesData);
-  initViewToggles();
+  // --- Visual Views (lazy-rendered when toggled visible) ---
+  let themesGraphRendered = false;
+  let sowhatMatrixRendered = false;
+
+  function ensureThemesGraph() {
+    if (!themesGraphRendered) {
+      themesGraphRendered = true;
+      // Ensure container is momentarily visible so D3 can measure
+      const c = document.getElementById('themes-graph-container');
+      if (c) {
+        c.style.visibility = 'hidden';
+        c.classList.add('active');
+        renderThemesGraph(themesData, papersData);
+        c.style.visibility = '';
+      }
+    }
+  }
+
+  function ensureSoWhatMatrix() {
+    if (!sowhatMatrixRendered) {
+      sowhatMatrixRendered = true;
+      renderSoWhatMatrix(sowhatData, papersData, themesData);
+    }
+  }
+
+  initViewToggles(ensureThemesGraph, ensureSoWhatMatrix);
 
   // === RENDER FUNCTIONS ===
 
@@ -389,8 +411,8 @@
     const wrap = document.getElementById('themes-graph-svg-wrap');
     const tooltip = document.getElementById('graph-tooltip');
     const detailPanel = document.getElementById('graph-detail-panel');
-    const width = wrap.clientWidth;
-    const height = wrap.clientHeight;
+    const width = wrap.clientWidth || 900;
+    const height = wrap.clientHeight || 600;
 
     const svg = d3.select(wrap).append('svg')
       .attr('viewBox', `0 0 ${width} ${height}`)
@@ -698,12 +720,12 @@
   }
 
   // === VIEW TOGGLE WIRING ===
-  function initViewToggles() {
-    setupToggle('themes', 'themes-view-toggle', 'themes-container', 'themes-graph-container');
-    setupToggle('sowhat', 'sowhat-view-toggle', 'sowhat-container', 'sowhat-matrix-container');
+  function initViewToggles(onThemesVisual, onSowhatVisual) {
+    setupToggle('themes', 'themes-view-toggle', 'themes-container', 'themes-graph-container', onThemesVisual);
+    setupToggle('sowhat', 'sowhat-view-toggle', 'sowhat-container', 'sowhat-matrix-container', onSowhatVisual);
   }
 
-  function setupToggle(key, toggleId, listContainerId, visualContainerId) {
+  function setupToggle(key, toggleId, listContainerId, visualContainerId, onVisualCb) {
     const toggle = document.getElementById(toggleId);
     const listContainer = document.getElementById(listContainerId);
     const visualContainer = document.getElementById(visualContainerId);
@@ -717,6 +739,7 @@
       buttons.forEach(b => b.classList.toggle('active', b.dataset.view === view));
 
       if (view === 'visual') {
+        if (onVisualCb) onVisualCb();
         listContainer.style.display = 'none';
         visualContainer.classList.add('active');
       } else {
