@@ -118,8 +118,13 @@
       <div class="section-header">
         <h2>Emerging Themes</h2>
         <span class="count" id="themes-count">0 themes</span>
+        <div class="view-toggle" id="themes-view-toggle">
+          <button data-view="list" class="active">List</button>
+          <button data-view="visual">Graph</button>
+        </div>
       </div>
       <div id="themes-container"></div>
+      <div id="themes-graph-container" class="themes-graph-container"></div>
     </div>
 
     <!-- TOOLS -->
@@ -136,11 +141,16 @@
       <div class="section-header">
         <h2>So What</h2>
         <span class="count" id="sowhat-count">Actionable Intelligence</span>
+        <div class="view-toggle" id="sowhat-view-toggle">
+          <button data-view="list" class="active">List</button>
+          <button data-view="visual">Matrix</button>
+        </div>
       </div>
       <div class="sowhat-intro">
         <p>Research is only valuable if it changes decisions. This page distils the entire AI Trust research corpus into sharp, actionable advice — grounded in evidence, cited to source. Updated as the research evolves.</p>
       </div>
       <div id="sowhat-container"></div>
+      <div id="sowhat-matrix-container" class="sowhat-matrix-container"></div>
       <div class="sowhat-updated" id="sowhat-updated"></div>
     </div>
 
@@ -215,6 +225,7 @@
     <p style="margin-top: 0.5rem;">Built on <a href="https://github.com/openclaw/openclaw">OpenClaw</a> · Powered by Claude</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script src="app.js"></script>
 </body>
 </html>
