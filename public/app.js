@@ -1,6 +1,9 @@
 // AI Trust Research — App
 (async function() {
   const dataDir = './data';
+  const PATTERNS_STORAGE_KEY = 'aiTrustReusablePatternsUnlocked';
+  const PATTERNS_PASSWORD_HASH = '85eb26be04b0ff35fc873c8c45b9f8d5b4b8060d9df83f8da3c287a4b030c50c';
+  let patternsData = null;
 
   // Load all data
   async function loadJSON(file) {
@@ -11,6 +14,21 @@
       console.warn(`Failed to load ${file}:`, e);
       return null;
     }
+  }
+
+  async function sha256Hex(text) {
+    const bytes = new TextEncoder().encode(text);
+    const digest = await crypto.subtle.digest('SHA-256', bytes);
+    return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+  }
+
+  function patternsUnlocked() {
+    return localStorage.getItem(PATTERNS_STORAGE_KEY) === '1';
+  }
+
+  async function ensurePatternsData() {
+    if (!patternsData) patternsData = await loadJSON('reusable-patterns.json');
+    return patternsData;
   }
 
   const [meta, logData, papersData, themesData, toolsData, sowhatData] = await Promise.all([
@@ -61,7 +79,7 @@
   const sections = document.querySelectorAll('.section');
 
   navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', async (e) => {
       e.preventDefault();
       const target = link.dataset.section;
       navLinks.forEach(l => l.classList.remove('active'));
@@ -69,6 +87,9 @@
       sections.forEach(s => {
         s.classList.toggle('active', s.id === target);
       });
+      if (target === 'patterns') {
+        await showPatterns();
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
@@ -381,6 +402,113 @@
     if (updatedEl && data?.lastUpdated) {
       updatedEl.textContent = `Last updated: ${data.lastUpdated}`;
     }
+  }
+
+  async function showPatterns() {
+    const container = document.getElementById('patterns-container');
+    const countEl = document.getElementById('patterns-count');
+    if (!container) return;
+
+    if (!patternsUnlocked()) {
+      countEl.textContent = 'Private';
+      container.innerHTML = `
+        <div class="pattern-gate">
+          <div class="pattern-gate-badge">Private consultation layer</div>
+          <h3>Reusable Patterns is lightly protected</h3>
+          <p>This tab contains consultation-grade patterns that are meant for direct client use. Enter the password to unlock it on this browser.</p>
+          <form id="patterns-gate-form" class="pattern-gate-form">
+            <input id="patterns-password" type="password" placeholder="Enter password" autocomplete="current-password" />
+            <button type="submit">Unlock</button>
+          </form>
+          <div id="patterns-gate-error" class="pattern-gate-error"></div>
+          <div class="pattern-gate-note">Light privacy only — enough to keep this layer out of casual view.</div>
+        </div>`;
+
+      const form = document.getElementById('patterns-gate-form');
+      form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const input = document.getElementById('patterns-password');
+        const error = document.getElementById('patterns-gate-error');
+        const value = input?.value || '';
+        const hash = await sha256Hex(value);
+        if (hash === PATTERNS_PASSWORD_HASH) {
+          localStorage.setItem(PATTERNS_STORAGE_KEY, '1');
+          await showPatterns();
+        } else {
+          error.textContent = 'Wrong password.';
+        }
+      });
+      return;
+    }
+
+    const data = await ensurePatternsData();
+    const patterns = data?.patterns || [];
+    countEl.textContent = `${patterns.length} patterns`;
+
+    container.innerHTML = `
+      <div class="patterns-toolbar">
+        <div class="patterns-toolbar-copy">Built for live consultations, workshops, diagnostic interviews, and executive conversations.</div>
+        <button id="patterns-lock" class="patterns-lock-btn">Lock tab</button>
+      </div>
+      <div class="patterns-grid">
+        ${patterns.map(pattern => `
+          <article class="pattern-card">
+            <div class="pattern-card-top">
+              <span class="pattern-category">${pattern.category}</span>
+              <span class="pattern-reuse ${String(pattern.reusability || 'high').replace(/\s+/g, '-').toLowerCase()}">${pattern.reusability || 'high'}</span>
+            </div>
+            <h3>${pattern.title}</h3>
+            <p class="pattern-summary">${pattern.summary}</p>
+
+            <div class="pattern-block">
+              <h4>When to use</h4>
+              <ul>${(pattern.whenToUse || []).map(x => `<li>${x}</li>`).join('')}</ul>
+            </div>
+
+            <div class="pattern-block">
+              <h4>How to run it</h4>
+              <ol>${(pattern.howToRun || []).map(x => `<li>${x}</li>`).join('')}</ol>
+            </div>
+
+            <div class="pattern-block">
+              <h4>Useful lines</h4>
+              <div class="pattern-lines">${(pattern.clientLines || []).map(x => `<blockquote>${x}</blockquote>`).join('')}</div>
+            </div>
+
+            <div class="pattern-meta-grid">
+              <div class="pattern-block">
+                <h4>Outputs</h4>
+                <ul>${(pattern.outputs || []).map(x => `<li>${x}</li>`).join('')}</ul>
+              </div>
+              <div class="pattern-block">
+                <h4>Watchouts</h4>
+                <ul>${(pattern.watchouts || []).map(x => `<li>${x}</li>`).join('')}</ul>
+              </div>
+            </div>
+
+            <div class="pattern-footer">
+              <div class="pattern-tags">
+                ${(pattern.themes || []).map(tid => {
+                  const theme = (themesData?.themes || []).find(t => t.id === tid);
+                  return `<span class="tag">${theme?.name || theme?.title || tid}</span>`;
+                }).join('')}
+              </div>
+              <div class="sowhat-citations">
+                ${(pattern.evidencePapers || []).map(pid => {
+                  const p = _paperMap[pid];
+                  if (!p) return `<span class="citation-link">${pid}</span>`;
+                  return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${p.title}">${pid}</a>`;
+                }).join('')}
+              </div>
+            </div>
+          </article>
+        `).join('')}
+      </div>`;
+
+    document.getElementById('patterns-lock')?.addEventListener('click', () => {
+      localStorage.removeItem(PATTERNS_STORAGE_KEY);
+      showPatterns();
+    });
   }
 
   // === THEMES NETWORK GRAPH ===

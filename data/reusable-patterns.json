@@ -1,0 +1,278 @@
+{
+  "lastUpdated": "2026-03-31",
+  "version": 1,
+  "patterns": [
+    {
+      "id": "rp01",
+      "title": "Oversight Mode Selection",
+      "category": "governance design",
+      "summary": "Stop treating human oversight as a binary. Match the oversight mode to the decision, the time horizon, and the reversibility of harm.",
+      "whenToUse": [
+        "A client says every AI decision must be human-reviewed",
+        "A board wants 'human in the loop' but cannot define what that means operationally",
+        "An agentic use case mixes low-risk routine actions with high-risk escalations"
+      ],
+      "howToRun": [
+        "Map the workflow into decision points, not systems.",
+        "Separate constitutive gates from corrective interventions.",
+        "Define where anticipatory oversight is needed because real-time review is infeasible.",
+        "Write explicit trigger conditions for escalation, pause, and override."
+      ],
+      "clientLines": [
+        "The question isn't whether a human is in the loop. It's what kind of loop, where, and with what actual intervention power.",
+        "If the human can only watch after the fact, call that monitoring, not control."
+      ],
+      "outputs": [
+        "Oversight mode map",
+        "Decision-rights matrix",
+        "Escalation and override triggers"
+      ],
+      "watchouts": [
+        "Rubber-stamp review passed off as meaningful control",
+        "Kill-switch theatre without genuine understanding or traceability",
+        "Designing oversight around org charts instead of workflow reality"
+      ],
+      "evidencePapers": ["p104", "p105", "p111"],
+      "themes": ["t040", "t41"],
+      "reusability": "high"
+    },
+    {
+      "id": "rp02",
+      "title": "Trust Provenance Ladder",
+      "category": "assurance",
+      "summary": "Trace trust below the model. Ask what is grounded in reality, what is proxy, what is inherited, and what degrades in production.",
+      "whenToUse": [
+        "A client wants assurance over an AI system but starts at model outputs",
+        "A model vendor claims strong trustworthiness without deep evidence on data or monitoring",
+        "You need to explain why 'accurate in testing' is not enough"
+      ],
+      "howToRun": [
+        "Start at output claims and walk backwards: output, deployment, model, training process, labels, source reality.",
+        "Mark each layer as observed, inferred, proxied, or assumed.",
+        "Identify which properties can be certified once versus continuously monitored.",
+        "Highlight where institutional judgement entered the chain."
+      ],
+      "clientLines": [
+        "Most AI trust claims are downstream claims built on upstream assumptions.",
+        "Ground truth is usually assembled, not discovered. That's where assurance has to begin."
+      ],
+      "outputs": [
+        "Trust provenance map",
+        "Certified-once vs monitored-continuously register",
+        "Assumption-to-evidence ledger"
+      ],
+      "watchouts": [
+        "Treating benchmark accuracy as a substitute for provenance",
+        "Ignoring label quality and institutional assumptions",
+        "Assuming static trust properties survive deployment unchanged"
+      ],
+      "evidencePapers": ["p107", "p108", "p113", "p115"],
+      "themes": ["t042", "t044", "t43"],
+      "reusability": "high"
+    },
+    {
+      "id": "rp03",
+      "title": "Path-Dependent Control Design",
+      "category": "agentic controls",
+      "summary": "Evaluate risky sequences, not just single actions. Many agent failures only become visible across a chain of individually acceptable steps.",
+      "whenToUse": [
+        "A client is deploying copilots or agents with tools, APIs, or system access",
+        "Control owners focus on prompts, permissions, or individual tool calls",
+        "You suspect that the real risk sits in action combinations rather than isolated moves"
+      ],
+      "howToRun": [
+        "List the top 5-10 mission paths the agent can execute.",
+        "Identify sequence-level failure modes: exfiltration, privilege escalation, hidden state changes, policy evasion.",
+        "Define runtime policies on paths, not just requests.",
+        "Add immutable logging at the path and handoff layer."
+      ],
+      "clientLines": [
+        "A safe action followed by another safe action can still create an unsafe path.",
+        "Prompt controls are not governance if the violation only appears at the sequence level."
+      ],
+      "outputs": [
+        "Path risk register",
+        "Runtime policy rules",
+        "Sequence-aware monitoring design"
+      ],
+      "watchouts": [
+        "Over-reliance on prompt wording",
+        "Approval gates that check single actions in isolation",
+        "No reconstruction of multi-step execution paths"
+      ],
+      "evidencePapers": ["p101", "p114"],
+      "themes": ["t44"],
+      "reusability": "high"
+    },
+    {
+      "id": "rp04",
+      "title": "Moral Crumple Zone Test",
+      "category": "accountability",
+      "summary": "Check whether the human is actually improving safety, or simply absorbing blame after the fact.",
+      "whenToUse": [
+        "A client mandates human approval for high-risk AI outputs",
+        "An executive says 'a human signs off, so we're covered'",
+        "You suspect the review task exceeds realistic human cognitive capacity"
+      ],
+      "howToRun": [
+        "Define exactly what the human reviewer must detect, verify, and challenge.",
+        "Test whether a competent reviewer can do that within the available time and evidence.",
+        "If not, redesign the system so the human governs framing, thresholds, and escalation instead of pretending to verify every output.",
+        "Document where accountability truly sits: design, deployment, monitoring, or review."
+      ],
+      "clientLines": [
+        "If the human cannot realistically detect the failure, you've built a liability absorber, not a control.",
+        "Presence is not oversight. Sign-off is not safety."
+      ],
+      "outputs": [
+        "Cognitive adequacy assessment",
+        "Reviewer task redesign",
+        "Accountability allocation map"
+      ],
+      "watchouts": [
+        "Compliance theatre disguised as oversight",
+        "Humans asked to verify opaque outputs at machine speed",
+        "Blame shifted downward while design decisions remain unscrutinised"
+      ],
+      "evidencePapers": ["p105", "p109", "p111", "p116"],
+      "themes": ["t041", "t42"],
+      "reusability": "high"
+    },
+    {
+      "id": "rp05",
+      "title": "Third-Party AI Materiality Review",
+      "category": "vendor risk",
+      "summary": "Treat major AI vendors like material service providers when they sit inside critical workflows. Most organisations are under-governing them.",
+      "whenToUse": [
+        "A bank or insurer uses OpenAI, Anthropic, Azure AI, Bedrock, or Vertex in material processes",
+        "The procurement or legal team treats the vendor as ordinary SaaS",
+        "A client needs a CPS 230-style discussion without hand-waving"
+      ],
+      "howToRun": [
+        "Map which business services actually depend on the AI vendor.",
+        "Assess concentration, substitutability, audit rights, subcontractor opacity, and incident notification obligations.",
+        "Separate model risk from service dependency risk.",
+        "Force a decision: tolerate gap, negotiate controls, or redesign dependence."
+      ],
+      "clientLines": [
+        "If the service is material, the AI vendor is not 'just software'. It's part of your operating resilience perimeter.",
+        "The hidden risk is not just model quality. It's contractual weakness plus dependency depth."
+      ],
+      "outputs": [
+        "AI vendor materiality assessment",
+        "contract gap matrix",
+        "substitutability and exit plan"
+      ],
+      "watchouts": [
+        "AI procurement done outside resilience or third-party risk frameworks",
+        "No practical fallback if the vendor changes terms or fails",
+        "Assuming hyperscaler branding equals adequate control evidence"
+      ],
+      "evidencePapers": ["p098", "p103"],
+      "themes": ["t039"],
+      "reusability": "high"
+    },
+    {
+      "id": "rp06",
+      "title": "Committee Diffusion Breaker",
+      "category": "operating model",
+      "summary": "When everyone touches AI governance, nobody owns it. Force named decisions, named artifacts, and named review triggers.",
+      "whenToUse": [
+        "A client has multiple committees and no one can answer who owns what",
+        "AI risk, cyber, legal, model risk, procurement, and business all assume someone else has checked it",
+        "You need to cut through governance sprawl fast"
+      ],
+      "howToRun": [
+        "For each major decision, assign one decision owner, one challenge owner, and one evidence owner.",
+        "Require a concrete artifact per control claim: test result, review note, policy exception, or log evidence.",
+        "Define escalation triggers and expiry dates for temporary tolerances.",
+        "Remove committee language until accountability is legible."
+      ],
+      "clientLines": [
+        "A committee can review a decision, but it cannot own one in the forensic sense regulators care about.",
+        "If you can't point to the artifact and the accountable owner, you don't have governance. You have atmosphere."
+      ],
+      "outputs": [
+        "AI decision-rights map",
+        "artifact register",
+        "escalation and exception protocol"
+      ],
+      "watchouts": [
+        "Shared accountability becoming no accountability",
+        "Control claims with no attached evidence object",
+        "Temporary workarounds becoming permanent invisible policy"
+      ],
+      "evidencePapers": ["p110", "p112"],
+      "themes": ["t045", "t45"],
+      "reusability": "high"
+    },
+    {
+      "id": "rp07",
+      "title": "Assurance Stack by Lifecycle Stage",
+      "category": "assurance",
+      "summary": "Split assurance into pre-deployment, deployment, and post-deployment layers. Different trust claims belong at different stages.",
+      "whenToUse": [
+        "A client asks for 'an AI assurance framework'",
+        "Internal audit wants a coherent review structure",
+        "A vendor lumps design evidence and runtime evidence together"
+      ],
+      "howToRun": [
+        "List the trust claims being made: accuracy, fairness, robustness, provenance, overrideability, incident response.",
+        "Assign each claim to the stage where it can actually be evidenced.",
+        "Make explicit which claims decay and need continuous evidence.",
+        "Design assurance reports that distinguish inherited evidence from live evidence."
+      ],
+      "clientLines": [
+        "You cannot audit runtime drift with design documents, and you cannot prove training integrity with production dashboards.",
+        "Assurance gets stronger when claims are matched to the stage where they can genuinely be evidenced."
+      ],
+      "outputs": [
+        "Lifecycle assurance stack",
+        "claim-to-evidence matrix",
+        "monitoring control plan"
+      ],
+      "watchouts": [
+        "One-off validation presented as ongoing assurance",
+        "Monitoring controls with no tie back to original trust claims",
+        "Audit scopes that blur design and runtime evidence"
+      ],
+      "evidencePapers": ["p102", "p107", "p113"],
+      "themes": ["t044"],
+      "reusability": "high"
+    },
+    {
+      "id": "rp08",
+      "title": "Consultation Reframe: From AI Risk to Decision Rights",
+      "category": "client framing",
+      "summary": "When a conversation gets abstract, reframe it around who is allowed to decide what, with what evidence, and what happens when they are wrong.",
+      "whenToUse": [
+        "A client meeting drifts into generic AI ethics language",
+        "Senior executives want something practical and immediate",
+        "You need to bridge trust, governance, and liability in one move"
+      ],
+      "howToRun": [
+        "Ask what decisions the AI is influencing, recommending, or making.",
+        "For each decision, ask who currently owns it, who can intervene, and what evidence they see.",
+        "Then ask what artifact would prove this was governed well after an incident.",
+        "Use the answers to redesign controls around real decision rights rather than abstract principles."
+      ],
+      "clientLines": [
+        "Trust is too vague to govern directly. Decision rights are not.",
+        "The fastest way to make this practical is to ask: who decides, on what basis, and who can stop it?"
+      ],
+      "outputs": [
+        "Decision inventory",
+        "intervention map",
+        "post-incident evidence checklist"
+      ],
+      "watchouts": [
+        "Abstract principle statements with no operational anchor",
+        "Confusing recommendation systems with non-decision systems",
+        "No forensic trail for why a decision was allowed to stand"
+      ],
+      "evidencePapers": ["p104", "p112", "p114"],
+      "themes": ["t040", "t45"],
+      "reusability": "very high"
+    }
+  ]
+}

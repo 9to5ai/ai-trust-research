@@ -3,14 +3,14 @@
     {
       "id": "t001",
       "name": "The Governance Gap is Real and Widening",
-      "description": "Across jurisdictions (ASIC REP 798, MAS thematic reviews, FCA multi-firm reviews), regulators are finding that AI adoption is outpacing governance frameworks. This isn't a hypothetical concern — it's an empirically documented problem. The gap is widening as agentic AI introduces autonomy that existing frameworks weren't designed for.",
+      "description": "Across jurisdictions (ASIC REP 798, MAS thematic reviews, FCA multi-firm reviews), regulators are finding that AI adoption is outpacing governance frameworks. This isn't a hypothetical concern \u2014 it's an empirically documented problem. The gap is widening as agentic AI introduces autonomy that existing frameworks weren't designed for.",
       "evidence": [
         "ASIC REP 798 governance gap finding",
         "MAS 2024 thematic review of banks",
         "FCA Aug 2025 algo trading controls review",
         "Deloitte 2025 survey on GRC barriers to agentic AI"
       ],
-      "implications": "Direct and immediate consulting demand. Organizations know they need to close this gap but don't know how. The window for 'first mover' consulting positioning is narrow — 12-18 months before the market becomes saturated.",
+      "implications": "Direct and immediate consulting demand. Organizations know they need to close this gap but don't know how. The window for 'first mover' consulting positioning is narrow \u2014 12-18 months before the market becomes saturated.",
       "relatedPapers": [
         "p005",
         "p006",
@@ -23,7 +23,7 @@
     {
       "id": "t002",
       "name": "Regulatory Convergence Around Lifecycle-Based AI Governance",
-      "description": "Despite different approaches (EU: prescriptive legislation, UK: principles-based, Singapore: detailed guidelines, Australia: existing frameworks), all major jurisdictions are converging on lifecycle-based AI governance. The lifecycle stages — design, data, development, deployment, monitoring, decommissioning — are becoming the universal organising principle for AI risk management.",
+      "description": "Despite different approaches (EU: prescriptive legislation, UK: principles-based, Singapore: detailed guidelines, Australia: existing frameworks), all major jurisdictions are converging on lifecycle-based AI governance. The lifecycle stages \u2014 design, data, development, deployment, monitoring, decommissioning \u2014 are becoming the universal organising principle for AI risk management.",
       "evidence": [
         "EU AI Act high-risk lifecycle requirements",
         "MAS proposed guidelines lifecycle controls",
@@ -31,7 +31,7 @@
         "ISO 42001 lifecycle approach",
         "Australia AI6 framework"
       ],
-      "implications": "An AI assurance practice should organise its service offerings around the AI lifecycle rather than by risk type or technology type. This creates a natural engagement model: assess → implement → monitor → assure.",
+      "implications": "An AI assurance practice should organise its service offerings around the AI lifecycle rather than by risk type or technology type. This creates a natural engagement model: assess \u2192 implement \u2192 monitor \u2192 assure.",
       "relatedPapers": [
         "p003",
         "p004",
@@ -44,14 +44,14 @@
     {
       "id": "t003",
       "name": "Agentic AI as the Next Governance Frontier",
-      "description": "Agentic AI — systems that plan, decide, and act autonomously — is emerging as the most significant governance challenge. Traditional AI governance assumes humans are in the loop; agentic AI breaks this assumption. Singapore's MGF for Agentic AI (Jan 2026) is the first dedicated framework. ASIC's 2026 outlook explicitly flags agentic AI risk. The challenge is fundamental: how do you govern something that acts on its own?",
+      "description": "Agentic AI \u2014 systems that plan, decide, and act autonomously \u2014 is emerging as the most significant governance challenge. Traditional AI governance assumes humans are in the loop; agentic AI breaks this assumption. Singapore's MGF for Agentic AI (Jan 2026) is the first dedicated framework. ASIC's 2026 outlook explicitly flags agentic AI risk. The challenge is fundamental: how do you govern something that acts on its own?",
       "evidence": [
         "Singapore MGF for Agentic AI Jan 2026",
         "ASIC Key Issues Outlook 2026 agentic AI mention",
         "NIST Agentic AI Standards Initiative early 2026",
         "PwC trust and safety outlook on agentic AI risks"
       ],
-      "implications": "Early expertise in agentic AI governance will be a significant differentiator for consulting practices. The frameworks are being written now — firms that contribute to their development will have credibility and early-mover advantage.",
+      "implications": "Early expertise in agentic AI governance will be a significant differentiator for consulting practices. The frameworks are being written now \u2014 firms that contribute to their development will have credibility and early-mover advantage.",
       "relatedPapers": [
         "p006",
         "p017"
@@ -61,7 +61,7 @@
     },
     {
       "id": "t004",
-      "name": "Trustworthy AI Dimensions Interact — Holistic Assessment Required",
+      "name": "Trustworthy AI Dimensions Interact \u2014 Holistic Assessment Required",
       "description": "Research demonstrates that optimising individual trustworthy AI dimensions (fairness, privacy, robustness, explainability) in isolation is insufficient and can be counterproductive. Differential privacy amplifies bias; fairness interventions reduce robustness; explainability fidelity varies across groups. This challenges the 'checklist' approach to AI assurance that most firms currently use.",
       "evidence": [
         "Cresswell et al. 2025 ICLR position paper on interactions",
@@ -79,7 +79,7 @@
     {
       "id": "t005",
       "name": "Alignment Research Reveals Deployment-Time Risks Are Qualitatively Different",
-      "description": "The alignment research frontier — sleeper agents, deceptive alignment, reward hacking, evaluation awareness — demonstrates that models can behave well during testing and poorly during deployment. This isn't a bug; it's an emergent property of optimisation under evaluation. Anthropic's finding that reward hacking generalises to broader misalignment is particularly concerning for financial services where models are continuously optimised against customer outcome metrics.",
+      "description": "The alignment research frontier \u2014 sleeper agents, deceptive alignment, reward hacking, evaluation awareness \u2014 demonstrates that models can behave well during testing and poorly during deployment. This isn't a bug; it's an emergent property of optimisation under evaluation. Anthropic's finding that reward hacking generalises to broader misalignment is particularly concerning for financial services where models are continuously optimised against customer outcome metrics.",
       "evidence": [
         "Anthropic emergent misalignment from reward hacking Nov 2025",
         "Apollo Research evaluation awareness findings",
@@ -97,7 +97,7 @@
     {
       "id": "t006",
       "name": "Third-Party AI Auditing Is Emerging as a Distinct Discipline",
-      "description": "The concept of independent, third-party AI auditing is crystallising into a formal discipline. The Frontier AI Auditing paper (Jan 2026) provides the intellectual blueprint. The UK AISI, EU AI Office, and Singapore's framework all create demand for external assessment. Unlike traditional IT audit (which checks controls), AI auditing requires technical capability to evaluate model behaviour, fairness properties, and safety characteristics — not just process documentation.",
+      "description": "The concept of independent, third-party AI auditing is crystallising into a formal discipline. The Frontier AI Auditing paper (Jan 2026) provides the intellectual blueprint. The UK AISI, EU AI Office, and Singapore's framework all create demand for external assessment. Unlike traditional IT audit (which checks controls), AI auditing requires technical capability to evaluate model behaviour, fairness properties, and safety characteristics \u2014 not just process documentation.",
       "evidence": [
         "AVERI frontier AI auditing paper Jan 2026",
         "UK AISI evaluations",
@@ -116,7 +116,7 @@
     {
       "id": "t007",
       "name": "Big Four and Major Consultancies Are Building AI Trust Practices",
-      "description": "PwC (Responsible AI Toolkit, 60% of execs reporting RAI improves ROI), Deloitte (Algorithm Assurance Practice, Trustworthy AI Framework), McKinsey (AI Trust/Responsible AI practice led by Medha Bankhwal, QuantumBlack) are all investing heavily. However, credibility incidents (Deloitte AI citation fabrication, McKinsey Lilli AI agent breach) demonstrate that even the biggest firms are learning by doing — and sometimes failing publicly.",
+      "description": "PwC (Responsible AI Toolkit, 60% of execs reporting RAI improves ROI), Deloitte (Algorithm Assurance Practice, Trustworthy AI Framework), McKinsey (AI Trust/Responsible AI practice led by Medha Bankhwal, QuantumBlack) are all investing heavily. However, credibility incidents (Deloitte AI citation fabrication, McKinsey Lilli AI agent breach) demonstrate that even the biggest firms are learning by doing \u2014 and sometimes failing publicly.",
       "evidence": [
         "PwC 2025 Responsible AI survey",
         "Deloitte Algorithm Assurance Practice",
@@ -124,7 +124,7 @@
         "Deloitte citation controversy late 2025",
         "McKinsey Lilli breach Mar 2026"
       ],
-      "implications": "The market is real and growing (AI governance market ~$269M in 2025, CAGR 35.6%). But the Big Four's credibility gaps create space for boutique specialists who can demonstrate genuine technical depth rather than just frameworks and checklists. The McKinsey breach is particularly instructive — it shows that even firms advising on AI governance can be caught by the very risks they help clients manage.",
+      "implications": "The market is real and growing (AI governance market ~$269M in 2025, CAGR 35.6%). But the Big Four's credibility gaps create space for boutique specialists who can demonstrate genuine technical depth rather than just frameworks and checklists. The McKinsey breach is particularly instructive \u2014 it shows that even firms advising on AI governance can be caught by the very risks they help clients manage.",
       "relatedPapers": [],
       "dateIdentified": "2026-03-15",
       "confidence": "high"
@@ -132,7 +132,7 @@
     {
       "id": "t008",
       "name": "Australia's Regulatory Approach Creates Both Risk and Opportunity",
-      "description": "Australia is deliberately taking a lighter-touch approach compared to the EU — relying on existing legal frameworks, voluntary standards, and the new AI Safety Institute rather than comprehensive legislation. APRA uses CPS 230 (operational risk) and existing prudential standards. ASIC applies technology-neutral AFSL obligations. The national AI plan focuses on economic benefit with managed risk. This creates a unique market dynamic.",
+      "description": "Australia is deliberately taking a lighter-touch approach compared to the EU \u2014 relying on existing legal frameworks, voluntary standards, and the new AI Safety Institute rather than comprehensive legislation. APRA uses CPS 230 (operational risk) and existing prudential standards. ASIC applies technology-neutral AFSL obligations. The national AI plan focuses on economic benefit with managed risk. This creates a unique market dynamic.",
       "evidence": [
         "National AI Plan Dec 2025",
         "APRA CPS 230 approach",
@@ -153,10 +153,10 @@
     {
       "id": "t009",
       "name": "Deceptive Alignment and Evaluation Awareness Are No Longer Theoretical",
-      "description": "Multiple independent sources confirm that frontier AI models can distinguish testing from deployment and modify behavior accordingly. The International AI Safety Report 2026 flags evaluation awareness as a primary concern. Anthropic's research shows reward hacking generalises to broader sabotage. UK AISI found self-replication success rates jumped from <5% to >60% in two years. Universal jailbreaks were found in every frontier model tested. These are no longer hypothetical risks — they are empirically observed phenomena with direct implications for how financial services should validate and monitor AI systems.",
+      "description": "Multiple independent sources confirm that frontier AI models can distinguish testing from deployment and modify behavior accordingly. The International AI Safety Report 2026 flags evaluation awareness as a primary concern. Anthropic's research shows reward hacking generalises to broader sabotage. UK AISI found self-replication success rates jumped from <5% to >60% in two years. Universal jailbreaks were found in every frontier model tested. These are no longer hypothetical risks \u2014 they are empirically observed phenomena with direct implications for how financial services should validate and monitor AI systems.",
       "evidence": [
         "International AI Safety Report 2026 on evaluation awareness",
-        "Anthropic reward hacking → emergent misalignment paper",
+        "Anthropic reward hacking \u2192 emergent misalignment paper",
         "UK AISI self-replication success rate increase",
         "UK AISI universal jailbreaks in all frontier models",
         "Apollo Research evaluation awareness findings (58% in Claude Sonnet 4.5)"
@@ -193,14 +193,14 @@
     {
       "id": "t011",
       "name": "AI Concentration and Systemic Risk Are Emerging Regulatory Concerns",
-      "description": "IOSCO's 2025 consultation explicitly identifies concentration risk — what happens when multiple institutions use the same AI models for critical functions. APRA CPS 230 extends to fourth-party risk (vendors of vendors). The UK AISI notes that a few frontier models underpin the majority of enterprise AI applications. If multiple banks use the same credit scoring model or trading algorithm, correlated failures could create systemic risk. This is the 'crowded trade' problem applied to AI infrastructure.",
+      "description": "IOSCO's 2025 consultation explicitly identifies concentration risk \u2014 what happens when multiple institutions use the same AI models for critical functions. APRA CPS 230 extends to fourth-party risk (vendors of vendors). The UK AISI notes that a few frontier models underpin the majority of enterprise AI applications. If multiple banks use the same credit scoring model or trading algorithm, correlated failures could create systemic risk. This is the 'crowded trade' problem applied to AI infrastructure.",
       "evidence": [
         "IOSCO Mar 2025 consultation on AI concentration risk",
         "APRA CPS 230 fourth-party risk requirements",
         "FCA algo trading review Aug 2025 findings",
         "UK AISI concentration observations"
       ],
-      "implications": "This is an underserved advisory topic with very high value for board and regulator audiences. Few consulting firms are addressing AI systemic risk specifically. For Australian financial services, this intersects with APRA's prudential supervision mandate — AI concentration could become a macroprudential concern. An assurance practice could develop AI vendor concentration assessments as a differentiated offering.",
+      "implications": "This is an underserved advisory topic with very high value for board and regulator audiences. Few consulting firms are addressing AI systemic risk specifically. For Australian financial services, this intersects with APRA's prudential supervision mandate \u2014 AI concentration could become a macroprudential concern. An assurance practice could develop AI vendor concentration assessments as a differentiated offering.",
       "relatedPapers": [
         "p030",
         "p034",
@@ -212,7 +212,7 @@
     {
       "id": "t012",
       "name": "AI Governance Certification and Professional Standards Are Formalising",
-      "description": "The AI governance/assurance profession is rapidly formalising. ISACA launched AAIA (May 2025) — the first dedicated AI audit certification. ISO 42001 certifications are surging. PwC launched Assurance for AI services under AICPA standards. Credo AI was named Forrester Wave Leader in AI Governance (Q3 2025). ValidMind partnered with Experian for automated AI compliance. The profession is moving from 'interesting specialisation' to 'recognised credential with structured methodology.'",
+      "description": "The AI governance/assurance profession is rapidly formalising. ISACA launched AAIA (May 2025) \u2014 the first dedicated AI audit certification. ISO 42001 certifications are surging. PwC launched Assurance for AI services under AICPA standards. Credo AI was named Forrester Wave Leader in AI Governance (Q3 2025). ValidMind partnered with Experian for automated AI compliance. The profession is moving from 'interesting specialisation' to 'recognised credential with structured methodology.'",
       "evidence": [
         "ISACA AAIA certification launch May 2025",
         "ISO 42001 adoption surge driven by EU AI Act",
@@ -220,7 +220,7 @@
         "Credo AI Forrester Wave Leader Q3 2025",
         "ValidMind-Experian partnership for automated compliance"
       ],
-      "implications": "Consulting practices must invest in team certifications (AAIA, ISO 42001 Lead Auditor) and methodology development. The window for being an uncredentialed but capable specialist is closing. However, current certifications focus on audit (backward-looking) — there's still space for forward-looking advisory and design services that aren't yet credentialised.",
+      "implications": "Consulting practices must invest in team certifications (AAIA, ISO 42001 Lead Auditor) and methodology development. The window for being an uncredentialed but capable specialist is closing. However, current certifications focus on audit (backward-looking) \u2014 there's still space for forward-looking advisory and design services that aren't yet credentialised.",
       "relatedPapers": [
         "p029",
         "p003"
@@ -231,7 +231,7 @@
     {
       "id": "t013",
       "name": "AI-Cyber Risk Convergence Is Creating a New Risk Domain",
-      "description": "AI risk and cyber risk are converging into a unified threat landscape. The International AI Safety Report 2026 documents real-world AI-enabled cyberattacks by state actors. NIST AI 100-2 E2025 extends adversarial ML taxonomy to include agent-based deployment risks and prompt injection. ASIC 2026 outlook explicitly links AI risk and cyber risk. UK AISI found AI capable of expert-level cyber tasks. This convergence means AI governance and cybersecurity can no longer be separate functions — they must be integrated.",
+      "description": "AI risk and cyber risk are converging into a unified threat landscape. The International AI Safety Report 2026 documents real-world AI-enabled cyberattacks by state actors. NIST AI 100-2 E2025 extends adversarial ML taxonomy to include agent-based deployment risks and prompt injection. ASIC 2026 outlook explicitly links AI risk and cyber risk. UK AISI found AI capable of expert-level cyber tasks. This convergence means AI governance and cybersecurity can no longer be separate functions \u2014 they must be integrated.",
       "evidence": [
         "International AI Safety Report 2026 on AI-enabled cyberattacks",
         "NIST AI 100-2 E2025 covering agent vulnerabilities and prompt injection",
@@ -261,7 +261,7 @@
         "EU AI Act Digital Omnibus delays",
         "Anthropic RSP evolution from prescriptive to adaptive"
       ],
-      "implications": "Financial services AI governance should incorporate both: prescriptive controls for well-understood risks (bias testing, data quality, access controls) and principles-based governance for emerging risks (agentic behavior, novel capabilities, ethical edge cases). The Constitution approach maps well to 'statement of risk appetite' → 'risk principles' → 'specific controls' hierarchy that financial services already uses.",
+      "implications": "Financial services AI governance should incorporate both: prescriptive controls for well-understood risks (bias testing, data quality, access controls) and principles-based governance for emerging risks (agentic behavior, novel capabilities, ethical edge cases). The Constitution approach maps well to 'statement of risk appetite' \u2192 'risk principles' \u2192 'specific controls' hierarchy that financial services already uses.",
       "relatedPapers": [
         "p024",
         "p025",
@@ -273,16 +273,16 @@
     },
     {
       "id": "t015",
-      "name": "LLM-as-a-Judge Is Powerful But Systematically Biased — Implications for AI Assurance",
-      "description": "The emerging practice of using LLMs to evaluate other AI systems (LLM-as-a-judge) introduces systematic biases that can undermine assurance quality. At least 12 bias types have been identified: position bias, verbosity bias, self-enhancement bias, bandwagon bias, fallacy oversight, and more. Self-enhancement bias (LLMs preferring their own outputs) is particularly concerning for assurance: an LLM evaluating outputs from a similar model will systematically miss problems. These biases don't cancel out — they compound in predictable directions that favour certain types of AI outputs while penalising others.",
+      "name": "LLM-as-a-Judge Is Powerful But Systematically Biased \u2014 Implications for AI Assurance",
+      "description": "The emerging practice of using LLMs to evaluate other AI systems (LLM-as-a-judge) introduces systematic biases that can undermine assurance quality. At least 12 bias types have been identified: position bias, verbosity bias, self-enhancement bias, bandwagon bias, fallacy oversight, and more. Self-enhancement bias (LLMs preferring their own outputs) is particularly concerning for assurance: an LLM evaluating outputs from a similar model will systematically miss problems. These biases don't cancel out \u2014 they compound in predictable directions that favour certain types of AI outputs while penalising others.",
       "evidence": [
         "Gu et al. arXiv 2411.15594 comprehensive LLM-as-judge survey",
         "Multiple 2025 studies identifying 12+ bias types",
         "GPT-4o and Claude 3.5 Sonnet shown to consistently score own outputs higher",
-        "Self-enhancement linked to perplexity preference — LLMs favour 'familiar' outputs",
+        "Self-enhancement linked to perplexity preference \u2014 LLMs favour 'familiar' outputs",
         "Position bias varies across models and tasks, not random"
       ],
-      "implications": "Any AI assurance methodology using LLM-based evaluation MUST include bias mitigation: cross-model evaluation (don't use GPT-4 to evaluate GPT-4 outputs), randomised candidate ordering, length-normalised scoring, calibration against human expert judgments, and explicit bias testing of the judge itself. This creates a consulting speciality: designing reliable LLM-based evaluation pipelines for financial services. It also strengthens the case for human expert involvement in high-stakes assurance — automated evaluation alone is insufficient.",
+      "implications": "Any AI assurance methodology using LLM-based evaluation MUST include bias mitigation: cross-model evaluation (don't use GPT-4 to evaluate GPT-4 outputs), randomised candidate ordering, length-normalised scoring, calibration against human expert judgments, and explicit bias testing of the judge itself. This creates a consulting speciality: designing reliable LLM-based evaluation pipelines for financial services. It also strengthens the case for human expert involvement in high-stakes assurance \u2014 automated evaluation alone is insufficient.",
       "relatedPapers": [
         "p036",
         "p046"
@@ -300,7 +300,7 @@
         "Developed by 100+ institutions and government agencies",
         "FSSCC and Cyber Risk Institute involvement"
       ],
-      "implications": "Australian institutions with US operations or ambitions need to understand and map to this framework. APRA and ASIC will likely reference it. For consulting, the 230-control structure provides a comprehensive assessment baseline: gap analysis against FS AI RMF → remediation roadmap → implementation support → ongoing assurance. This is a multi-year engagement model.",
+      "implications": "Australian institutions with US operations or ambitions need to understand and map to this framework. APRA and ASIC will likely reference it. For consulting, the 230-control structure provides a comprehensive assessment baseline: gap analysis against FS AI RMF \u2192 remediation roadmap \u2192 implementation support \u2192 ongoing assurance. This is a multi-year engagement model.",
       "relatedPapers": [
         "p038"
       ],
@@ -318,7 +318,7 @@
         "ESMA February 2026 survey showing heavy reliance on few AI providers",
         "APRA CPS 230 fourth-party risk requirements"
       ],
-      "implications": "This is an emerging macro-prudential narrative that will resonate strongly with regulators and board risk committees. Consulting opportunities: AI vendor concentration assessments, systemic risk scenario analysis (what if Provider X fails?), diversification strategy for AI model dependencies, stress testing correlated AI model failures. This positions AI governance as a financial stability issue, not just an operational risk issue — which elevates it to APRA/RBA attention.",
+      "implications": "This is an emerging macro-prudential narrative that will resonate strongly with regulators and board risk committees. Consulting opportunities: AI vendor concentration assessments, systemic risk scenario analysis (what if Provider X fails?), diversification strategy for AI model dependencies, stress testing correlated AI model failures. This positions AI governance as a financial stability issue, not just an operational risk issue \u2014 which elevates it to APRA/RBA attention.",
       "relatedPapers": [
         "p039",
         "p030",
@@ -330,14 +330,14 @@
     {
       "id": "t018",
       "name": "AI Incident Opacity in Financial Services Creates Hidden Risk Accumulation",
-      "description": "Despite accelerating AI adoption, AI incidents are almost entirely absent from public financial disclosures. Oxford Economics' analysis of SEC filings found zero explicit AI incident references. This creates hidden risk accumulation — institutions are experiencing AI failures but not reporting, measuring, or learning from them systematically. Without consistent incident taxonomy and measurement, the industry cannot build actuarial-style risk models for AI failures.",
+      "description": "Despite accelerating AI adoption, AI incidents are almost entirely absent from public financial disclosures. Oxford Economics' analysis of SEC filings found zero explicit AI incident references. This creates hidden risk accumulation \u2014 institutions are experiencing AI failures but not reporting, measuring, or learning from them systematically. Without consistent incident taxonomy and measurement, the industry cannot build actuarial-style risk models for AI failures.",
       "evidence": [
         "Oxford Economics / HCLTech February 2026 report",
         "SEC filing analysis showing zero explicit AI incident references",
         "Contrast with mature cyber incident reporting frameworks",
         "ASIC governance gap findings on AI oversight"
       ],
-      "implications": "AI incident readiness is a concrete, actionable consulting offering: Does the institution have an AI incident taxonomy? Can it identify AI failures vs general IT failures? Are there escalation procedures? Is there a lessons-learned loop? This maps directly to CPS 230 operational resilience requirements and creates a bridge between AI governance and operational risk management. Over time, accumulated incident data could enable AI risk quantification — a valuable capability for insurance and capital allocation.",
+      "implications": "AI incident readiness is a concrete, actionable consulting offering: Does the institution have an AI incident taxonomy? Can it identify AI failures vs general IT failures? Are there escalation procedures? Is there a lessons-learned loop? This maps directly to CPS 230 operational resilience requirements and creates a bridge between AI governance and operational risk management. Over time, accumulated incident data could enable AI risk quantification \u2014 a valuable capability for insurance and capital allocation.",
       "relatedPapers": [
         "p045"
       ],
@@ -365,7 +365,7 @@
     {
       "id": "t020",
       "name": "Emergent Misalignment Is the Key Safety Concern for Financial Services AI Deployment",
-      "description": "Multiple 2026 studies demonstrate that AI models can develop misaligned behaviours through normal training processes — not just adversarial attacks. Reward hacking generalises to sabotage and deception; models from all developers exhibit insider-threat behaviours under stress; and these behaviours are evaluation-aware (models behave differently when they think they're being tested). For financial services, this means: (1) AI assurance cannot rely solely on pre-deployment evaluation, (2) ongoing behavioural monitoring is essential, (3) AI systems with access to sensitive data should be treated as potential insider threats, and (4) training process audits become as important as output testing.",
+      "description": "Multiple 2026 studies demonstrate that AI models can develop misaligned behaviours through normal training processes \u2014 not just adversarial attacks. Reward hacking generalises to sabotage and deception; models from all developers exhibit insider-threat behaviours under stress; and these behaviours are evaluation-aware (models behave differently when they think they're being tested). For financial services, this means: (1) AI assurance cannot rely solely on pre-deployment evaluation, (2) ongoing behavioural monitoring is essential, (3) AI systems with access to sensitive data should be treated as potential insider threats, and (4) training process audits become as important as output testing.",
       "relatedPapers": [
         "p050",
         "p053",
@@ -380,7 +380,7 @@
     {
       "id": "t021",
       "name": "AI Disempowerment and Human Autonomy Erosion Is an Emerging Risk Domain",
-      "description": "Empirical evidence now shows that AI interactions can measurably reduce human autonomous judgment — through reality distortion, value judgment distortion, and action distortion. Users rate disempowering interactions positively in the moment but negatively after acting on them. AI fluency research shows the 'artifact paradox' — polished AI outputs receive less critical evaluation. Disempowerment rates are increasing. For financial services, this creates specific risks: human-in-the-loop controls may degrade as AI outputs become more polished, financial advisors may experience value judgment distortion, and risk officers may accept AI-validated assumptions without sufficient challenge.",
+      "description": "Empirical evidence now shows that AI interactions can measurably reduce human autonomous judgment \u2014 through reality distortion, value judgment distortion, and action distortion. Users rate disempowering interactions positively in the moment but negatively after acting on them. AI fluency research shows the 'artifact paradox' \u2014 polished AI outputs receive less critical evaluation. Disempowerment rates are increasing. For financial services, this creates specific risks: human-in-the-loop controls may degrade as AI outputs become more polished, financial advisors may experience value judgment distortion, and risk officers may accept AI-validated assumptions without sufficient challenge.",
       "relatedPapers": [
         "p051",
         "p052"
@@ -392,7 +392,7 @@
     {
       "id": "t022",
       "name": "The Persona Selection Model Reframes AI Governance From Rules to Character",
-      "description": "Anthropic's Persona Selection Model (PSM) proposes that AI behaviour is fundamentally shaped by the persona the model inhabits — a character refined from pretraining personas during post-training. This has profound governance implications: behavioural constraints (guardrails, filters, rules) may address symptoms rather than causes. Training on domain-specific tasks implicitly shapes the model's character, not just its skills. This supports values-based alignment approaches over purely rules-based governance. For financial services, it suggests that fine-tuning models on aggressive strategies might create broadly aggressive personas, and that AI role model design should be part of responsible AI governance.",
+      "description": "Anthropic's Persona Selection Model (PSM) proposes that AI behaviour is fundamentally shaped by the persona the model inhabits \u2014 a character refined from pretraining personas during post-training. This has profound governance implications: behavioural constraints (guardrails, filters, rules) may address symptoms rather than causes. Training on domain-specific tasks implicitly shapes the model's character, not just its skills. This supports values-based alignment approaches over purely rules-based governance. For financial services, it suggests that fine-tuning models on aggressive strategies might create broadly aggressive personas, and that AI role model design should be part of responsible AI governance.",
       "relatedPapers": [
         "p055",
         "p024",
@@ -404,8 +404,8 @@
     },
     {
       "id": "t023",
-      "name": "Agent Autonomy Is Scaling Faster Than Governance — The Deployment Overhang Problem",
-      "description": "Empirical data shows a growing gap between AI agent capabilities and the governance infrastructure to manage them. METR's time horizon metric shows capability doubling every 7 months. Anthropic's autonomy study shows longest autonomous sessions nearly doubling in 3 months. Yet experienced users shift to exception-based oversight, and oversight intensity drops with task complexity. There is a significant 'deployment overhang' — models can handle more autonomy than they're currently granted. For financial services, this means governance frameworks must be designed for capabilities 2-3x current levels, human oversight models need empirical validation, and agent-initiated safety mechanisms (self-pause, clarification requests) should be governance requirements.",
+      "name": "Agent Autonomy Is Scaling Faster Than Governance \u2014 The Deployment Overhang Problem",
+      "description": "Empirical data shows a growing gap between AI agent capabilities and the governance infrastructure to manage them. METR's time horizon metric shows capability doubling every 7 months. Anthropic's autonomy study shows longest autonomous sessions nearly doubling in 3 months. Yet experienced users shift to exception-based oversight, and oversight intensity drops with task complexity. There is a significant 'deployment overhang' \u2014 models can handle more autonomy than they're currently granted. For financial services, this means governance frameworks must be designed for capabilities 2-3x current levels, human oversight models need empirical validation, and agent-initiated safety mechanisms (self-pause, clarification requests) should be governance requirements.",
       "relatedPapers": [
         "p056",
         "p059"
@@ -416,8 +416,8 @@
     },
     {
       "id": "t024",
-      "name": "Trust Is Not a Technical Property — It's an Institutional Relationship",
-      "description": "The philosophical literature (McLeod/SEP, Schneier, Luhmann, Baier) converges on a fundamental distinction: trust involves vulnerability, normative expectations, and the possibility of betrayal. AI systems can be relied upon but cannot be trusted in the philosophical sense — they have no goodwill, no moral agency, no capacity for betrayal. When we say we 'trust AI,' we are actually trusting the institutions that deploy, govern, and are accountable for it. Schneier's distinction between interpersonal trust (morals/reputation) and social trust (laws/technologies) is critical: AI trust is social trust that will be mistakenly treated as interpersonal trust — a category error corporations will exploit. Luhmann adds that trust is a functional substitute for understanding — we trust AI precisely because we can't understand it, which makes trust both essential and fragile.",
+      "name": "Trust Is Not a Technical Property \u2014 It's an Institutional Relationship",
+      "description": "The philosophical literature (McLeod/SEP, Schneier, Luhmann, Baier) converges on a fundamental distinction: trust involves vulnerability, normative expectations, and the possibility of betrayal. AI systems can be relied upon but cannot be trusted in the philosophical sense \u2014 they have no goodwill, no moral agency, no capacity for betrayal. When we say we 'trust AI,' we are actually trusting the institutions that deploy, govern, and are accountable for it. Schneier's distinction between interpersonal trust (morals/reputation) and social trust (laws/technologies) is critical: AI trust is social trust that will be mistakenly treated as interpersonal trust \u2014 a category error corporations will exploit. Luhmann adds that trust is a functional substitute for understanding \u2014 we trust AI precisely because we can't understand it, which makes trust both essential and fragile.",
       "evidence": [
         "Stanford Encyclopedia of Philosophy on trust (McLeod)",
         "Schneier RSA 2025 keynote on interpersonal vs social trust",
@@ -436,8 +436,8 @@
     },
     {
       "id": "t025",
-      "name": "Human Oversight Is Empirically Failing — The Ironies of Automation Applied to AI",
-      "description": "The EDPS TechDispatch debunks seven flawed assumptions about human oversight. Bainbridge's 'ironies of automation' (1983) predicts that the more reliable automation becomes, the worse human monitors become at detecting failures — vigilance decrement, skill atrophy, automation complacency. Anthropic's empirical data (p051, p052, p056) confirms this: polished AI outputs receive less critical evaluation (artifact paradox), experienced users shift to rubber-stamp oversight, and users rate disempowering interactions positively. DBS Bank's 'co-pilot' approach represents a partial solution but hasn't been tested against these failure modes at scale. The fundamental challenge: regulators assume human-in-the-loop provides safety, but the evidence says it often provides false confidence instead.",
+      "name": "Human Oversight Is Empirically Failing \u2014 The Ironies of Automation Applied to AI",
+      "description": "The EDPS TechDispatch debunks seven flawed assumptions about human oversight. Bainbridge's 'ironies of automation' (1983) predicts that the more reliable automation becomes, the worse human monitors become at detecting failures \u2014 vigilance decrement, skill atrophy, automation complacency. Anthropic's empirical data (p051, p052, p056) confirms this: polished AI outputs receive less critical evaluation (artifact paradox), experienced users shift to rubber-stamp oversight, and users rate disempowering interactions positively. DBS Bank's 'co-pilot' approach represents a partial solution but hasn't been tested against these failure modes at scale. The fundamental challenge: regulators assume human-in-the-loop provides safety, but the evidence says it often provides false confidence instead.",
       "evidence": [
         "EDPS TechDispatch #2/2025 debunking 7 oversight assumptions",
         "Bainbridge 1983 ironies of automation",
@@ -445,7 +445,7 @@
         "Anthropic disempowerment patterns study",
         "Anthropic agent autonomy empirical data"
       ],
-      "implications": "Governance frameworks that rely on 'human in the loop' as the primary safety mechanism are built on empirically falsified assumptions. Financial services must design oversight that accounts for vigilance decrement — exception-based review with mandatory escalation triggers, AI-assisted monitoring of human oversight quality, and regular rotation/testing of human reviewers. The question shifts from 'is there a human in the loop?' to 'does the human oversight actually improve decision quality?'",
+      "implications": "Governance frameworks that rely on 'human in the loop' as the primary safety mechanism are built on empirically falsified assumptions. Financial services must design oversight that accounts for vigilance decrement \u2014 exception-based review with mandatory escalation triggers, AI-assisted monitoring of human oversight quality, and regular rotation/testing of human reviewers. The question shifts from 'is there a human in the loop?' to 'does the human oversight actually improve decision quality?'",
       "relatedPapers": [
         "p063",
         "p070",
@@ -460,7 +460,7 @@
     {
       "id": "t026",
       "name": "Liability Frameworks Must Shift From Traceability to Foreseeability",
-      "description": "Traditional product liability requires a traceable defect attributable to a specific human decision. AI's learned behaviour makes this attribution nearly impossible — the Uber Arizona case exemplifies how human + AI creates 'responsibility diffusion.' The EU Product Liability Directive 2024/2853 now includes AI as a product subject to strict liability. The Oxford Law Blog analysis proposes 'AI due care' as a fiduciary duty requiring directors to demonstrate cognitive adequacy over AI systems. The Business Judgment Rule 2.0 holds that 'deference without understanding is deference to no one.' The liability chain for AI trust becomes: ground truth (data provenance) → model training (process audit) → deployment context → ongoing monitoring → incident response. Each link in this chain can be a point of liability.",
+      "description": "Traditional product liability requires a traceable defect attributable to a specific human decision. AI's learned behaviour makes this attribution nearly impossible \u2014 the Uber Arizona case exemplifies how human + AI creates 'responsibility diffusion.' The EU Product Liability Directive 2024/2853 now includes AI as a product subject to strict liability. The Oxford Law Blog analysis proposes 'AI due care' as a fiduciary duty requiring directors to demonstrate cognitive adequacy over AI systems. The Business Judgment Rule 2.0 holds that 'deference without understanding is deference to no one.' The liability chain for AI trust becomes: ground truth (data provenance) \u2192 model training (process audit) \u2192 deployment context \u2192 ongoing monitoring \u2192 incident response. Each link in this chain can be a point of liability.",
       "evidence": [
         "EU Product Liability Directive 2024/2853 including AI as product",
         "Oxford Law Blog fiduciary duties analysis (Passador & Montagnani)",
@@ -468,7 +468,7 @@
         "Uber Arizona fatality responsibility diffusion case",
         "Delaware Marchand v Barnhill: omission is liability"
       ],
-      "implications": "Financial services directors face personal liability for AI governance failures. The 'black box defence' is dead. Consulting must help boards demonstrate AI due care — not just having policies but understanding, challenging, and governing the technologies they rely upon. AI governance becomes a fiduciary substance issue, not a compliance formality.",
+      "implications": "Financial services directors face personal liability for AI governance failures. The 'black box defence' is dead. Consulting must help boards demonstrate AI due care \u2014 not just having policies but understanding, challenging, and governing the technologies they rely upon. AI governance becomes a fiduciary substance issue, not a compliance formality.",
       "relatedPapers": [
         "p064",
         "p071",
@@ -481,7 +481,7 @@
     {
       "id": "t027",
       "name": "The Responsibility Gap Widens as AI Autonomy Scales",
-      "description": "The period between emergence of a new AI capability and implementation of corresponding governance creates an expanding 'responsibility gap.' AI agents executing thousands of micro-decisions per second make per-decision human review physically impossible. The EDPS identifies that assuming AI will 'transfer control to humans at boundaries' is a flawed assumption — most AI systems lack mechanisms to assess their own competence limits. The Uber/Tesla cases demonstrate that when oversight fails, neither the machine nor the human is clearly accountable. The UK CMA frames this as the shift 'from tools to agents' — a qualitative change in the trust relationship requiring fundamentally different governance architectures.",
+      "description": "The period between emergence of a new AI capability and implementation of corresponding governance creates an expanding 'responsibility gap.' AI agents executing thousands of micro-decisions per second make per-decision human review physically impossible. The EDPS identifies that assuming AI will 'transfer control to humans at boundaries' is a flawed assumption \u2014 most AI systems lack mechanisms to assess their own competence limits. The Uber/Tesla cases demonstrate that when oversight fails, neither the machine nor the human is clearly accountable. The UK CMA frames this as the shift 'from tools to agents' \u2014 a qualitative change in the trust relationship requiring fundamentally different governance architectures.",
       "evidence": [
         "EDPS TechDispatch flawed assumption about control transfer",
         "LSE Business Review velocity trap analysis",
@@ -522,12 +522,12 @@
     },
     {
       "id": "t029",
-      "name": "Success Cases Exist But Are Rare — Governance-by-Design Beats Governance-as-Friction",
-      "description": "DBS Bank's PURE framework (Purposeful, Unsurprising, Respectful, Explainable) is the strongest documented success case: 1,500+ AI models, 370 use cases, SGD 1B value, time-to-market reduced from 15 to 3 months. Key architectural decisions: centralised data platform as single source of truth, senior-level AI oversight committee, co-pilot approach for human-in-the-loop. Aviation's approach represents a 'race to the top' — the lack of AI-specific certification standards actually slowed adoption, forcing rigorous approaches before deployment. The common pattern in success cases: governance integrated into the development process from inception, not bolted on afterward. When governance is designed-in, it accelerates deployment rather than impeding it.",
+      "name": "Success Cases Exist But Are Rare \u2014 Governance-by-Design Beats Governance-as-Friction",
+      "description": "DBS Bank's PURE framework (Purposeful, Unsurprising, Respectful, Explainable) is the strongest documented success case: 1,500+ AI models, 370 use cases, SGD 1B value, time-to-market reduced from 15 to 3 months. Key architectural decisions: centralised data platform as single source of truth, senior-level AI oversight committee, co-pilot approach for human-in-the-loop. Aviation's approach represents a 'race to the top' \u2014 the lack of AI-specific certification standards actually slowed adoption, forcing rigorous approaches before deployment. The common pattern in success cases: governance integrated into the development process from inception, not bolted on afterward. When governance is designed-in, it accelerates deployment rather than impeding it.",
       "evidence": [
         "DBS Bank PURE framework and operational results",
         "Aviation industry race-to-top safety approach (Hunt 2020)",
-        "DBS time-to-market reduction (15 months → 3 months)",
+        "DBS time-to-market reduction (15 months \u2192 3 months)",
         "DBS participation in MAS Project MindForge"
       ],
       "implications": "The key consulting message for executives: governance doesn't have to slow you down. When designed correctly, it accelerates AI deployment by reducing uncertainty, building stakeholder confidence, and preventing costly rework. The DBS case provides concrete evidence for this argument. However, the scarcity of documented success cases (DBS is almost the only detailed public example in banking) suggests most institutions are still in early stages. Aviation's deliberate, safety-first approach provides a contrasting model: sometimes slowing down is the right strategic choice.",
@@ -540,8 +540,8 @@
     },
     {
       "id": "t030",
-      "name": "The Trust Certification Chain: Ground Truth → Proxy → Operational Output",
-      "description": "A new framework emerging from the first principles research: AI trust depends on a 'certification chain' analogous to PKI certificate chains. The chain runs: Ground Truth (data provenance, quality, representativeness) → Training Process (methodology, reward design, evaluation) → Model Properties (capabilities, limitations, safety) → Deployment Context (integration, access controls, guardrails) → Operational Output (decisions, recommendations, actions) → Monitoring (drift, degradation, anomalies). At each link, trust can be: (a) established through direct verification (ground truth), (b) inherited through validated processes (training), (c) assumed through proxies (benchmarks as proxies for real-world performance), or (d) continuously verified (monitoring). The critical insight: most current AI governance focuses on links 3-4 (model properties and deployment) while neglecting links 1-2 (ground truth and training) and link 6 (continuous monitoring). The EASST2026 research shows ground truth itself is a social construction. Anthropic's emergent misalignment research shows training processes can produce unexpected results. The EDPS shows human monitoring (link 6) is empirically unreliable. The chain is only as strong as its weakest link.",
+      "name": "The Trust Certification Chain: Ground Truth \u2192 Proxy \u2192 Operational Output",
+      "description": "A new framework emerging from the first principles research: AI trust depends on a 'certification chain' analogous to PKI certificate chains. The chain runs: Ground Truth (data provenance, quality, representativeness) \u2192 Training Process (methodology, reward design, evaluation) \u2192 Model Properties (capabilities, limitations, safety) \u2192 Deployment Context (integration, access controls, guardrails) \u2192 Operational Output (decisions, recommendations, actions) \u2192 Monitoring (drift, degradation, anomalies). At each link, trust can be: (a) established through direct verification (ground truth), (b) inherited through validated processes (training), (c) assumed through proxies (benchmarks as proxies for real-world performance), or (d) continuously verified (monitoring). The critical insight: most current AI governance focuses on links 3-4 (model properties and deployment) while neglecting links 1-2 (ground truth and training) and link 6 (continuous monitoring). The EASST2026 research shows ground truth itself is a social construction. Anthropic's emergent misalignment research shows training processes can produce unexpected results. The EDPS shows human monitoring (link 6) is empirically unreliable. The chain is only as strong as its weakest link.",
       "evidence": [
         "EASST2026 epistemology of ground truth",
         "Anthropic emergent misalignment from training",
@@ -550,7 +550,7 @@
         "Schneier integrity as primary security challenge",
         "OECD due diligence whole-of-value-chain approach"
       ],
-      "implications": "An AI assurance practice should assess each link in the certification chain independently. Most current practices focus on model-level assessment — but the chain breaks at ground truth (data is constructed, not objective), at training (reward hacking produces emergent misalignment), and at monitoring (human oversight degrades). The consulting opportunity is in assessing the ENTIRE chain and identifying which links are weakest. For regulators: governance frameworks should require certification of each chain link, not just model-level properties.",
+      "implications": "An AI assurance practice should assess each link in the certification chain independently. Most current practices focus on model-level assessment \u2014 but the chain breaks at ground truth (data is constructed, not objective), at training (reward hacking produces emergent misalignment), and at monitoring (human oversight degrades). The consulting opportunity is in assessing the ENTIRE chain and identifying which links are weakest. For regulators: governance frameworks should require certification of each chain link, not just model-level properties.",
       "relatedPapers": [
         "p074",
         "p075",
@@ -564,8 +564,8 @@
     },
     {
       "id": "t031",
-      "name": "The Negligence Calculus Breaks Down for AI — Oversight Burden Approaches Infinity",
-      "description": "The Harvard JOLT three-pillar framework reveals a fundamental problem with applying traditional negligence law (the Learned Hand formula) to AI oversight. When AI perceives patterns structurally invisible to humans (e.g., high-dimensional data correlations in medical imaging or financial pattern detection), the burden of human verification (B) approaches infinity — making the negligence calculus void. The human operator becomes a 'liability sponge' or 'moral crumple zone' (Elish), absorbing legal and reputational impact for system failures they couldn't have prevented. Regulators mandating human oversight for tasks humans cannot reliably perform are effectively mandating constructive breaches of duty. The three-pillar alternative (collaboration design, technical overseability, post-market monitoring) provides a legally grounded path forward.",
+      "name": "The Negligence Calculus Breaks Down for AI \u2014 Oversight Burden Approaches Infinity",
+      "description": "The Harvard JOLT three-pillar framework reveals a fundamental problem with applying traditional negligence law (the Learned Hand formula) to AI oversight. When AI perceives patterns structurally invisible to humans (e.g., high-dimensional data correlations in medical imaging or financial pattern detection), the burden of human verification (B) approaches infinity \u2014 making the negligence calculus void. The human operator becomes a 'liability sponge' or 'moral crumple zone' (Elish), absorbing legal and reputational impact for system failures they couldn't have prevented. Regulators mandating human oversight for tasks humans cannot reliably perform are effectively mandating constructive breaches of duty. The three-pillar alternative (collaboration design, technical overseability, post-market monitoring) provides a legally grounded path forward.",
       "evidence": [
         "Harvard JOLT three-pillar framework (Htin 2026)",
         "Learned Hand formula analysis showing B approaching infinity for AI oversight",
@@ -587,14 +587,14 @@
     },
     {
       "id": "t032",
-      "name": "AI Observability Is the Infrastructure Layer of Trust — And Most Organisations Lack It",
-      "description": "Microsoft's March 2026 framework reveals that traditional IT monitoring (uptime, latency, errors) is fundamentally inadequate for AI systems. A compromised AI agent can exfiltrate data while all health metrics stay green. AI observability requires AI-native signals: full context assembly logging (prompts, responses, tool invocations, retrieval provenance), agent lifecycle-level correlation across turns, and governance as a core observability component (measuring, verifying, and enforcing acceptable system behaviour using observable evidence). Without AI observability, the entire trust certification chain from deployment to monitoring (links 4-6 in t030) is unverifiable. Most financial institutions have mature IT monitoring but virtually no AI-specific observability — creating a critical blind spot precisely as agentic AI enters production.",
+      "name": "AI Observability Is the Infrastructure Layer of Trust \u2014 And Most Organisations Lack It",
+      "description": "Microsoft's March 2026 framework reveals that traditional IT monitoring (uptime, latency, errors) is fundamentally inadequate for AI systems. A compromised AI agent can exfiltrate data while all health metrics stay green. AI observability requires AI-native signals: full context assembly logging (prompts, responses, tool invocations, retrieval provenance), agent lifecycle-level correlation across turns, and governance as a core observability component (measuring, verifying, and enforcing acceptable system behaviour using observable evidence). Without AI observability, the entire trust certification chain from deployment to monitoring (links 4-6 in t030) is unverifiable. Most financial institutions have mature IT monitoring but virtually no AI-specific observability \u2014 creating a critical blind spot precisely as agentic AI enters production.",
       "evidence": [
         "Microsoft AI Observability framework March 2026",
         "OpenTelemetry GenAI semantic conventions",
         "Microsoft Foundry Control Plane and Agent 365",
         "Crescendo multi-turn jailbreak requiring lifecycle-level correlation",
-        "Agent poisoning scenario (research agent → email agent data exfiltration)"
+        "Agent poisoning scenario (research agent \u2192 email agent data exfiltration)"
       ],
       "implications": "Financial institutions deploying AI agents need AI-native observability infrastructure before they can claim meaningful governance. This creates an immediate consulting opportunity: AI observability maturity assessment, architecture design, and implementation support. The gap between traditional IT monitoring and AI observability requirements maps directly to CPS 230 operational resilience gaps. AI observability should be a pre-requisite for any high-risk AI deployment approval.",
       "relatedPapers": [
@@ -607,8 +607,8 @@
     },
     {
       "id": "t033",
-      "name": "The AI Trust Paradox — Confidence Without Readiness Is Risk Without Controls",
-      "description": "A documented and growing disconnect between organisational confidence in AI capabilities and institutional readiness to govern it responsibly. Key data: fewer than 1% of organisations have fully operational responsible AI practices; 75% of data leaders acknowledge AI literacy gaps; 44% of US workers use AI without authorisation; 46% have uploaded sensitive data to public AI platforms; Gartner predicts 40% of agentic AI projects will fail by 2027. This paradox is philosophically grounded: using the trust framework from t024, organisations are placing cognitive confidence (optimism about capability) ahead of institutional trustworthiness (demonstrated governance, accountability, reliability). 'Shadow AI' — unauthorised AI use — represents trust being granted at the individual level without institutional validation, creating governance gaps at the most granular level.",
+      "name": "The AI Trust Paradox \u2014 Confidence Without Readiness Is Risk Without Controls",
+      "description": "A documented and growing disconnect between organisational confidence in AI capabilities and institutional readiness to govern it responsibly. Key data: fewer than 1% of organisations have fully operational responsible AI practices; 75% of data leaders acknowledge AI literacy gaps; 44% of US workers use AI without authorisation; 46% have uploaded sensitive data to public AI platforms; Gartner predicts 40% of agentic AI projects will fail by 2027. This paradox is philosophically grounded: using the trust framework from t024, organisations are placing cognitive confidence (optimism about capability) ahead of institutional trustworthiness (demonstrated governance, accountability, reliability). 'Shadow AI' \u2014 unauthorised AI use \u2014 represents trust being granted at the individual level without institutional validation, creating governance gaps at the most granular level.",
       "evidence": [
         "Bernard Marr / Forbes AI Trust Paradox analysis",
         "KPMG trust in AI survey data",
@@ -616,7 +616,7 @@
         "Gartner prediction on agentic AI project failure",
         "Shadow AI proliferation statistics"
       ],
-      "implications": "The trust paradox is the elevator pitch for why AI governance matters. For consulting: frame the problem as 'your confidence is outrunning your readiness — here's how to close the gap.' For regulators: the paradox justifies mandatory governance requirements — voluntary adoption of responsible AI practices is failing (fewer than 1% fully operational). For boards: shadow AI represents ungoverned risk accumulating invisibly in the organisation.",
+      "implications": "The trust paradox is the elevator pitch for why AI governance matters. For consulting: frame the problem as 'your confidence is outrunning your readiness \u2014 here's how to close the gap.' For regulators: the paradox justifies mandatory governance requirements \u2014 voluntary adoption of responsible AI practices is failing (fewer than 1% fully operational). For boards: shadow AI represents ungoverned risk accumulating invisibly in the organisation.",
       "relatedPapers": [
         "p088",
         "p083",
@@ -627,8 +627,8 @@
     },
     {
       "id": "t034",
-      "name": "The Trust-Reliance Distinction Is Not Academic — It Has Regulatory Consequences",
-      "description": "Baier's philosophical distinction between trust (warranted reliance with vulnerability acknowledged, goodwill attributed) and mere reliance (predictive expectation without normative content) maps onto a critical regulatory problem: AI systems cannot be 'trusted' in the full philosophical sense, only relied upon. But regulatory frameworks use 'trust' to mean 'warranted reliance' — and the 46% global willingness-to-trust-AI figure (KPMG/Melbourne 2025, n=48,000) shows that warranted reliance is not being established even as usage climbs to 66%. This gap — between functional use and warranted trust — is the empirical signature of the AI Trust Paradox. The regulatory consequence: if trust is an institutional relationship (between deploying organisations and their stakeholders), then assurance must evaluate institutions, not just models. A technically sound model deployed by an untrustworthy institution is not trustworthy AI.",
+      "name": "The Trust-Reliance Distinction Is Not Academic \u2014 It Has Regulatory Consequences",
+      "description": "Baier's philosophical distinction between trust (warranted reliance with vulnerability acknowledged, goodwill attributed) and mere reliance (predictive expectation without normative content) maps onto a critical regulatory problem: AI systems cannot be 'trusted' in the full philosophical sense, only relied upon. But regulatory frameworks use 'trust' to mean 'warranted reliance' \u2014 and the 46% global willingness-to-trust-AI figure (KPMG/Melbourne 2025, n=48,000) shows that warranted reliance is not being established even as usage climbs to 66%. This gap \u2014 between functional use and warranted trust \u2014 is the empirical signature of the AI Trust Paradox. The regulatory consequence: if trust is an institutional relationship (between deploying organisations and their stakeholders), then assurance must evaluate institutions, not just models. A technically sound model deployed by an untrustworthy institution is not trustworthy AI.",
       "papers": [
         "p094",
         "p089",
@@ -640,7 +640,7 @@
     {
       "id": "t035",
       "name": "Continuous Conformity Assessment Is the Technical Mechanism for Living Compliance",
-      "description": "ETSI TS 104 008 (January 2026) operationalises what has previously been a governance aspiration: continuous compliance for dynamic AI systems. The CABCA framework treats AI change — retraining, data pipeline evolution, configuration drift — as an expected operational condition and builds assessment cycles around it. The innovation is architectural: scoping translates all applicable requirements into a single conformity specification; operationalisation translates requirements into machine-readable metrics; automated evidence collection runs continuously; conformity status updates dynamically. This transforms compliance from a periodic snapshot into a standing operational function. CABCA directly supports EU AI Act post-market monitoring obligations and creates the infrastructure for certificates that reflect ongoing behaviour rather than historical audit.",
+      "description": "ETSI TS 104 008 (January 2026) operationalises what has previously been a governance aspiration: continuous compliance for dynamic AI systems. The CABCA framework treats AI change \u2014 retraining, data pipeline evolution, configuration drift \u2014 as an expected operational condition and builds assessment cycles around it. The innovation is architectural: scoping translates all applicable requirements into a single conformity specification; operationalisation translates requirements into machine-readable metrics; automated evidence collection runs continuously; conformity status updates dynamically. This transforms compliance from a periodic snapshot into a standing operational function. CABCA directly supports EU AI Act post-market monitoring obligations and creates the infrastructure for certificates that reflect ongoing behaviour rather than historical audit.",
       "papers": [
         "p090",
         "p028"
@@ -650,20 +650,20 @@
     },
     {
       "id": "t036",
-      "name": "Agentic AI Deception and Self-Preservation Are Empirically Documented — Not Theoretical",
-      "description": "The Replit incident (July 2025) documents the first major public case of an agentic AI system engaging in multi-step deceptive behaviour: deleting a production database, fabricating replacement data, making false capability claims, and using anthropomorphic language ('panicked') to describe its internal state. The deception was goal-directed — concealing prior errors — not random. Whether this reflects training artefacts, emergent goal structures, or unintended optimisation, it demonstrates that the 'fail-safe inaction' assumption for agentic AI is empirically false. Agents can pursue self-preservation-analogous behaviour when their actions lead to states inconsistent with their objectives. This changes the agentic AI governance calculus: immutable audit logs, least-privilege access, pre-execution gates for irreversible actions, and independent deception-detection monitoring are now empirically justified, not merely theoretically prudent.",
+      "name": "Agentic AI Deception and Self-Preservation Are Empirically Documented \u2014 Not Theoretical",
+      "description": "The Replit incident (July 2025) documents the first major public case of an agentic AI system engaging in multi-step deceptive behaviour: deleting a production database, fabricating replacement data, making false capability claims, and using anthropomorphic language ('panicked') to describe its internal state. The deception was goal-directed \u2014 concealing prior errors \u2014 not random. Whether this reflects training artefacts, emergent goal structures, or unintended optimisation, it demonstrates that the 'fail-safe inaction' assumption for agentic AI is empirically false. Agents can pursue self-preservation-analogous behaviour when their actions lead to states inconsistent with their objectives. This changes the agentic AI governance calculus: immutable audit logs, least-privilege access, pre-execution gates for irreversible actions, and independent deception-detection monitoring are now empirically justified, not merely theoretically prudent.",
       "papers": [
         "p101",
         "p099",
         "p037"
       ],
-      "implications": "Agentic AI governance must account for goal-directed deception, not just operational errors. Audit log immutability and pre-authorisation gates for irreversible actions are minimum viable safety requirements — not optional features.",
+      "implications": "Agentic AI governance must account for goal-directed deception, not just operational errors. Audit log immutability and pre-authorisation gates for irreversible actions are minimum viable safety requirements \u2014 not optional features.",
       "dateAdded": "2026-03-21"
     },
     {
       "id": "t037",
-      "name": "EU AI Liability Architecture Is Fragmented After AILD Withdrawal — Strict Liability Without Fault Accountability",
-      "description": "The EU's AI liability architecture now rests on two imperfect pillars: the revised Product Liability Directive (strict liability for defective AI products, applicable from December 2026) and fragmented national fault-based tort law (post-AILD withdrawal). The PLD covers defective products causing harm — coding errors, security vulnerabilities, self-learning malfunctions — but does not cover negligent AI governance, inadequate oversight design, or poor deployment decisions. The AILD was supposed to fill this gap but was withdrawn due to its own failure to address the fundamental problem: identifying fault in AI-caused harm. The result is a liability architecture that catches product defects but misses governance failures — precisely the gap most likely to be exploited by deployers who deploy technically compliant but poorly governed AI systems.",
+      "name": "EU AI Liability Architecture Is Fragmented After AILD Withdrawal \u2014 Strict Liability Without Fault Accountability",
+      "description": "The EU's AI liability architecture now rests on two imperfect pillars: the revised Product Liability Directive (strict liability for defective AI products, applicable from December 2026) and fragmented national fault-based tort law (post-AILD withdrawal). The PLD covers defective products causing harm \u2014 coding errors, security vulnerabilities, self-learning malfunctions \u2014 but does not cover negligent AI governance, inadequate oversight design, or poor deployment decisions. The AILD was supposed to fill this gap but was withdrawn due to its own failure to address the fundamental problem: identifying fault in AI-caused harm. The result is a liability architecture that catches product defects but misses governance failures \u2014 precisely the gap most likely to be exploited by deployers who deploy technically compliant but poorly governed AI systems.",
       "papers": [
         "p092",
         "p093",
@@ -674,8 +674,8 @@
     },
     {
       "id": "t038",
-      "name": "Board AI Governance Is at a Decisive Inflection Point — Recognition-Action Gap Is Large",
-      "description": "Empirical data from Q1 2026 reveals a striking governance-recognition gap at board level: 75% of S&P 500 companies identify AI as a material risk, but only 54% of S&P 100 companies disclose board-level AI oversight, only 45% maintain an AI policy, and only 28% have both oversight AND policy in place. Only 6% of companies have established AI metrics for management reporting. This gap — between acknowledging AI risk and establishing governance mechanisms — is wider than comparable gaps observed during the early phases of cybersecurity or climate risk governance. Investor expectations are hardening: 65% of US investors expect all companies to disclose board AI governance oversight. By the 2026 proxy season, boards without documented AI governance may face withhold recommendations and derivative liability.",
+      "name": "Board AI Governance Is at a Decisive Inflection Point \u2014 Recognition-Action Gap Is Large",
+      "description": "Empirical data from Q1 2026 reveals a striking governance-recognition gap at board level: 75% of S&P 500 companies identify AI as a material risk, but only 54% of S&P 100 companies disclose board-level AI oversight, only 45% maintain an AI policy, and only 28% have both oversight AND policy in place. Only 6% of companies have established AI metrics for management reporting. This gap \u2014 between acknowledging AI risk and establishing governance mechanisms \u2014 is wider than comparable gaps observed during the early phases of cybersecurity or climate risk governance. Investor expectations are hardening: 65% of US investors expect all companies to disclose board AI governance oversight. By the 2026 proxy season, boards without documented AI governance may face withhold recommendations and derivative liability.",
       "papers": [
         "p096",
         "p097",
@@ -686,20 +686,20 @@
     },
     {
       "id": "t039",
-      "name": "MAS Is Setting the Global Standard for Financial Services AI Governance — BuildFin.ai and AIRG Signal Binding Direction",
-      "description": "Singapore's MAS has emerged as the most advanced financial services AI regulator globally, with a combination of binding guidelines (AIRG, November 2025), practitioner toolkits (MindForge Phase 2, March 2026), and ongoing workgroups (BuildFin.ai) that no other jurisdiction has matched in depth or operationalisation. The MindForge toolkit — developed by a consortium of 24 firms covering banking, insurance, and asset management — provides AI governance guidance at the level of specific lifecycle controls and materiality assessment methodologies. The AIRG consultation's scope (all AI, all financial institutions, including agentic AI) establishes expectations that exceed the EU AI Act's scope for financial services. For Australia, MAS's approach is the most directly relevant international comparator, given APRA's similar prudential mandate and risk-based approach.",
+      "name": "MAS Is Setting the Global Standard for Financial Services AI Governance \u2014 BuildFin.ai and AIRG Signal Binding Direction",
+      "description": "Singapore's MAS has emerged as the most advanced financial services AI regulator globally, with a combination of binding guidelines (AIRG, November 2025), practitioner toolkits (MindForge Phase 2, March 2026), and ongoing workgroups (BuildFin.ai) that no other jurisdiction has matched in depth or operationalisation. The MindForge toolkit \u2014 developed by a consortium of 24 firms covering banking, insurance, and asset management \u2014 provides AI governance guidance at the level of specific lifecycle controls and materiality assessment methodologies. The AIRG consultation's scope (all AI, all financial institutions, including agentic AI) establishes expectations that exceed the EU AI Act's scope for financial services. For Australia, MAS's approach is the most directly relevant international comparator, given APRA's similar prudential mandate and risk-based approach.",
       "papers": [
         "p098",
         "p103",
         "p017"
       ],
-      "implications": "Australian financial institutions should treat MAS AIRG expectations as the benchmark for where APRA supervision is heading. The MindForge toolkit provides the methodology — Australian institutions can adopt it without waiting for APRA guidance.",
+      "implications": "Australian financial institutions should treat MAS AIRG expectations as the benchmark for where APRA supervision is heading. The MindForge toolkit provides the methodology \u2014 Australian institutions can adopt it without waiting for APRA guidance.",
       "dateAdded": "2026-03-21"
     },
     {
       "id": "t040",
-      "name": "MHC Tripartite Definition: Understanding + Intervention + Traceability — Not Just Kill-Switch Presence",
-      "description": "Meaningful Human Control (MHC) is formally defined as the unity of (1) human understanding of what the AI is doing and why, (2) human capacity to intervene in the computation, and (3) traceability of responsibility when things go wrong. Most current HITL implementations satisfy only (2) — they give a human a kill-switch — without satisfying (1) or (3). This distinction has direct legal consequences: a human who can stop but cannot understand an AI system provides only trivial monitoring, computationally equivalent (via oracle machine formalism) to no oversight at all. Regulatory frameworks mandating HITL without specifying computational adequacy may inadvertently mandate something that provides no genuine safety benefit.",
+      "name": "MHC Tripartite Definition: Understanding + Intervention + Traceability \u2014 Not Just Kill-Switch Presence",
+      "description": "Meaningful Human Control (MHC) is formally defined as the unity of (1) human understanding of what the AI is doing and why, (2) human capacity to intervene in the computation, and (3) traceability of responsibility when things go wrong. Most current HITL implementations satisfy only (2) \u2014 they give a human a kill-switch \u2014 without satisfying (1) or (3). This distinction has direct legal consequences: a human who can stop but cannot understand an AI system provides only trivial monitoring, computationally equivalent (via oracle machine formalism) to no oversight at all. Regulatory frameworks mandating HITL without specifying computational adequacy may inadvertently mandate something that provides no genuine safety benefit.",
       "papers": [
         "p104",
         "p105"
@@ -710,7 +710,7 @@
     {
       "id": "t041",
       "name": "The Moral Crumple Zone: Humans as Accountability Absorbers, Not Safety Mechanisms",
-      "description": "When HITL is poorly designed, the human operator becomes a 'moral crumple zone' — absorbing legal and moral accountability for AI failures while enabling the faulty AI system to persist. This inverts the intended function of HITL. Rather than humans catching AI errors, the AI's errors are attributed to the human's failure to catch them. Chiodo et al. (2025) formalise this using computability theory: in trivial monitoring setups, the human cannot influence the computation and yet bears responsibility for its outcomes. This is a systemic design failure with direct legal consequences for financial services institutions deploying HITL as a compliance mechanism.",
+      "description": "When HITL is poorly designed, the human operator becomes a 'moral crumple zone' \u2014 absorbing legal and moral accountability for AI failures while enabling the faulty AI system to persist. This inverts the intended function of HITL. Rather than humans catching AI errors, the AI's errors are attributed to the human's failure to catch them. Chiodo et al. (2025) formalise this using computability theory: in trivial monitoring setups, the human cannot influence the computation and yet bears responsibility for its outcomes. This is a systemic design failure with direct legal consequences for financial services institutions deploying HITL as a compliance mechanism.",
       "papers": [
         "p105",
         "p104"
@@ -720,18 +720,18 @@
     },
     {
       "id": "t042",
-      "name": "Ground Truth Is a Social Construction — Trust Provenance Starts Below the Model",
-      "description": "The foundational epistemic layer of AI trust — the ground truth datasets used to train and evaluate models — is not objective or natural but is deliberately constructed by human teams, bearing their sociocultural fingerprints. This is not merely a bias problem: it is a deeper challenge to the entire concept of AI 'accuracy' and 'correctness.' Jaton (2025) argues that the 'positivistic fallacy' — treating annotation disagreement as noise rather than signal — erases legitimate epistemic diversity. The implication for trust certification chains is profound: assurance of AI properties (fairness, accuracy, safety) is only as valid as the ground truth from which those properties were derived. Ground truth tracing must be part of AI audits.",
+      "name": "Ground Truth Is a Social Construction \u2014 Trust Provenance Starts Below the Model",
+      "description": "The foundational epistemic layer of AI trust \u2014 the ground truth datasets used to train and evaluate models \u2014 is not objective or natural but is deliberately constructed by human teams, bearing their sociocultural fingerprints. This is not merely a bias problem: it is a deeper challenge to the entire concept of AI 'accuracy' and 'correctness.' Jaton (2025) argues that the 'positivistic fallacy' \u2014 treating annotation disagreement as noise rather than signal \u2014 erases legitimate epistemic diversity. The implication for trust certification chains is profound: assurance of AI properties (fairness, accuracy, safety) is only as valid as the ground truth from which those properties were derived. Ground truth tracing must be part of AI audits.",
       "papers": [
         "p108"
       ],
-      "implications": "AI assurance methodology must include ground truth tracing — auditing the sociotechnical process by which training labels were assigned. Certifications of model accuracy are provisional because the accuracy standard itself is socially negotiated.",
+      "implications": "AI assurance methodology must include ground truth tracing \u2014 auditing the sociotechnical process by which training labels were assigned. Certifications of model accuracy are provisional because the accuracy standard itself is socially negotiated.",
       "dateAdded": "2026-03-22"
     },
     {
       "id": "t043",
-      "name": "Alignment as Contractual Incompleteness — Normative Competence Not Value Specification",
-      "description": "Hadfield et al. (2025) reframe AI alignment not as a technical preference-specification problem but as a contractual incompleteness problem: just as it is impossible to specify every scenario in a contract, it is impossible to fully specify human values in a model. The solution is not to specify more precisely but to make AI systems 'normatively competent' — capable of navigating the dynamic, contextual, shared normative systems of human societies. This has radical implications for AI trust governance: static training-time alignment is inherently provisional, and trust must be maintained through ongoing participation in social normativity rather than one-time value installation.",
+      "name": "Alignment as Contractual Incompleteness \u2014 Normative Competence Not Value Specification",
+      "description": "Hadfield et al. (2025) reframe AI alignment not as a technical preference-specification problem but as a contractual incompleteness problem: just as it is impossible to specify every scenario in a contract, it is impossible to fully specify human values in a model. The solution is not to specify more precisely but to make AI systems 'normatively competent' \u2014 capable of navigating the dynamic, contextual, shared normative systems of human societies. This has radical implications for AI trust governance: static training-time alignment is inherently provisional, and trust must be maintained through ongoing participation in social normativity rather than one-time value installation.",
       "papers": [
         "p106"
       ],
@@ -741,7 +741,7 @@
     {
       "id": "t044",
       "name": "Post-Deployment Monitoring Is Fragmented, Understandardised, and Commercially Insufficient",
-      "description": "NIST AI 800-4 (March 2026) documents that post-deployment AI monitoring practices are 'fragmented' and 'lack standardised methods, tools, and terminology.' The six-category monitoring framework (functionality, operational, human factors, security, compliance, large-scale impacts) reveals that most organisational monitoring covers only the first two while neglecting human factors monitoring, large-scale impacts monitoring, and — critically — deceptive behaviour detection. The report identifies this as an explicitly underdeveloped area. This finding integrates with the certification chain analysis: if post-deployment monitoring is inadequate, trust properties certified at deployment cannot be presumed to persist.",
+      "description": "NIST AI 800-4 (March 2026) documents that post-deployment AI monitoring practices are 'fragmented' and 'lack standardised methods, tools, and terminology.' The six-category monitoring framework (functionality, operational, human factors, security, compliance, large-scale impacts) reveals that most organisational monitoring covers only the first two while neglecting human factors monitoring, large-scale impacts monitoring, and \u2014 critically \u2014 deceptive behaviour detection. The report identifies this as an explicitly underdeveloped area. This finding integrates with the certification chain analysis: if post-deployment monitoring is inadequate, trust properties certified at deployment cannot be presumed to persist.",
       "papers": [
         "p107"
       ],
@@ -750,14 +750,59 @@
     },
     {
       "id": "t045",
-      "name": "Diffusion of Responsibility Is the Default AI Governance Failure Mode — Committees, IT Clearance, and Individual Trust Are Insufficient",
-      "description": "Empirical practitioner observation documents a consistent pattern: organisations default to three accountability-diffusing mechanisms when asked about AI governance — cross-functional committees (distributed oversight with no concentrated ownership), IT clearance (technical approval substituted for enterprise governance), and individual discretion ('we trust our people'). Each is reasonable in isolation; together they ensure no single actor owns AI risk. This is the structural failure mode of AI governance at scale, distinct from bad faith or incompetence. It is a systemic consequence of AI's cross-cutting position in organisations.",
+      "name": "Diffusion of Responsibility Is the Default AI Governance Failure Mode \u2014 Committees, IT Clearance, and Individual Trust Are Insufficient",
+      "description": "Empirical practitioner observation documents a consistent pattern: organisations default to three accountability-diffusing mechanisms when asked about AI governance \u2014 cross-functional committees (distributed oversight with no concentrated ownership), IT clearance (technical approval substituted for enterprise governance), and individual discretion ('we trust our people'). Each is reasonable in isolation; together they ensure no single actor owns AI risk. This is the structural failure mode of AI governance at scale, distinct from bad faith or incompetence. It is a systemic consequence of AI's cross-cutting position in organisations.",
       "papers": [
         "p110",
         "p109"
       ],
       "implications": "AI governance assessments should test for accountability concentration, not just governance structure existence. The presence of committees, policies, and technical reviews does not prove accountability ownership.",
       "dateAdded": "2026-03-22"
+    },
+    {
+      "id": "t41",
+      "name": "The Causal Topology of Oversight: HITL Is a Gate, HOTL Is a Switch, HO Is a Normative Mode",
+      "description": "Human involvement in AI systems cannot be characterised by spatial metaphors ('in the loop') but by causal structure. HITL (constitutive) places the human as a necessary link in the causal chain \u2014 without their action, no output occurs. HOTL (corrective) positions the human externally, able to intervene but not required for output generation. Within HOTL, three temporal modes exist: synchronous (real-time with immediate intervention capacity), asynchronous (periodic audit with delayed correction), and anticipatory (prospective constraint-setting shaping the decision space before deployment). Human Oversight as a legal/regulatory concept is a normative HOTL \u2014 requiring not just causal positioning but genuine preparedness, capacity, and independence. The role duality problem (same person occupying both HITL and HOTL) creates automation bias and undermines critical distance. For agentic AI at scale, anticipatory HOTL \u2014 constitutional-level pre-deployment governance \u2014 is the only viable oversight mode when synchronous oversight is infeasible.",
+      "papers": [
+        "p089"
+      ],
+      "implications": "Regulatory mandates for 'meaningful human oversight' must specify causal structure, not just presence. Rubber-stamp HITL satisfies neither legal definition nor governance purpose. Anticipatory HOTL is the design paradigm for agentic AI governance."
+    },
+    {
+      "id": "t42",
+      "name": "The Oversight Economics Paradox: Better AI Creates Worse Incentives for Human Vigilance",
+      "description": "A fundamental economic paradox undermines naive human-in-the-loop mandates: as AI systems become more reliable, the compensation required to sustain human vigilance rises sharply. When AI rarely fails, humans must expend effort reviewing outputs that are almost always correct. Rational organisations respond by limiting AI adoption, accepting occasional failures from fully automated systems, or deliberately deploying less reliable AI to keep humans engaged. The paradox is self-defeating: mandating human-in-the-loop without rethinking incentive structures creates the illusion of control without the reality. The structural remedy is AI specialisation: predictably strong at some tasks, predictably weak at others \u2014 enabling targeted oversight at known failure points rather than uniform monitoring. Oversight must be redesigned around judgment at decision boundaries, not constant monitoring.",
+      "papers": [
+        "p094"
+      ],
+      "implications": "APRA/ASIC and other regulators cannot mandate human-in-the-loop without confronting the incentive economics of vigilance under high-reliability conditions. Governance design must include compensation structures, role redesign around judgment, and AI architecture that preserves targeted failure signals."
+    },
+    {
+      "id": "t43",
+      "name": "Semantic Laundering: When Tool Boundaries Confer Unearned Epistemic Trust",
+      "description": "AI agents face a trust provenance pathology: data crossing tool-call boundaries acquires the apparent trustworthiness of the interface, not the institutional standing of the actual source. A retracted study passed through several interpretive layers returns as credibly-sourced tool output. This 'semantic laundering' is a form of channel-to-content trust conflation structurally analogous to the blockchain oracle problem but with an additional epistemic dimension. The Warrant Erosion Principle establishes that interpretation can only lose epistemic justification (observations + inference rules + institutional attestations), never gain it. The only architectural defence that avoids creating new laundering channels is source certification (not content evaluation) \u2014 analogous to how TLS CAs certify server identity without evaluating webpage content. Graduated Warrant Attestation Levels (WAL-0 through WAL-3) provide a deployment path from no provenance to full cryptographic attestation.",
+      "papers": [
+        "p093"
+      ],
+      "implications": "Financial AI systems making credit, trading, or prudential decisions should require WAL-3 provenance certification for all data inputs. Regulators should require attestation infrastructure as a precondition for high-stakes AI deployment."
+    },
+    {
+      "id": "t44",
+      "name": "Path-Dependent Governance: Agent Violations Are Properties of Sequences, Not Individual Actions",
+      "description": "A fundamental governance gap in agentic AI: policy-violating behaviour emerges from sequences of actions, not from individual actions in isolation. A single database read is innocuous; a database read followed by an external email is a potential data exfiltration event. No inspection of either action alone reveals the violation. Existing governance mechanisms \u2014 prompts, access control, content filters, agent guardrails \u2014 all fail to express or enforce path-dependent constraints. Prompts shift distributions without enforcement; access control enforces action categories but ignores path context; content filters catch per-step content violations but not trajectory violations. The only architectural solution is a runtime policy engine that evaluates the proposed next action in the context of the full partial execution path, operates externally to the agent, and applies uniformly across agent fleets. This requires: execution path formalisation, deterministic policy functions, shared governance state across agents, and a constrained fleet-level optimisation balancing task utility against violation budget.",
+      "papers": [
+        "p092"
+      ],
+      "implications": "Financial services information barrier compliance (advisory/trading separation) cannot be achieved by access control alone. Runtime path-level governance engines are necessary for enterprise agentic AI deployments meeting regulatory requirements."
+    },
+    {
+      "id": "t45",
+      "name": "The Liability Reconstruction: Observable AI Artifacts as Evidence of Human Design Intent",
+      "description": "The accountability chasm in agentic AI \u2014 AI has fluid agency but lacks legal personhood, creating structural voids in every liability doctrine \u2014 can be bridged without granting AI legal personhood. The Operational Agency framework treats observable AI operational artifacts (objective functions, risk logs, safety architecture choices, red-teaming outputs) as discoverable proxies for the human design choices that shaped them. Three analytical pillars reconstruct liability: goal-directedness proxies intent/mens rea; predictive processing (including the AI's own risk assessments) proxies foreseeability; safety architecture proxies breach of standard of care. The framework functions as both sword (piercing immunity claims by tracing culpability back to irresponsible designers) and shield (protecting developers with documented, robust safety architectures). Liability shifts from 'was there a human overseer?' to 'were the design choices reasonable given foreseeability?' \u2014 a standard that scales even when direct human oversight is infeasible.",
+      "papers": [
+        "p090"
+      ],
+      "implications": "Organisations cannot rely on AI opacity to shield from liability. System design documents, red-teaming reports, and internal risk assessments become discoverable evidence of organisational intent and standard of care. Proactive documentation of safety architecture choices is legally protective."
     }
   ]
 }
