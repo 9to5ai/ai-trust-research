@@ -1,6 +1,6 @@
 {
   "projectName": "AI Trust Research",
-  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance — with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
+  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance \u2014 with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
   "currentPhase": "Phase 2: First Principles of AI Trust",
   "phaseDescription": "Deep examination of trust provenance, accountability frameworks, human oversight feasibility, and the certification chain from ground truth to operational proxies.",
   "researchQuestions": [
@@ -14,7 +14,7 @@
     "What does the convergence of AI risk and cyber risk mean for practice design?",
     "How should AI concentration and systemic risk be assessed and governed?",
     "What can values-based alignment approaches teach us about governance framework design?",
-    "How should agentic AI systems be governed — what frameworks exist and what gaps remain for autonomous multi-step agents?",
+    "How should agentic AI systems be governed \u2014 what frameworks exist and what gaps remain for autonomous multi-step agents?",
     "What are the risks, methodologies, and limitations of using LLMs as judges for AI evaluation and assurance?",
     "How does AI model homogenisation create systemic risk and how should it be assessed?",
     "What does reliable AI evaluation look like when LLM judges are systematically biased?",
@@ -22,10 +22,10 @@
     "How does emergent misalignment from reward hacking affect financial services AI assurance models?",
     "What is the relationship between AI capability growth and human oversight quality degradation?",
     "How should AI insider threat management be structured for financial services?",
-    "What is the Trust Trilemma — can warranted reliance, institutional accountability, and continuously valid trust properties coexist at scale in AI?",
-    "How does the Oversight Paradox Amplification work — does increasing AI reliability reduce effective human oversight by enabling deception concealment?",
-    "What is the legal architecture for AI liability after the AILD withdrawal — what governance failures fall through the PLD/national tort gap?",
-    "How should boards demonstrate 'cognitive adequacy' (BJR 2.0) over AI systems — what does fiduciary demonstrability look like in practice?"
+    "What is the Trust Trilemma \u2014 can warranted reliance, institutional accountability, and continuously valid trust properties coexist at scale in AI?",
+    "How does the Oversight Paradox Amplification work \u2014 does increasing AI reliability reduce effective human oversight by enabling deception concealment?",
+    "What is the legal architecture for AI liability after the AILD withdrawal \u2014 what governance failures fall through the PLD/national tort gap?",
+    "How should boards demonstrate 'cognitive adequacy' (BJR 2.0) over AI systems \u2014 what does fiduciary demonstrability look like in practice?"
   ],
   "nextPhaseGoals": [
     "Draft 'State of AI Trust 2026' synthesis document pulling together all 19 themes",
@@ -44,19 +44,19 @@
     "date": "2026-03-26",
     "direction": "MANDATORY NEXT SESSION: Read and analyze the papers in the third-party AI risk reading list. Focus on developing strategies to tackle the third-party risk problem, using the LiteLLM supply chain attack (March 24, 2026) as the central case study.",
     "priorities": [
-      "Read the full directive at ~/workspace/ai-trust-research/data/next-research-directive.md — it contains the complete reading list with 10 papers/documents and analysis angles",
+      "Read the full directive at ~/workspace/ai-trust-research/data/next-research-directive.md \u2014 it contains the complete reading list with 10 papers/documents and analysis angles",
       "Fetch and deep-read ALL 10 papers from Gary Ang's reading list (arXiv links + AEF-1 PDF + MAS consultation paper)",
-      "Map the LiteLLM incident (TeamPCP supply chain attack, March 24 2026) against each paper's framework — where did accountability, oversight, and transparency fail?",
+      "Map the LiteLLM incident (TeamPCP supply chain attack, March 24 2026) against each paper's framework \u2014 where did accountability, oversight, and transparency fail?",
       "Compare MAS Third-Party Risk Management Guidelines (March 2026) with APRA CPS 230/234 on AI supply chain coverage gaps",
-      "Develop a practical 'AI Supply Chain Security Strategy' for financial services — combining AI BOM, KYA standards, and third-party audit ecosystem design",
+      "Develop a practical 'AI Supply Chain Security Strategy' for financial services \u2014 combining AI BOM, KYA standards, and third-party audit ecosystem design",
       "Key question from Gary Ang: 'How do you govern AI you don't control? And maybe don't even know exists?'",
-      "This connects directly to our existing research on trust provenance and certification chains — third-party risk is where the chain breaks"
+      "This connects directly to our existing research on trust provenance and certification chains \u2014 third-party risk is where the chain breaks"
     ],
     "note": "Reading list sourced from Gary Ang PhD (author of MAS AI Risk Management Guidelines). This is the frontier of third-party AI governance research. The LiteLLM incident makes it viscerally real."
   },
   "stats": {
-    "papers": 129,
-    "themes": 53,
+    "papers": 138,
+    "themes": 57,
     "tools": 42,
     "researchSessions": 10,
     "totalSearches": 29,
@@ -71,5 +71,5 @@
     "totalResearchSessions": 10,
     "totalResearchHours": 34.0
   },
-  "lastUpdated": "2026-04-01"
+  "lastUpdated": "2026-04-02"
 }
