@@ -3139,6 +3139,201 @@
       ],
       "relevance": "The AI trust paradox provides the empirical frame for why first-principles trust analysis matters. The disconnect between confidence and readiness is not just a governance gap \u2014 it's a market failure that consulting and regulatory intervention can address.",
       "dateRead": "2026-04-02"
+    },
+    {
+      "id": "p139",
+      "title": "Dislocated Accountabilities in the \"AI Supply Chain\": Modularity and Developers' Notions of Responsibility",
+      "authors": [
+        "David Gray Widder",
+        "Dawn Nafus"
+      ],
+      "year": 2023,
+      "source": "Big Data & Society (SAGE)",
+      "url": "https://arxiv.org/abs/2209.09780",
+      "analysis": "Widder and Nafus conducted 27 interviews with AI engineers across industry, open source, and academia and found a consistent pattern: developers acknowledge AI harms but believe addressing them is \"someone else's job.\" The mechanism is modularity \u2014 the software engineering ideal of decomposing complex systems into self-contained parts. This creates what the authors call \"located accountability,\" where each developer's sense of responsibility is bounded by their module. The imagined supply chain metaphor compounds this: developers see dependencies as \"necessary supplies\" rather than relationships requiring shared responsibility. The authors identify four cross-cutting social logics that organize RAI labor: modularizability (decompose and delegate), scale (someone else has the overview), reputation (ethics work is low-status), and customer orientation (the client wants features, not safety). The LiteLLM incident is the perfect contemporary illustration: LiteLLM's developers likely assumed users would secure their own deployments; users assumed LiteLLM would vet its dependencies; the CI/CD pipeline maintainers assumed someone else was monitoring the build chain. No one owned the supply chain risk. The paper's key policy implication: ethics checklists and guidelines that assume panoptical knowledge and control over systems will fail in distributed supply chains. Instead, accountability obligations must be designed around the actual organizational boundaries and information asymmetries that exist. This is the foundational paper for understanding WHY AI supply chain governance is structurally difficult.",
+      "tags": [
+        "supply-chain",
+        "accountability",
+        "responsibility",
+        "modularity",
+        "engineers",
+        "interviews",
+        "qualitative-research"
+      ],
+      "relevance": "Essential for understanding the structural causes of AI supply chain failures. Explains why LiteLLM-type incidents are near-inevitable given current engineering culture and organizational structures.",
+      "dateRead": "2026-04-02"
+    },
+    {
+      "id": "p140",
+      "title": "AI Auditing: The Broken Bus on the Road to AI Accountability",
+      "authors": [
+        "Abeba Birhane",
+        "Ryan Steed",
+        "Victor Ojewale",
+        "Briana Vecchione",
+        "Inioluwa Deborah Raji"
+      ],
+      "year": 2024,
+      "source": "IEEE SaTML 2024",
+      "url": "https://arxiv.org/abs/2401.14462",
+      "analysis": "Birhane et al. taxonomize AI audit practices across six domains (regulators, law firms, civil society, journalism, academia, consulting) and find that only a subset translate to desired accountability outcomes. The title is deliberate: audits are happening but they're not necessarily taking anyone where they need to go. The authors find that audits are most effective when they have: clear accountability objectives, adequate methodological rigor, sufficient access to systems and data, and institutional mechanisms to enforce consequences. Most AI audits fail on the last criterion \u2014 even when an audit identifies serious harms, there's no enforcement pathway to compel remediation. The taxonomy reveals a critical distinction: ecosystem audits (broad industry-level assessment), product audits (specific deployed systems), and non-audits (studies that look like audits but lack independence or accountability objectives). The paper's most important finding for practitioners: AI auditing as currently practiced replicates the accountability gap it purports to solve. The LiteLLM incident would not have been caught by any existing AI audit regime \u2014 the attack was a standard software supply chain compromise, invisible to model-focused AI evaluations. This suggests that AI auditing frameworks need to incorporate software supply chain security as a first-class concern, not an IT ops afterthought.",
+      "tags": [
+        "auditing",
+        "accountability",
+        "taxonomy",
+        "governance",
+        "regulation",
+        "audit-effectiveness"
+      ],
+      "relevance": "Critical analysis of why AI audits fail to deliver accountability. The LiteLLM incident confirms the paper's thesis: audits focused on model behaviour miss the infrastructure-level compromises that cause real-world harm.",
+      "dateRead": "2026-04-02"
+    },
+    {
+      "id": "p141",
+      "title": "Understanding Accountability in Algorithmic Supply Chains",
+      "authors": [
+        "Jennifer Cobbe",
+        "Michael Veale",
+        "Jatinder Singh"
+      ],
+      "year": 2023,
+      "source": "ACM FAccT 2023",
+      "url": "https://arxiv.org/abs/2304.14749",
+      "analysis": "Cobbe, Veale, and Singh introduce the concept of the \"accountability horizon\" \u2014 the limit beyond which an actor in an algorithmic supply chain cannot see, and therefore cannot be held accountable for, the actions of downstream actors. The paper traces how the \"agile turn\" in software development reorganised production around data-driven supply chains where different actors control different components. The authors argue that algorithmic accountability literature is grounded in an organisation-focused understanding of digital technologies, missing the supply chain dynamics that now characterise most real-world deployments. Key findings: (1) Distributed responsibility: accountability for algorithmic outcomes is distributed across supply chain actors, none of whom has complete visibility; (2) Accountability horizon: actors can only be held responsible for what they can see \u2014 supply chains obscure the \"many hands\" that produce outcomes; (3) Service models: AI-as-a-Service providers intentionally structure relationships to maximise commercial advantage while minimising legal liability; (4) Regulatory arbitrage: actors structure supply chains to benefit from the most favourable regulatory jurisdiction. For the LiteLLM case: the firm using LiteLLM is within the accountability horizon of LiteLLM's API, but beyond the horizon of the PyPI maintainer who was compromised, the CI/CD system, and the security scanner that was backdoored. The implication for financial services: institutions need to map their accountability horizons for every AI system and explicitly acknowledge what lies beyond them.",
+      "tags": [
+        "accountability-horizon",
+        "supply-chain",
+        "AIaaS",
+        "governance",
+        "regulatory-arbitrage",
+        "many-hands"
+      ],
+      "relevance": "The accountability horizon concept is the most important theoretical contribution for understanding AI supply chain liability gaps. Directly applicable to financial services AI procurement and vendor risk management.",
+      "dateRead": "2026-04-02"
+    },
+    {
+      "id": "p142",
+      "title": "Outsider Oversight: Designing a Third Party Audit Ecosystem for AI Governance",
+      "authors": [
+        "Inioluwa Deborah Raji",
+        "Peggy Xu",
+        "Colleen Honigsberg",
+        "Daniel Ho"
+      ],
+      "year": 2022,
+      "source": "AAAI/ACM AIES 2022",
+      "url": "https://arxiv.org/abs/2206.04737",
+      "analysis": "Raji et al. synthesise lessons from financial, environmental, and health regulation on crafting effective external oversight systems. The paper argues that the naive move toward AI audits \u2014 without considering auditor independence, access, scope, and transparency \u2014 risks replicating the failures of ESG auditing. The authors document specific failure modes: auditors compromised by selection and payment by auditees; auditors struggling to secure access to systems; auditees concealing findings behind NDAs; and audit results being co-opted by targets to legitimise practices rather than improve them. The paper surveys institutional design across domains: financial audits (mandatory, standardised, enforcement-backed), environmental audits (voluntary with regulatory backstop), health audits (accreditation-based with professional standards). The authors conclude that effective AI third-party oversight requires: target identification mechanisms (who should be audited and by whom), independence in selection and compensation (not self-selected or self-funded), access to data and systems (sufficient to assess what matters), clear and well-scoped audit standards (focused on consequential outcomes), and post-audit transparency (public reporting requirements). The paper predates the current wave of AI governance frameworks but its institutional design lessons are urgently relevant: the EU AI Act's conformity assessment requirements, NIST's AI Tounters, and the emerging ecosystem of AI safety institutes all embody its recommendations \u2014 and all face the same implementation challenges the paper identifies.",
+      "tags": [
+        "third-party-audit",
+        "oversight",
+        "institutional-design",
+        "independence",
+        "ESG",
+        "governance"
+      ],
+      "relevance": "Foundational framework for thinking about what makes third-party AI oversight effective vs performative. Essential reading before designing any AI assurance or audit program.",
+      "dateRead": "2026-04-02"
+    },
+    {
+      "id": "p143",
+      "title": "AEF-1: Minimum Operating Conditions for Independent Third Party AI Evaluations",
+      "authors": [
+        "Conrad Stosz",
+        "Karson Elmgren",
+        "Charles Foster",
+        "George Balston",
+        "et al."
+      ],
+      "year": 2025,
+      "source": "AI Evaluation Foundation",
+      "url": "https://www.aef.one/aef-one.pdf",
+      "analysis": "AEF-1 is the first attempt to define minimum operating conditions for third-party AI evaluators. The standard identifies five principles: sufficient access and resources (evaluators need technical access to the right systems), minimized conflicts of interest (structural independence from the provider), analytic autonomy (freedom to define methodology), transparent methods and results (sharing what was done and found), and protection of sensitive information (handling confidential data appropriately). The document includes a compliance checklist that evaluators can use to demonstrate adherence. The gap between what AEF-1 requires and what commercial AI vendors actually provide defines the current AI evaluation governance gap: most vendors restrict evaluator access to black-box API testing only, maintain financial relationships with auditors through consulting contracts, constrain methodological freedom through narrow scope agreements, and share findings selectively. For financial services, AEF-1 provides a procurement specification: any third-party AI evaluation cited as assurance evidence should be assessed against the AEF-1 checklist. The standard also has implications for AI vendors: those that proactively comply with AEF-1 conditions will have a significant trust advantage in regulated markets.",
+      "tags": [
+        "evaluation",
+        "third-party",
+        "standard",
+        "independence",
+        "access",
+        "transparency",
+        "AEF"
+      ],
+      "relevance": "Provides the first concrete standard for what AI evaluation independence and access should look like. Directly applicable to AI vendor due diligence and third-party AI risk assessment.",
+      "dateRead": "2026-04-02"
+    },
+    {
+      "id": "p144",
+      "title": "Third-party Compliance Reviews for Frontier AI Safety Frameworks",
+      "authors": [
+        "Aidan Homewood",
+        "Sophie Williams",
+        "Noemi Dreksler",
+        "John Lidiard",
+        "et al."
+      ],
+      "year": 2025,
+      "source": "arXiv:2505.01643",
+      "url": "https://arxiv.org/abs/2505.01643",
+      "analysis": "Homewood et al. address a specific question: how can external parties verify that frontier AI companies are complying with their own safety frameworks? The paper maps six key design choices: who conducts the review (Big Four accounting firms, specialist evaluation firms like METR, consulting firms, AI audit firms, security firms, law firms, or hybrids); what information sources the reviewer can consider (structural, procedural, operational, or technical information); how compliance is assessed (framework translation, control mapping, or outcome testing); what is disclosed externally (nothing, summary, detailed, or full report); how findings guide actions (voluntary, contractual, or regulatory backstop); and when reviews occur (pre-deployment, periodic, or continuous). The paper acknowledges significant challenges: information security risks if sensitive information leaks; cost burdens on companies; reputational damage from negative findings; and measurement difficulties for abstract safety properties. The authors draw on parallels with financial audit (standardised methodology, professional indemnity, public reporting requirements) and environmental/health regulation (accreditation requirements, regulatory backstop). Anthropic and G42 have already committed to commissioning such reviews; the EU GPAI Code of Practice recommends them. For financial services: the emerging infrastructure for frontier AI compliance reviews will create new assurance products that regulated entities can leverage in their own AI governance programs.",
+      "tags": [
+        "compliance-review",
+        "frontier-AI",
+        "safety-framework",
+        "third-party",
+        "governance",
+        "evaluation"
+      ],
+      "relevance": "Maps the design space for AI safety framework compliance reviews. Relevant for financial institutions working with frontier AI providers who want independent assurance that safety commitments are being met.",
+      "dateRead": "2026-04-02"
+    },
+    {
+      "id": "p145",
+      "title": "Implementing AI Bill of Materials (AI BOM) with SPDX 3.0",
+      "authors": [
+        "Karen Bennet",
+        "Gopi Krishnan Rajbahadur",
+        "Arthit Suriyawongkul",
+        "Kate Stewart"
+      ],
+      "year": 2024,
+      "source": "Linux Foundation Research",
+      "url": "https://arxiv.org/abs/2504.16743",
+      "analysis": "The Bennet et al. guide is the operational manual for AI Bill of Materials (AI BOM) using SPDX 3.0. An AI BOM extends the traditional software SBOM concept to capture the full provenance of AI systems: algorithms, training data sources, preprocessing steps, model architecture, hyperparameters, fine-tuning procedures, deployment configuration, and licensing. The AI Profile in SPDX 3.0 includes mandatory fields for autonomy type, domain, model type, standard compliance, safety risk assessment, and build-time provenance. The Dataset Profile captures data provenance: collection process, preprocessing, confidentiality level, known biases, intended use, and update mechanisms. The guide explains how AI BOMs enable regulatory compliance with EU AI Act (transparency requirements), FDA/EMA requirements (medical device documentation), and IEEE P70xx standards. It also addresses the relationship between AI BOMs and existing documentation practices: Model Cards, Datasheets, and FactSheets are compared and the SPDX format is shown to subsume their key fields while adding supply chain depth. For the LiteLLM case: an AI BOM for the litellm package would have documented its dependencies, build pipeline, and testing procedures \u2014 making the Trivy/renovate supply chain compromise visible at procurement time. For financial services: AI BOMs should become a mandatory procurement requirement for all AI systems, with the EU AI Act timeline providing regulatory momentum.",
+      "tags": [
+        "AI-BOM",
+        "SPDX",
+        "SBOM",
+        "supply-chain",
+        "transparency",
+        "provenance",
+        "documentation",
+        "EU-AI-Act"
+      ],
+      "relevance": "The operational standard for AI supply chain transparency. Implementing AI BOM requirements is the most immediate structural response to LiteLLM-type incidents available to financial institutions today.",
+      "dateRead": "2026-04-02"
+    },
+    {
+      "id": "p146",
+      "title": "AgentFacts: Universal KYA Standard for Verified AI Agent Metadata & Deployment",
+      "authors": [
+        "Jared James Grogan"
+      ],
+      "year": 2025,
+      "source": "Universitas AI",
+      "url": "https://arxiv.org/abs/2506.13794",
+      "analysis": "Grogan's AgentFacts proposes a Know Your Agent (KYA) standard analogous to Know Your Customer (KYC) in financial services. The core problem: enterprises deploying AI agents cannot verify third-party agent capabilities without standardised metadata infrastructure. AgentFacts addresses this through cryptographically-signed capability declarations from multiple authorities, dynamic permission management with time-to-live freshness guarantees, and a ten-section schema covering identity, model transparency, classification, capabilities, authentication, compliance, performance, supply chain (SBOM integration), and verification. The multi-authority model is key: different trusted authorities validate different metadata aspects \u2014 a cybersecurity firm verifies security capabilities, a compliance consultancy validates regulatory adherence \u2014 eliminating single points of trust failure. The standard is explicitly designed for agentic AI: it handles dynamic permissions, scope boundaries, escalation policies, and real-time authorization updates. The supply chain section integrates with SBOM/AI BOM standards, providing end-to-end provenance from foundation model to deployed agent. For financial services: AgentFacts addresses the \"Shadow AI\" problem (fourth-party AI embedded in SaaS tools by vendors) by enabling enterprises to discover and verify what AI is operating in their environment without relying on vendor self-declaration alone. KYA infrastructure is the missing piece that makes continuous AI monitoring feasible at scale.",
+      "tags": [
+        "KYA",
+        "metadata",
+        "agent",
+        "standard",
+        "verification",
+        "cryptographic",
+        "enterprise",
+        "trust"
+      ],
+      "relevance": "Forward-looking framework for AI agent transparency at scale. The KYA paradigm directly addresses the fourth/fifth-party AI risk that existing TPRM frameworks cannot see. Relevant now as financial services deploy more agentic AI.",
+      "dateRead": "2026-04-02"
     }
   ]
 }

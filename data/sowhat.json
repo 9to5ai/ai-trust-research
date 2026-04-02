@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02",
+  "lastUpdated": "2026-04-03",
   "sections": [
     {
       "id": "trust-professionals",
@@ -347,6 +347,57 @@
           ],
           "urgency": "act-now",
           "prompt": "For your three most critical AI systems, how far does the accountability horizon extend \u2014 and which parts of it are beyond your visibility? What contractual, technical, or governance mechanisms do you have in place to manage risks that exist beyond your accountability horizon?"
+        },
+        {
+          "id": "ta22",
+          "headline": "The LiteLLM incident is not an anomaly \u2014 it is the modal form of AI supply chain attacks",
+          "body": "The LiteLLM compromise was not sophisticated. The attacker used a standard supply chain technique: compromise a security scanner (Trivy on PyPI), wait for automated tools to update dependencies, push a backdoored version, harvest credentials on startup. Any firm using litellm in a Docker container with internet access had their secrets stolen. The financial sector's response has been inadequate: treating this as an IT ops problem to be patched, rather than a governance failure requiring supply chain risk infrastructure. Every AI vendor you use is on a supply chain you cannot see. The only defensible response is to assume compromise is possible and build detection, response, and recovery capability accordingly. This means: maintain independent copies of AI system provenance (AI BOMs), implement runtime behavioral monitoring that detects credential exfiltration patterns, and design systems so that AI tool access tokens are short-lived and scoped.",
+          "citations": [
+            "p139",
+            "p141",
+            "p138",
+            "p136"
+          ],
+          "themes": [
+            "t053",
+            "t054",
+            "t055"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your AI supply chain risk assessment include assumptions about the security of your vendors' build pipelines? When did you last verify that your AI vendors' AI BOMs are current and complete?"
+        },
+        {
+          "id": "ta23",
+          "headline": "AI BOMs are not optional \u2014 they are the minimum viable response to supply chain opacity",
+          "body": "The AI Bill of Materials (AI BOM) using SPDX 3.0 is the single most immediately actionable response to the LiteLLM problem. A financial institution using LiteLLM that had demanded an AI BOM at procurement would have known: which version of litellm was deployed, which dependencies were included, which build system was used, and which CI/CD pipeline was configured. This documentation would not have prevented the compromise, but it would have enabled rapid affected-system identification, targeted incident response, and faster regulatory notification. The EU AI Act is already moving toward mandatory AI BOMs for high-risk systems. Financial institutions should not wait for regulation: begin requiring AI BOMs from AI vendors now, and build internal capability to parse and act on them. This is an existing standard (SPDX 3.0 AI Profile), not new infrastructure.",
+          "citations": [
+            "p145",
+            "p136",
+            "p143"
+          ],
+          "themes": [
+            "t055",
+            "t057"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your AI procurement process require AI BOMs from vendors? If not, what would it take to add this requirement to your next AI vendor contract?"
+        },
+        {
+          "id": "ta24",
+          "headline": "Stop accepting AI audit reports as AI supply chain assurance",
+          "body": "The research is clear: AI audits as currently practiced focus on model behavior (fairness, accuracy, safety outputs) and do not cover software supply chain security. The LiteLLM compromise would not have been detected by any current AI audit regime because it was a build pipeline attack, not a model behavior problem. Assurance professionals must stop conflating AI model audits with AI supply chain security. The correct standard for AI supply chain security is software supply chain standards (SLSA, AEF-1, SPDX AI BOM) applied to AI-specific contexts. Before accepting any AI audit or evaluation as sufficient assurance, apply the three-question diagnostic: Who is reviewing (and are they independent)? What are they reviewing (and is it the supply chain, not just the model)? What can they actually see (and does that include build pipelines and dependencies)?",
+          "citations": [
+            "p140",
+            "p142",
+            "p143",
+            "p144"
+          ],
+          "themes": [
+            "t055",
+            "t053"
+          ],
+          "urgency": "act-now",
+          "prompt": "Take the last AI audit report you relied on for supply chain assurance and apply the three-question diagnostic. Were you relying on a document that assessed the model but not the supply chain?"
         }
       ]
     },
@@ -654,6 +705,38 @@
           ],
           "urgency": "act-now",
           "prompt": "For your most relied-upon third-party AI review: (1) Who conducted it and what is their independence from your organisation? (2) Did they test your system technically or review your documentation? (3) Could they actually see your training data, model weights, and production behaviour? If you can't answer these confidently, what is your basis for relying on that review?"
+        },
+        {
+          "id": "eb20",
+          "headline": "The LiteLLM incident reveals that software tooling is AI infrastructure \u2014 and it isn't being governed as such",
+          "body": "Financial institutions spend significant resources governing AI model selection and deployment. Very few govern the software tools that build, test, and deploy AI systems. LiteLLM was not an AI model \u2014 it was a Python library for calling LLM APIs. But because it had access to API keys and conversation data, it was de facto AI infrastructure. The compromise occurred through a dependency of a dependency (Trivy/renovate on PyPI) \u2014 completely outside any AI governance framework in use at financial institutions. The executive implication: AI infrastructure governance must extend to the full software supply chain that handles AI artifacts, including: dependency management tools, CI/CD pipelines, container registries, API key management systems, and model deployment platforms. The question for your next AI governance review: do your AI risk controls cover the tools your AI teams use to build and deploy systems?",
+          "citations": [
+            "p136",
+            "p139",
+            "p141"
+          ],
+          "themes": [
+            "t054",
+            "t055"
+          ],
+          "urgency": "act-now",
+          "prompt": "Ask your CISO: what is the governance framework for the software dependency supply chain that your AI systems run on? If the answer is \"IT ops handles it,\" that's the governance gap."
+        },
+        {
+          "id": "eb21",
+          "headline": "Your AI accountability horizon ends before your liability does \u2014 and that is not fully solvable",
+          "body": "The accountability horizon concept (Cobbe et al.) is one of the most important strategic insights for AI governance: financial institutions can only be held accountable for what they can see in their AI supply chains, but they bear liability for harms that extend beyond what they can see. This is not a governance failure \u2014 it is a structural feature of how AI supply chains work. LiteLLM users could not have seen the PyPI compromise; they bear liability for its consequences. The executive response must be: (1) map your accountability horizons explicitly \u2014 know what you can and cannot see; (2) invest in resilience over prevention \u2014 detection, response, and recovery capability for supply chain incidents that cannot be prevented; (3) build contractual and insurance mechanisms that allocate supply chain risk appropriately, recognizing that due diligence has limits. This is a board-level strategic message: AI supply chain risk is partially irreducible, and the institution needs a strategy for living with that uncertainty.",
+          "citations": [
+            "p141",
+            "p139",
+            "p138"
+          ],
+          "themes": [
+            "t053",
+            "t054"
+          ],
+          "urgency": "watch",
+          "prompt": "At what level of your AI supply chain does your institutional visibility end? What mechanisms do you have for making liability allocation decisions when harms originate beyond your accountability horizon?"
         }
       ]
     },
@@ -998,6 +1081,40 @@
           ],
           "urgency": "watch",
           "prompt": "When your regulatory framework requires 'independent' AI assessment, do you have a definition of what 'independent' means in technical and structural terms? If an organisation presents an AI evaluation conducted by a firm with significant commercial relationships with the AI developer, does your framework have a basis for saying that evaluation is not independent?"
+        },
+        {
+          "id": "ar21",
+          "headline": "MAS TPRM and APRA CPS 230/234 were not built for AI software supply chain risk \u2014 the gap is systemic",
+          "body": "The MAS Consultation Paper on TPRM (March 2026) and APRA's CPS 230 and CPS 234 are grounded in traditional outsourcing and operational risk frameworks. They focus on vendor reliability, service continuity, and security controls at the organizational level. Neither framework was designed for the structural reality documented in this research: AI systems are built from modular software components that pass through many hands, no single actor has complete visibility, and accountability is structurally dislocated across supply chain actors. The LiteLLM incident would not have been prevented by either framework because both assume the relationship with the vendor is the governance boundary, not the vendor's software supply chain. Regulators should develop AI-specific third-party risk management requirements that mandate: AI BOMs for all AI systems used in regulated activities, sub-processor disclosure requirements analogous to GDPR sub-processor requirements, and continuous monitoring of AI system provenance (not just point-in-time due diligence). The MAS AI Risk Management Guidelines (which reference AI) provide the foundation; they need explicit supply chain provisions.",
+          "citations": [
+            "p141",
+            "p145",
+            "p146",
+            "p057"
+          ],
+          "themes": [
+            "t057",
+            "t055"
+          ],
+          "urgency": "act-now",
+          "prompt": "Do your current AI third-party risk management guidelines require visibility into the AI vendor's software supply chain? If not, what would it take to add AI BOM requirements to your framework?"
+        },
+        {
+          "id": "ar22",
+          "headline": "Mandatory AI BOMs for high-stakes AI deployment should be the minimum regulatory ask",
+          "body": "The EU AI Act is moving toward mandatory transparency documentation for high-risk AI systems. The SPDX 3.0 AI BOM standard provides the technical mechanism to deliver this. Financial regulators should mandate AI BOM requirements for all AI systems deployed in regulated activities above a risk threshold. The AI BOM should at minimum include: foundation model identification and version, training data provenance (to the extent known), fine-tuning procedure documentation, dependency tree (AI-specific and software), and build/deployment provenance. This is not a novel requirement \u2014 it is the AI-specific extension of SBOM requirements already being implemented in software supply chain security. The business case is straightforward: AI BOMs enable rapid incident response (as demonstrated by the LiteLLM case), support regulatory examination, and reduce the asymmetry of information between regulated institutions and AI vendors. The implementation gap is small; the regulatory signal needed is large.",
+          "citations": [
+            "p145",
+            "p146",
+            "p136"
+          ],
+          "themes": [
+            "t057",
+            "t055",
+            "t056"
+          ],
+          "urgency": "watch",
+          "prompt": "At what risk threshold should AI BOMs be mandated in your jurisdiction? What body of regulated entities would be affected, and what implementation timeline is realistic?"
         }
       ]
     }

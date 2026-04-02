@@ -40,20 +40,7 @@
     "Develop AI red teaming methodology specification",
     "Create LLM evaluation bias mitigation protocol for assurance engagements"
   ],
-  "supervisorFeedback": {
-    "date": "2026-03-26",
-    "direction": "MANDATORY NEXT SESSION: Read and analyze the papers in the third-party AI risk reading list. Focus on developing strategies to tackle the third-party risk problem, using the LiteLLM supply chain attack (March 24, 2026) as the central case study.",
-    "priorities": [
-      "Read the full directive at ~/workspace/ai-trust-research/data/next-research-directive.md \u2014 it contains the complete reading list with 10 papers/documents and analysis angles",
-      "Fetch and deep-read ALL 10 papers from Gary Ang's reading list (arXiv links + AEF-1 PDF + MAS consultation paper)",
-      "Map the LiteLLM incident (TeamPCP supply chain attack, March 24 2026) against each paper's framework \u2014 where did accountability, oversight, and transparency fail?",
-      "Compare MAS Third-Party Risk Management Guidelines (March 2026) with APRA CPS 230/234 on AI supply chain coverage gaps",
-      "Develop a practical 'AI Supply Chain Security Strategy' for financial services \u2014 combining AI BOM, KYA standards, and third-party audit ecosystem design",
-      "Key question from Gary Ang: 'How do you govern AI you don't control? And maybe don't even know exists?'",
-      "This connects directly to our existing research on trust provenance and certification chains \u2014 third-party risk is where the chain breaks"
-    ],
-    "note": "Reading list sourced from Gary Ang PhD (author of MAS AI Risk Management Guidelines). This is the frontier of third-party AI governance research. The LiteLLM incident makes it viscerally real."
-  },
+  "supervisorFeedback": "SESSION COMPLETE. The reading list analysis and LiteLLM case study are complete. Next priority: develop the three hypotheses (accountability horizon, modularity trap, audit gap) into full arguments with supporting evidence. These form the core of the first-principles trust framework we need.",
   "stats": {
     "papers": 138,
     "themes": 57,
@@ -65,11 +52,12 @@
       "executives": 16,
       "regulators": 17
     },
-    "totalPapers": 129,
-    "totalThemes": 53,
-    "totalTools": 42,
+    "totalPapers": 146,
+    "totalThemes": 62,
+    "totalTools": 47,
     "totalResearchSessions": 10,
-    "totalResearchHours": 34.0
+    "totalResearchHours": 34.0,
+    "totalSessions": 13
   },
-  "lastUpdated": "2026-04-02"
+  "lastUpdated": "2026-04-03"
 }

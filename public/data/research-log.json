@@ -705,6 +705,84 @@
       "newThemes": 4,
       "newTools": 0,
       "newSowhatItems": 9
+    },
+    {
+      "id": "rl9",
+      "date": "2026-04-03",
+      "title": "Session 13: Third-Party AI Risk \u2014 Gary Ang Reading List + LiteLLM Case Study",
+      "summary": "Analyzed 8 papers from Gary Ang PhD's third-party AI risk management reading list using the LiteLLM supply chain attack (March 24, 2026) as central case study. Key findings: (1) The accountability horizon explains why AI supply chain liability is structurally irreducible; (2) Modularity makes Responsible AI structurally difficult \u2014 developers delegate accountability along with components; (3) AI audits as currently practiced evaluate model behavior but miss software supply chain compromises; (4) Neither MAS TPRM nor APRA CPS 230/234 was designed for AI software supply chain risk; (5) AI BOMs via SPDX 3.0 are the minimum viable immediate response; (6) AgentFacts KYA standard provides a forward-looking framework for continuous AI agent verification at scale.",
+      "sessionType": "deep-research",
+      "duration": "90 minutes",
+      "searches": 14,
+      "sourcesRead": [
+        "LiteLLM Security Update (litellm.ai blog)",
+        "Gary Ang LinkedIn Reading List",
+        "Widder & Nafus (2023) arXiv:2209.09780",
+        "Birhane et al. (2024) arXiv:2401.14462",
+        "Cobbe, Veale & Singh (2023) arXiv:2304.14749",
+        "Raji et al. (2022) arXiv:2206.04737",
+        "Stosz et al. (2025) AEF-1",
+        "Homewood et al. (2025) arXiv:2505.01643",
+        "Bennet et al. (2024) arXiv:2504.16743",
+        "Grogan (2025) arXiv:2506.13794",
+        "MAS TPRM Consultation (March 2026)",
+        "Trend Micro LiteLLM Analysis"
+      ],
+      "newPapers": [
+        "p139-p146"
+      ],
+      "newThemes": [
+        "t053-t057"
+      ],
+      "newTools": [
+        "tool43-tool47"
+      ],
+      "newSowhatItems": {
+        "trust-professionals": 3,
+        "executives": 2,
+        "regulators": 2
+      },
+      "sections": [
+        {
+          "title": "Papers Analyzed",
+          "items": [
+            "p139 Widder & Nafus (2023) \u2014 Dislocated Accountabilities in AI Supply Chain (Big Data & Society)",
+            "p140 Birhane et al. (2024) \u2014 AI Auditing: The Broken Bus (IEEE SaTML)",
+            "p141 Cobbe, Veale & Singh (2023) \u2014 Accountability in Algorithmic Supply Chains (ACM FAccT)",
+            "p142 Raji et al. (2022) \u2014 Outsider Oversight (AAAI/ACM AIES)",
+            "p143 Stosz et al. (2025) \u2014 AEF-1 Minimum Operating Conditions",
+            "p144 Homewood et al. (2025) \u2014 Third-party Compliance Reviews for Frontier AI Safety",
+            "p145 Bennet et al. (2024) \u2014 AI BOM with SPDX 3.0 (Linux Foundation)",
+            "p146 Grogan (2025) \u2014 AgentFacts KYA Standard"
+          ]
+        },
+        {
+          "title": "Case Study: LiteLLM Supply Chain Attack (March 24, 2026)",
+          "items": [
+            "Attack vector: Compromised Trivy executable distributed via PyPI (renovate bug), affecting litellm >=1.11.0",
+            "Impact: All API keys and server environment variables stolen \u2014 LLM provider keys, vector DB credentials, Langfuse credentials, RAG data",
+            "Scale: ~5,000-10,000 affected organizations (major banks, Fortune 500, AI safety orgs)",
+            "Financial services exposure: Banking AI assistants, customer-facing LLM apps, internal coding assistants, RAG systems with proprietary data",
+            "Root cause: Standard software supply chain compromise invisible to AI audit ecosystem \u2014 AI-specific governance gap"
+          ]
+        },
+        {
+          "title": "Key Hypotheses Formed",
+          "items": [
+            "H1 (Accountability Horizon): AI supply chain liability is structurally irreducible \u2014 institutions bear risk for harms beyond their visibility, and due diligence cannot close the horizon",
+            "H2 (Modularity Trap): The engineering practices that make AI development scalable are the same structures that dislocate accountability \u2014 individual behavior change cannot fix structural accountability failures",
+            "H3 (Audit Gap): AI audit ecosystems evaluate model behavior, not software supply chain security \u2014 structural reform of audit scope is required to address the LiteLLM problem class"
+          ]
+        },
+        {
+          "title": "SOWHAT Updates",
+          "items": [
+            "ta22-ta24: AI BOM requirements, audit gap, LiteLLM response (trust-professionals)",
+            "eb20-eb21: Software tooling governance, accountability horizon (executives)",
+            "ar21-ar22: MAS/APRA framework gaps, mandatory AI BOM requirements (regulators)"
+          ]
+        }
+      ]
     }
   ]
 }

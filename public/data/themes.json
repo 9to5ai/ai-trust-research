@@ -901,6 +901,73 @@
       "implications": "The governance-as-enabler narrative is the most effective executive communication strategy for AI governance investment. Concrete evidence (DBS: 15 months \u2192 3 months; Scotiabank DataIQ award) beats abstract risk arguments. Consulting engagements should always include a governance redesign component, not just a gap assessment.",
       "dateIdentified": "2026-04-02",
       "confidence": "high"
+    },
+    {
+      "id": "t053",
+      "name": "The Accountability Horizon: Why Your AI Supply Chain Visibility Ends Before Your Liability Does",
+      "description": "Cobbe, Veale & Singh (p141) introduce the accountability horizon: the limit beyond which an actor in an algorithmic supply chain cannot see, and therefore cannot be held accountable for, the actions of downstream actors. This concept directly explains why financial institutions face irreducible uncertainty about their AI supply chain exposure. The LiteLLM case illustrates this precisely: the financial institution using LiteLLM has accountability visibility to the LiteLLM API layer (within horizon), but is beyond the horizon of the PyPI package maintainer, the CI/CD build system, and the compromised security scanner that introduced the backdoor. Critically, the horizon is asymmetric: actors at the top of the supply chain can externalise risks to actors they can't see, while actors at the bottom (end users, affected individuals) face harms from actors entirely beyond their horizon. Widder & Nafus (p139) explain why the horizon is structurally reinforced: modularity, scale, and the supply chain metaphor all work to limit what any single actor considers their responsibility. The practical implication: financial institutions cannot achieve supply chain AI security through due diligence alone \u2014 they must assume that significant risks lie beyond their accountability horizon and design governance for that reality. This means: invest in resilience (detection, response, recovery) rather than just prevention; build contractual and technical mechanisms that extend visibility where possible (AI BOMs, SBOMs, model cards); and develop explicit risk acceptance documentation for supply chain risks that cannot be seen.",
+      "papers": [
+        "p141",
+        "p139",
+        "p138"
+      ],
+      "implications": "The accountability horizon is the core concept for explaining to boards and regulators why AI supply chain risk is irreducible through standard vendor management. It should replace \"third-party risk\" as the primary framing, because it correctly locates the structural problem: not that firms aren't doing enough diligence, but that the supply chain structure itself limits what any single actor can be responsible for.",
+      "dateIdentified": "2026-04-03",
+      "confidence": "very high"
+    },
+    {
+      "id": "t054",
+      "name": "Modularity as Accountability Infrastructure: Why \"Just Check Your Dependencies\" Is Structurally Inadequate",
+      "description": "Widder & Nafus (p139) provide the most important empirical finding for understanding why AI supply chain governance fails: the modularity that makes modern software development possible is the same structure that makes responsible AI structurally difficult. When AI systems are built by composing pre-existing modules that pass through many hands, developers experience their responsibility as bounded by their module. The supply chain metaphor compounds this: dependencies are experienced as \"necessary supplies\" rather than as ongoing relationships requiring shared responsibility. The four cross-cutting logics that organize RAI (Responsible AI) labor are: (1) Modularizability \u2014 decompose and delegate, (2) Scale \u2014 someone else has the overview, (3) Reputation \u2014 ethics work is low-status, and (4) Customer orientation \u2014 clients want features not safety. These logics are not individual failures; they're structural features of how software engineering is organised. This means interventions aimed at changing individual developer behaviour (ethics training, checklists, guidelines) will fail unless they also change the organizational and incentive structures that produce these logics. The LiteLLM case: LiteLLM's developers were doing \"normal\" software engineering \u2014 using standard tools (renovate, Trivy) to manage dependencies in a standard way. The backdoor was introduced through a compromised tool, not through a deliberate act by LiteLLM. The engineers were doing their jobs correctly; the system failed because the system of which they were a module had been compromised upstream.",
+      "papers": [
+        "p139",
+        "p141",
+        "p140"
+      ],
+      "implications": "The Widder & Nafus finding should change every AI governance training program: it's not enough to train developers to care more about AI safety. You need to change the incentive structures, information flows, and organizational boundaries that currently make AI supply chain responsibility feel like someone else's job.",
+      "dateIdentified": "2026-04-03",
+      "confidence": "very high"
+    },
+    {
+      "id": "t055",
+      "name": "The AI Audit Gap: Why Current AI Audit Regimes Would Not Have Caught LiteLLM",
+      "description": "Birhane et al. (p140) taxonomize AI audit practices and find they focus primarily on model behavior (fairness, accuracy, safety outputs). The LiteLLM compromise was a software supply chain attack on the build infrastructure \u2014 invisible to any audit that evaluates model outputs, training data, or API behavior. This reveals a fundamental gap in the AI audit ecosystem: it has developed around the AI model as the unit of analysis, but the actual attack surface of AI systems is the full software stack from dependencies to deployment infrastructure. Raji et al. (p142) explain why this gap persists: auditors face structural pressures to assess what's measurable and reportable, not what's consequential. Model fairness metrics are concrete and publishable; build pipeline security is abstract and operationally sensitive. The AEF-1 standard (p143) addresses evaluator access conditions, but no current AI audit standard requires examination of the supply chain that produces the AI system. This gap means that financial institutions relying on AI audits for assurance may have false confidence: they have audited the model, not the system. The structural fix requires integrating software supply chain security standards (like SLSA, SPDX AI BOM) into AI audit scope.",
+      "papers": [
+        "p140",
+        "p142",
+        "p143",
+        "p145"
+      ],
+      "implications": "Financial institutions should not accept AI audit reports as sufficient assurance for AI supply chain security. AI audit scope must include software supply chain practices: dependency management, build pipeline security, CI/CD configuration, and sub-processor visibility. This is a gap that existing AI governance frameworks do not address.",
+      "dateIdentified": "2026-04-03",
+      "confidence": "very high"
+    },
+    {
+      "id": "t056",
+      "name": "From Point-in-Time Certification to Continuous Trust: Why AI Trust Properties Degrade and What That Means for Governance",
+      "description": "Grogan's AgentFacts (p146) introduces the critical concept of dynamic metadata with time-to-live freshness \u2014 the recognition that AI agent capabilities, permissions, and compliance status change over time. This challenges the prevailing model of AI trust: point-in-time certification (annual audit, upfront due diligence, one-time vendor assessment). The LiteLLM incident illustrates the structural problem with point-in-time approaches: a library that was clean at procurement could be compromised between one update cycle and the next. The AEF-1 standard (p143) implicitly acknowledges this by requiring ongoing access conditions, not just initial assessment. Homewood et al. (p144) introduce the question of when compliance reviews occur: pre-deployment (point-in-time), periodic (low-frequency), or continuous (high-frequency). Continuous approaches are most appropriate for dynamic AI systems but are also most resource-intensive. The governance question this raises: what is the right certification-refresh frequency for AI systems that can change behavior with every model update, fine-tuning, or dependency change? The financial services answer likely varies by risk tier: high-stakes AI systems require continuous or near-continuous assurance; lower-stakes systems can accept periodic review. But the sector currently lacks the infrastructure to deliver continuous assurance for most AI systems.",
+      "papers": [
+        "p146",
+        "p143",
+        "p144",
+        "p139"
+      ],
+      "implications": "The point-in-time certification model is inadequate for AI systems that degrade or change continuously. Financial institutions need to develop risk-tiered refresh requirements for AI trust properties: some things should be certified once (fundamental model architecture), some should be monitored continuously (API behavior in production), and some should be assessed on change (fine-tune or update events).",
+      "dateIdentified": "2026-04-03",
+      "confidence": "high"
+    },
+    {
+      "id": "t057",
+      "name": "MAS TPRM vs APRA CPS 230/234: Neither Framework Was Built for AI Software Supply Chain Risk",
+      "description": "The MAS Consultation Paper on TPRM (March 2026) extends existing outsourcing guidelines to cover all third-party arrangements, including AI. However, the framework is grounded in traditional service outsourcing logic: risk assessment, due diligence, contracting, monitoring, and termination. The AI BOM approach (p145) and AgentFacts KYA standard (p146) reveal that these frameworks have a fundamental blind spot: they focus on the vendor relationship (is the vendor reliable?) rather than the product provenance (what's actually inside the AI system the vendor is providing?). The LiteLLM case would not be addressed by MAS TPRM requirements: a financial institution could have conducted perfect due diligence on LiteLLM the company, signed ironclad contracts with LiteLLM, and still been compromised by a malicious PyPI package that LiteLLM unknowingly used. APRA CPS 230 and CPS 234 similarly focus on operational risk and security controls at the organizational level, not on the software supply chain that produces AI systems. Neither framework requires AI BOMs, software provenance documentation, or continuous monitoring of AI system components. The gap: financial regulators are applying industrial-age third-party risk frameworks to digital-age AI supply chains, and the mismatch creates exploitable vulnerability.",
+      "papers": [
+        "p145",
+        "p146",
+        "p141"
+      ],
+      "implications": "Regulators and consultants need to develop AI-specific third-party risk management frameworks that incorporate software provenance, AI BOM requirements, and continuous sub-processor monitoring. Existing TPRM frameworks provide necessary but not sufficient coverage.",
+      "dateIdentified": "2026-04-03",
+      "confidence": "high"
     }
   ]
 }
