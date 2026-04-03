@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-31",
+  "lastUpdated": "2026-04-04",
   "version": 1,
   "patterns": [
     {
@@ -32,8 +32,15 @@
         "Kill-switch theatre without genuine understanding or traceability",
         "Designing oversight around org charts instead of workflow reality"
       ],
-      "evidencePapers": ["p104", "p105", "p111"],
-      "themes": ["t040", "t41"],
+      "evidencePapers": [
+        "p104",
+        "p105",
+        "p111"
+      ],
+      "themes": [
+        "t040",
+        "t41"
+      ],
       "reusability": "high"
     },
     {
@@ -66,8 +73,17 @@
         "Ignoring label quality and institutional assumptions",
         "Assuming static trust properties survive deployment unchanged"
       ],
-      "evidencePapers": ["p107", "p108", "p113", "p115"],
-      "themes": ["t042", "t044", "t43"],
+      "evidencePapers": [
+        "p107",
+        "p108",
+        "p113",
+        "p115"
+      ],
+      "themes": [
+        "t042",
+        "t044",
+        "t43"
+      ],
       "reusability": "high"
     },
     {
@@ -100,8 +116,13 @@
         "Approval gates that check single actions in isolation",
         "No reconstruction of multi-step execution paths"
       ],
-      "evidencePapers": ["p101", "p114"],
-      "themes": ["t44"],
+      "evidencePapers": [
+        "p101",
+        "p114"
+      ],
+      "themes": [
+        "t44"
+      ],
       "reusability": "high"
     },
     {
@@ -134,8 +155,16 @@
         "Humans asked to verify opaque outputs at machine speed",
         "Blame shifted downward while design decisions remain unscrutinised"
       ],
-      "evidencePapers": ["p105", "p109", "p111", "p116"],
-      "themes": ["t041", "t42"],
+      "evidencePapers": [
+        "p105",
+        "p109",
+        "p111",
+        "p116"
+      ],
+      "themes": [
+        "t041",
+        "t42"
+      ],
       "reusability": "high"
     },
     {
@@ -168,8 +197,13 @@
         "No practical fallback if the vendor changes terms or fails",
         "Assuming hyperscaler branding equals adequate control evidence"
       ],
-      "evidencePapers": ["p098", "p103"],
-      "themes": ["t039"],
+      "evidencePapers": [
+        "p098",
+        "p103"
+      ],
+      "themes": [
+        "t039"
+      ],
       "reusability": "high"
     },
     {
@@ -202,8 +236,14 @@
         "Control claims with no attached evidence object",
         "Temporary workarounds becoming permanent invisible policy"
       ],
-      "evidencePapers": ["p110", "p112"],
-      "themes": ["t045", "t45"],
+      "evidencePapers": [
+        "p110",
+        "p112"
+      ],
+      "themes": [
+        "t045",
+        "t45"
+      ],
       "reusability": "high"
     },
     {
@@ -236,8 +276,14 @@
         "Monitoring controls with no tie back to original trust claims",
         "Audit scopes that blur design and runtime evidence"
       ],
-      "evidencePapers": ["p102", "p107", "p113"],
-      "themes": ["t044"],
+      "evidencePapers": [
+        "p102",
+        "p107",
+        "p113"
+      ],
+      "themes": [
+        "t044"
+      ],
       "reusability": "high"
     },
     {
@@ -270,8 +316,60 @@
         "Confusing recommendation systems with non-decision systems",
         "No forensic trail for why a decision was allowed to stand"
       ],
-      "evidencePapers": ["p104", "p112", "p114"],
-      "themes": ["t040", "t45"],
+      "evidencePapers": [
+        "p104",
+        "p112",
+        "p114"
+      ],
+      "themes": [
+        "t040",
+        "t45"
+      ],
+      "reusability": "very high"
+    },
+    {
+      "id": "rp09",
+      "title": "Know Your Agent (KYA) Review",
+      "category": "third-party agent governance",
+      "summary": "Use KYA to make agent systems legible. Trace identity, lineage, authority, runtime dependencies, evidence, and accountable ownership before an agent is allowed into material workflows.",
+      "whenToUse": [
+        "A client is buying or piloting an external agentic AI product",
+        "A vendor demo looks impressive but accountability is opaque",
+        "An institution needs a practical bridge between third-party risk, model risk, and operational governance"
+      ],
+      "howToRun": [
+        "Identify the agent and require a persistent attributable identity, not just a product name.",
+        "Map lineage: model provider, orchestration layer, wrappers, tool connectors, and subcontractors.",
+        "Document authority: what the agent can read, write, trigger, approve, or escalate.",
+        "Inspect runtime evidence: logs, traces, tool-call records, provenance artifacts, and shutdown mechanisms.",
+        "Assign one accountable owner internally and one named control owner for exceptions, reviews, and incidents."
+      ],
+      "clientLines": [
+        "If you cannot identify the agent, you cannot meaningfully govern it.",
+        "KYA is the operational layer between knowing your vendor and trusting your workflow."
+      ],
+      "outputs": [
+        "KYA checklist",
+        "agent lineage map",
+        "authority and permissions register",
+        "runtime evidence requirements",
+        "accountable owner assignment"
+      ],
+      "watchouts": [
+        "Questionnaire theatre with no runtime verification",
+        "Hidden subcontractors or wrapper layers",
+        "No persistent logs of tool use or delegated actions",
+        "Confusing vendor reputation with agent controllability"
+      ],
+      "evidencePapers": [
+        "p115",
+        "p112",
+        "p114"
+      ],
+      "themes": [
+        "t45",
+        "t44"
+      ],
       "reusability": "very high"
     }
   ]
