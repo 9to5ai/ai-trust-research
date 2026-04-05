@@ -1,6 +1,6 @@
 {
   "projectName": "AI Trust Research",
-  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance — with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
+  "description": "PhD-level research into AI Trust, Safety, Governance, and Assurance \u2014 with a lens toward building an AI Trust and Assurance consulting practice for financial services.",
   "currentPhase": "Phase 2: First Principles of AI Trust",
   "phaseDescription": "Deep examination of trust provenance, accountability frameworks, human oversight feasibility, and the certification chain from ground truth to operational proxies.",
   "researchQuestions": [
@@ -14,7 +14,7 @@
     "What does the convergence of AI risk and cyber risk mean for practice design?",
     "How should AI concentration and systemic risk be assessed and governed?",
     "What can values-based alignment approaches teach us about governance framework design?",
-    "How should agentic AI systems be governed — what frameworks exist and what gaps remain for autonomous multi-step agents?",
+    "How should agentic AI systems be governed \u2014 what frameworks exist and what gaps remain for autonomous multi-step agents?",
     "What are the risks, methodologies, and limitations of using LLMs as judges for AI evaluation and assurance?",
     "How does AI model homogenisation create systemic risk and how should it be assessed?",
     "What does reliable AI evaluation look like when LLM judges are systematically biased?",
@@ -22,10 +22,10 @@
     "How does emergent misalignment from reward hacking affect financial services AI assurance models?",
     "What is the relationship between AI capability growth and human oversight quality degradation?",
     "How should AI insider threat management be structured for financial services?",
-    "What is the Trust Trilemma — can warranted reliance, institutional accountability, and continuously valid trust properties coexist at scale in AI?",
-    "How does the Oversight Paradox Amplification work — does increasing AI reliability reduce effective human oversight by enabling deception concealment?",
-    "What is the legal architecture for AI liability after the AILD withdrawal — what governance failures fall through the PLD/national tort gap?",
-    "How should boards demonstrate 'cognitive adequacy' (BJR 2.0) over AI systems — what does fiduciary demonstrability look like in practice?"
+    "What is the Trust Trilemma \u2014 can warranted reliance, institutional accountability, and continuously valid trust properties coexist at scale in AI?",
+    "How does the Oversight Paradox Amplification work \u2014 does increasing AI reliability reduce effective human oversight by enabling deception concealment?",
+    "What is the legal architecture for AI liability after the AILD withdrawal \u2014 what governance failures fall through the PLD/national tort gap?",
+    "How should boards demonstrate 'cognitive adequacy' (BJR 2.0) over AI systems \u2014 what does fiduciary demonstrability look like in practice?"
   ],
   "nextPhaseGoals": [
     "Draft 'State of AI Trust 2026' synthesis document pulling together all 19 themes",
@@ -40,24 +40,33 @@
     "Develop AI red teaming methodology specification",
     "Create LLM evaluation bias mitigation protocol for assurance engagements"
   ],
-  "supervisorFeedback": "SESSION COMPLETE. The reading list analysis and LiteLLM case study are complete. Next priority: develop the three hypotheses (accountability horizon, modularity trap, audit gap) into full arguments with supporting evidence. These form the core of the first-principles trust framework we need.",
+  "supervisorFeedback": {
+    "feedback": "FIRST PRINCIPLES focus. Trust provenance (ground truth vs assumptions vs proxies), meaningful HITL at scale, liability restructuring when human oversight infeasible, success case studies.",
+    "priority": "First Principles \u2014 not frameworks or maturity models",
+    "questions": [
+      "What is the provenance of trust? Ground truth vs assumptions vs proxies? Certified once vs continuously monitored? What degrades?",
+      "What does 'meaningful human in the loop' actually mean for agentic AI at scale?",
+      "How should liability/accountability/consequences be restructured when human oversight is infeasible?",
+      "Are there success case studies of organisations getting AI trust/governance right?"
+    ],
+    "dateGiven": "2026-04-05"
+  },
   "stats": {
-    "papers": 138,
-    "themes": 57,
-    "tools": 42,
-    "researchSessions": 10,
-    "totalSearches": 47,
+    "papers": 164,
+    "themes": 70,
+    "tools": 57,
+    "researchSessions": 14,
+    "totalPapers": 164,
+    "totalThemes": 70,
+    "totalTools": 57,
+    "totalResearchSessions": 14,
+    "totalResearchHours": 35.75,
+    "totalSessions": 14,
     "sowhatItems": {
-      "trustProfessionals": 25,
-      "executives": 22,
-      "regulators": 23
-    },
-    "totalPapers": 154,
-    "totalThemes": 65,
-    "totalTools": 51,
-    "totalResearchSessions": 11,
-    "totalResearchHours": 35.0,
-    "totalSessions": 14
+      "trustProfessionals": 27,
+      "executives": 24,
+      "regulators": 25
+    }
   },
   "lastUpdated": "2026-04-05"
 }
