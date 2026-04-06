@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-05",
+  "lastUpdated": "2026-04-06",
   "sections": [
     {
       "id": "trust-professionals",
@@ -448,6 +448,46 @@
           ],
           "urgency": "act-now",
           "prompt": "What percentage of your model evaluations include temporal holdout testing \u2014 training on pre-2023 data and testing on 2024 data? If most of your accuracy claims are in-distribution, your model cards may be measuring fluency rather than robustness."
+        },
+        {
+          "id": "ta10",
+          "headline": "Ground truth is constructed \u2014 audit the construction process, not just the model",
+          "body": "Jaton's ethnographic research shows ground truth datasets are artefacts of annotation decisions, not objective facts. AI trust cannot rest on the fiction of ground truth as unmediated reality. Before deploying any model, you need to know: who labeled the training data? what assumptions did they embed? how was annotation disagreement resolved? what cultural and temporal biases are baked in? This shifts the assurance question from \"does the model perform well?\" to \"was the training data governance sound?\" Model cards that omit training data construction provenance are compliance theatre.",
+          "citations": [
+            "p103"
+          ],
+          "themes": [
+            "t49"
+          ],
+          "urgency": "act-now",
+          "prompt": "When you assess an AI model, do you require documentation of who labeled the training data and how disagreement was resolved? If not, you are certifying performance without epistemic foundation."
+        },
+        {
+          "id": "ta11",
+          "headline": "Reliability is the ceiling, not the floor \u2014 stop marketing AI as trustworthy",
+          "body": "Carroll (2025) draws on Baier's goodwill theory to show that \"trustworthy AI\" creates obligations AI cannot bear. Trust requires the trustee to have genuine goodwill \u2014 the motivation to act in the trustor's interests, not just competence. AI has no goodwill, no motives, no standing to make moral commitments. Marketing AI as trustworthy means your organisation bears trust obligations that your AI cannot discharge. When the AI fails in ways that would constitute bad faith if done by a human, the liability fallout is worse. The correct aspiration is reliability: competent performance without normative trust obligations. Review your organisation's AI marketing language \u2014 if it says \"trustworthy AI,\" it may be creating liability.",
+          "citations": [
+            "p104"
+          ],
+          "themes": [
+            "t50"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your organisation market its AI as \"trustworthy\"? If yes, what happens when the AI betrays user trust in a way that would constitute bad faith if done by a human? Who bears that liability?"
+        },
+        {
+          "id": "ta12",
+          "headline": "Human oversight must be architectural, not volumetric \u2014 design it into the system",
+          "body": "Bainbridge's automation paradox means humans monitoring AI at scale get worse at it over time. Xu et al.'s Meaningful Human Control framework provides the correct model: human oversight is meaningful when it is embedded in the AI's architecture (the right to understand, intervene, trace responsibility), not when humans review every action. At agentic AI scale, per-action review is mathematically impossible. Your assurance frameworks should assess whether AI systems have architectural human control provisions, not whether humans are \"in the loop.\" A system with no human override capability fails the MHC test regardless of how many humans are nominally assigned to oversight.",
+          "citations": [
+            "p106",
+            "p110"
+          ],
+          "themes": [
+            "t52"
+          ],
+          "urgency": "act-now",
+          "prompt": "When you assess an AI system's human oversight, are you checking whether architectural control provisions exist (override capability, decision tracing, intervention points)? Or are you checking how many humans are nominally \"in the loop\"?"
         }
       ]
     },
@@ -832,6 +872,46 @@
           ],
           "urgency": "act-now",
           "prompt": "Does your legal documentation explicitly map what your AI agents are authorised to represent to third parties \u2014 and is that mapping technically enforced? If an AI agent exceeded its authority today, would your internal limits protect you legally?"
+        },
+        {
+          "id": "ex10",
+          "headline": "Point-in-time AI certification is compliance theatre \u2014 demand continuous assurance",
+          "body": "Model drift means a model certified trustworthy last quarter is not necessarily trustworthy today. Data drift, concept drift, and performance degradation silently degrade trust properties over time. \"Performance degradation is particularly dangerous because systems often continue operating well enough until significant harm has already occurred.\" (Radkowski 2026). Your AI governance programme needs continuous monitoring infrastructure, not annual certifications. If your current AI assurance work is mostly point-in-time assessment, you are providing false comfort to your board and regulators.",
+          "citations": [
+            "p108",
+            "p112"
+          ],
+          "themes": [
+            "t51"
+          ],
+          "urgency": "act-now",
+          "prompt": "Ask your AI assurance team: what percentage of your AI monitoring is continuous versus annual? If you cannot name the drift detection mechanisms in production, your certification programme has a fundamental design flaw."
+        },
+        {
+          "id": "ex11",
+          "headline": "Singapore's MindForge proves industry-regulator co-development works \u2014 advocate for it",
+          "body": "MAS's MindForge AI Risk Management Toolkit \u2014 developed by 24 financial institutions in consortium with MAS \u2014 is the clearest proof-of-concept that AI governance can be implementable, not just principled. Success factors: MAS provided coordination and regulatory legitimacy but did not dictate solutions; the consortium model distributed innovation costs and created shared ownership; practical outputs (operationalisation handbook, case studies) versus abstract frameworks. If your jurisdiction's regulators are developing AI governance rules without industry co-development, push for the Singapore model. Abstract principles produced by regulators alone tend to be either too vague to implement or too rigid to be useful.",
+          "citations": [
+            "p109"
+          ],
+          "themes": [
+            "t53"
+          ],
+          "urgency": "watch",
+          "prompt": "Is your jurisdiction's regulator developing AI governance rules through consultation, industry co-development, or top-down mandate? What would change if your organisation advocated for consortium-style co-development?"
+        },
+        {
+          "id": "ex12",
+          "headline": "AI is becoming an epistemic agent \u2014 if it shapes what your people know, you have a new risk",
+          "body": "Marchal et al. (Google DeepMind) identify a newly emerging category: AI as epistemic agent \u2014 systems that actively shape what humans know, believe, and how they make decisions. When AI agents become primary knowledge intermediaries, humans risk losing independent epistemic capacity \u2014 \"cognitive deskilling\" and \"epistemic drift.\" For financial services: if your AI systems are being used for research, analysis, and decision-support, your organisation is already an epistemic infrastructure. The governance question is not just \"does the AI make accurate predictions?\" but \"is the AI degrading human epistemic independence?\"",
+          "citations": [
+            "p107"
+          ],
+          "themes": [
+            "t53"
+          ],
+          "urgency": "watch",
+          "prompt": "Are your AI systems being used as primary knowledge intermediaries for your employees? If yes, have you assessed the epistemic deskilling risk \u2014 whether humans are losing independent capacity to evaluate AI recommendations?"
         }
       ]
     },
@@ -1259,6 +1339,47 @@
           ],
           "urgency": "watch",
           "prompt": "Does your AI documentation regime distinguish between trust claims that are directly observed, socially constructed, or based on indirect proxies? If all claims look equally credible in documentation, you are allowing firms to obscure what they don't actually know."
+        },
+        {
+          "id": "r10",
+          "headline": "Distinguish certifiable-once properties from continuous-monitoring properties in your framework",
+          "body": "Not all trust properties can be certified at a point in time. Accuracy, calibration, and fairness drift over time; they require continuous monitoring infrastructure. Only structural properties \u2014 training data governance, architectural human override capability, data lineage completeness \u2014 can be meaningfully certified once. If your regulatory framework allows point-in-time certification of dynamic properties, you are creating compliance theatre. Specify which properties require continuous monitoring, mandate the infrastructure for it, and audit for the existence and effectiveness of drift detection rather than relying on historical model performance snapshots.",
+          "citations": [
+            "p108",
+            "p112"
+          ],
+          "themes": [
+            "t51"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your AI regulatory framework distinguish between properties that can be certified once (structural) versus those requiring continuous monitoring (dynamic)? If not, certified models may be trustworthy today and untrustworthy within weeks."
+        },
+        {
+          "id": "r11",
+          "headline": "The automation paradox invalidates volumetric human-in-the-loop requirements",
+          "body": "Bainbridge's automation paradox proves that naive human-in-the-loop (humans review every AI action) is cognitively impossible at scale. Human oversight quality degrades precisely when AI output volumes are highest. Your regulatory framework's \"meaningful human oversight\" requirement is not satisfied by specifying the number or seniority of human reviewers. It requires specifying the architectural conditions under which human oversight is meaningful: (1) the right to understand AI decisions; (2) the capability to intervene at consequential decision points; (3) the ability to trace responsibility chain. Rewrite your human-in-the-loop requirements to specify architectural conditions, not personnel ratios.",
+          "citations": [
+            "p106",
+            "p110"
+          ],
+          "themes": [
+            "t52"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your human-in-the-loop requirement specify per-action review (which is infeasible at scale) or architectural control provisions (which are feasible)? If the former, your requirement cannot be met and will produce compliance theatre."
+        },
+        {
+          "id": "r12",
+          "headline": "Follow Singapore's MindForge model \u2014 mandate industry-regulator co-development for financial services AI governance",
+          "body": "Singapore's MAS has demonstrated that industry-regulator co-development (MindForge: 24 institutions + MAS over multiple phases) produces implementable AI governance. Pure regulatory frameworks tend to be either too abstract or too prescriptive. Pure industry self-governance tends to be self-serving. The Singapore model distributes innovation costs, creates shared ownership, and produces practical outputs (operationalisation handbook, case studies). Other jurisdictions should study this model and replicate it: convene industry consortia, provide regulatory coordination without dictating solutions, and require practical outputs (case studies, operationalisation guides) as conditions of the process.",
+          "citations": [
+            "p109"
+          ],
+          "themes": [
+            "t53"
+          ],
+          "urgency": "watch",
+          "prompt": "Is your AI regulatory development process designed for co-development with industry, or is it a top-down mandate? What would change if you convened an industry consortium model similar to Singapore's MindForge?"
         }
       ]
     }

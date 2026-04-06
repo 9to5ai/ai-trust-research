@@ -3747,6 +3747,208 @@
       ],
       "relevance": "Most practically useful framework for implementing risk-tiered human oversight at scale across different AI action types.",
       "dateRead": "2026-04-05"
+    },
+    {
+      "id": "p103",
+      "title": "Ground Truths Are Human Constructions",
+      "authors": [
+        "Florian Jaton"
+      ],
+      "year": 2024,
+      "source": "Issues in Science and Technology",
+      "url": "https://issues.org/ai-ground-truths-human-constructions-jaton/",
+      "analysis": "Jaton, an STS scholar embedded with AI teams for 30 months, demonstrates that ground truth datasets are not objective facts but socially negotiated constructions bearing the cultural fingerprints of the annotators who created them. This is a foundational critique for AI trust research: if ground truth is constructed, then AI models trained on it inherit those construction biases. The \"raw data\" myth is debunked. Data is always labeled, curated, and shaped by human decisions. This means AI trust cannot rest on the fiction of objective ground truth \u2014 it must rest on the governance of the construction process itself. For financial services, this means: who labeled the training data? What assumptions did they embed? How was disagreement resolved? The provenance of the training data is as important as the model architecture. This paper is essential reading for anyone attempting to establish trustworthy AI: the epistemic foundation of trust in AI is itself socially constructed, not mechanically guaranteed.",
+      "tags": [
+        "ground-truth",
+        "epistemology",
+        "annotation-bias",
+        "first-principles",
+        "data-governance"
+      ],
+      "relevance": "Foundational first-principles paper on AI epistemology. Provides the philosophical grounding for why AI trust cannot rest on \"ground truth\" as objective fact \u2014 ground truth is always constructed, negotiated, and power-laden. Critical for understanding the provenance question.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p104",
+      "title": "Artificial Goodwill and Human Vulnerability: The Case for Building Merely Reliable, Rather than Trustworthy, Artificial Intelligence Technologies",
+      "authors": [
+        "N. G. Carroll"
+      ],
+      "year": 2025,
+      "source": "Philosophy & Technology",
+      "url": "https://link.springer.com/article/10.1007/s13347-025-00881-w",
+      "analysis": "Carroll builds on Annette Baier's Goodwill Theory of Trust to argue that while AI systems can be built to be trustworthy according to three definitions of trustworthiness (competence, motive, and goodwill), doing so is actually undesirable because it creates unique human vulnerability. Baier's key insight is that trust involves making oneself vulnerable to another party's goodwill \u2014 the motivation to act in the trustor's interests, not just competently but intentionally. AI lacks goodwill in this sense: it has no motives, no capacity for genuine care, no standing to make moral commitments. Designing AI to be trustworthy in Baier's sense means humans become vulnerable to something that cannot genuinely care about them. Carroll argues we should build merely reliable AI \u2014 AI that performs its function competently without generating the false expectation of genuine care. The practical implication for financial services is significant: if you market your AI as \"trustworthy\" in the full sense of the term, you are creating a trust relationship your AI cannot reciprocate. This exposes your organisation to liability when the AI \"betrays\" that trust by failing in ways that, had it been a human trustee, would constitute bad faith.",
+      "tags": [
+        "trustworthiness",
+        "reliability",
+        "philosophy",
+        "Baier",
+        "human-vulnerability",
+        "first-principles"
+      ],
+      "relevance": "Critically important philosophical paper that challenges the AI industry's dominant framing of \"trustworthy AI.\" Uses Baier's goodwill theory to argue we should aim for reliability not trustworthiness, as only the latter creates proper trust obligations. Essential for liability and accountability frameworks.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p105",
+      "title": "Human trust in AI: a relationship beyond reliance",
+      "authors": [
+        "S. Blanco"
+      ],
+      "year": 2025,
+      "source": "AI and Ethics",
+      "url": "https://link.springer.com/article/10.1007/s43681-025-00690-z",
+      "analysis": "Blanco argues against the dominant \"reliance not trust\" position (exemplified by Ryan 2020), contending that the key features of trusting relationships \u2014 vulnerability, normative expectations, possibility of betrayal \u2014 apply to human-AI relationships. Against the view that AI can only be relied upon (like a calculator), Blanco argues AI's unprecedented ability to replicate human decision-making, combined with its outputs being unforeseeable even to designers, creates genuinely new kinds of relationships. This matters for governance: if human-AI relationships are genuinely trusting relationships, then the governance obligations are different from those applying to reliable tools. Trust implies normative expectations beyond mere performance. Blanco's argument creates a conceptual challenge: if we accept that humans do genuinely trust AI systems (not just rely on them), then the question becomes whether the organisations deploying those systems can bear the weight of that trust. For financial services regulators, this suggests that organisations deploying AI in high-stakes decisions are not just selling a reliable tool \u2014 they are mediating trust relationships that create genuine obligations.",
+      "tags": [
+        "trust",
+        "reliance",
+        "philosophy",
+        "human-AI-relationship",
+        "first-principles"
+      ],
+      "relevance": "Conceptually important paper that challenges the clean \"reliance not trust\" distinction used by many AI governance frameworks. If trust relationships genuinely exist between humans and AI, this has significant implications for how organisations must frame their AI governance obligations.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p106",
+      "title": "Human-controllable AI: Meaningful Human Control",
+      "authors": [
+        "Wei Xu et al."
+      ],
+      "year": 2025,
+      "source": "ArXiv",
+      "url": "https://arxiv.org/abs/2512.04334",
+      "analysis": "Xu et al. provide a systematic analysis of Meaningful Human Control (MHC) in AI, articulating it as a unity of human understanding, intervention, and traceability of responsibility \u2014 requiring design, governance, and human participation together. Key for agentic AI: they argue that MHC requires human controllability as a prerequisite for future AI systems, operationalised through three pillars: (1) technical architectures with embedded human control mechanisms; (2) human-AI interactions optimised for human understanding; (3) AI evolution harmonising intelligence with human controllability. Critically, they address the scaling problem: governance must prioritise human-centred participatory frameworks transcending technical elite dominance, and promote MHC as a universal governance paradigm. This directly addresses the supervisor's second question: what does \"meaningful\" human in the loop actually mean when human review of every action is infeasible? The answer requires designing control architectures that match the level of AI autonomy \u2014 not per-action review, but the right to understand, intervene, and trace responsibility.",
+      "tags": [
+        "meaningful-human-control",
+        "agentic-AI",
+        "human-oversight",
+        "scalability",
+        "governance"
+      ],
+      "relevance": "Comprehensive academic treatment of Meaningful Human Control (MHC) that directly addresses the scalability question. Provides the conceptual architecture for what \"meaningful\" oversight means when continuous per-action review is impossible.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p107",
+      "title": "Architecting Trust in Artificial Epistemic Agents",
+      "authors": [
+        "Marchal et al. (Google DeepMind)"
+      ],
+      "year": 2026,
+      "source": "ArXiv",
+      "url": "https://arxiv.org/html/2603.02960v1",
+      "analysis": "Google DeepMind scholars address how LLMs are evolving from information tools into epistemic agents \u2014 entities that autonomously pursue epistemic goals and shape shared knowledge environments. They argue this creates new informational interdependencies that require fundamental shifts in AI evaluation and governance. They propose a framework centred on: (1) building trustworthiness of epistemic AI agents through demonstrable competence, robust falsifiability, and epistemically virtuous behaviours; (2) aligning AI with human epistemic goals; (3) reinforcing surrounding socio-epistemic infrastructure. They introduce \"knowledge sanctuaries\" to protect human resilience \u2014 spaces where humans maintain independent epistemic capacity. This is significant for AI trust because it identifies a category of AI risk (epistemic deskilling and \"epistemic drift\") that standard reliability-focused governance misses. If AI agents become primary knowledge intermediaries, humans risk losing the capacity to independently evaluate that knowledge. Governance must therefore include human epistemic resilience as a trust property.",
+      "tags": [
+        "epistemic-agents",
+        "knowledge-ecosystem",
+        "trustworthiness",
+        "first-principles",
+        "governance"
+      ],
+      "relevance": "Sophisticated treatment of a newly emerging risk: AI systems as epistemic agents shaping what humans know and believe. Introduces \"epistemic trust\" as a distinct category requiring governance attention beyond standard reliability frameworks. Important for financial services where AI-generated advice interacts with human judgment.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p108",
+      "title": "4 Trends in AI Governance for 2026",
+      "authors": [
+        "Chris Radkowski (Pathlock)"
+      ],
+      "year": 2026,
+      "source": "Risk Management Magazine",
+      "url": "https://www.rmmagazine.com/articles/article/2026/03/31/4-trends-in-ai-governance-for-2026",
+      "analysis": "Radkowski identifies four shifts defining AI governance in 2026: (1) regulatory maturity \u2014 EU AI Act going fully into effect in August 2026 forces verifiable technical evidence over verbal compliance claims; (2) audit expectations shift to technical evidence \u2014 model cards and data lineage become audit requirements; (3) explainability moves from concept to operational obligation \u2014 SHAP, LIME, counterfactual analysis must be in production pipelines; (4) continuous AI quality assurance replaces point-in-time monitoring \u2014 drift detection (data drift, concept drift, upstream drift) and performance degradation tracking become mandatory. The fourth trend is most relevant to the trust provenance question: model drift means a model certified trustworthy last quarter may be materially different today. \"Performance degradation is particularly dangerous because systems often continue operating well enough until significant harm has already occurred.\" This confirms that many trust properties are fundamentally continuous, not certifiable once.",
+      "tags": [
+        "governance-trends",
+        "drift",
+        "continuous-monitoring",
+        "regulatory",
+        "performance-degradation"
+      ],
+      "relevance": "Current practitioner-oriented analysis confirming the shift from point-in-time to continuous assurance. The EU AI Act enforcement timeline (August 2026) creates immediate compliance pressure. Confirms the \"trust degrades\" hypothesis with practitioner evidence.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p109",
+      "title": "MAS Partners Industry to Develop AI Risk Management Toolkit for the Financial Sector",
+      "authors": [
+        "Monetary Authority of Singapore"
+      ],
+      "year": 2026,
+      "source": "MAS",
+      "url": "https://www.mas.gov.sg/news/media-releases/2026/mas-partners-industry-to-develop-ai-risk-management-toolkit-for-the-financial-sector",
+      "analysis": "MAS announced the conclusion of Phase 2 of Project MindForge, producing a comprehensive AI Risk Management Toolkit developed by a consortium of 24 financial institutions. The toolkit includes an Operationalisation Handbook and AI case studies. Key structural insight: the handbook is organised around four sections aligned with MAS' proposed guidelines \u2014 Scope and Oversight, AI Risk Management, AI Lifecycle Management, and Enablers. This is a direct answer to the supervisor's fourth question: it IS possible to get AI governance right, and Singapore's approach shows how. The consortium model distributes the cost of governance innovation across 24 institutions, while MAS provides regulatory legitimacy and coordination. The toolkit's practical orientation (operationalisation handbook, case studies) contrasts with many frameworks that stay at the principle level. For other jurisdictions, the lesson is: industry-regulator co-development produces more implementable governance than either party producing it alone.",
+      "tags": [
+        "MAS",
+        "Singapore",
+        "financial-services",
+        "governance-case-study",
+        "agentic-AI",
+        "industry-coordination"
+      ],
+      "relevance": "The most concrete success case in this session: Singapore's MAS MindForge toolkit. Directly answers the question of whether organisations can get AI governance right. Provides a template for industry-regulator co-development. Critical reference case for financial services AI governance.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p110",
+      "title": "The Ironies of Automation: Lisanne Bainbridge's Paradox and AI Oversight at Scale",
+      "authors": [
+        "Various"
+      ],
+      "year": 2025,
+      "source": "Multiple sources including PubMed, Medium",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41524154/",
+      "analysis": "The automation paradox (Bainbridge 1983) describes how automating a task reduces the human operator's ability to monitor and intervene when the automated system fails. Recent research confirms this is intensifying with AI: the vigilance decrement is \"one of the most robust findings in attention research\" (Klein and Feltmate 2025). When AI systems handle routine decisions, human overseers lose the situational awareness needed to catch anomalous decisions. A 2025 review describes AI review fatigue: as AI-generated code or content increases, human reviewers experience cognitive overload and declining attention, leading to reduced oversight quality precisely when AI output volumes are highest. For the supervisor's second question: if meaningful human in the loop requires vigilant human oversight, but automation degrades that vigilance, then the naive interpretation of human-in-the-loop is infeasible at scale. The solution is not more human review but better control architecture: designing AI systems so that human intervention is needed only at decision points with high consequence, not for every action.",
+      "tags": [
+        "automation-paradox",
+        "vigilance-decrement",
+        "human-in-the-loop",
+        "scalability",
+        "cognitive-load"
+      ],
+      "relevance": "Directly addresses the scalability of human oversight. Documents that naive human-in-the-loop is cognitively impossible at scale \u2014 the automation paradox means humans monitoring AI actually get worse at it over time. Critical for restructuring oversight frameworks.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p111",
+      "title": "Trust in AI is not a Conceptual Confusion",
+      "authors": [
+        "PhilArchive"
+      ],
+      "year": 2025,
+      "source": "PhilArchive",
+      "url": "https://philarchive.org/archive/LANTIA-8",
+      "analysis": "This paper argues against the position that \"trust in AI\" is a conceptual confusion \u2014 the view that only humans can be trusted (in the full normative sense), and AI can at best be relied upon. The author argues that dismissing trust in AI as confusion misses the phenomenological reality: people do experience vulnerability when AI systems fail, they do make themselves dependent on AI recommendations, and they do feel betrayed when AI recommendations are wrong. The paper's argument matters for governance: if people are experiencing their relationship with AI as a trust relationship (even if philosophers dispute whether it truly qualifies as trust), then the governance failure mode is real \u2014 organisations that deploy AI are bearing the trust obligations whether or not those obligations are formally recognised. The practical implication: organisations cannot disclaim AI trust obligations by invoking the \"AI is just a tool\" defence, because users experience it as a trust relationship.",
+      "tags": [
+        "trust",
+        "philosophy",
+        "conceptual-analysis",
+        "organisational-liability",
+        "first-principles"
+      ],
+      "relevance": "Supports the position that AI trust obligations are real even if contested philosophically. Provides philosophical grounding for why organisations bear trust obligations in AI deployment, regardless of whether AI itself can \"trust.\" Relevant for liability frameworks.",
+      "dateRead": "2026-04-06"
+    },
+    {
+      "id": "p112",
+      "title": "AI's 2026 Reality: From Model Releases to Model Reliability",
+      "authors": [
+        "Various"
+      ],
+      "year": 2026,
+      "source": "Towards AI",
+      "url": "https://pub.towardsai.net/from-model-releases-to-model-reliability-ais-2026-reality-e6f33d226f8b",
+      "analysis": "This analysis of AI's 2026 reality introduces a critical distinction: model releases (point-in-time certification) versus model reliability (continuous assurance). \"A credit scoring model might show consistent accuracy degradation over six months following each retraining, allowing teams to schedule the next retraining before performance drops below acceptable thresholds.\" This confirms the session's core finding that trust properties are temporally degraded. A model that was trustworthy at certification is not necessarily trustworthy six months later. The practical implication: any trust framework that relies on point-in-time certification is building on sand. The framework must include continuous measurement of trust properties post-deployment, with clear thresholds for when remediation is required. The paper also notes that organisations with \"controlled degradation\" capabilities \u2014 the ability to manage degradation gracefully \u2014 are emerging as AI maturity leaders.",
+      "tags": [
+        "drift",
+        "continuous-monitoring",
+        "performance-degradation",
+        "model-reliability",
+        "certification"
+      ],
+      "relevance": "Concise practitioner analysis confirming that trust properties are time-dependent and degrade. Introduces the model-release vs model-reliability distinction as a framing for why point-in-time certification is insufficient. Good supporting evidence for the continuous monitoring theme.",
+      "dateRead": "2026-04-06"
     }
   ],
   "total": 164

@@ -620,6 +620,137 @@
         "p102"
       ],
       "status": "new"
+    },
+    {
+      "id": "tool48",
+      "name": "MindForge AI Risk Management Toolkit",
+      "type": "framework",
+      "jurisdiction": "Singapore",
+      "description": "Multi-phase consortium-developed AI risk management toolkit produced by 24 financial institutions under MAS coordination. Includes an Operationalisation Handbook organised around four sections (Scope and Oversight, AI Risk Management, AI Lifecycle Management, Enablers) and AI case studies. The most concrete, implementable financial services AI governance framework produced to date.",
+      "provider": "MAS + 24-member industry consortium",
+      "url": "https://www.mas.gov.sg/news/media-releases/2026/mas-partners-industry-to-develop-ai-risk-management-toolkit-for-the-financial-sector",
+      "papersReferenced": [
+        "p109"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool49",
+      "name": "SHAP (SHapley Additive exPlanations)",
+      "type": "methodology",
+      "jurisdiction": "International",
+      "description": "Explainability technique for AI model decisions. Provides consistent feature importance scores that sum to the difference between expected model output and actual prediction. Standard operational requirement under 2026 AI governance trends for regulated use cases. Must be integrated into production pipelines, not used post-hoc.",
+      "provider": "Lundberg et al.",
+      "url": "https://christophm.github.io/interpretable-ml-book/shap.html",
+      "papersReferenced": [
+        "p108"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool50",
+      "name": "LIME (Local Interpretable Model-Agnostic Explanations)",
+      "type": "methodology",
+      "jurisdiction": "International",
+      "description": "Technique for explaining individual predictions of any classifier or regressor by learning local models around each prediction. Complementary to SHAP. Standard operational requirement for explainability in regulated AI use cases.",
+      "provider": "Ribana et al.",
+      "url": "https://github.com/marcotcr/lime",
+      "papersReferenced": [
+        "p108"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool51",
+      "name": "Counterfactual Explanations",
+      "type": "methodology",
+      "jurisdiction": "International",
+      "description": "Explainability technique that identifies minimal changes to input features that would change the AI decision outcome. Particularly relevant for fairness and non-discrimination in credit, insurance, HR AI decisions. EU AI Act Article 13 requires systems to be able to explain their outputs; counterfactuals are a standard method for satisfying this in high-stakes decisions.",
+      "provider": "Wachter et al.",
+      "url": "https://arxiv.org/abs/1711.00399",
+      "papersReferenced": [
+        "p108"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool52",
+      "name": "Model Drift Detection",
+      "type": "methodology",
+      "jurisdiction": "International",
+      "description": "Continuous monitoring methodology for detecting when AI model statistical properties diverge from training conditions. Three types: data drift (input distribution changes), concept drift (relationship between inputs and outputs changes), and upstream data drift (data collection changes). Must be continuous, not periodic, per 2026 governance trends. Performance degradation is particularly dangerous because systems often operate \"well enough\" until significant harm has occurred.",
+      "provider": "Multiple practitioners",
+      "url": "https://decodethefuture.org/en/ai-for-risk-management/",
+      "papersReferenced": [
+        "p108",
+        "p112"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool53",
+      "name": "Model Cards",
+      "type": "documentation",
+      "jurisdiction": "International",
+      "description": "Standardised documentation format for AI model metadata: architecture, intended use, performance metrics, risks, limitations, training data characteristics. Required during audits under EU AI Act and emerging US state frameworks (Colorado, California). Model cards become core compliance artefacts.",
+      "provider": "Mitchell et al. (Google)",
+      "url": "https://modelcards.withgoogle.com/",
+      "papersReferenced": [
+        "p108"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool54",
+      "name": "Data Lineage Tracking",
+      "type": "methodology",
+      "jurisdiction": "International",
+      "description": "Tracks full lifecycle of model data: sources, transformations, access controls, and usage. Maps relationships between model and all components contributing to its development. Moves firmly into audit scope in 2026. Required for high-risk AI systems under EU AI Act.",
+      "provider": "Data governance practitioners",
+      "url": "https://www.ovaledge.com/blog/ai-data-governance",
+      "papersReferenced": [
+        "p108"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool55",
+      "name": "Meaningful Human Control (MHC) Framework",
+      "type": "governance-model",
+      "jurisdiction": "International",
+      "description": "Three-pillar framework for operationalising human oversight of AI: (1) technical architectures with embedded human control mechanisms; (2) human-AI interactions optimised for human understanding; (3) evolution of AI systems harmonising intelligence with controllability. Governance must prioritise human-centred participatory frameworks transcending technical elite dominance.",
+      "provider": "Xu et al. 2025 (ArXiv)",
+      "url": "https://arxiv.org/abs/2512.04334",
+      "papersReferenced": [
+        "p106"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool56",
+      "name": "Knowledge Sanctuaries",
+      "type": "concept",
+      "jurisdiction": "International",
+      "description": "Proposed by Marchal et al. (Google DeepMind) as spaces where human epistemic independence is protected from AI-mediated knowledge environments. Part of the socio-epistemic infrastructure needed to prevent cognitive deskilling and \"epistemic drift\" when AI agents become primary knowledge intermediaries. Governance concept for protecting human epistemic resilience.",
+      "provider": "Marchal et al. 2026",
+      "url": "https://arxiv.org/html/2603.02960v1",
+      "papersReferenced": [
+        "p107"
+      ],
+      "dateIdentified": "2026-04-06"
+    },
+    {
+      "id": "tool57",
+      "name": "Baier Goodwill Theory of Trust",
+      "type": "philosophical-framework",
+      "jurisdiction": "Philosophical",
+      "description": "Annette Baier's philosophical theory distinguishing trust from mere reliance. Trust requires the trustee to have goodwill toward the trustor \u2014 the motivation to act in the trustor's interests. Trust creates vulnerability obligations that reliability does not. Used by Carroll (2025) to argue that AI should be reliable not trustworthy. Central to the provenance of trust question.",
+      "provider": "Baier 1986; Carroll 2025",
+      "url": "https://philpapers.org/rec/BAITWA",
+      "papersReferenced": [
+        "p104"
+      ],
+      "dateIdentified": "2026-04-06"
     }
   ],
   "total": 57

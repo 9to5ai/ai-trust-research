@@ -1074,6 +1074,91 @@
       "implications": "The most valuable thing a regulator can do for AI governance is observe what good practice actually looks like in the field and publish it. APRA and ASIC should conduct thematic reviews now, even if the frameworks are incomplete.",
       "dateIdentified": "2026-04-05",
       "confidence": "high"
+    },
+    {
+      "id": "t49",
+      "name": "Ground Truth is Always Constructed: The Epistemic Foundation of AI Trust is Socially Negotiated",
+      "description": "Jaton (2024) demonstrates through ethnographic research embedded with AI teams that ground truth datasets are not objective facts but artefacts of human annotation decisions, negotiations, and cultural assumptions. There is no \"raw data\" in AI. Every training dataset encodes choices about what counts as correct, how disagreement is resolved, and whose values take precedence. This means AI trust cannot rest on the fiction of objectively verified ground truth. Trust in AI must rest on governance of the construction process \u2014 who labeled the data, what assumptions they embedded, how was disagreement handled \u2014 not on the pretence of objective ground truth. This is a first-principles challenge to the entire enterprise of AI trust: if the epistemic foundation is constructed, the trust built on it is too.",
+      "evidence": [
+        "Jaton 2024 - Issues in Science and Technology",
+        "PhilArchive 2025 - Trust is not a conceptual confusion",
+        "Blanco 2025 - trust beyond reliance"
+      ],
+      "implications": "First-principles challenge to AI trust: the ground upon which AI trust is built is itself socially constructed. Any AI trust framework must account for this by focusing on the governance of the data construction process, not the pretence of objective ground truth. This has immediate implications for training data documentation, model cards, and data lineage requirements.",
+      "relatedPapers": [
+        "p103",
+        "p105",
+        "p111"
+      ],
+      "dateIdentified": "2026-04-06",
+      "confidence": "very high"
+    },
+    {
+      "id": "t50",
+      "name": "Reliability is the Correct Aspiration, Not Trustworthiness \u2014 Trust Creates Obligations AI Cannot Bear",
+      "description": "Carroll (2025) builds on Baier's Goodwill Theory to argue that the AI industry's pursuit of \"trustworthy AI\" is conceptually confused and practically dangerous. Trust involves making oneself vulnerable to another party's goodwill \u2014 their motivation to act in the trustor's interests. AI lacks goodwill: it has no motives, no capacity for genuine care, no standing to make moral commitments. \"Trustworthy\" AI creates human vulnerability without the reciprocal moral capacity that makes trust relationships ethically bearable. The correct aspiration is reliability \u2014 competent performance without the normative baggage of trust. This is not just a philosophical point: organisations marketing AI as \"trustworthy\" are creating trust obligations they cannot discharge, exposing themselves to liability when AI fails in ways that would constitute bad faith if done by a human trustee.",
+      "evidence": [
+        "Carroll 2025 - Philosophy & Technology",
+        "Baier 1986 Goodwill Theory",
+        "PhilArchive 2025"
+      ],
+      "implications": "Critical reframe for AI trust messaging and liability: organisations should position AI as a reliable tool, not a trustworthy agent. The liability implications of the \"trustworthy AI\" framing are significant \u2014 you cannot disclaim what you've marketed. This should change how AI governance frameworks are written and how AI is marketed.",
+      "relatedPapers": [
+        "p104",
+        "p111"
+      ],
+      "dateIdentified": "2026-04-06",
+      "confidence": "very high"
+    },
+    {
+      "id": "t51",
+      "name": "Trust Properties are Temporally Degraded \u2014 Most Cannot Be Certified Once",
+      "description": "Multiple sources confirm that trust properties in AI are not stable over time. Model drift (Radkowski 2026), performance degradation, data distribution shifts, and concept drift mean a model trustworthy at certification time is not necessarily trustworthy weeks or months later. \"Performance degradation is particularly dangerous because systems often continue operating well enough until significant harm has already occurred.\" (Radkowski 2026). This has direct implications for the certification question: properties like accuracy, calibration, bias absence, and fairness are fundamentally continuous, not point-in-time. Only structural properties \u2014 whether the model has been trained on representative data, whether the architecture includes human override capability \u2014 can be certified at a point in time. Dynamic properties require continuous monitoring infrastructure. Any regulatory framework that allows point-in-time certification of dynamic properties is building compliance theatre.",
+      "evidence": [
+        "Radkowski 2026 - Risk Management Magazine",
+        "Towards AI 2026 - model releases to reliability",
+        "DecodetheFuture - AI for Risk Management"
+      ],
+      "implications": "The certification vs continuous monitoring distinction is not academic \u2014 it determines what regulators can meaningfully require. Properties that degrade over time (accuracy, fairness, calibration) cannot be certified once. Regulatory frameworks must mandate continuous monitoring for these properties. Audit practices must evolve to distinguish point-in-time assessable properties from continuous ones.",
+      "relatedPapers": [
+        "p108",
+        "p112"
+      ],
+      "dateIdentified": "2026-04-06",
+      "confidence": "very high"
+    },
+    {
+      "id": "t52",
+      "name": "The Automation Paradox Makes Naive Human-in-the-Loop Infeasible at Scale",
+      "description": "Bainbridge's automation paradox (1983) describes how automating tasks degrades human operators' ability to monitor and intervene when automated systems fail. Recent AI-specific research confirms this effect intensifies: the vigilance decrement is one of the most robust findings in attention research; AI review fatigue causes human reviewers to become cognitively overloaded as AI output volumes increase. At agentic AI scale, the volume of AI decisions makes per-action human review mathematically impossible. The naive interpretation of \"meaningful human in the loop\" \u2014 human review of every AI action \u2014 is infeasible. The correct interpretation, as articulated by Xu et al. (2025), requires: (1) technical architectures with embedded human control mechanisms; (2) human-AI interactions optimised for human understanding; (3) the right to intervene and trace responsibility. Human oversight must be architectural, not per-action.",
+      "evidence": [
+        "Bainbridge 1983 - Ironies of Automation",
+        "Klein and Feltmate 2025 - vigilance decrement",
+        "Xu et al. 2025 - Human-controllable AI"
+      ],
+      "implications": "Human-in-the-loop requirements in AI governance frameworks are being written on the assumption that humans can meaningfully review AI actions at scale. They cannot. Frameworks must specify the architectural conditions under which human oversight is meaningful \u2014 not the volume of human review. Regulators must understand that oversight quality is not proportional to the number of human reviewers.",
+      "relatedPapers": [
+        "p106",
+        "p110"
+      ],
+      "dateIdentified": "2026-04-06",
+      "confidence": "very high"
+    },
+    {
+      "id": "t53",
+      "name": "Singapore MindForge as Proof-of-Concept: Industry-Regulator Co-Development Can Produce Implementable AI Governance",
+      "description": "The supervisor asked whether any organisations are \"getting AI trust/governance right.\" Singapore's MAS MindForge is the clearest affirmative case: 24 financial institutions co-developing an AI Risk Management Toolkit with MAS over multiple phases, producing an Operationalisation Handbook and case studies. Success factors: (1) Industry-regulator co-development distributes governance innovation costs and produces implementable (not just principled) guidance; (2) MAS provided coordination and regulatory legitimacy but did not dictate solutions; (3) The consortium model created shared ownership and peer learning; (4) Practical outputs \u2014 operationalisation handbook, case studies \u2014 versus abstract principles. The lesson for other jurisdictions: AI governance frameworks produced by regulators alone tend to be either too abstract or too prescriptive. Industry-produced frameworks tend to be too self-serving. The Singapore model suggests a middle path that may be replicable in other contexts.",
+      "evidence": [
+        "MAS March 2026 - MindForge Phase 2 announcement",
+        "MAS Agentic AI Framework January 2026",
+        "Compliance Week March 2026"
+      ],
+      "implications": "Actionable case study for jurisdictions looking to improve AI governance. The consortium model is not universal \u2014 it requires willing regulators and competitive-but-cooperative industry players. But it is a replicable design pattern. Advisors working with regulators should advocate for industry-regulator co-development over either pure regulatory dictate or industry self-governance.",
+      "relatedPapers": [
+        "p109"
+      ],
+      "dateIdentified": "2026-04-06",
+      "confidence": "high"
     }
   ],
   "total": 70

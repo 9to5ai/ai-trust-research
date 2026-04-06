@@ -899,6 +899,106 @@
           ]
         }
       ]
+    },
+    {
+      "date": "2026-04-06",
+      "session": "First Principles of Trust",
+      "summary": "This session focused on Ray's four first-principles questions about AI trust: (1) provenance of trust \u2014 ground truth vs proxies; (2) meaningful human in the loop at scale; (3) liability/accountability restructuring; (4) success case studies. Key findings: Ground truth is always constructed (Jaton), making AI trust epistemic foundation socially negotiated; Carroll's Baier-based argument that reliability is the correct aspiration not trustworthiness; the automation paradox makes naive HITL infeasible; Singapore MindForge is the clearest success case; trust properties are temporally degraded requiring continuous monitoring not point-in-time certification.",
+      "sections": [
+        {
+          "title": "Provenance of Trust",
+          "items": [
+            "Ground truth is always constructed by human annotators with cultural assumptions \u2014 not raw data",
+            "Trust in AI rests on governance of the data construction process, not objective ground truth",
+            "Carroll (Baier-based): AI should be reliable not trustworthy \u2014 trust creates obligations AI cannot bear",
+            "Trust properties degrade over time \u2014 accuracy, calibration, fairness require continuous monitoring"
+          ]
+        },
+        {
+          "title": "Meaningful Human in the Loop",
+          "items": [
+            "Bainbridge automation paradox: humans monitoring AI get worse at it over time",
+            "Naive per-action review is mathematically impossible at agentic AI scale",
+            "Meaningful Human Control = architectural provisions: understand, intervene, trace responsibility",
+            "Human oversight must be designed into system architecture, not added as personnel"
+          ]
+        },
+        {
+          "title": "Liability & Accountability",
+          "items": [
+            "Marketing AI as trustworthy creates trust obligations the AI cannot discharge",
+            "Blanco: trust relationships exist in human-AI interaction regardless of philosophical dispute",
+            "Organisations bear trust obligations whether or not formally recognised",
+            "Fiduciary governance duty for board-level AI oversight becoming mandatory"
+          ]
+        },
+        {
+          "title": "Success Case Studies",
+          "items": [
+            "Singapore MAS MindForge: 24 financial institutions co-developing AI risk management toolkit",
+            "First concrete, implementable financial services AI governance framework",
+            "Consortium model distributes innovation costs, creates shared ownership, produces practical outputs",
+            "DBS Bank: 2,000+ models deployed, projected economic impact SGD 1 billion+ \u2014 governance at scale"
+          ]
+        },
+        {
+          "title": "Emerging Properties of Trust",
+          "items": [
+            "AI as epistemic agent: actively shapes what humans know and believe \u2014 new governance category",
+            "Cognitive deskilling and epistemic drift when AI becomes primary knowledge intermediary",
+            "Knowledge sanctuaries: spaces preserving human epistemic independence",
+            "Model cards and data lineage become mandatory audit artefacts under EU AI Act from August 2026"
+          ]
+        }
+      ],
+      "papersAdded": [
+        "p103",
+        "p104",
+        "p105",
+        "p106",
+        "p107",
+        "p108",
+        "p109",
+        "p110",
+        "p111",
+        "p112"
+      ],
+      "themesAdded": [
+        "t49",
+        "t50",
+        "t51",
+        "t52",
+        "t53"
+      ],
+      "toolsAdded": [
+        "tool48",
+        "tool49",
+        "tool50",
+        "tool51",
+        "tool52",
+        "tool53",
+        "tool54",
+        "tool55",
+        "tool56",
+        "tool57"
+      ],
+      "adviceAdded": {
+        "trust-professionals": [
+          "ta10",
+          "ta11",
+          "ta12"
+        ],
+        "executives": [
+          "ex10",
+          "ex11",
+          "ex12"
+        ],
+        "regulators": [
+          "r10",
+          "r11",
+          "r12"
+        ]
+      }
     }
   ],
   "total": 14
