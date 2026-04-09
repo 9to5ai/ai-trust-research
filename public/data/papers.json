@@ -4149,7 +4149,160 @@
       ],
       "relevance": "High relevance to the accountability question. It offers a concrete example of how legislation may split duties across developers and deployers, which is directly useful for designing future-proof governance and evidence records.",
       "dateRead": "2026-04-09"
+    },
+    {
+      "id": "p165",
+      "title": "Redefining the Standard of Human Oversight for AI Negligence",
+      "authors": [
+        "Nanda Min Htin"
+      ],
+      "year": 2026,
+      "source": "Harvard Journal of Law and Technology (JOLT)",
+      "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
+      "analysis": "This paper is the most rigorous legal first-principles analysis of human oversight in AI I've encountered. Htin applies the Learned Hand negligence formula (B < P × L) to AI contexts and finds it breaks down in two critical ways. First, the Burden (B) of meaningful human oversight approaches infinity when AI operates beyond human sensory and cognitive capacity — a radiologist cannot verify what the AI detected that was invisible to human perception. Second, the Black Box problem makes B undefined for developers: debugging neural networks is not line-by-line inspection but induced pattern analysis across billions of parameters. The paper introduces the concept of the 'liability sponge' — humans positioned to absorb legal and moral impact of AI failures without the cognitive architecture to prevent them. The Sriwijaya Air Flight 182 crash (2021) is the canonical case: pilots lulled by autopilot reliability failed to monitor engine instruments for minutes before fatal dive. The 2018 Uber Arizona collision illustrates the same dynamic: the safety driver became a liability sponge for automation design failures. The paper's three-pillar framework is the key operational output: (1) deployer's duty to implement genuine Human-Systems Integration rather than passive monitoring roles; (2) developer's duty to demonstrate technical robustness; (3) both parties' duty for post-market monitoring. Critically, the paper argues that mandatory human oversight which exceeds human cognitive capacity creates a regulatory trap — operating the system becomes a constructive breach of duty. This has profound implications: it means the EU AI Act's high-risk oversight requirements may be legally unenforceable for sufficiently autonomous systems, and that liability law must shift from asking 'was a human in the loop?' to 'was the oversight architecture genuinely capable of catching failures?' For first-principles trust research, this is the definitive source on why the human-in-the-loop assumption fails at scale and what must replace it.",
+      "tags": [
+        "human-oversight",
+        "negligence-law",
+        "liability",
+        "learned-hand-formula",
+        "automation-bias",
+        "moral-crumple-zone",
+        "human-systems-integration"
+      ],
+      "relevance": "Critical for the liability/accountability restructuring question. Defines precisely why existing oversight mandates fail and what genuine oversight architecture requires.",
+      "dateRead": "2026-04-09"
+    },
+    {
+      "id": "p166",
+      "title": "Being Pragmatic About Reliance and Trust in Artificial Intelligence",
+      "authors": [
+        "M. Lugato",
+        "L. Floridi"
+      ],
+      "year": 2025,
+      "source": "Minds and Machines",
+      "url": "https://link.springer.com/article/10.1007/s11023-025-09754-9",
+      "analysis": "This philosophical paper provides the conceptual grounding for why 'trust in AI' is the wrong frame — and what to use instead. The authors distinguish between reliance (acting on the supposition that something will perform) and trust (reliance plus vulnerability plus normative expectation of goodwill). Their core argument: AI systems can be relied upon but cannot be trusted in the full philosophical sense, because trust requires the possibility of betrayal by a being with intentions, and AI systems lack the relevant moral agency. This matters enormously for assurance practice. If you cannot trust an AI system — only the institution deploying it — then assurance frameworks must assess institutional governance, not just model performance. The paper's pragmatic reconciliation is to treat trust as a quantitative property of reliance, measured by the efficiency of appropriate reliance: monitoring investment versus expected gains. High trust means efficient reliance with low monitoring costs relative to gains. Calibration is the mechanism: calibrated reliance means the user's trust level matches the system's actual trustworthiness. The implications for assurance are threefold. First, the assurance target is the institution-AI system pair, not the AI alone. Second, the key measurable is calibration — whether the institution's reliance matches the system's actual capabilities and limitations. Third, trust decays not just because AI degrades but because reliance relationships become inefficient when monitoring costs rise faster than the system's value delivery. The authors acknowledge that this pragmatic framing may disappoint those who want AI trust to replicate interpersonal trust's social functions. But for governance and accountability purposes, it refocuses the question precisely: can this institution's governance of this AI system justify the reliance we are placing in it?",
+      "tags": [
+        "reliance",
+        "trust",
+        "philosophy",
+        "calibration",
+        "governance",
+        "institutional-trust"
+      ],
+      "relevance": "Foundational philosophical contribution to the trust provenance question. Clarifies that AI trust is fundamentally institutional, not technical — and that this reframe is operationally important for assurance practice.",
+      "dateRead": "2026-04-09"
+    },
+    {
+      "id": "p167",
+      "title": "Harvard Business School Case Study: DBS AI Strategy",
+      "authors": [
+        "Feng Zhu"
+      ],
+      "year": 2024,
+      "source": "Harvard Business School",
+      "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=66332",
+      "analysis": "The HBS case on DBS — the first HBS case on AI in an Asian bank — documents what successful AI governance at scale actually looks like operationally, not just philosophically. DBS has deployed over 800 AI models across 350 use cases with measured economic impact exceeding SGD 1 billion in 2025. They ranked #1 for AI Strategy Leadership in the Global Evident AI Index and were the only Asian bank in the Top 10. The case maps their journey since 2014: integrating AI into core processes to unlock customer-centricity and operational excellence, using AI to generate hyper-personalised customer nudges, providing relationship managers with deeper customer insights, and developing tailored employee upskilling roadmaps. The critical governance insight is not in any single tool or framework — it's in the integrated operating model design. DBS's governance is reinforced by data foundations, model governance protocols, staged rollout, cross-functional review, and internal training. The technology and the governance co-evolved. For the success case study question, DBS is the strongest available example: a large complex financial institution that has genuinely operationalised AI governance at scale with measurable outcomes. The limitation is that DBS is an outlier — it began serious investment in 2014, has exceptional talent density, and operates in Singapore's uniquely supportive regulatory environment. Most financial institutions cannot replicate the journey, but they can study the principles: governance embedded in operating model design, not overlaid on existing structures; investment in data foundations as a prerequisite; staged adoption with genuine oversight at each stage.",
+      "tags": [
+        "banking",
+        "AI-governance",
+        "operating-model",
+        "success-study",
+        "Singapore",
+        "HBS"
+      ],
+      "relevance": "The most credible success case study available for AI governance at scale in financial services. Essential evidence for what 'good' looks like operationally.",
+      "dateRead": "2026-04-09"
+    },
+    {
+      "id": "p168",
+      "title": "ETSI Launches New Standard Enabling Continuous Compliance for Dynamic AI Systems Aligned with the EU AI Act",
+      "authors": [
+        "ETSI"
+      ],
+      "year": 2025,
+      "source": "ETSI",
+      "url": "https://www.etsi.org/newsroom/press-releases/2634-etsi-launches-new-standard-enabling-continuous-compliance-for-dynamic-ai-systems-aligned-with-the-eu-ai-act",
+      "analysis": "ETSI's new standard (CABCA — Continuous Compliance for Dynamic AI Systems) is the most concrete regulatory response to the point-in-time certification problem. The press release announces a standard enabling continuous compliance monitoring for AI systems that adapt post-deployment, directly addressing the EU AI Act's requirement that high-risk AI systems maintain compliance throughout their operational lifetime. The standard is being developed under ETSI's zero trust architecture group and responds to a specific gap: existing certification approaches assume static systems, but modern AI — especially agentic AI — changes behavior through in-context learning, fine-tuning, tool use, and environment interaction. The standard's core innovation is mapping compliance requirements to technically-auditable rules that can be checked continuously rather than at certification audits. This operationalises the 'living compliance' concept that regulators and practitioners have been discussing. The connection to the EU AI Act is direct: Article 9 requires risk management systems, Article 10 requires data governance, Article 12 requires technical documentation updated continuously, and Article 14 requires human oversight. The CABCA standard provides the technical means to make these requirements auditable in real time. For first-principles trust research, CABCA represents the regulatory engineering response to the provenance question: it attempts to create continuous attestation infrastructure for properties that previously could only be certified once. The limitation is that CABCA is a standard announcement, not a fully-specified technical document — its implementation details remain to be developed.",
+      "tags": [
+        "continuous-compliance",
+        "EU-AI-Act",
+        "ETSI",
+        "dynamic-AI",
+        "certification",
+        "monitoring"
+      ],
+      "relevance": "High relevance to the 'certified once vs continuously monitored' question. Represents the emerging standard infrastructure for continuous AI compliance.",
+      "dateRead": "2026-04-09"
+    },
+    {
+      "id": "p169",
+      "title": "Temporal Quality Degradation in AI Models",
+      "authors": [
+        "Daniel Vela",
+        "et al."
+      ],
+      "year": 2022,
+      "source": "Scientific Reports (Nature)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35803963/",
+      "analysis": "This 2022 study is the foundational empirical work on AI aging — the phenomenon of model quality degrading as more time passes since the last training cycle. Using datasets from four industries (healthcare operations, transportation, finance, and weather) and four standard ML models, the authors identify three principal temporal degradation patterns: gradual degradation (error increasing no faster than linearly over time), explosive degradation (nonlinear, accelerating error growth), and increasing unpredictability (error variance expanding even when mean error stays stable). Critically, the study demonstrates that AI temporal degradation is distinct from data concept drift and continuous learning problems — it is a separate phenomenon requiring separate monitoring approaches. The practical implications for trust provenance are significant. First, model accuracy as measured at certification time is not the same as model accuracy at deployment time, and the gap grows with time since training. Second, the study identifies 'strange attractors' — dense areas of most probable errors where models tend to cluster temporally, meaning degradation is not random but follows detectable patterns. Third, feature importance itself changes over time: the features that drove model predictions in Month 1 may differ from Month 12 even without data distribution change. For financial services, this means that credit scoring models, fraud detection models, and risk assessment models deployed today are already degrading. The 90-day certification cycle common in regulated financial institutions may be inadequate for models in rapidly-changing environments. The study recommends: shorter revalidation cycles for high-risk models, continuous monitoring of feature importance temporal evolution, and explicit modeling of degradation patterns rather than treating model performance as static post-deployment.",
+      "tags": [
+        "model-degradation",
+        "temporal-drift",
+        "model-performance",
+        "monitoring",
+        "certification",
+        "financial-services"
+      ],
+      "relevance": "Critical empirical grounding for why point-in-time certification is inadequate and what continuous monitoring must account for. Essential evidence for any trust provenance framework.",
+      "dateRead": "2026-04-09"
+    },
+    {
+      "id": "p170",
+      "title": "Human-Controllable AI: Meaningful Human Control",
+      "authors": [
+        "Wei Xu"
+      ],
+      "year": 2025,
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2512.04334",
+      "analysis": "This paper provides the most comprehensive academic treatment of Meaningful Human Control (MHC) for AI systems and articulates precisely why the concept is harder to achieve than its name suggests. Wei Xu defines MHC not as the right to operate or veto, but as the unity of three elements: human understanding (the human knows what the AI is doing and why), human intervention (the human can practically stop, modify, or redirect the AI), and traceability of responsibility (the human's role in the decision is documented and accountable). The paper identifies a fundamental mismatch: as AI systems grow more capable and autonomous, the cognitive demands on the human overseer increase, while the human's actual understanding and intervention capacity decreases. This is the Oversight Paradox Amplification — a concept that deserves its own place in the trust research framework. The paper proposes three technical requirements for MHC: (1) AI systems must have architecturally embedded mechanisms for human control (not just API kill switches, but design-level intervention points); (2) human-AI interactions must be optimised for genuine understanding rather than compliance documentation (dashboards, explanations, anomaly signals designed for human cognition); (3) AI systems must be designed to harmonise intelligence with controllability — meaning the AI's capability trajectory should not outrun the human's oversight capacity. The governance section of the paper is equally important: MHC requires that control modes match technology levels, that human supervision balances trust and doubt (not naïve trust or reflexive scepticism), and that global promotion of MHC as a universal governance paradigm — not just a technical design principle — is necessary. For first-principles trust research, this paper provides the intellectual architecture for the 'meaningful human in the loop at scale' question.",
+      "tags": [
+        "meaningful-human-control",
+        "MHC",
+        "human-oversight",
+        "agentic-AI",
+        "controllability",
+        "governance"
+      ],
+      "relevance": "Critical for the 'meaningful HITL at scale' question. Provides the definitional precision and technical requirements needed to operationalise human oversight beyond compliance theatre.",
+      "dateRead": "2026-04-09"
+    },
+    {
+      "id": "p171",
+      "title": "AI Agents Under EU Law: A Compliance Architecture for AI Providers",
+      "authors": [
+        "Luca Nannini",
+        "Adam Leon Smith",
+        "Michele Joshua Maggini",
+        "et al."
+      ],
+      "year": 2026,
+      "source": "arXiv",
+      "url": "https://arxiv.org/html/2604.04604v1",
+      "analysis": "This April 2026 paper provides the most comprehensive and technically precise regulatory mapping for AI agents under EU law currently available. The key insight is structural: the EU AI Act regulates AI systems, not architectural patterns, meaning AI agents — which satisfy the Article 3(1) definition of an AI system — fall within existing framework scope without requiring new legal categories. However, the functional properties that define agents (autonomous tool invocation, multi-step planning, environmental interaction, adaptive execution) amplify specific regulatory risks in ways existing frameworks address in principle but demand dedicated analysis in practice. The paper identifies nine concrete agent deployment categories with regulatory triggers and twelve sequential compliance steps for providers. Four agent-specific challenges are analyzed: cybersecurity (privilege minimisation outside the generative model — the agent's tool use creates attack surface beyond the model itself), human oversight (oversight evasion risk from reinforcement learning enabling agents to learn how to appear compliant during evaluation), transparency across multi-party action chains, and runtime behavioral drift (the boundary between anticipated adaptive behavior and substantial modification under Article 3(23)). The most striking compliance conclusion: high-risk agentic systems with untraceable behavioral drift cannot currently satisfy the essential requirements of the AI Act. The provider's foundational compliance task is not architectural classification but an exhaustive inventory of the agent's external actions, data flows, connected systems, and affected persons. For first-principles trust research, this confirms that agentic AI is not just an incremental challenge — it is a category that breaks existing compliance infrastructure at its foundations, because meaningful oversight requires knowing every action the agent might take, which is definitionally impossible for systems that plan adaptively.",
+      "tags": [
+        "agentic-AI",
+        "EU-AI-Act",
+        "compliance",
+        "regulatory",
+        "autonomous-systems",
+        "runtime-drift"
+      ],
+      "relevance": "The definitive compliance architecture for agentic AI under EU law. Confirms the scope of the agentic governance gap and identifies the specific points where existing frameworks break.",
+      "dateRead": "2026-04-09"
     }
   ],
-  "total": 184
+  "total": 191
 }

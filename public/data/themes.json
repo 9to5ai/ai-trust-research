@@ -1206,7 +1206,87 @@
       "implications": "For financial institutions, the strategic benchmark should be integrated operating models with embedded governance, not stand-alone responsible-AI documentation. Advisory work should focus on redesigning decision pathways, training, and platform controls together.",
       "dateIdentified": "2026-04-09",
       "confidence": "medium-high"
+    },
+    {
+      "id": "t069",
+      "name": "Trust Properties Have Different Decay Profiles — Structural vs Behavioral",
+      "description": "The first-principles analysis of trust provenance reveals that AI trust properties decay at fundamentally different rates, requiring different governance treatments. Structural properties — approved architecture, override hooks, lineage controls, role segregation, and other design-level characteristics — are largely stable after deployment and can be meaningfully assessed at a point in time. Behavioral properties — calibration, accuracy, fairness, drift, and capability alignment — change continuously as the world changes, as data distributions shift, and as the model adapts or is updated. The temporal degradation study (Vela et al., p169) provides the empirical grounding: AI model error increases measurably over time since last training, following distinct patterns (gradual, explosive, or increasingly unpredictable). Critically, even feature importance — the relative contribution of input variables to model outputs — changes temporally. This means that a fairness assessment conducted last quarter may be measuring different feature interactions than the model is actually using today. The governance implication is that regulatory frameworks and assurance practices that treat all trust properties the same — requiring point-in-time certification for everything — produce compliance theatre rather than genuine risk management. The correct approach, now beginning to emerge in ETSI's CABCA standard (p168), is to match governance cadence to property decay profile. Structural properties warrant certification cycles measured in years. Behavioral properties warrant continuous monitoring with automated alerting. This is not just an operational distinction — it is a philosophical one. Whether a property can be certified once depends on whether its relationship to ground truth is stable or decaying.",
+      "papers": [
+        "p169",
+        "p168",
+        "p155",
+        "p166"
+      ],
+      "implications": "Assurance practices must explicitly categorise each trust property by its decay profile. Regulatory frameworks should mandate continuous monitoring for behavioral properties and point-in-time certification only for structural ones. This distinction also determines what 'ground truth' means operationally for each property type.",
+      "dateIdentified": "2026-04-09",
+      "confidence": "high"
+    },
+    {
+      "id": "t070",
+      "name": "The Oversight Paradox Amplification: More Reliable AI Makes Human Oversight Harder",
+      "description": "The Harvard JOLT paper (p165) identifies the core automation paradox: humans are worst at intervening at the moment AI fails precisely because AI rarely fails. Lulled by reliability, operators disengage cognitively — out-of-the-loop unfamiliarity — and cannot recover when the rare failure occurs. But there is a deeper amplification: as AI systems become more reliable AND more capable, the oversight challenge worsens on two axes simultaneously. First, more reliable automation means longer periods of cognitive disengagement between failures, making the human less prepared when intervention is needed. Second, more capable AI means the failure modes are more complex, opaque, and consequential when they occur — the human's cognitive load at the moment of required intervention is higher precisely when their preparation is lower. Xu et al. (p170) formalise this as the Oversight Paradox Amplification: the AI's capability trajectory outruns the human's oversight capacity as both grow. The paradox is that improving AI reliability and capability creates conditions where meaningful human oversight becomes structurally harder, not easier. This is not a paradox to be solved — it is a structural limit to be governed. The only viable response is architectural: building AI systems whose capability growth is deliberately bounded by oversight architecture, so that human control scales with AI capability. The alternative — deploying increasingly capable AI while maintaining 'meaningful human oversight' as a compliance statement — produces the liability sponge problem where humans absorb accountability for failures they had no realistic capacity to prevent.",
+      "papers": [
+        "p165",
+        "p170",
+        "p169"
+      ],
+      "implications": "Firms should not assume that more AI reliability means less oversight risk. The oversight paradox means that as AI improves, the governance architecture must actively strengthen to prevent the human from becoming a progressively less capable control point. This has direct implications for how to allocate investment between AI capability and oversight infrastructure.",
+      "dateIdentified": "2026-04-09",
+      "confidence": "high"
+    },
+    {
+      "id": "t071",
+      "name": "Liability Sponges and the Accountability Gap: When Mandated Oversight Is Constructively Infeasible",
+      "description": "The Harvard JOLT analysis (p165) introduces the 'liability sponge' concept with precision: humans positioned in AI oversight roles absorb legal, moral, and reputational impact of system failures without possessing the cognitive architecture to prevent those failures. This is not a metaphor — it is a structural description of how accountability law interacts with automated systems. The Uber Arizona case (2018) is the canonical legal example: the safety driver was charged with negligent homicide while streaming The Voice, but the real failure was automation design that made meaningful oversight impossible. The Sriwijaya Air Flight 182 crash (2021) illustrates the same pattern at system scale: pilots failed to monitor a clearly malfunctioning system for minutes before a fatal dive because automation had so thoroughly deskilled them. The accountability gap emerges when both the human operator and the AI developer can plausibly disclaim responsibility: the operator because they lacked realistic intervention capacity, the developer because the system performed as designed until the specific failure mode occurred. This gap is not a bug that better regulation can close — it is a structural feature of delegating consequential decisions to AI. The legal consequence framework must therefore shift: from attributing fault after the fact to assessing whether the deployment decision itself — including the oversight architecture designed in — was reasonable. This is the deployer's duty articulated in the three-pillar framework (p165): not 'did the human catch this failure?' but 'was the oversight architecture genuinely capable of catching failures of this type?'",
+      "papers": [
+        "p165",
+        "p164",
+        "p163"
+      ],
+      "implications": "Legal and compliance teams should stop asking 'do we have a human in the loop?' and start asking 'is our oversight architecture designed to give humans realistic intervention capacity?' This reframe shifts liability analysis from outcome attribution to deployment decision quality.",
+      "dateIdentified": "2026-04-09",
+      "confidence": "high"
+    },
+    {
+      "id": "t072",
+      "name": "Trust Is Institutional, Not Algorithmic — the Assurance Target Is the Organisation-AI Pair",
+      "description": "The philosophical analysis in Lugato and Floridi (p166) provides the conceptual clarification that resolves many practical confusion in AI trust: AI systems can be relied upon but cannot be trusted in the full philosophical sense, because trust requires vulnerability, normative expectations, and the possibility of betrayal by a being with genuine intentions. AI systems lack the relevant moral agency — they have no interests to protect, no goodwill to exercise, and no capacity for betrayal in the morally relevant sense. What can be trusted is the institution deploying and governing the AI. This reframe has profound operational consequences for assurance practice. First, the assurance target is not the AI model but the institution-AI system pair: can this organisation's governance of this AI system justify the reliance we are placing in it? Second, the key measurable is calibration — whether the organisation's reliance on the AI matches its actual trustworthiness. Over-reliance (excessive trust) produces automation bias and missed anomalies. Under-reliance (excessive scepticism) produces deskilling and failure to capture AI's genuine value. Third, trust as a quantitative property of the reliance relationship can be measured: high trust means the organisation invests low monitoring resources relative to the value extracted from the AI. Low trust means monitoring costs approach or exceed value, and the reliance relationship is unsustainable. This reframing does not make the philosophical debate about AI trust irrelevant — it makes it operationally useful by redirecting it toward the question that actually matters for governance.",
+      "papers": [
+        "p166",
+        "p073",
+        "p072"
+      ],
+      "implications": "Assurance engagements should be scoped around institutional governance capacity, not model performance metrics alone. The assessment question is: does this organisation's governance of this AI system justify the reliance stakeholders are placing in it? This requires evaluating decision-rights allocation, escalation paths, monitoring investment, and incentive structures — not just technical model properties.",
+      "dateIdentified": "2026-04-09",
+      "confidence": "high"
+    },
+    {
+      "id": "t073",
+      "name": "Trust at Scale Emerges from Organisational Design — It Is Not an Output of Ethics Statements or Technical Testing",
+      "description": "The DBS case study (p167), read alongside Singapore's MindForge work and the broader AI governance literature, produces a first-principles conclusion that should reshape how organisations approach AI trust: at scale, trust is emergent from organisational design, not a property that can be produced independently. The organisations getting AI governance right — DBS, Singapore's consortium banks, a small number of leading global institutions — share a common structural feature: they have redesigned their operating models around AI, not added AI governance to their existing operating models. DBS's PURE framework (Purposeful, Unsurprising, Respectful, Explainable) is useful precisely because it is not a standalone ethics statement — it is embedded in data foundations, model governance protocols, staged rollout, cross-functional review, employee training, and central infrastructure. Each element reinforces the others. Governance becomes an operating discipline rather than a compliance overlay. The organisational design principle is that trust emerges when norms, controls, incentives, tooling, and staff capabilities are aligned tightly enough that responsible AI use becomes the default path — not a special effort requiring willpower or vigilance. This is structurally similar to how safety emerges in high-reliability organisations: it is not produced by having a safety department, but by designing every process, incentive, and tool so that safe behaviour is the path of least resistance.",
+      "papers": [
+        "p167",
+        "p109",
+        "p161",
+        "p162"
+      ],
+      "implications": "Leaders should stop asking 'do we have a good AI governance policy?' and start asking 'is our operating model designed so that responsible AI use is the default behaviour?' The audit question is whether norms, controls, incentives, and capabilities are aligned — not whether a responsible AI document exists.",
+      "dateIdentified": "2026-04-09",
+      "confidence": "medium-high"
+    },
+    {
+      "id": "t074",
+      "name": "Appropriate Reliance — the Operationally Useful Replacement for AI Trust",
+      "description": "Lugato and Floridi's pragmatic approach (p166) resolves the trust/reliance debate in a way that is directly operationally useful: treat trust as a quantitative property of the reliance relationship, measured by its efficiency. Appropriate reliance has three components: (1) Appropriateness — the reliance is warranted given the system's actual capabilities, which requires calibration (matching trust level to system trustworthiness); (2) Efficiency — the monitoring investment required to maintain appropriate reliance is low relative to the value extracted, which requires the system to be genuinely reliable and the oversight architecture to be well-designed; (3) Calibration — the organisation's trust level matches the system's actual trustworthiness across different contexts and time periods. The measurement approach proposed by Taddeo (2007, 2010) and applied in the Lugato/Floridi framework — measuring trust as a ratio of monitoring investment to expected gains — provides a concrete operational metric. This replaces vague claims about 'trustworthy AI' with quantifiable parameters: trust level, monitoring cost, expected gain, and calibration error. For assurance practice, this means every AI system in a high-stakes domain should have a trust dashboard showing these parameters, updated continuously. The goal is not to maximise trust — overly trusting AI is dangerous. The goal is to calibrate reliance to the system's actual properties, maintain that calibration as both the system and the environment change, and ensure the monitoring investment remains proportionate to the value extracted.",
+      "papers": [
+        "p166",
+        "p155",
+        "p156"
+      ],
+      "implications": "Assurance frameworks should operationalise the three components of appropriate reliance: are systems being used within their validated capability boundaries (appropriateness), is monitoring investment proportionate (efficiency), and do users' trust levels match actual system performance (calibration)? These three questions provide a more useful assessment structure than any binary 'trustworthy or not' framework.",
+      "dateIdentified": "2026-04-09",
+      "confidence": "high"
     }
   ],
-  "total": 78
+  "total": 84
 }

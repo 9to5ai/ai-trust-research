@@ -52,22 +52,22 @@
     "dateGiven": "2026-04-05"
   },
   "stats": {
-    "papers": 184,
-    "themes": 78,
-    "tools": 73,
-    "researchSessions": 16,
-    "totalPapers": 184,
-    "totalThemes": 78,
-    "totalTools": 73,
-    "totalResearchSessions": 16,
-    "totalResearchHours": 36.75,
-    "totalSessions": 16,
+    "papers": 191,
+    "themes": 84,
+    "tools": 81,
+    "researchSessions": 17,
+    "totalPapers": 191,
+    "totalThemes": 84,
+    "totalTools": 81,
+    "totalResearchSessions": 17,
+    "totalResearchHours": 37.75,
+    "totalSessions": 17,
     "sowhatItems": {
-      "trustProfessionals": 29,
-      "executives": 26,
-      "regulators": 27
+      "trustProfessionals": 32,
+      "executives": 29,
+      "regulators": 30
     },
-    "adviceItems": 82
+    "adviceItems": 93
   },
   "lastUpdated": "2026-04-09"
 }

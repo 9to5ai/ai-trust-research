@@ -1090,7 +1090,113 @@
           "r27"
         ]
       }
+    },
+    {
+      "id": "rl017",
+      "date": "2026-04-09",
+      "title": "First Principles of AI Trust — Provenance, Meaningful HITL, Liability Restructuring, and Success Cases",
+      "summary": "This session applied first-principles analysis to the four questions Ray identified: (1) trust provenance — distinguishing ground truth, inferred assumptions, and operational proxies, and showing that these degrade differently over time; (2) meaningful human in the loop at scale — revealing why the automation paradox makes per-action review infeasible and what runtime control architecture must replace it; (3) liability restructuring — showing how the liability sponge problem creates an accountability gap and how the three-pillar duty framework, layered liability by control, and the Learned Hand formula provide re-engineered negligence foundations; (4) success case studies — DBS as the most credible institutional example, Singapore MindForge as the industry-regulator co-development model. The session produced six new themes, seven papers, eight tools, and twelve new advice items across all three audiences.",
+      "sessionType": "deep-research",
+      "duration": "1 hour",
+      "sections": [
+        {
+          "title": "Research Questions Addressed",
+          "items": [
+            "Trust provenance: ground truth vs assumptions vs proxies — showed that AI trust chains decompose into three layers with different temporal stabilities and different degradation mechanisms",
+            "Meaningful HITL at scale: proved that per-action human review is mathematically infeasible at agentic AI scale and identified runtime control architecture as the correct replacement concept",
+            "Liability restructuring: traced the accountability gap through the liability sponge problem and showed how negligence law must shift from outcome attribution to deployment decision quality assessment",
+            "Success case studies: DBS (800+ models, SGD 1B economic impact, #1 AI strategy globally), Singapore MindForge consortium model, NatWest's five-principle approach"
+          ]
+        },
+        {
+          "title": "Key First-Principles Findings",
+          "items": [
+            "Trust provenance: AI trust chains decompose into ground truth (training signal), inferred assumptions (boundary conditions and deployment context), and operational proxies (what we measure in production). Each layer degrades differently — ground truth by world-change, assumptions by context shift, proxies by measurement system drift. Governance must match cadence to decay profile",
+            "Automation paradox amplification: as AI capability and reliability improve, meaningful human oversight becomes structurally harder on two axes simultaneously — longer disengagement periods AND more complex failure modes. This is a design constraint, not a solvable problem — it must be governed",
+            "Liability sponge: humans positioned in AI oversight roles absorb legal accountability for failures they lacked realistic capacity to prevent. The Uber Arizona and Sriwijaya Air cases are canonical examples. The legal response requires shifting from 'did a human intervene?' to 'was the oversight architecture genuinely capable of catching this failure?'",
+            "Meaningful oversight = runtime control architecture: meaningful human oversight requires risk-tiered escalation paths, identity-bound intervention rights, time-bounded approvals, clear shutdown authority, and sufficient contextual information for independent judgment. Not a reviewer headcount problem",
+            "Appropriate reliance as operational replacement for AI trust: trust in AI systems is institutional (not algorithmic). Assurance targets the organisation-AI pair. The key measurable is calibration — whether the institution's trust level matches the system's actual trustworthiness",
+            "Temporal degradation: AI model quality degrades measurably over time since last training across healthcare, finance, transportation, weather — following three patterns: gradual, explosive, and increasingly unpredictable. Feature importance itself shifts temporally. Point-in-time certification is inadequate for behavioural trust properties"
+          ]
+        },
+        {
+          "title": "Papers Added",
+          "items": [
+            "p165: Harvard JOLT — Redefining Standard of Human Oversight for AI Negligence (Nanda Min Htin, 2026) — Critical for liability restructuring and the Learned Hand formula applied to AI",
+            "p166: Being Pragmatic About Reliance and Trust in AI (Lugato & Floridi, Minds and Machines, 2025) — Foundational philosophical contribution establishing institutional nature of AI trust",
+            "p167: HBS Case Study: DBS AI Strategy (Zhu, 2024) — Most credible success case study: 800+ models, SGD 1B+ economic impact, #1 AI Strategy globally",
+            "p168: ETSI CABCA Continuous Compliance Standard (2025) — Regulatory engineering for continuous monitoring of dynamic AI systems aligned with EU AI Act",
+            "p169: Temporal Quality Degradation in AI Models (Vela et al., Sci Rep, 2022) — Empirical foundation for why point-in-time certification fails behavioural properties",
+            "p170: Human-Controllable AI: Meaningful Human Control (Wei Xu, arXiv, 2025) — Definitive academic treatment of MHC for AI including Oversight Paradox Amplification",
+            "p171: AI Agents Under EU Law: Compliance Architecture (Nannini et al., arXiv, 2026) — Nine deployment categories, twelve compliance steps, runtime drift detection"
+          ]
+        },
+        {
+          "title": "Themes Added",
+          "items": [
+            "t069: Trust Properties Have Different Decay Profiles — Structural vs Behavioral — empirical and conceptual grounding for why governance cadences must differ by property type",
+            "t070: The Oversight Paradox Amplification — More Reliable AI Makes Human Oversight Harder — formalising the structural limit to HITL as AI capability grows",
+            "t071: Liability Sponges and the Accountability Gap — When Mandated Oversight Is Constructively Infeasible — the legal consequence of the automation paradox",
+            "t072: Trust Is Institutional, Not Algorithmic — the Assurance Target Is the Organisation-AI Pair — philosophical grounding for assurance practice reframe",
+            "t073: Trust at Scale Emerges from Organisational Design — first-principles conclusion from DBS and MindForge evidence",
+            "t074: Appropriate Reliance — the Operationally Useful Replacement for AI Trust — Taddeo quantification applied to AI assurance dashboards"
+          ]
+        },
+        {
+          "title": "Self-Critique",
+          "items": [
+            "A philosophy PhD supervisor would likely push back on the 'ground truth' concept as itself constructed rather than given — annotation choices, sampling biases, and measurement methods mean that even the foundational training signal is theory-laden",
+            "The temporal degradation analysis (p169) actually strengthens this critique: if ground truth itself shifts as the world changes, then the entire chain is temporally unstable, not just the proxies. The practical governance implication is the same, but the philosophical claim about ground truth needs more care",
+            "The strongest surviving claim is modest but robust: even if ground truth is always partially constructed, the layered provenance model (ground truth → assumptions → proxies → institutional governance) still provides a more useful governance framework than treating AI trust as undifferentiated",
+            "Sources are mixed in maturity — Harvard JOLT, Springer philosophy, HBS case study, and ETSI press release alongside peer-reviewed empirical work. The convergence across different source types and disciplinary perspectives strengthens rather than weakens the practical conclusions"
+          ]
+        }
+      ],
+      "papersAdded": [
+        "p165",
+        "p166",
+        "p167",
+        "p168",
+        "p169",
+        "p170",
+        "p171"
+      ],
+      "themesAdded": [
+        "t069",
+        "t070",
+        "t071",
+        "t072",
+        "t073",
+        "t074"
+      ],
+      "toolsAdded": [
+        "tool64",
+        "tool65",
+        "tool66",
+        "tool67",
+        "tool68",
+        "tool69",
+        "tool70",
+        "tool71"
+      ],
+      "adviceAdded": {
+        "trust-professionals": [
+          "ta30",
+          "ta31",
+          "ta32"
+        ],
+        "executives": [
+          "ex27",
+          "ex28",
+          "ex29"
+        ],
+        "regulators": [
+          "r28",
+          "r29",
+          "r30"
+        ]
+      }
     }
   ],
-  "total": 16
+  "total": 17
 }

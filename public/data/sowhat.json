@@ -519,6 +519,53 @@
           ],
           "urgency": "act-now",
           "prompt": "Which of your current HITL controls would still work if you simulated high volume, time pressure, and opaque model reasoning tomorrow?"
+        },
+        {
+          "id": "ta30",
+          "headline": "The assurance target is the institution-AI pair, not the algorithm",
+          "body": "Philosophical analysis is unambiguous: AI systems cannot be trusted in the full interpersonal sense because they lack moral agency and cannot betray. What can be trusted — and what assurance should assess — is the institution deploying and governing the AI. The practical implication is that a model can be technically perfect and the assurance should still fail if the governance is weak. Assurance engagements should be scoped to evaluate: is this organisation's governance of this AI system such that stakeholders can reasonably rely on it? This requires assessing decision-rights allocation, escalation paths, monitoring investment, incentive alignment, and the quality of human oversight architecture — not just model performance metrics.",
+          "citations": [
+            "p166",
+            "p165",
+            "p072"
+          ],
+          "themes": [
+            "t072"
+          ],
+          "urgency": "act-now",
+          "prompt": "In your current assurance practice, are you evaluating the model's technical properties or the institution's governance capacity? If the model passes all technical checks but the governance is weak, would you certify it — and should you?"
+        },
+        {
+          "id": "ta31",
+          "headline": "Point-in-time certification fails for behavioural properties — implement continuous trust monitoring",
+          "body": "Temporal degradation research demonstrates that AI model error increases measurably over time since last training, following patterns that are predictable but not monitored. Feature importance shifts — the variables driving model predictions in Month 1 differ from Month 12 even without explicit model updates. A fairness certification from last quarter may be measuring different feature interactions than the model is actually using today. The correct response is to distinguish structural properties (architecture, lineage controls, override hooks — assessable at point in time) from behavioural properties (calibration, accuracy, fairness, drift — requiring continuous monitoring). Build monitoring systems for behavioural trust properties that update their assessment continuously, not annually.",
+          "citations": [
+            "p169",
+            "p168",
+            "p155"
+          ],
+          "themes": [
+            "t069"
+          ],
+          "urgency": "act-now",
+          "prompt": "Which trust properties in your current assessment practice are you treating as stable (point-in-time) when they are actually decaying continuously? What would your certification look like if you had to certify behavioural properties as continuously monitored rather than annually assessed?"
+        },
+        {
+          "id": "ta32",
+          "headline": "Meaningful human oversight requires runtime control architecture, not reviewer headcount",
+          "body": "The Learned Hand formula applied to AI (p165) reveals why per-action human review fails at scale: the burden (B) of meaningful oversight approaches infinity when AI operates at volume and speed beyond human processing capacity. The automation paradox compounds this: humans monitoring reliable AI become cognitively disengaged and cannot intervene at the precise moment of failure. Meaningful oversight requires runtime control architecture: risk-tiered escalation paths, identity-bound intervention rights, time-bounded approvals, clear shutdown authority, and evidence that humans received enough context to exercise independent judgment. Assurance practices should test whether the oversight architecture is genuinely capable of catching failures — not whether a human was nominally present.",
+          "citations": [
+            "p165",
+            "p170",
+            "p171"
+          ],
+          "themes": [
+            "t070",
+            "t071",
+            "t067"
+          ],
+          "urgency": "act-now",
+          "prompt": "In your oversight assessments, are you evaluating the existence of reviewers or the intervention capacity of the oversight architecture? Could your current design withstand a scenario where the AI system requires human intervention within milliseconds, across hundreds of simultaneous decisions?"
         }
       ]
     },
@@ -974,6 +1021,53 @@
           ],
           "urgency": "act-now",
           "prompt": "Does your current AI program connect governance decisions to workflow redesign, employee capability, and capital allocation, or are those still separate conversations?"
+        },
+        {
+          "id": "ex27",
+          "headline": "Meaningful human oversight at scale requires operating model redesign, not an oversight committee",
+          "body": "The oversight paradox amplification shows that as AI capability and reliability improve, meaningful human oversight becomes structurally harder — not easier. Adding a human review step to an existing workflow will not solve this. The organisations succeeding at AI governance at scale — DBS, Singapore MindForge participants — have redesigned their operating models: platform standards, approval pathways, workforce capability, escalation routes, and economic measurement are built as an integrated system. Senior executives should ask: has our organisation designed AI oversight into how work gets done, or have we added an oversight function to how work was already organised before AI?",
+          "citations": [
+            "p170",
+            "p167",
+            "p165"
+          ],
+          "themes": [
+            "t070",
+            "t073",
+            "t068"
+          ],
+          "urgency": "act-now",
+          "prompt": "Where in your organisation does the design of AI oversight infrastructure sit — in the technology team, the risk team, or as a joint design with the operating model redesign team? If it's siloed in any one function, that is a structural weakness."
+        },
+        {
+          "id": "ex28",
+          "headline": "Treat AI trust properties by their decay profile — behavioural properties need continuous monitoring",
+          "body": "AI trust properties are not homogeneous: some are structural (architecture, lineage controls, override hooks) and can be meaningfully certified once; others are behavioural (calibration, accuracy, fairness, drift) and degrade continuously after training. Treating them the same produces either over-engineered governance for structural properties or dangerous under-governance for behavioural ones. Leaders should demand that their teams explicitly categorise each AI trust property by decay profile and apply the appropriate governance cadence. The ETSI CABCA standard (p168) provides the technical infrastructure for continuous monitoring of behavioural properties.",
+          "citations": [
+            "p169",
+            "p168",
+            "p155"
+          ],
+          "themes": [
+            "t069"
+          ],
+          "urgency": "act-now",
+          "prompt": "Do you know which of your AI systems' trust properties are structural (stable) versus behavioural (decaying)? If you are treating all properties the same in your governance cadence, you are either over-engineering some or dangerously under-engineering others."
+        },
+        {
+          "id": "ex29",
+          "headline": "Appropriate reliance is the operational replacement for AI trust — measure it",
+          "body": "The pragmatic framework from Lugato and Floridi (p166) replaces vague 'trustworthy AI' claims with three operational metrics: appropriateness (is the AI being used within its validated capability boundaries?), efficiency (is the monitoring investment proportionate to the value extracted?), and calibration (does the organisation's trust level match the system's actual performance?). Every high-stakes AI system should have a trust dashboard showing these three parameters updated continuously. The goal is not maximum trust — overly trusting AI is dangerous. The goal is calibrated reliance: trust levels that match the system's actual trustworthiness.",
+          "citations": [
+            "p166",
+            "p155",
+            "p156"
+          ],
+          "themes": [
+            "t074"
+          ],
+          "urgency": "watch",
+          "prompt": "For your highest-stakes AI system, can you quantify: what is the current calibration error between user trust and system performance? What monitoring investment is required to maintain appropriate reliance? If the answers are qualitative rather than quantitative, that is an assurance gap."
         }
       ]
     },
@@ -1474,6 +1568,51 @@
           ],
           "urgency": "act-now",
           "prompt": "In your current regime, if an AI system becomes harmful through post-deployment adaptation or wrapper design, can you clearly explain which actor should bear primary responsibility, and why?"
+        },
+        {
+          "id": "r28",
+          "headline": "Mandatory human oversight that exceeds human cognitive capacity is a regulatory trap — fix it structurally",
+          "body": "The liability sponge problem (p165) reveals a structural flaw in how most AI governance regulation approaches human oversight. When the law mandates that a human oversee an AI system whose operations exceed the human's cognitive capacity to understand and intervene meaningfully, the regulation mandates a duty that is constructively impossible to satisfy. The result is not safety — it is the creation of a class of legal violations that occur through no fault of the nominal overseer. Regulators should shift from requiring human presence to requiring demonstrated oversight architecture: evidence that the oversight design gives the human realistic intervention capacity, sufficient context, and enforceable stop-power. The standard should be: can this oversight architecture catch failures of this type, in this operational context, at this speed and volume?",
+          "citations": [
+            "p165",
+            "p170"
+          ],
+          "themes": [
+            "t071",
+            "t070"
+          ],
+          "urgency": "act-now",
+          "prompt": "In your current regulatory framework, which AI systems require human oversight that exceeds the cognitive capacity of the humans nominally assigned to it? What would your framework look like if the standard were 'demonstrated intervention capacity' rather than 'human presence'?"
+        },
+        {
+          "id": "r29",
+          "headline": "Separate what can be certified once from what must be monitored continuously — then regulate accordingly",
+          "body": "The empirical finding that AI model quality degrades temporally (p169) and the emergence of the CABCA standard (p168) together make the case: regulatory frameworks that treat all AI trust properties the same — requiring point-in-time certification for everything — produce compliance theatre. Structural properties (architecture, lineage, override hooks) can be assessed at intervals measured in years. Behavioural properties (calibration, accuracy, fairness, drift) require continuous monitoring infrastructure. The regulatory implication is to mandate different governance cadences for different property types, with continuous monitoring requirements for behavioural properties in high-risk AI applications.",
+          "citations": [
+            "p169",
+            "p168",
+            "p155"
+          ],
+          "themes": [
+            "t069"
+          ],
+          "urgency": "act-now",
+          "prompt": "Which AI properties in your current regulatory perimeter are you treating as certifiable once when they plainly are not? What would a decay-profile-based regulatory framework look like for the AI applications under your jurisdiction?"
+        },
+        {
+          "id": "r30",
+          "headline": "AI agent governance requires exhaustive action inventory before any compliance classification",
+          "body": "The most important compliance architecture insight from the EU AI agent mapping (p171) is that providers cannot comply by classifying their system architecture — they must first exhaustively inventory every external action the agent can take, every data flow it can initiate, every connected system it can modify, and every person who can be affected. Only that inventory reveals which regulatory triggers apply and what the oversight architecture must make controllable. High-risk agentic systems with untraceable behavioural drift cannot currently satisfy the EU AI Act's essential requirements. Regulators should require that agentic AI deployments be preceded by a formal action inventory that defines the boundaries of the agent's permissible behaviour at runtime.",
+          "citations": [
+            "p171",
+            "p003"
+          ],
+          "themes": [
+            "t003",
+            "t067"
+          ],
+          "urgency": "watch",
+          "prompt": "Does your current regulatory framework for agentic AI require an exhaustive action inventory before deployment authorisation? If not, how can you assess whether the oversight architecture is adequate when you don't know the full range of actions the agent can take?"
         }
       ]
     }

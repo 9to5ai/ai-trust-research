@@ -829,7 +829,114 @@
         "p162"
       ],
       "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool64",
+      "name": "Learned Hand Formula for AI Negligence",
+      "type": "liability-framework",
+      "jurisdiction": "International (US origin)",
+      "description": "The Learned Hand formula (B < P × L) defines negligence as when the burden of precautions (B) is less than the probability of harm (P) multiplied by the gravity of loss (L). Applied to AI: B represents the effort required by operators, deployers, or developers to prevent foreseeable risks; P is the probability the AI system will cause harm; L is the magnitude of potential harm. The formula breaks down for AI in two ways: B approaches infinity when AI operates beyond human cognitive capacity (making the formula mathematically void or indicating no negligence); and B is undefined for developers of neural networks, where logic is induced rather than written. For AI liability analysis, the formula's primary value is in shifting the negligence question from 'did a human intervene?' to 'was the precaution burden reasonable given the harm probability and magnitude?'",
+      "provider": "Learned Hand / Harvard JOLT (p165)",
+      "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
+      "papersReferenced": [
+        "p165"
+      ],
+      "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool65",
+      "name": "Three-Pillar AI Oversight Duty Framework",
+      "type": "liability-framework",
+      "jurisdiction": "International",
+      "description": "A legal framework for operationalizing AI oversight duties, proposed by Htin (p165), that allocates distinct duties across the AI supply chain. Pillar 1: Deployer's duty to implement genuine Human-Systems Integration (HSI) frameworks — not passive monitoring roles but active human-AI collaboration architectures designed for human cognitive capacity. Pillar 2: Developer's duty to demonstrate technical robustness — including interpretability tooling, testing for known failure modes, and documentation of model behaviour boundaries. Pillar 3: Both parties' duty for post-market monitoring and failure reporting — continuous surveillance of model behaviour in deployment environment, with mandatory reporting of adverse events. This three-way allocation resolves the liability sponge problem by making each party's specific duty legally enforceable, rather than concentrating accountability on the human operator who lacks realistic intervention capacity.",
+      "provider": "Htin / Harvard JOLT (p165)",
+      "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
+      "papersReferenced": [
+        "p165"
+      ],
+      "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool66",
+      "name": "Human-Systems Integration (HSI) Frameworks for AI",
+      "type": "oversight-design-framework",
+      "jurisdiction": "International",
+      "description": "Human-Systems Integration frameworks ensure AI systems are designed for genuine human oversight rather than performative human presence. Multiple HSI frameworks exist; the most directly applicable for AI oversight is the Partnership on AI's Human-AI Collaboration Framework — a 36-question heuristic for designing and assessing human-AI collaborative systems. Key HSI design principles: friction roles (forcing active human deliberation before AI decisions to prevent automation bias), resilience roles (positioning humans as fail-safe sources of contextual judgment at system boundaries), and cognitive handrails (providing uncertainty quantification, saliency indicators, and model confidence signals calibrated for human cognition). HSI frameworks operationalise the first-pillar duty: a deployer who places a human in a loop without HSI-designed interfaces is negligent regardless of whether a human was technically present.",
+      "provider": "Partnership on AI / HSI research (p165)",
+      "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
+      "papersReferenced": [
+        "p165"
+      ],
+      "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool67",
+      "name": "Crootof-Kaminski-Price Human Role Taxonomy",
+      "type": "oversight-taxonomy",
+      "jurisdiction": "International",
+      "description": "A taxonomy of human roles in AI oversight developed by Crootof, Kaminski, and Price (referenced in p165) to help courts adjudicate whether a human was truly 'in the loop' or was merely a liability sponge. The taxonomy categorises human roles in automated systems, distinguishing meaningful oversight roles from friction roles (designed to force deliberate slowing of AI decisions) and resilience roles (positioning humans as fail-safe sources of contextual judgment). The taxonomy's legal significance is that it provides courts with a framework to distinguish genuine oversight from nominal oversight — helping resolve the accountability gap by identifying whether the human's role was structurally capable of catching the failure that occurred.",
+      "provider": "Crootof, Kaminski, Price (p165)",
+      "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
+      "papersReferenced": [
+        "p165"
+      ],
+      "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool68",
+      "name": "Taddeo Trust Quantification",
+      "type": "trust-measurement-framework",
+      "jurisdiction": "International",
+      "description": "Taddeo's framework (2007, 2010) treats trust as a quantitative property of reliance relations, enabling measurement rather than just qualitative assessment. Trust level is derived from the ratio of monitoring investment to expected gains in the human-AI interaction. High trust: high expected gains with low monitoring costs. Low trust: monitoring costs approach or exceed expected gains. The framework also accommodates trust as either 'monitoring' (investing in verification to compensate for uncertainty) or 'confidence in reliability' (assuming the system is trustworthy without active verification). Applied to AI assurance, this means every high-stakes AI system should have a continuously updated dashboard showing: expected gains from AI use, monitoring investment required to maintain appropriate reliance, and the ratio between them. The goal is appropriate reliance — calibrated trust — not maximal trust.",
+      "provider": "Luciano Taddeo (p166)",
+      "url": "https://link.springer.com/article/10.1007/s11023-025-09754-9",
+      "papersReferenced": [
+        "p166"
+      ],
+      "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool69",
+      "name": "EU AI Agent Deployment Taxonomy (Nine Categories)",
+      "type": "regulatory-taxonomy",
+      "jurisdiction": "EU",
+      "description": "A practical taxonomy of nine AI agent deployment categories developed by Nannini et al. (p171) that maps concrete agent actions to regulatory triggers under the EU AI Act. Each category identifies a different combination of autonomy level, tool-invocation scope, environmental impact, and human oversight requirement. The taxonomy is significant because it provides the first systematic mapping from agentic AI architectural patterns to specific regulatory obligations — allowing providers to identify which EU AI Act articles are triggered by specific agent configurations. The nine categories range from low-autonomy advisory agents to fully autonomous critical infrastructure agents, each with distinct compliance requirements. The taxonomy operationalises the principle that agent governance cannot be one-size-fits-all: different autonomy levels require different oversight architectures.",
+      "provider": "Nannini et al. / arXiv (p171)",
+      "url": "https://arxiv.org/html/2604.04604v1",
+      "papersReferenced": [
+        "p171",
+        "p003"
+      ],
+      "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool70",
+      "name": "CABCA Continuous Compliance Standard",
+      "type": "continuous-monitoring-standard",
+      "jurisdiction": "EU",
+      "description": "ETSI's CABCA (Continuous Compliance for Dynamic AI Systems) standard enables real-time compliance monitoring for AI systems that adapt post-deployment, directly addressing the point-in-time certification inadequacy for behavioral trust properties. The standard maps EU AI Act requirements (Article 9 risk management, Article 10 data governance, Article 12 technical documentation, Article 14 human oversight) to technically-auditable rules that can be checked continuously rather than at periodic audits. CABCA represents the regulatory engineering response to the temporal degradation problem: by creating standardised continuous monitoring infrastructure, it makes behavioral trust properties auditable over time rather than frozen at certification moments. Implementation requires AI systems to expose runtime telemetry sufficient to evaluate compliance state continuously.",
+      "provider": "ETSI",
+      "url": "https://www.etsi.org/newsroom/press-releases/2634-etsi-launches-new-standard-enabling-continuous-compliance-for-dynamic-ai-systems-aligned-with-the-eu-ai-act",
+      "papersReferenced": [
+        "p168",
+        "p169"
+      ],
+      "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool71",
+      "name": "Runtime Behavioural Drift Detection",
+      "type": "monitoring-methodology",
+      "jurisdiction": "International",
+      "description": "A compliance architecture methodology from Nannini et al. (p171) that addresses the boundary between anticipated adaptive AI behaviour and 'substantial modification' under EU AI Act Article 3(23). Runtime behavioural drift detection requires: (1) baseline behavioural characterisation at deployment — defining the expected range of the agent's actions in each context; (2) continuous monitoring of actual versus expected behaviour — detecting when the agent's action patterns diverge from baseline; (3) change-point detection — identifying moments when the agent's strategy shifts discontinuously (the boundary between normal adaptation and substantial modification); (4) documentation and reporting — creating the evidentiary record needed for compliance and liability purposes. This methodology directly addresses the agentic AI governance gap: without runtime drift detection, it is impossible to know whether an agent has crossed from legitimate adaptation into a substantial modification that triggers new regulatory obligations.",
+      "provider": "Nannini et al. / arXiv (p171)",
+      "url": "https://arxiv.org/html/2604.04604v1",
+      "papersReferenced": [
+        "p171",
+        "p169"
+      ],
+      "dateIdentified": "2026-04-09"
     }
   ],
-  "total": 73
+  "total": 81
 }
