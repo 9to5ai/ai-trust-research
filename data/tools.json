@@ -936,7 +936,78 @@
         "p169"
       ],
       "dateIdentified": "2026-04-09"
+    },
+    {
+      "id": "tool072",
+      "name": "Reversal Register",
+      "type": "accountability-instrument",
+      "jurisdiction": "International (EU AI Act Article 14)",
+      "description": "The primary governance artifact from the Dynamic Authority Reversal (DAR) framework (Westover et al., p195). A Reversal Register is an auditable log that binds each AI-assisted decision to: (1) the prevailing authority state at the time of decision (HL, AL, CO, or MO); (2) the trigger conditions that caused any state transition; (3) the actors (human or AI) in each role; (4) the thresholds used to evaluate trigger conditions; (5) the explanation delivered to relevant parties; (6) the action taken. The Reversal Register transforms accountability from a static property (who signed off) into a dynamic property (which authority state produced each decision, and why). It is the operational artifact that makes EU AI Act Article 14's 'meaningful oversight' requirement specific and auditable. In financial services, the Reversal Register provides the evidentiary basis for demonstrating proportionate human supervisory involvement under the three-pillar liability framework (p177) and for satisfying post-market monitoring obligations under EU AI Act Article 12.",
+      "papers": [
+        "p195",
+        "p177"
+      ],
+      "dateIdentified": "2026-04-10"
+    },
+    {
+      "id": "tool073",
+      "name": "Short Trust in Automation Scale (S-TIAS)",
+      "type": "measurement-instrument",
+      "jurisdiction": "International",
+      "description": "A 3-item psychometrically validated instrument for measuring human trust in AI systems (McGrath et al., 2025, p196). The S-TIAS was developed via factor analysis from the validated 12-item TIAS, retaining three items that capture the two dimensions of trust and distrust as oblique (related but distinct) factors. Validation studies confirm: (1) S-TIAS is valid and reliable across diverse AI applications (self-driving cars, medical diagnosis, virtual assistants); (2) trust measured by S-TIAS significantly predicts behavioural intention to use AI; (3) machine trust propensity (MTP) predicts S-TIAS trust under high-performance conditions. The S-TIAS enables frequent, minimally disruptive trust measurement in organisational settings — critical for longitudinal calibration monitoring under CABCA methodology. Recommended measurement points: deployment, 30 days, 90 days, and annually. Discrepancies between S-TIAS scores and objective system performance data indicate calibration problems requiring governance intervention.",
+      "papers": [
+        "p196"
+      ],
+      "dateIdentified": "2026-04-10"
+    },
+    {
+      "id": "tool074",
+      "name": "Dynamic Authority Reversal (DAR) Framework",
+      "type": "governance-framework",
+      "jurisdiction": "International (EU AI Act Article 14)",
+      "description": "A governance framework that treats human-AI collaboration as a temporal authority problem with four states: Human-Leader/AI-Follower (HL), AI-Leader/Human-Follower (AL), Co-Leadership (CO), and Mutual Override (MO). Transitions between states are governed by four trigger classes: data superiority, contextual judgment requirements, risk thresholds, and ethics overrides. Key structural features: hysteresis bands (exit thresholds differ from entry thresholds to prevent oscillation between states), safe-exit timers (maximum dwell time in AL state triggers mandatory human review — directly addresses EU AI Act Article 14 meaningful oversight requirement), and the Reversal Register (audit log binding each decision to authority state, triggers, and justifications). The DAR framework is the operational complement to Baum et al.'s causal taxonomy of HITL (p187): where Baum et al. distinguish constitutive from corrective human involvement, DAR specifies the architectural mechanisms for implementing each type at scale.",
+      "papers": [
+        "p195",
+        "p187"
+      ],
+      "dateIdentified": "2026-04-10"
+    },
+    {
+      "id": "tool075",
+      "name": "CABCA Operationalisation Toolkit",
+      "type": "conformity-assessment-methodology",
+      "jurisdiction": "EU / International",
+      "description": "Practical implementation guidance for ETSI TS 104 008 Continuous Auditing-Based Conformity Assessment (CABCA). The toolkit operationalises CABCA across five implementation layers: (1) Trigger Definition — defining the events that initiate a reassessment cycle (model drift detection, data distribution shift, hyperparameter change, capability level change, new deployment context); (2) Evidence Collection — automated collection of behavioural data sufficient to demonstrate conformity with applicable requirements, including model performance metrics, fairness indicators, drift statistics, and user trust calibration data; (3) Metric Operationalisation — translating high-level regulatory requirements into measurable, machine-readable specifications (e.g., EU AI Act Article 10 data governance requirements → specific data quality metrics with defined thresholds); (4) Automated Reporting — generating machine-readable conformity reports that map evidence to specific regulatory requirements, enabling regulatory submission without manual report preparation; (5) Continuous Review Cycle — establishing a perpetual review cycle with defined frequency for each property type (behavioural properties: continuous or weekly; structural properties: quarterly or upon triggering event). Note: TS 104 008 is a Technical Specification, not a Harmonised Standard — it provides methodology benefits but no legal presumption of conformity under EU AI Act (Smith, p199).",
+      "papers": [
+        "p070",
+        "p199"
+      ],
+      "dateIdentified": "2026-04-10"
+    },
+    {
+      "id": "tool076",
+      "name": "AI Trust Calibration Audit Protocol",
+      "type": "audit-methodology",
+      "jurisdiction": "International",
+      "description": "An audit methodology for assessing whether organisational reliance on AI systems is appropriately calibrated to actual system performance. Based on Lugato and Floridi's appropriate reliance framework (p166) and McGrath's S-TIAS measurement (p196), the protocol has four steps: (1) Measure — administer S-TIAS to representative users of each AI system, collecting trust scores at multiple time points; (2) Compare — obtain objective system performance data (accuracy, calibration, fairness metrics, drift statistics) for the same period; (3) Calculate Calibration Error — compute the gap between measured trust and expected trust given system performance, identifying over-trust or under-trust; (4) Intervene — if calibration error exceeds defined thresholds, trigger governance intervention (user re-training, system modification, deployment restriction, or enhanced monitoring). The protocol is designed for integration with CABCA continuous monitoring and for use as the primary audit instrument for appropriate reliance assessment under the appropriate reliance framework.",
+      "papers": [
+        "p166",
+        "p196",
+        "p198"
+      ],
+      "dateIdentified": "2026-04-10"
+    },
+    {
+      "id": "tool077",
+      "name": "Trajectory Logging Infrastructure Specification",
+      "type": "liability-compliance-infrastructure",
+      "jurisdiction": "International (EU AI Liability Directive March 2026)",
+      "description": "A technical specification for the trajectory logging infrastructure required by trajectory-based liability frameworks (Bommarito et al., p192). The specification requires: (1) comprehensive action logging — every AI action (tool invocation, decision output, environmental interaction) logged with timestamp, inputs, outputs, and the decision state that produced it; (2) trajectory reconstruction capability — sufficient log granularity to reconstruct the full behavioural trajectory of the AI system for any time period, enabling regulators and courts to assess whether trajectories stayed within permissible bounds; (3) trajectory classification — automated classification of trajectories as within-bounds or out-of-bounds against defined behavioural specifications, with flagged trajectories escalated for human review; (4) audit access — secure, immutable log storage with regulated access protocols enabling authorised third-party review (regulators, courts) without exposing commercially sensitive model details. The March 2026 AI Liability Directive burden-of-proof shift makes trajectory logging infrastructure a legal necessity for deployers of autonomous AI systems, not merely a governance best practice.",
+      "papers": [
+        "p192"
+      ],
+      "dateIdentified": "2026-04-10"
     }
   ],
-  "total": 81
+  "total": 87
 }

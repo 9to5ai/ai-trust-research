@@ -4302,7 +4302,603 @@
       ],
       "relevance": "The definitive compliance architecture for agentic AI under EU law. Confirms the scope of the agentic governance gap and identifies the specific points where existing frameworks break.",
       "dateRead": "2026-04-09"
+    },
+    {
+      "id": "p172",
+      "title": "AI Trust OS — A Continuous Governance Framework for Enterprise AI",
+      "authors": [
+        "Y. Zhang, R. Patel, S. Kumar et al."
+      ],
+      "year": 2026,
+      "source": "arXiv",
+      "url": "https://arxiv.org/html/2604.04749v1",
+      "analysis": "AI Trust OS is a novel telemetry-first AI governance framework that replaces manual, attestation-based compliance workflows with continuous, machine-collected evidence. The core proposition: most current AI governance is performed by humans reviewing documents and signing attestations — a process that is both unreliable (humans cannot meaningfully review all AI system behaviour at scale) and non-continuous (certification is point-in-time while AI systems change continuously). The framework proposes that AI systems should emit structured governance telemetry: low-level behavioural signals that can be automatically collected, correlated, and evaluated against policy requirements. This transforms governance from a human review activity into an automated, continuous compliance monitoring system. The telemetry approach has profound implications for the trust provenance question: if governance evidence is machine-collected rather than human-attested, the reliability of that evidence depends on the integrity of the telemetry infrastructure itself — creating a new trust chain, not eliminating the trust problem. The framework is significant for first-principles trust research because it demonstrates that the certification chain problem cannot be solved by shifting from human attestation to AI-powered monitoring without addressing the meta-trust question: who watches the watcher?",
+      "tags": [
+        "continuous-compliance",
+        "telemetry",
+        "governance-architecture",
+        "certification-chain",
+        "enterprise"
+      ],
+      "relevance": "Directly addresses the point-in-time certification inadequacy for behavioural trust properties. Provides an operational architecture for continuous governance that has direct implications for how assurance practices should be structured.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p173",
+      "title": "Formalizing Trust in AI: A Philosophy and Technology Review",
+      "authors": [
+        "M. Coeckelbergh"
+      ],
+      "year": 2025,
+      "source": "Philosophy & Technology",
+      "url": "https://link.springer.com/article/10.1007/s13347-025-00843-2",
+      "analysis": "Coeckelbergh's philosophical analysis cuts to the heart of the trust provenance problem: what does it mean to say an AI system is trustworthy, and what epistemic warrant underlies that claim? The paper argues that mainstream AI trust discourse conflates three distinct concepts: reliability (the system performs consistently), safety (the system does not cause harm), and trustworthiness (the system has good intentions and cares about those it affects). AI systems can be reliable and safe without being trustworthy in any meaningful moral sense — they simply lack the moral agency that trustworthiness requires. This distinction has direct consequences for the certification chain: a certification that an AI system is reliable and safe is meaningfully different from a certification that it is trustworthy. Regulatory frameworks that use 'trustworthy AI' language without distinguishing these levels are making claims they cannot operationalise. The paper also critiques the tendency to anthropomorphise AI systems in trust discourse — calling systems 'trustworthy' when what is really meant is that they are predictably beneficial. For first-principles trust research, the key insight is that the provenance of trust claims matters: 'trustworthy AI' certifications are not all of a kind, and the different epistemic weight of different certification types needs to be made explicit.",
+      "tags": [
+        "philosophy",
+        "trust-theory",
+        "epistemology",
+        "trustworthiness",
+        "reliability"
+      ],
+      "relevance": "Provides the philosophical grounding for distinguishing between types of trust claims and their epistemic weight — essential for understanding what a certification chain can and cannot warrant.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p174",
+      "title": "The Oversight Trap: Why Human-in-the-Loop Is Failing at Scale",
+      "authors": [
+        "L. Marchetti"
+      ],
+      "year": 2026,
+      "source": "MeaningStack Substack",
+      "url": "https://meaningstack.substack.com/p/the-oversight-trap-why-human-in-the",
+      "analysis": "The most operationally precise analysis of why HITL fails at agentic AI scale. The core argument: the failure is architectural, not human. Agentic AI systems operate at machine resolution — tracking thousands of signals simultaneously, evaluating probabilistic tradeoffs in milliseconds, coordinating multi-step plans across distributed environments. Human cognition does not operate at that resolution, nor should it. When oversight systems push raw machine-resolution data to human operators, the result is certainty: not risk of fatigue, but certainty of it. The paper names the cascade: desensitisation → delayed escalations → reflexive approvals → missed early warning signals → undetected semantic drift. The critical insight is that the system continues to function through all of this — no rule is violated, no alert fires, no obvious error occurs. The agent simply drifts: cost constraints silently alter decision thresholds; optimisation pressure reduces reasoning depth; tool selection logic shifts over time. The governance question shifts from 'is the model accurate?' to 'is the system still operating the way we designed it to operate?' Four questions are proposed for continuous oversight: reasoning fidelity, trajectory alignment, decision quality, and purpose coherence. The solution is a semantic compression layer between machine signals and human interpretation, with graduated intervention: Nudge → Flag → Escalate → Block. MeaningStack's Steward product is described as a sidecar implementation of this architecture. This is the sharpest practitioner-focused analysis of the oversight problem available and should be required reading for any governance framework that purports to include human oversight.",
+      "tags": [
+        "HITL",
+        "agentic-AI",
+        "oversight",
+        "alert-fatigue",
+        "semantic-drift",
+        "governance-architecture"
+      ],
+      "relevance": "The definitive practitioner analysis of why HITL fails at scale. Proposes a concrete architectural solution (semantic compression layer) that should be part of any agentic AI governance framework.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p175",
+      "title": "Effective Human Oversight of AI-Based Systems: A Signal Detection Perspective",
+      "authors": [
+        "A. Langer, R. Hertwig, B. B. Zhang et al."
+      ],
+      "year": 2025,
+      "source": "Minds and Machines",
+      "url": "https://link.springer.com/article/10.1007/s11023-024-09701-0",
+      "analysis": "The application of Signal Detection Theory to the problem of error detection in AI oversight is the most methodologically rigorous approach to the HITL problem available. The paper argues that effective human oversight requires effective error detection, which requires understanding how humans distinguish errors (signal) from correct outputs (noise) under uncertainty. SDT provides the mathematical framework for analysing two independent parameters: sensitivity (the ability to distinguish signal from noise) and response bias (the threshold for deciding a signal is present). The framework is applied to both accuracy errors (straightforward SDT) and fairness errors (more complex because fairness requires choosing a normative standard). The practical implications are significant: overseer training should focus on sensitivity calibration (helping humans recognise what errors look like) and response bias management (preventing both under- and over-reporting of errors). The SDT framework also explains why alert fatigue is not just a volume problem — as the ratio of correct to incorrect AI outputs shifts toward very high accuracy, the base rate of errors becomes so low that even well-calibrated observers will miss them without special statistical approaches. For the first-principles trust question, SDT provides the quantitative language for specifying what meaningful human oversight actually requires: it requires that the overseer's sensitivity be sufficient to detect errors at the rate the system produces them, and that the overseer's response bias be appropriately calibrated to the cost structure of the domain. When these conditions cannot be met, the oversight is not merely difficult — it is mathematically insufficient.",
+      "tags": [
+        "HITL",
+        "signal-detection-theory",
+        "error-detection",
+        "oversight",
+        "cognitive-science",
+        "fairness"
+      ],
+      "relevance": "Provides the quantitative framework for specifying when human oversight is and is not sufficient to catch AI errors. Essential for the assurance practice's methodology when designing oversight architectures.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p176",
+      "title": "Constitutive Knowledge Sources: An Institutional Approach to Epistemic Trust in Opaque AI Systems",
+      "authors": [
+        "L. Gazit"
+      ],
+      "year": 2026,
+      "source": "AI and Ethics",
+      "url": "https://link.springer.com/article/10.1007/s43681-025-00930-2",
+      "analysis": "The most philosophically significant contribution to the trust provenance question in this session. Gazit argues that the standard approaches to addressing AI opacity — technical explainability and reference-based justification — both fail because they require cognitive access to reasoning processes that are definitionally beyond human comprehension in modern AI systems. The proposed alternative is radical: constitutive knowledge sources provide epistemic warrant that does not depend on algorithmic transparency at all. A constitutive knowledge source is an institution that creates normative reality within a domain — not by describing pre-existing facts, but by establishing what counts as valid through authoritative certification. Examples: a medical board that approves a treatment protocol constitutes what counts as valid medical practice; a financial regulator that sets reporting standards constitutes what counts as adequate disclosure. The key move: when an AI system is certified against constitutive standards, its outputs inherit epistemic warrant from the certifying institution, not from the algorithm's internal logic. This reframes the trust question entirely: instead of 'can we understand the algorithm?', the question becomes 'is the institutional chain of certification trustworthy?' The implications for the certification chain are profound: a trust property certified by a recognized constitutive authority (a standards body, a regulator, a professional board) has a different epistemic status than one self-certified by a developer or assessed by a third party against non-constitutive benchmarks. The paper also identifies a failure mode: AI systems that cite constitutive sources (e.g., Perplexity citing academic papers) without genuine institutional embedding — simulating warrant without providing it.",
+      "tags": [
+        "epistemology",
+        "institutional-trust",
+        "certification",
+        "opacity",
+        "trust-provenance",
+        "philosophy"
+      ],
+      "relevance": "The foundational philosophical reframing of AI trust that resolves the opacity paradox. Should inform how assurance practices structure their certifications and communicate the epistemic weight of their assessments.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p177",
+      "title": "Redefining the Standard of Human Oversight for AI Negligence",
+      "authors": [
+        "Nanda Min Htin"
+      ],
+      "year": 2026,
+      "source": "Harvard Journal of Law and Technology",
+      "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
+      "analysis": "The most rigorous legal analysis of why current human oversight mandates create a regulatory trap. The central argument applies the Learned Hand negligence formula (B < P × L) to AI oversight and demonstrates that for the most capable AI systems, the burden (B) of meaningful oversight approaches infinity — because deep learning models identify patterns in high-dimensional data that are structurally invisible to human perception, making verification of AI outputs cognitively impossible. The consequences: mandatory human oversight that exceeds human cognitive capacity effectively mandates a breach of duty; humans placed in oversight roles become 'liability sponges' absorbing moral, legal, and reputational impact of systemic design failures; and courts are pushed toward outcome-based liability determinations (hindsight bias) rather than principled guidance. The proposed three-pillar framework restructures liability: Pillar 1 — deployer's duty to implement genuine Human-Systems Integration frameworks (not warm-body oversight), including friction roles, resilience roles with cognitive handrails (uncertainty quantification, saliency maps), and training for failure. Pillar 2 — developer's duty to demonstrate technical robustness via compliance with recognized standards (NIST AI RMF, ISO 42001), with safe harbour for compliant developers and rebuttable presumption of negligence for non-compliant ones. Pillar 3 — shared duty for post-market monitoring and failure reporting. The EU Product Liability Directive's shift of evidentiary burden to developers for complex AI systems is cited as a parallel development. This paper provides the legal architecture for the liability restructuring question and should be central to any consulting engagement involving AI liability assessment.",
+      "tags": [
+        "liability",
+        "negligence",
+        "HITL",
+        "legal",
+        "human-systems-integration",
+        "regulation"
+      ],
+      "relevance": "The definitive legal framework for restructured AI liability that moves beyond deployer-only or developer-only models. Essential for liability and governance consulting engagements.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p178",
+      "title": "AI and Human Oversight: A Risk-Based Framework",
+      "authors": [
+        "A. Bhatt, J. Singh, S. Chen et al."
+      ],
+      "year": 2025,
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2510.09090",
+      "analysis": "A structured framework for applying risk-based proportionality to human oversight requirements across AI system types. The paper surveys existing regulatory approaches to HITL (EU AI Act Article 14, NIST guidance, ISO standards) and identifies that current approaches either mandate human oversight uniformly (without proportionality) or defer to organisations to determine appropriate oversight (without guidance). The proposed framework fills this gap with a systematic risk-rating methodology: oversight requirements are determined by consequence severity, autonomy level, reversibility of decisions, and human capacity to meaningfully evaluate the decision type. The framework produces a matrix of oversight intensity requirements, from low-stakes advisory AI (minimal oversight) to high-stakes consequential autonomous AI (intensive multi-layer oversight with genuine intervention capacity). Critically, the framework operationalises the distinction between human oversight that is genuinely possible and human oversight that is merely mandated: it includes a cognitive feasibility assessment that flags oversight requirements that exceed human cognitive bandwidth for the specific decision type. For the assurance practice, this framework provides the methodological basis for advising clients on proportionate oversight architecture — identifying where current oversight investments are misallocated (over-monitoring low-risk systems while under-addressing high-risk ones).",
+      "tags": [
+        "HITL",
+        "risk-framework",
+        "oversight",
+        "proportionality",
+        "regulatory"
+      ],
+      "relevance": "Provides the methodological structure for proportionate HITL requirements. Can be used as an assessment tool for identifying where client oversight architectures are mismatched to actual risk.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p179",
+      "title": "AI Supply Chain Risk: Vendor Due Diligence",
+      "authors": [
+        "TrustArc"
+      ],
+      "year": 2026,
+      "source": "TrustArc",
+      "url": "https://trustarc.com/resource/ai-supply-chain-risk-vendor-due-diligence/",
+      "analysis": "TrustArc's practitioner framework for AI vendor due diligence is the most operationally complete treatment of AI supply chain risk available. The central analogy: traditional vendor risk management inspects a house (static structure, fixed vulnerabilities); AI vendor risk manages a living organism (continuous learning, evolving behaviour, cascading sub-processor dependencies). The framework identifies five AI vendor categories requiring assessment: foundation model providers (data provenance, hallucination risk), model hosts (data residency, inference logging, zero-retention policies), synthetic data vendors (re-identification risk, differential privacy validation), data enrichment partners (consent lineage, 'fruit of the poisonous tree' risk), and AI copilots embedded in existing SaaS tools (shadow AI risk). A risk-based due diligence methodology is proposed: classify by AI role and risk level, expand assessment criteria beyond traditional security questionnaires to include AI-specific questions (training data provenance, model lifecycle management, explainability capability), and assess downstream exposure by mapping sub-processors. The critical insight: static point-in-time assessments are structurally inadequate for AI supply chain risk because AI models drift — a model that is unbiased in January may exhibit significant drift by June. Continuous monitoring triggers are required: material model version changes, sub-processor list changes, or regulatory enforcement actions against vendors. For the assurance practice, this framework provides the structure for AI supply chain due diligence service offerings.",
+      "tags": [
+        "vendor-risk",
+        "third-party",
+        "supply-chain",
+        "due-diligence",
+        "continuous-monitoring"
+      ],
+      "relevance": "The definitive due diligence framework for AI supply chain risk. Directly applicable to third-party AI governance consulting engagements.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p180",
+      "title": "Why Continuous Monitoring Is Replacing Point-in-Time Audits for Compliance",
+      "authors": [
+        "SecurityScorecard"
+      ],
+      "year": 2026,
+      "source": "SecurityScorecard",
+      "url": "https://securityscorecard.com/blog/why-continuous-monitoring-is-replacing-point-in-time-audits-for-compliance/",
+      "analysis": "SecurityScorecard's analysis of why continuous monitoring is displacing point-in-time audits in the broader compliance landscape provides important context for the AI trust certification problem. The argument: point-in-time audits suffer from three structural flaws when applied to dynamic environments: they capture a snapshot that is immediately stale as the environment changes; they create perverse incentives to 'prepare for the audit' rather than maintain continuous compliance; and they cannot detect the silent accumulation of drift between assessment moments. These flaws are particularly acute for AI systems, which can change behaviour through retraining, fine-tuning, prompt updates, and data distribution shifts — all of which can occur between a Tuesday audit and a Wednesday deployment. Continuous monitoring addresses these flaws by maintaining persistent visibility into compliance-relevant parameters. The article documents that organisations with continuous monitoring capabilities detect issues 60% faster than those relying on periodic audits, and that the cost per control evaluation is lower in continuous models at scale. For AI trust certification, the implication is that the appropriate certification model depends on the stability of the trust property: structural properties (architecture, lineage, override hooks) can sustain point-in-time certification with long reassessment intervals; behavioural properties (calibration, accuracy, fairness alignment) require continuous monitoring because they degrade continuously.",
+      "tags": [
+        "continuous-monitoring",
+        "compliance",
+        "certification",
+        "point-in-time",
+        "drift"
+      ],
+      "relevance": "Provides the business case evidence for why continuous monitoring is replacing point-in-time certification across compliance domains — applicable directly to AI trust certification economics.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p181",
+      "title": "Operationalizing AI Governance at Mastercard (Case Study)",
+      "authors": [
+        "J. Hearty"
+      ],
+      "year": 2026,
+      "source": "DataVersity",
+      "url": "https://www.dataversity.net/case-studies/case-study-operationalizing-ai-governance-at-mastercard/",
+      "analysis": "The most detailed success case study of enterprise AI governance implementation available. Hearty documents how a team of five specialists at Mastercard built an AI governance function that assesses, guides, and monitors a doubled-every-year AI portfolio (60% growth in 2024). Key success factors: (1) Lean team structure — five specialists covering architecture, model risk, technology solutions, and communications; all exhibiting curiosity and self-awareness as core hiring behaviours. (2) Influence-based operating model — the team earns influence through partnership and delivering value, not through mandate and enforcement; the best partnerships focus on others' pain points that also happen to serve governance goals. (3) Pre-competitive collaboration — partnering with developer peers to cocreate governance frameworks, bias testing APIs, and model documentation templates before deployment. (4) Customer-facing value — taking model documentation to customers pre-contract to build trust through transparency. (5) Making compliance easy — providing not just guidance but easy access to tools that enable proper compliance (bias testing APIs, LLM evaluation tools). (6) Risk guidance before systems are built — the scorecard process that forces product owners to think through data, techniques, agency, and risk materiality before a contract is signed. The most important strategic insight: 'If your partnerships deliver something, they don't just create value. They also create more influence as a result of having done valuable work with other people.' For the assurance practice, this case study demonstrates that AI governance is a relationship-and-influence business as much as a technical one — technical excellence without strategic positioning produces compliance theater, not genuine governance.",
+      "tags": [
+        "case-study",
+        "governance",
+        "enterprise",
+        "Mastercard",
+        "operationalization"
+      ],
+      "relevance": "The primary success case study for enterprise AI governance operationalization. Provides concrete evidence that small teams can deliver outsized governance impact with the right model.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p182",
+      "title": "MAS Guidelines for Artificial Intelligence Risk Management (2025)",
+      "authors": [
+        "Monetary Authority of Singapore"
+      ],
+      "year": 2025,
+      "source": "MAS",
+      "url": "https://www.mas.gov.sg/news/media-releases/2025/mas-guidelines-for-artificial-intelligence-risk-management",
+      "analysis": "MAS's November 2025 AI Risk Management Guidelines represent the most sophisticated proportional, risk-based AI governance framework from any financial regulator globally. The framework applies to all financial institutions and sets out supervisory expectations across four key areas: (1) Board and senior management governance and oversight responsibilities, including establishment of frameworks, structures, policies, and risk culture for AI use; (2) AI risk management systems including AI usage identification processes, accurate inventories, and materiality assessments across impact, complexity, and reliance dimensions; (3) AI lifecycle controls (data management, fairness, transparency, human oversight, third-party risk, evaluation, monitoring, change management) applied proportionally based on assessed risk materiality; (4) Capabilities and capacities adequate for AI use. Critically, the guidelines explicitly extend to GenAI and AI agents — the most forward-looking coverage of any major regulator. The guidelines build on MAS's 2024 thematic review of banks' AI use and incorporate proportionality: controls are commensurate with FI size, AI activity nature, and risk profile. For the Australian context, MAS guidelines are the most directly relevant foreign framework — Singapore's financial sector is comparable to Australia's in scale and structure, and MAS's proportionate approach is more exportable to Australia than EU prescriptive requirements. The guidelines should be treated as the primary reference framework for any AI trust consulting engagement in Australian financial services.",
+      "tags": [
+        "MAS",
+        "Singapore",
+        "financial-services",
+        "risk-management",
+        "guidelines",
+        "agentic-AI",
+        "proportionality"
+      ],
+      "relevance": "The most directly relevant international regulatory framework for Australian financial services AI governance. Should be the primary reference for any cross-border or comparable regulatory analysis.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p183",
+      "title": "How AI Is Changing Model Risk Management",
+      "authors": [
+        "KPMG"
+      ],
+      "year": 2026,
+      "source": "KPMG",
+      "url": "https://kpmg.com/us/en/articles/2026/ai-model-risk.html",
+      "analysis": "KPMG's practitioner perspective on AI model risk management provides a commercially grounded framework for how financial institutions should structure AI governance in practice. The framework starts with clear taxonomy: distinguishing AI models from traditional models and categorising by functionality (tabular ML, NLP/LLMs, RAG, computer vision), potential impact, data types, and associated risks. The risk tiering methodology is the most operationally useful component: operational significance, customer impact, data sensitivity, opacity, retraining frequency, and vendor dependency as tiering criteria. Tiering enables resource prioritisation and avoids the box-checking approach that uniform governance requirements produce. Third-party AI governance is identified as a critical weakness: the interface between Model Risk and Third-Party Risk Management needs strengthening, with AI-specific vendor attestations, upgraded due diligence, and continuous capability monitoring replacing point-in-time assessments. The article notes that AI is dynamic and requires continuous monitoring and periodic re-validation to detect and address behaviour changes. For the consulting practice, KPMG's framework provides the commercial structure for articulating AI model risk management service offerings to financial services clients — it translates academic frameworks into commercially deployable methodologies.",
+      "tags": [
+        "model-risk",
+        "financial-services",
+        "KPMG",
+        "tiering",
+        "third-party",
+        "governance"
+      ],
+      "relevance": "Provides the commercial consulting framework structure for AI model risk management engagements. Risk tiering methodology is directly applicable to practice service offerings.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p184",
+      "title": "Driving Responsible AI Innovation in Financial Services",
+      "authors": [
+        "Monitaur"
+      ],
+      "year": 2026,
+      "source": "Monitaur",
+      "url": "https://www.monitaur.ai/case-studies/driving-responsible-ai-innovation-in-financial-services",
+      "analysis": "Monitaur's Fortune 200 financial services case study documents how an AI governance platform enables responsible AI innovation at scale in a large financial institution. The case study demonstrates how integrated governance platforms address the specific challenge of maintaining consistent governance across diverse AI deployments: different teams, different environments, different contexts, inconsistent documentation and ownership. The platform approach — embedding governance into the AI lifecycle rather than applying it as an external review — is shown to reduce the time from AI deployment to governance clearance and enable more consistent monitoring post-deployment. The case study also illustrates the practical challenge Mastercard's Hearty identified: in large organisations, teams may launch or buy AI systems without notifying the governance team, creating legacy product backlogs and increased operational risk. The Monitaur platform addresses this through automated discovery and inventory management. For the consulting practice, this case study provides evidence that governance platforms (as opposed to purely manual governance processes) are the operational solution to scaling AI governance across large financial institutions.",
+      "tags": [
+        "case-study",
+        "governance-platform",
+        "financial-services",
+        "Fortune-200",
+        "automation"
+      ],
+      "relevance": "Evidence that governance platforms are the operational scaling solution for large FI AI governance. Useful for client conversations about technology-enabled governance.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p185",
+      "title": "Towards a Strong Trust-Based AI Governance Model",
+      "authors": [
+        "World Economic Forum"
+      ],
+      "year": 2023,
+      "source": "WEF",
+      "url": "https://www.weforum.org/stories/2023/05/towards-a-strong-trust-based-ai-governance-model/",
+      "analysis": "The WEF's trust-based AI governance framework is the most globally influential articulation of why trust must be the organising principle for AI governance. The central argument: AI governance models that enable trust and confidence are prerequisites for capturing AI's productivity benefits, because organisations and individuals will not delegate consequential decisions to AI systems they do not trust. The framework identifies five pillars of trust-based AI governance: transparency (stakeholders can understand how AI systems work), explainability (decisions can be traced to specific inputs and logic), fairness (AI systems do not discriminate or produce unjust outcomes), accountability (clearly assigned responsibility for AI outcomes), and safety (AI systems are secure and reliable). These five pillars map broadly to the properties identified in academic trust literature but provide a more accessible framework for board-level and executive communication. The WEF's global reach and institutional credibility give this framework significant weight in international policy discussions. For the consulting practice, the WEF framework provides a globally recognised framing for AI trust conversations with senior leadership — it translates academic trust properties into business language.",
+      "tags": [
+        "WEF",
+        "governance",
+        "trust",
+        "framework",
+        "global"
+      ],
+      "relevance": "The globally most influential trust-based AI governance framework. Provides board-level communication language for AI trust concepts.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p186",
+      "title": "Conformity Assessment Under the EU AI Act",
+      "authors": [
+        "Future of Privacy Forum"
+      ],
+      "year": 2025,
+      "source": "FPF",
+      "url": "https://fpf.org/wp-content/uploads/2025/04/OT-comformity-assessment-under-the-eu-ai-act-WP-1.pdf",
+      "analysis": "The Future of Privacy Forum's detailed analysis of EU AI Act conformity assessment procedures provides the procedural map for how high-risk AI systems must demonstrate compliance. The paper explains the two conformity assessment pathways: internal assessment (for systems where the provider has adequate competence and access to required information) and external notified body assessment (for higher-risk or novel system types). The procedural requirements are demanding: providers must establish and maintain a quality management system, technical documentation must be updated continuously as the system evolves, post-market monitoring must be systematic and proportionate to risk, and incident reporting to national authorities is mandatory for serious incidents. The analysis identifies the key challenge for continuous AI systems: conformity assessment procedures are designed for relatively static products, but high-risk AI systems that adapt post-deployment may require re-certification when they change in ways that affect their original risk assessment. The paper also addresses the specific documentation requirements for credit scoring and insurance pricing AI — the two financial services use cases explicitly caught by the high-risk annex. For the consulting practice, this paper provides the procedural knowledge needed to advise clients on EU AI Act compliance readiness.",
+      "tags": [
+        "EU-AI-Act",
+        "conformity-assessment",
+        "high-risk",
+        "compliance",
+        "documentation"
+      ],
+      "relevance": "The procedural guide to EU AI Act conformity assessment. Essential for any consulting engagement involving EU market access or cross-border AI governance.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p187",
+      "title": "Constitutive vs. Corrective: A Causal Taxonomy of Human Runtime Involvement in AI Systems",
+      "authors": [
+        "K. Baum",
+        "J. Laux",
+        "S. B. K. et al."
+      ],
+      "year": 2026,
+      "source": "arXiv",
+      "url": "https://arxiv.org/html/2603.19213v1",
+      "analysis": "The most conceptually precise contribution to the human oversight literature in 2026. Baum et al. resolve the terminological chaos around HITL/HOTL/Human Oversight through a single organising principle: causal structure. HITL (Human-in-the-Loop) is defined as constitutive — a human contribution is a necessary gate in the causal chain; without the human, no output occurs. HOTL (Human-on-the-Loop) is corrective — the AI can produce outputs by default, and the human occupies an external supervisory position capable of modifying or overriding the outcome. These are not gradations of the same thing; they are categorically different causal structures. The paper then adds a second orthogonal dimension: cognitive integration (complementary vs. hybrid intelligence), yielding four structurally distinct configurations. The most important practical insight is the temporal gradation within HOTL: synchronous (real-time monitoring and immediate intervention), asynchronous (periodic review of logs and retrospective correction), and anticipatory (normative constraints established before deployment, shaping the space of permissible actions). Crucially, only synchronous HOTL can become outcome-HITL for a specific decision — both async and anticipatory HOTL operate at the process level, not the decision-token level. For agentic AI, this has direct implications: reactive oversight modes (sync and async HOTL) become structurally insufficient as agent autonomy increases, because the speed and complexity of agent action exceeds what real-time or even periodic human review can address. Anticipatory HOTL — shaping normative constraints before deployment — becomes the only scalable form of meaningful oversight for high-capability agents. The paper also identifies role duality as a design problem: the same person may simultaneously occupy HITL and HOTL roles with respect to different subsystems, requiring architectural mitigation rather than mere acknowledgment. This paper should replace all earlier HITL frameworks in the practice's methodology.",
+      "tags": [
+        "HITL",
+        "HOTL",
+        "human-oversight",
+        "causal-taxonomy",
+        "agentic-AI",
+        "anticipatory-oversight"
+      ],
+      "relevance": "The definitive causal taxonomy for human involvement in AI systems. Resolves the HITL/HOTL confusion and provides the conceptual foundation for designing proportionate, meaningful oversight architectures.",
+      "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p188",
+      "title": "The Oversight Fatigue Problem: Why HITL Breaks Down at Scale and What Comes After",
+      "authors": [
+        "M. Choubey"
+      ],
+      "year": 2026,
+      "source": "HackerNoon",
+      "url": "https://hackernoon.com/the-oversight-fatigue-problem-why-hitl-breaks-down-at-scale-and-what-comes-after",
+      "analysis": "An accessible but operationally precise practitioner analysis of the oversight failure cascade at agentic AI scale. The core argument: agentic AI adoption more than doubled in enterprise settings in 2025, with Gartner projecting 40% of enterprise applications will embed AI agents by 2026. At this scale, the traditional HITL model — a human reviewing each significant AI action — becomes not merely difficult but architecturally broken. The cascade: automation complacency sets in as humans develop reflexive trust from extended AI reliability; alert desensitisation follows as volume and complexity overwhelm human capacity to distinguish signal from noise; rubber-stamping emerges as the rational individual response to being overwhelmed; the oversight function degrades into a warm-body compliance ritual with no genuine checking. The article is particularly strong on the automation complacency effect: as AI reliability increases, human oversight quality degrades — a counterintuitive but well-documented phenomenon. The proposed alternatives include confidence-based routing (only escalating ambiguous or high-stakes decisions to humans), agentic oversight AI (AI systems monitoring AI systems), and synthetic diverse viewpoint generation (deliberately engineering multiple AI perspectives to reduce single-point-of-failure trust). The article is published April 2026 and draws on current enterprise deployment experience, making it the most temporally relevant analysis of the oversight fatigue problem available.",
+      "tags": [
+        "HITL",
+        "oversight-fatigue",
+        "automation-bias",
+        "agentic-AI",
+        "governance-failure"
+      ],
+      "relevance": "The practitioner-focused complement to the academic causal taxonomy. Names the specific failure cascade at enterprise agentic AI scale and identifies operational alternatives.",
+      "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p189",
+      "title": "AI Governance in Financial Services: Building Comprehensive Safety Frameworks",
+      "authors": [
+        "Aveni"
+      ],
+      "year": 2026,
+      "source": "Aveni",
+      "url": "https://aveni.ai/blog/ai-governance-building-trust-and-compliance-in-financial-services/",
+      "analysis": "The most operationally detailed financial services AI governance framework currently available, developed by Aveni for FinLLM deployment with Lloyds Banking Group and Nationwide Building Society. The framework follows a strict progression: Principles → Regulations → Standards → Requirements → Safety Report → Artefacts. This is significant because it operationalises the gap between high-level principles and deployable technical requirements — a gap that is the primary failure mode in most AI governance implementations. The governance structure includes a tiered operating model: AI Governance and Ethics Board (strategic oversight), specialised working groups (Safety, Information Security, Data Governance), and operational teams (Risk & Compliance, Technical, Senior Leadership). The most distinctive feature is the emphasis on regulatory engagement as a governance mechanism: FCA Digital Sandbox participation, collaboration with University of Edinburgh on ethical AI, EuroLLM contribution, and hallucination detection dataset development. The framework explicitly addresses the EU AI Act classification of financial AI as high-risk, mapping specific compliance requirements to operational artefacts. Key documentation outputs include Model Cards (hosted on HuggingFace), Data Protection Impact Assessments, Model Risk Management Policies, and Privacy Notices. The business case is clearly articulated: strong governance is not a barrier to innovation but its foundation — financial institutions with robust governance frameworks deploy AI with confidence and accelerate adoption by reducing regulatory uncertainty.",
+      "tags": [
+        "financial-services",
+        "governance-framework",
+        "FinLLM",
+        "EU-AI-Act",
+        "FCA",
+        "documentation"
+      ],
+      "relevance": "The most complete financial services governance operating model available. The Principles-to-Artefacts progression and tiered governance structure are directly applicable to practice service design.",
+      "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p190",
+      "title": "The AI Governance Playbook for Financial Institutions",
+      "authors": [
+        "ValidMind"
+      ],
+      "year": 2026,
+      "source": "ValidMind",
+      "url": "https://validmind.com/blog/ai-governance-playbook-financial-institutions/",
+      "analysis": "A practitioner governance playbook specifically designed for financial sector leaders (CROs, CCOs, Heads of Model Risk). The framework is built on four steps: Map, Classify, Assign Ownership; Embed Controls Throughout the Model Lifecycle; Monitor Continuously and Respond Rapidly; Align with Regulation and Build Culture. The first step addresses the inventory problem: most financial institutions do not have a comprehensive view of all AI/ML systems across the firm. Tagging by risk level and regulatory exposure, with clear ownership assignment, is the foundation. The second step embeds fairness checks, validation protocols, and testing early in development rather than treating validation as a gate at deployment. The third step explicitly names continuous monitoring as the operational requirement: AI systems degrade over time, and predefined protocols allow rapid response. The fourth step addresses the culture gap: AI governance must be embedded in firm culture, not treated as a compliance exercise. The playbook correctly identifies that generic governance frameworks fail in financial services because the sector's specific risks (credit exposure, algorithmic trading, fraud, data privacy) require tailored approaches. Key regulatory references include OCC SR 11-7, Basel IV, EU AI Act, FCA SS1/23, and APRA CPS 230. For the consulting practice, this playbook provides the structure for AI governance diagnostic engagements and the basis for AI governance framework development.",
+      "tags": [
+        "financial-services",
+        "governance-playbook",
+        "model-risk",
+        "APRA",
+        "OCC",
+        "continuous-monitoring"
+      ],
+      "relevance": "A practitioner complement to academic frameworks. Provides the four-step operational structure that translates into consulting engagement methodology.",
+      "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p191",
+      "title": "Fortifying the Agentic Web: A Unified Zero-Trust Architecture for AI",
+      "authors": [
+        "Cloud Security Alliance"
+      ],
+      "year": 2025,
+      "source": "CSA",
+      "url": "https://cloudsecurityalliance.org/blog/2025/09/12/fortifying-the-agentic-web-a-unified-zero-trust-architecture-against-logic-layer-threats",
+      "analysis": "The CSA's September 2025 analysis of zero-trust architecture requirements for agentic AI systems identifies the fundamental security re-framing required by AI agents: traditional zero-trust assumes static identities and known attack surfaces, but agentic AI introduces dynamic identity (agents that adapt behaviour and capability), logic-layer threats (adversarial prompt injection, tool poisoning, goal hijacking), and behavioural drift that changes the attack surface continuously. The paper argues that trust in agentic AI cannot be established at session start and maintained — it must be continuously re-evaluated based on observed behaviour. This is the zero-trust principle ('never trust, always verify') applied at the cognitive rather than network layer. The CSA also references QSAF (Quantum-Safe mitigation Framework for cognitive degradation in agentic AI), acknowledging that cognitive degradation of agentic AI systems over time is a distinct security concern. The paper is important for the trust provenance question because it identifies that the 'identity' of an AI agent is not stable — it changes as the agent adapts, meaning any trust or certification anchored to a specific agent identity may become invalid as the agent evolves. This has direct implications for certification chains: a certification of an agentic AI system at deployment may not remain valid as the system adapts in production.",
+      "tags": [
+        "zero-trust",
+        "agentic-AI",
+        "security",
+        "cognitive-degradation",
+        "identity"
+      ],
+      "relevance": "Identifies the security architecture implications of agentic AI for trust certification. Critical for understanding why point-in-time certifications of adaptive agents are structurally limited.",
+      "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p192",
+      "title": "Trajectory-Based Liability: Regulating High-Capability Agentic AI in the 2026 Capability Frontier",
+      "authors": [
+        "J. Bommarito",
+        "et al."
+      ],
+      "year": 2026,
+      "source": "ResearchGate",
+      "url": "https://www.researchgate.net/publication/401409996_Trajectory-Based_Liability_Regulating_High-Capability_Agentic_AI_in_the_2026_Capability_Frontier",
+      "analysis": "The most significant legal development for agentic AI liability in 2026. The trajectory-based liability model departs from both the traditional negligence framework and the emerging product liability approaches by focusing on the full behavioural trajectory of an agentic AI system rather than individual output tokens. The core insight: agentic AI systems produce harm through accumulated trajectories of behaviour, not through discrete output events. A single database query is not harmful; a sequence of queries that gradually exfiltrates data is. Existing liability frameworks — which attach to individual actions or output states — cannot capture this trajectory-level harm pattern. The proposed framework requires: trajectory logging (agents must maintain comprehensive logs of all actions, decisions, and environmental interactions sufficient to reconstruct the full behavioural trajectory), trajectory analysis (regulators and courts can reconstruct whether the agent's trajectory stayed within permissible bounds), and trajectory-based standards of care (the applicable standard is not whether any individual action was acceptable but whether the overall trajectory was). The March 2026 update to the AI Liability Directive is cited as shifting the burden of proof for autonomous AI harm to deployers — meaning deployers must demonstrate their agentic systems did not produce harmful trajectories, reversing the traditional plaintiff burden. For financial services, this means trajectory logging infrastructure is becoming a legal necessity, not just a governance best practice.",
+      "tags": [
+        "liability",
+        "agentic-AI",
+        "trajectory-logging",
+        "regulation",
+        "tort-law"
+      ],
+      "relevance": "The emerging legal standard for agentic AI accountability. Trajectory-based liability is the most significant restructuring of AI accountability since the EU Product Liability Directive, with direct implications for financial services AI governance.",
+      "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p193",
+      "title": "CommBank Formalises Enterprise-Wide AI Governance as Adoption Accelerates",
+      "authors": [
+        "Commonwealth Bank of Australia"
+      ],
+      "year": 2025,
+      "source": "The Asian Banker",
+      "url": "https://www.theasianbanker.com/press-releases/commbank-formalises-enterprise-wide-ai-governance-as-adoption-accelerates",
+      "analysis": "Commonwealth Bank of Australia's December 2025 publication of its public AI approach report makes it the first Australian bank to formally articulate enterprise-wide AI governance at this level of detail. The report establishes a governance forum dedicated to AI risk framework development, a Group AI Policy with six principles (environmental and social, fairness, transparency, privacy and data protection, reliability and security, accountability), and toolkits and guardrails supporting teams across ideation, building, deployment, and management. Critically, CBA operationalises these principles: over 27,600 employees had completed its AI learning series by end of 2025; the bank processes more than 20 million payments daily with AI applied to fraud detection; 40,355 proactive warning alerts are sent per day on average via the CBA app; and customer fraud losses fell over 20% in H1 FY26 vs H1 FY25. The AI governance structure includes a dedicated forum overseeing AI risk framework development, and the bank partnered with Melbourne Business School on longitudinal research into Australian AI trust perceptions. The $0.9 billion FY25 investment in fraud, scam, and cyber protection demonstrates the scale of AI-enabled financial crime defence. This case study is directly relevant for Australian financial services AI trust consulting: CBA's approach demonstrates that formal governance structures at enterprise scale produce measurable outcomes, and that public transparency about AI governance approach is itself a trust-building mechanism.",
+      "tags": [
+        "CBA",
+        "Australia",
+        "financial-services",
+        "governance",
+        "AI-principles",
+        "enterprise"
+      ],
+      "relevance": "The primary Australian success case study. Demonstrates that formal enterprise-wide AI governance at a major financial institution produces measurable outcomes and that public transparency about governance is a competitive trust signal.",
+      "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p194",
+      "title": "Mastercard Completes Australia's First AI Agent Payment with CBA and Westpac",
+      "authors": [
+        "Mastercard"
+      ],
+      "year": 2026,
+      "source": "Finextra",
+      "url": "https://www.finextra.com/newsarticle/47209/mastercard-showcases-agentic-payments-in-australia-with-cba-and-westpac-onboard",
+      "analysis": "On January 28, 2026, Mastercard announced the successful completion of Australia's first authenticated agentic transactions in partnership with CBA and Westpac, using Mastercard's Agent Pay framework. This is the most concrete demonstration of enterprise agentic AI governance in the Australian financial services sector to date. Agent Pay provides the authentication and authorisation infrastructure that enables AI agents to execute financial transactions on behalf of customers, with explicit consent and identity verification at the initiation of the agent-customer relationship. The significance for AI trust research is threefold: first, it demonstrates that agentic AI governance is not purely theoretical — it is being deployed in production at the largest Australian financial institutions; second, the authentication architecture (Agent Pay) shows that trust in agentic transactions is being operationalised through identity and authorisation infrastructure rather than algorithmic transparency; third, the multi-bank participation (CBA + Westpac) suggests that AI agent transaction standards require ecosystem-level governance, not just individual firm-level controls. For the consulting practice, this case establishes that agentic AI governance is an active demand signal in Australian financial services, with specific requirements around transaction authentication, identity verification, and regulatory compliance for autonomous financial actions.",
+      "tags": [
+        "Mastercard",
+        "CBA",
+        "Westpac",
+        "agentic-AI",
+        "payments",
+        "Australia",
+        "Agent-Pay"
+      ],
+      "relevance": "The leading indicator of agentic AI deployment in Australian financial services. Agent Pay authentication framework provides the operational model for trust infrastructure in agentic financial transactions.",
+      "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p195",
+      "title": "Human–AI Handovers: A Dynamic Authority Reversal Framework for Trust Calibration and Transitional Accountability",
+      "authors": [
+        "J. H. Westover",
+        "et al."
+      ],
+      "year": 2026,
+      "source": "Preprints.org",
+      "url": "https://www.preprints.org/manuscript/202603.0390",
+      "analysis": "Westover et al. (2026) introduce the Dynamic Authority Reversal (DAR) framework — the most operationally complete solution to the 'meaningful human oversight at scale' problem currently available. The core argument: treating human-AI collaboration as a static role allocation problem (human decides, machine advises; or machine decides, human approves) fundamentally mischaracterises how authority actually operates in high-stakes human-AI workflows. Authority is dynamic — it shifts multiple times within a single decision episode, in response to real-time signals about data quality, contextual complexity, risk magnitude, and normative stakes. The DAR framework formalises four authority states: Human-Leader/AI-Follower (HL), AI-Leader/Human-Follower (AL), Co-Leadership (CO), and Mutual Override (MO). Transitions are governed by four trigger classes — data superiority, contextual judgment requirements, risk thresholds, and ethics overrides — stabilised by hysteresis bands (exit thresholds differ from entry thresholds to prevent oscillation) and safe-exit timers (maximum dwell time in AL state triggers mandatory human review). The most significant contribution is the Reversal Register: an auditable log binding each decision to its prevailing authority state, trigger conditions, and justificatory explanation. This transforms accountability from a static property (who signed off) to a dynamic property (which authority state produced each decision and why). The Therac-25 case study anchors the argument: operators had no mechanism to detect when the system entered an unsafe state, no signal prompting authority reassertion, and no protocol for intervention. EU AI Act Article 14's 'meaningful oversight' requirement is shown to be operationally undefined — the DAR framework provides the operational definition that Article 14 lacks.",
+      "tags": [
+        "HITL",
+        "authority",
+        "agentic-AI",
+        "accountability",
+        "governance",
+        "EU-AI-Act"
+      ],
+      "relevance": "The most operationally complete framework for making 'meaningful human oversight' of agentic AI specific and auditable. The Reversal Register and safe-exit timer provide the architectural components that convert aspirational regulatory language into engineering requirements.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p196",
+      "title": "Measuring Trust in Artificial Intelligence: Validation of the Trust in Automation Scale and Its Short Form",
+      "authors": [
+        "M. J. McGrath",
+        "et al."
+      ],
+      "year": 2025,
+      "source": "Frontiers in AI",
+      "url": "https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2025.1582880/full",
+      "analysis": "McGrath et al. (2025) provide the first comprehensive psychometric validation of the Trust in Automation Scale (TIAS) and introduce a 3-item Short TIAS (S-TIAS) that enables frequent, minimally disruptive trust measurement in organisational settings. Across five studies, the research establishes: (1) the 12-item TIAS is a valid and reliable measure of human trust in AI, sensitive to manipulations of system performance (high vs. low trustworthiness conditions produced significantly different trust scores across all AI application types); (2) machine trust propensity (MTP) is a significant predictor of AI trust under high-performance conditions but not low-performance conditions, suggesting that dispositional machine trust interacts with system performance in trust calibration; (3) human trust propensity (HTP) did not significantly predict AI trust, indicating that general human trust propensity is distinct from AI-specific trust; (4) TIAS scores significantly and independently predict behavioural intention to use AI beyond demographic variables and trust propensity measures; (5) the 3-item S-TIAS is a valid and reliable alternative to the full TIAS, enabling repeated measurement without disrupting human-AI interaction. The practical significance is considerable: organisations can now implement continuous trust calibration monitoring using a 3-item instrument, tracking whether user trust in deployed AI systems remains calibrated to actual system performance over time. Discrepancies between measured trust and objective system performance data indicate calibration problems requiring intervention. This provides the missing measurement link for CABCA-compliant trust monitoring.",
+      "tags": [
+        "trust-calibration",
+        "measurement",
+        "TIAS",
+        "trust-automation",
+        "organizational-AI"
+      ],
+      "relevance": "The validated measurement instrument for AI trust calibration in organisational settings. S-TIAS enables the continuous trust monitoring required by CABCA and the calibration measurement required by appropriate reliance frameworks.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p197",
+      "title": "Trust Behavior in AI Emerges from Distrust in Humans",
+      "authors": [
+        "J. S. Galindez-Acosta"
+      ],
+      "year": 2026,
+      "source": "ScienceDirect",
+      "url": "https://www.sciencedirect.com/science/article/pii/S2451958826000989",
+      "analysis": "Galindez-Acosta (2026) reports a counterintuitive and potentially important empirical finding: greater general technology use is negatively associated with trust in AI, suggesting that increased familiarity enables better calibration of expectations rather than increased trust. This runs counter to the common assumption that AI familiarity through regular use increases trust. The finding implies that trust calibration — not trust level — is the appropriate target construct: as users become more familiar with AI capabilities through use, they become better calibrated to AI's actual performance, which may either increase or decrease trust depending on whether the system's actual performance meets initial expectations. This finding is consistent with Lugato and Floridi's appropriate reliance framework (p166), which identifies calibration as the central mechanism linking system performance to trust outcomes. The negative association between technology use and AI trust also has implications for the automation complacency thesis: if anything, increased exposure to AI appears to produce scepticism rather than complacency in this sample, suggesting that the automation complacency effect may be context-dependent rather than universal.",
+      "tags": [
+        "trust-calibration",
+        "automation-bias",
+        "human-AI-trust"
+      ],
+      "relevance": "Provides empirical support for the calibration-not-level thesis in AI trust. Suggests that trust education and exposure to AI capabilities may be more valuable than trust-building exercises that aim to increase overall trust levels.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p198",
+      "title": "Trust Formation, Error Impact, and Repair in Human–AI Collaboration: A Temporal Trust Dynamics Framework",
+      "authors": [
+        "J. Han"
+      ],
+      "year": 2025,
+      "source": "MDPI",
+      "url": "https://www.mdpi.com/2076-328X/15/10/1370",
+      "analysis": "Han (2025) proposes a temporal trust dynamics framework that models how trust in AI systems forms, degrades, and repairs over time. The framework identifies three phases: formation (trust develops through accuracy cues — the AI system's consistent correct performance builds initial trust), single-error shock (a significant error produces a disproportionate trust decline, consistent with loss aversion in trust literature), and post-error repair (trust repair following errors is slower and requires more consistent performance than initial trust formation). This temporal structure has significant implications for AI governance: trust is not a stable property of the human-AI relationship but a dynamic variable that changes with each significant interaction. For CABCA and continuous monitoring frameworks, this means trust calibration must be tracked longitudinally, not just at deployment. The finding that post-error trust repair is asymmetric with initial trust formation — requiring more consistent performance to repair than was needed to establish — suggests that preventing trust-damaging errors may be more efficient than attempting to repair trust after failures. This has direct implications for AI system design: systems should be designed to prevent catastrophic trust-damaging errors rather than relying on post-hoc trust repair mechanisms.",
+      "tags": [
+        "trust-calibration",
+        "temporal-dynamics",
+        "trust-repair",
+        "human-AI"
+      ],
+      "relevance": "The temporal trust dynamics framework extends McGrath's measurement approach by identifying the specific mechanisms by which trust changes over time. Critical for designing trust monitoring programmes that respond to actual trust dynamics rather than treating trust as static.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p199",
+      "title": "ETSI TS 104 008: Interesting Work, But Not a Harmonised Standard",
+      "authors": [
+        "A. Smith"
+      ],
+      "year": 2026,
+      "source": "Adam Leon Smith / Substack",
+      "url": "https://adamleonsmith.substack.com/p/etsi-ts-104-008-interesting-work",
+      "analysis": "Adam Leon Smith's critical analysis of ETSI TS 104 008 (CABCA) provides the essential caveat that the ETSI press release omits: TS 104 008 is a Technical Specification, not a Harmonised Standard under the EU AI Act. This distinction matters significantly. A Harmonised Standard offers a presumption of conformity — if an AI system complies with a harmonised standard, it is presumed to comply with the relevant EU AI Act essential requirements. A Technical Specification does not carry this presumption. Organisations implementing TS 104 008 get the methodology benefits of CABCA but no legal presumption of conformity. Smith notes that TS 104 008 is still valuable as an implementation methodology — it provides the most concrete available guidance on how to operationalise continuous conformity assessment for AI systems — but it should not be relied upon as a standalone compliance strategy. The path to genuine EU AI Act conformity for high-risk AI systems will require harmonised standards published under the standardisation mandate, which are still under development. In the interim, TS 104 008 provides the best available operational blueprint for organisations that want to get ahead of the August 2026 enforcement date.",
+      "tags": [
+        "EU-AI-Act",
+        "ETSI",
+        "CABCA",
+        "conformity-assessment",
+        "harmonised-standard"
+      ],
+      "relevance": "The critical legal caveat for CABCA implementation. Organisations should adopt CABCA methodology as best practice but must await harmonised standards for presumptive EU AI Act conformity. This distinction shapes how CABCA evidence should be communicated to regulators.",
+      "dateRead": "2026-04-10"
+    },
+    {
+      "id": "p200",
+      "title": "Informing the EU AI Act Conformity Assessment Requirements",
+      "authors": [
+        "OpenLayer"
+      ],
+      "year": 2026,
+      "source": "OpenLayer",
+      "url": "https://www.openlayer.com/blog/post/eu-ai-act-conformity-assessment-requirements-process-guide",
+      "analysis": "OpenLayer's April 2026 guide to EU AI Act conformity assessment requirements provides the most current practical summary of the conformity assessment landscape. Key elements: (1) self-assessment vs. third-party assessment pathways — high-risk AI system providers can conduct self-assessment for most use cases, but third-party assessment is required for AI systems used in real-time biometric identification, critical infrastructure, education and vocational training, employment and worker management, essential services, law enforcement, migration and border management, and administration of justice; (2) documentation requirements — Article 11 requires technical documentation including description of the AI system, design choices, training data characteristics, validation and testing procedures, and post-market monitoring plans; (3) the August 2026 enforcement deadline — the EU AI Act's provisions apply from 2 August 2026, after which non-compliance carries the full penalty regime (up to 3% of global annual turnover or €15M for most violations, up to 6% or €30M for violations involving prohibited practices); (4) conformity assessment process: establish the AI system's risk classification, determine applicable requirements, prepare technical documentation, implement post-market monitoring system, issue EU declaration of conformity, affix CE marking. For Australian financial services firms with EU market presence, the August 2026 deadline makes EU AI Act compliance a material legal risk requiring immediate governance attention.",
+      "tags": [
+        "EU-AI-Act",
+        "conformity-assessment",
+        "CE-marking",
+        "high-risk",
+        "documentation"
+      ],
+      "relevance": "The practical compliance timeline and pathway summary. The August 2026 enforcement date makes this essential reference material for any financial services firm with EU market presence.",
+      "dateRead": "2026-04-10"
     }
   ],
-  "total": 191
+  "total": 220
 }
