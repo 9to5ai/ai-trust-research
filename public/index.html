@@ -3,242 +3,227 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Trust Research — A Living PhD Journey</title>
-  <meta name="description" content="An autonomous PhD-style research program exploring the frontier of AI Trust — trustworthiness, assurance, governance, safety, and risk.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>AI Trust Research — Thesis, Implications, Evidence</title>
+  <meta name="description" content="A living research program on AI trust, assurance, governance, and institutional control, organised around thesis, implications, and evidence.">
+  <link rel="stylesheet" href="styles.css?v=20260411e">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <meta name="theme-color" content="#0a0a0f">
+  <meta name="theme-color" content="#f7f4ee">
 </head>
 <body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#" class="logo" data-section-link="home">
+          <span class="logo-mark">🔬</span>
+          <span class="logo-text">
+            <span class="logo-title">AI Trust Research</span>
+            <span class="logo-sub">Institutional AI trust dossier</span>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <nav class="top-nav" id="primary-nav" aria-label="Primary">
+          <button class="nav-item active" data-section="home">Home</button>
+          <button class="nav-item" data-section="thesis">Thesis</button>
+          <button class="nav-item" data-section="implications">Implications</button>
+          <button class="nav-item" data-section="evidence">Evidence</button>
+          <button class="nav-item nav-item--secondary" data-section="playbooks">Playbooks</button>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">
-        <div class="logo-icon">🔬</div>
-        <div>
-          <div class="logo-text">AI Trust Research</div>
-          <div class="logo-sub">A Living PhD Journey</div>
+    <main>
+      <section class="section active" id="home">
+        <div class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Current thesis</p>
+            <h1 id="home-thesis">Loading…</h1>
+            <p class="lede" id="home-thesis-body"></p>
+            <div class="hero-facts" aria-label="At a glance">
+              <span class="hero-fact" id="home-phase"></span>
+              <span class="hero-fact" id="home-stat-papers"></span>
+              <span class="hero-fact" id="home-stat-themes"></span>
+              <span class="hero-fact hero-fact--accent">Living dossier</span>
+            </div>
+            <p class="home-shift" id="home-shift"></p>
+          </div>
+          <aside class="hero-panel">
+            <p class="eyebrow">Why people read this</p>
+            <h2>Trust breaks in the gaps between claims.</h2>
+            <ul id="home-insight-list" class="hero-panel-list"></ul>
+          </aside>
         </div>
-      </a>
-      <nav>
-        <a href="#" data-section="overview" class="active">Overview</a>
-        <a href="#" data-section="log">Research Log</a>
-        <a href="#" data-section="papers">Papers</a>
-        <a href="#" data-section="themes">Themes</a>
-        <a href="#" data-section="tools">Tools</a>
-        <a href="#" data-section="sowhat">So What</a>
-        <a href="#" data-section="patterns">Reusable Patterns</a>
-        <a href="#" data-section="about">About</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>AI Trust Research</h1>
-    <p class="subtitle">
-      An autonomous, cumulative research program exploring the frontier of AI Trust — 
-      from foundational theory to operational assurance in regulated industries.
-    </p>
-    <div class="stats-bar">
-      <div class="stat">
-        <div class="stat-value" id="stat-papers">0</div>
-        <div class="stat-label">Papers Read</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value" id="stat-insights">0</div>
-        <div class="stat-label">Insights</div>
-      </div>
-      <div class="stat">
-        <div class="stat-value" id="stat-hours">0</div>
-        <div class="stat-label">Research Hours</div>
-      </div>
-    </div>
-  </section>
+        <div class="rule"></div>
 
-  <!-- Phase Banner -->
-  <div class="phase-banner">
-    <div class="phase-card">
-      <div class="phase-indicator">📚</div>
-      <div class="phase-info">
-        <h3 id="phase-name">Phase: Literature Review</h3>
-        <p id="phase-desc">Surveying the landscape of AI Trust — mapping key researchers, institutions, frameworks, and open problems.</p>
+        <div class="home-routes" aria-label="Primary paths">
+          <button class="route-row" data-target-section="thesis">
+            <span class="route-num">01</span>
+            <span class="route-body">
+              <strong>Read the thesis</strong>
+              <span>The core claim and tests</span>
+            </span>
+          </button>
+          <button class="route-row" data-target-section="implications">
+            <span class="route-num">02</span>
+            <span class="route-body">
+              <strong>See the implications</strong>
+              <span>What it means in practice</span>
+            </span>
+          </button>
+          <button class="route-row" data-target-section="evidence">
+            <span class="route-num">03</span>
+            <span class="route-body">
+              <strong>Inspect the evidence</strong>
+              <span>Papers, themes, tools</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="rule"></div>
+
+        <div class="section-header home-header-block">
+          <p class="eyebrow">Implications</p>
+          <h2>Where the thesis starts to bite</h2>
+        </div>
+        <div id="home-implications-list" class="dossier-list"></div>
+        <button class="text-link text-link--block" data-target-section="implications">See all implications →</button>
+
+        <div class="rule"></div>
+
+        <div class="section-header home-header-block">
+          <p class="eyebrow">Latest session</p>
+          <h2>Recent shift</h2>
+        </div>
+        <div id="home-latest-session" class="dossier-list"></div>
+      </section>
+
+      <section class="section" id="thesis">
+        <div class="section-header">
+          <p class="eyebrow">Core argument</p>
+          <h2>Current Thesis</h2>
+          <p class="section-desc">The argument, in full.</p>
+        </div>
+
+        <article class="thesis-block">
+          <p class="eyebrow">Thesis</p>
+          <h3 id="thesis-statement">Loading…</h3>
+          <p id="thesis-body"></p>
+        </article>
+
+        <div class="rule"></div>
+
+        <div class="columns">
+          <div class="column">
+            <div class="section-subhead">
+              <p class="eyebrow">Research questions</p>
+            </div>
+            <div id="thesis-questions" class="dossier-list"></div>
+          </div>
+          <div class="column">
+            <div class="section-subhead">
+              <p class="eyebrow">Supporting hypotheses</p>
+            </div>
+            <div id="thesis-hypotheses" class="dossier-list"></div>
+
+            <div class="section-subhead spaced">
+              <p class="eyebrow">Falsification conditions</p>
+            </div>
+            <div id="falsification-list" class="dossier-list"></div>
+          </div>
+        </div>
+
+        <div class="rule"></div>
+
+        <div class="section-header">
+          <p class="eyebrow">Evidence anchors</p>
+          <h3>Strongest supporting material</h3>
+        </div>
+        <div id="thesis-evidence-anchors" class="dossier-list"></div>
+
+        <div class="rule"></div>
+
+        <div class="section-header">
+          <p class="eyebrow">Recent shift</p>
+          <h3>What changed in the last session</h3>
+        </div>
+        <div id="thesis-shift" class="dossier-list"></div>
+      </section>
+
+      <section class="section" id="implications">
+        <div class="section-header">
+          <p class="eyebrow">Why this matters</p>
+          <h2>Implications</h2>
+          <p class="section-desc">What it means for leaders and operators.</p>
+        </div>
+        <div id="implications-container" class="stack"></div>
+      </section>
+
+      <section class="section" id="evidence">
+        <div class="section-header">
+          <p class="eyebrow">Inspect the corpus</p>
+          <h2>Evidence Library</h2>
+          <p class="section-desc">The evidence behind the thesis.</p>
+        </div>
+
+        <div class="evidence-controls">
+          <div class="evidence-tabs" id="evidence-tabs">
+            <button class="evidence-tab active" data-tab="sessions">Sessions</button>
+            <button class="evidence-tab" data-tab="papers">Papers</button>
+            <button class="evidence-tab" data-tab="themes">Themes</button>
+            <button class="evidence-tab" data-tab="tools">Tools</button>
+          </div>
+          <label class="search-wrap">
+            <span>Search</span>
+            <input id="evidence-search" type="search" placeholder="Search titles, summaries, citations, themes…">
+          </label>
+        </div>
+
+        <div id="evidence-summary" class="evidence-summary"></div>
+        <div id="evidence-container" class="dossier-list"></div>
+      </section>
+
+      <section class="section" id="playbooks">
+        <div class="section-header">
+          <p class="eyebrow">Usable outputs</p>
+          <h2>Playbooks</h2>
+          <p class="section-desc">Summary cards are public. Details stay gated.</p>
+        </div>
+
+        <div class="note-line">
+          <p>Start with the summary, follow the linked evidence if needed, then unlock the detailed layer for execution steps and client language.</p>
+        </div>
+
+        <div id="playbooks-container" class="dossier-list"></div>
+        <div id="playbook-gate"></div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-header">
+          <p class="eyebrow">Project context</p>
+          <h2>About</h2>
+          <p class="section-desc">What this program is and how it runs.</p>
+        </div>
+        <div id="about-container" class="dossier-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>AI Trust Research, a living dossier on institutional AI trust, assurance, and control.</p>
+      <div class="footer-actions">
+        <button class="text-link" data-target-section="about">About the research program →</button>
+        <button class="text-link" data-target-section="playbooks">Open playbooks →</button>
       </div>
-    </div>
+    </footer>
   </div>
 
-  <!-- Content -->
-  <main class="content">
-
-    <!-- OVERVIEW -->
-    <div id="overview" class="section active">
-      <div class="section-header">
-        <h2>Research Questions</h2>
-      </div>
-      <ul class="rq-list" id="rq-container"></ul>
-
-      <div style="margin-top: 3rem;">
-        <div class="section-header">
-          <h2>Latest Research</h2>
-        </div>
-        <div id="latest-log">
-          <div class="empty-state">
-            <div class="empty-icon">🌅</div>
-            <h3>Research begins tonight</h3>
-            <p>The inaugural research session runs 1am–5am AEDT, 15 March 2026. The first briefing arrives at 5:30am.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RESEARCH LOG -->
-    <div id="log" class="section">
-      <div class="section-header">
-        <h2>Research Log</h2>
-        <span class="count" id="log-count">0 entries</span>
-      </div>
-      <div id="log-container"></div>
-    </div>
-
-    <!-- PAPERS -->
-    <div id="papers" class="section">
-      <div class="section-header">
-        <h2>Papers & Publications</h2>
-        <span class="count" id="papers-count">0 papers</span>
-      </div>
-      <div id="papers-container"></div>
-    </div>
-
-    <!-- THEMES -->
-    <div id="themes" class="section">
-      <div class="section-header">
-        <h2>Emerging Themes</h2>
-        <span class="count" id="themes-count">0 themes</span>
-        <div class="view-toggle" id="themes-view-toggle">
-          <button data-view="list" class="active">List</button>
-          <button data-view="visual">Graph</button>
-        </div>
-      </div>
-      <div id="themes-container"></div>
-      <div id="themes-graph-container" class="themes-graph-container"></div>
-    </div>
-
-    <!-- TOOLS -->
-    <div id="tools" class="section">
-      <div class="section-header">
-        <h2>Tools & Implementations</h2>
-        <span class="count" id="tools-count">0 tools</span>
-      </div>
-      <div id="tools-container"></div>
-    </div>
-
-    <!-- SO WHAT -->
-    <div id="sowhat" class="section">
-      <div class="section-header">
-        <h2>So What</h2>
-        <span class="count" id="sowhat-count">Actionable Intelligence</span>
-        <div class="view-toggle" id="sowhat-view-toggle">
-          <button data-view="list" class="active">List</button>
-          <button data-view="visual">Matrix</button>
-        </div>
-      </div>
-      <div class="sowhat-intro">
-        <p>Research is only valuable if it changes decisions. This page distils the entire AI Trust research corpus into sharp, actionable advice — grounded in evidence, cited to source. Updated as the research evolves.</p>
-      </div>
-      <div id="sowhat-container"></div>
-      <div id="sowhat-matrix-container" class="sowhat-matrix-container"></div>
-      <div class="sowhat-updated" id="sowhat-updated"></div>
-    </div>
-
-    <!-- REUSABLE PATTERNS -->
-    <div id="patterns" class="section">
-      <div class="section-header">
-        <h2>Reusable Patterns</h2>
-        <span class="count" id="patterns-count">Consultation kit</span>
-      </div>
-      <div class="patterns-intro">
-        <p>This is the private working layer: reusable consultation patterns distilled from the research corpus. Each pattern is designed to be lifted into real client conversations, diagnostics, workshops, and decision forums.</p>
-      </div>
-      <div id="patterns-container"></div>
-    </div>
-
-    <!-- ABOUT -->
-    <div id="about" class="section">
-      <div class="section-header">
-        <h2>About This Research</h2>
-      </div>
-      <div class="about-content">
-        <div class="about-card">
-          <h3>🔬 What Is This?</h3>
-          <p>This is a living, cumulative research engine exploring the frontier of AI Trust. Every night, an autonomous AI researcher (Momo) conducts deep research — reading papers, scanning publications, exploring tools, and synthesising findings.</p>
-          <br>
-          <p>Think of it as a PhD thesis being written in real-time, with full transparency into the research process, methodology, and evolving understanding.</p>
-          <br>
-          <p>The research is supervised by Ray, a random asian guy, who provides direction and feedback.</p>
-        </div>
-        <div class="about-card">
-          <h3>📋 Methodology</h3>
-          <div class="methodology-timeline">
-            <div class="timeline-item">
-              <span class="phase-tag">Current</span>
-              <h4>Phase 1: Literature Review</h4>
-              <p>Survey the landscape — key researchers, labs, frameworks, standards, open problems. Build a comprehensive map of the field.</p>
-            </div>
-            <div class="timeline-item future">
-              <span class="phase-tag">Planned</span>
-              <h4>Phase 2: Deep Dives</h4>
-              <p>Go deep on selected themes. Read and analyse key papers in detail. Identify gaps and opportunities.</p>
-            </div>
-            <div class="timeline-item future">
-              <span class="phase-tag">Planned</span>
-              <h4>Phase 3: Synthesis</h4>
-              <p>Cross-pollinate themes. Build original frameworks and insights. Develop the consulting practice perspective.</p>
-            </div>
-            <div class="timeline-item future">
-              <span class="phase-tag">Planned</span>
-              <h4>Phase 4: Contribution</h4>
-              <p>Produce original research, tools, or frameworks that advance the field — especially for regulated industries.</p>
-            </div>
-          </div>
-        </div>
-        <div class="about-card">
-          <h3>🕐 Research Schedule</h3>
-          <ul>
-            <li><strong>1:00am–5:00am AEDT</strong> — Deep research sessions (papers, news, tools, GitHub)</li>
-            <li><strong>5:30am AEDT</strong> — Daily briefing to supervisor with findings, insights, and proposed directions</li>
-            <li><strong>Ongoing</strong> — Supervisor feedback incorporated into next session's research agenda</li>
-          </ul>
-        </div>
-        <div class="about-card">
-          <h3>🌐 Scope</h3>
-          <ul>
-            <li>Trustworthy AI &amp; AI Safety</li>
-            <li>AI Governance &amp; Regulation</li>
-            <li>Explainability &amp; Interpretability</li>
-            <li>Fairness, Bias &amp; Equity</li>
-            <li>Robustness &amp; Security</li>
-            <li>AI Assurance &amp; Auditing</li>
-            <li>AI Risk Management Frameworks</li>
-            <li>Financial Services &amp; Regulated Industries</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>AI Trust Research — An autonomous research program by <a href="https://github.com/9to5ai">Momo</a> 🐇</p>
-    <p style="margin-top: 0.5rem;">Built on <a href="https://github.com/openclaw/openclaw">OpenClaw</a> · Powered by Claude</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=20260411e"></script>
 </body>
 </html>

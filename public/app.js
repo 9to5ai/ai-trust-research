@@ -1,17 +1,59 @@
-// AI Trust Research — App
-(async function() {
-  const dataDir = './data';
-  const PATTERNS_STORAGE_KEY = 'aiTrustReusablePatternsUnlocked';
-  const PATTERNS_PASSWORD_HASH = '85eb26be04b0ff35fc873c8c45b9f8d5b4b8060d9df83f8da3c287a4b030c50c';
-  let patternsData = null;
+(async function () {
+  const DATA_DIR = './data';
+  const PLAYBOOKS_STORAGE_KEY = 'aiTrustReusablePatternsUnlocked';
+  const PLAYBOOKS_PASSWORD_HASH = '85eb26be04b0ff35fc873c8c45b9f8d5b4b8060d9df83f8da3c287a4b030c50c';
 
-  // Load all data
+  const state = {
+    activeSection: 'home',
+    activeEvidenceTab: 'sessions',
+    evidenceQuery: '',
+    playbooksUnlocked: localStorage.getItem(PLAYBOOKS_STORAGE_KEY) === '1',
+    data: null,
+  };
+
+  function $(id) {
+    return document.getElementById(id);
+  }
+
+  function toArray(value) {
+    return Array.isArray(value) ? value : [];
+  }
+
+  function escapeHTML(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function slugify(value) {
+    return String(value || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/(^-|-$)/g, '') || 'item';
+  }
+
+  function truncate(text, max = 220) {
+    const clean = String(text || '').trim();
+    if (clean.length <= max) return clean;
+    return clean.slice(0, max).replace(/\s+\S*$/, '') + '…';
+  }
+
+  function firstSentence(text) {
+    const clean = String(text || '').trim();
+    const match = clean.match(/^(.+?[.!?])\s/);
+    return match ? match[1] : clean;
+  }
+
   async function loadJSON(file) {
     try {
-      const res = await fetch(`${dataDir}/${file}?t=${Date.now()}`);
+      const res = await fetch(`${DATA_DIR}/${file}?t=${Date.now()}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.json();
-    } catch(e) {
-      console.warn(`Failed to load ${file}:`, e);
+    } catch (error) {
+      console.warn(`Failed to load ${file}`, error);
       return null;
     }
   }
@@ -19,899 +61,667 @@
   async function sha256Hex(text) {
     const bytes = new TextEncoder().encode(text);
     const digest = await crypto.subtle.digest('SHA-256', bytes);
-    return Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, '0')).join('');
+    return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, '0')).join('');
   }
 
-  function patternsUnlocked() {
-    return localStorage.getItem(PATTERNS_STORAGE_KEY) === '1';
+  function formatDate(dateString) {
+    if (!dateString) return 'Undated';
+    const date = new Date(`${dateString}T00:00:00`);
+    if (Number.isNaN(date.getTime())) return dateString;
+    return date.toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' });
   }
 
-  async function ensurePatternsData() {
-    if (!patternsData) patternsData = await loadJSON('reusable-patterns.json');
-    return patternsData;
+  function friendlyAudienceTitle(section) {
+    return String(section.title || section.id || 'Audience').replace(/^For\s+/i, '').trim();
   }
 
-  const [meta, logData, papersData, themesData, toolsData, sowhatData] = await Promise.all([
-    loadJSON('meta.json'),
-    loadJSON('research-log.json'),
-    loadJSON('papers.json'),
-    loadJSON('themes.json'),
-    loadJSON('tools.json'),
-    loadJSON('sowhat.json'),
-  ]);
-
-  // --- Determine latest session date for NEW badges ---
-  const logEntries = (logData?.entries || []).sort((a, b) => b.date.localeCompare(a.date));
-  const latestSessionDate = logEntries.length > 0 ? logEntries[0].date : null;
-
-  // === SHARED HELPERS (must be before render calls) ===
-  const _paperMap = {};
-  (papersData?.papers || []).forEach(p => { _paperMap[p.id] = p; });
-
-  function paperLink(pidOrTitle, opts = {}) {
-    const p = _paperMap[pidOrTitle];
-    if (p) {
-      const title = opts.short && p.title.length > 60 ? p.title.substring(0, 57) + '...' : p.title;
-      const label = opts.showYear !== false ? `${title} (${p.year || ''})` : title;
-      return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="paper-link" title="${p.title}">${label}</a>`;
-    }
-    const match = (papersData?.papers || []).find(pp =>
-      pidOrTitle.toLowerCase().includes(pp.title.toLowerCase().substring(0, 30)) ||
-      pp.title.toLowerCase().includes(pidOrTitle.toLowerCase().substring(0, 30))
-    );
-    if (match && match.url) {
-      return `<a href="${match.url}" target="_blank" rel="noopener" class="paper-link" title="${match.title}">${pidOrTitle}</a>`;
-    }
-    return pidOrTitle;
+  function urgencyClass(value) {
+    if (value === 'act-now') return 'urgency act-now';
+    if (value === 'watch') return 'urgency watch';
+    return 'urgency build';
   }
 
-  // --- Stats ---
-  document.getElementById('stat-papers').textContent = meta?.stats?.totalPapers || 0;
-  document.getElementById('stat-insights').textContent = meta?.stats?.totalThemes || 0;
-  document.getElementById('stat-hours').textContent = meta?.stats?.totalResearchHours || 0;
-  // --- Phase ---
-  const phase = meta?.currentPhase || 'Initialising';
-  document.getElementById('phase-name').textContent = phase.startsWith('Phase') ? phase : `Phase: ${phase}`;
-  document.getElementById('phase-desc').textContent = meta?.phaseDescription || '';
-
-  // --- Navigation ---
-  const navLinks = document.querySelectorAll('nav a');
-  const sections = document.querySelectorAll('.section');
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', async (e) => {
-      e.preventDefault();
-      const target = link.dataset.section;
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      sections.forEach(s => {
-        s.classList.toggle('active', s.id === target);
-      });
-      if (target === 'patterns') {
-        await showPatterns();
-      }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-
-  // --- Latest Research (overview) ---
-  renderLatestLog(logData);
-
-  // --- Research Log ---
-  renderLog(logData);
-
-  // --- Papers ---
-  renderPapers(papersData, latestSessionDate);
-
-  // --- Themes ---
-  renderThemes(themesData, latestSessionDate);
-
-  // --- Tools ---
-  renderTools(toolsData, latestSessionDate);
-
-  // --- Research Questions ---
-  renderRQ(meta);
-
-  // --- So What ---
-  renderSoWhat(sowhatData, papersData, themesData);
-
-  // --- Visual Views (lazy-rendered when toggled visible) ---
-  let themesGraphRendered = false;
-  let sowhatMatrixRendered = false;
-
-  function ensureThemesGraph() {
-    if (!themesGraphRendered) {
-      themesGraphRendered = true;
-      // Ensure container is momentarily visible so D3 can measure
-      const c = document.getElementById('themes-graph-container');
-      if (c) {
-        c.style.visibility = 'hidden';
-        c.classList.add('active');
-        renderThemesGraph(themesData, papersData);
-        c.style.visibility = '';
-      }
-    }
+  function urgencyLabel(value) {
+    if (value === 'act-now') return 'Act now';
+    if (value === 'watch') return 'Watch';
+    return 'Build';
   }
 
-  function ensureSoWhatMatrix() {
-    if (!sowhatMatrixRendered) {
-      sowhatMatrixRendered = true;
-      renderSoWhatMatrix(sowhatData, papersData, themesData);
-    }
-  }
-
-  initViewToggles(ensureThemesGraph, ensureSoWhatMatrix);
-
-  // === RENDER FUNCTIONS ===
-
-  function renderLatestLog(data) {
-    const container = document.getElementById('latest-log');
-    if (!container) return;
-    const entries = (data?.entries || []).sort((a, b) => b.date.localeCompare(a.date));
-    if (entries.length === 0) return; // keep placeholder
-
-    const entry = entries[0];
-    container.innerHTML = `
-      <div class="log-entry">
-        <div class="log-date">
-          ${entry.date}
-          <span class="session-tag">${entry.sessionType || 'Research Session'}</span>
-          ${entry.duration ? `<span class="session-tag">${entry.duration}</span>` : ''}
-        </div>
-        <h3>${entry.title}</h3>
-        <div class="summary">${entry.summary}</div>
-      </div>`;
-  }
-
-  function renderLog(data) {
-    const container = document.getElementById('log-container');
-    const entries = data?.entries || [];
-    document.getElementById('log-count').textContent = `${entries.length} entries`;
-
-    if (entries.length === 0) {
-      container.innerHTML = `
-        <div class="empty-state">
-          <div class="empty-icon">📖</div>
-          <h3>Research begins tonight</h3>
-          <p>The first research session runs 1am–5am AEDT. Check back tomorrow morning for the inaugural entry.</p>
-        </div>`;
-      return;
-    }
-
-    container.innerHTML = entries.sort((a, b) => b.date.localeCompare(a.date)).map(entry => `
-      <div class="log-entry">
-        <div class="log-date">
-          ${entry.date}
-          <span class="session-tag">${entry.sessionType || 'Research Session'}</span>
-          ${entry.duration ? `<span class="session-tag">${entry.duration}</span>` : ''}
-        </div>
-        <h3>${entry.title}</h3>
-        <div class="summary">${entry.summary}</div>
-        ${renderSubsections(entry.sections || [])}
-      </div>
-    `).join('');
-  }
-
-  function renderSubsections(sections) {
-    return sections.map(s => `
-      <div class="log-subsection">
-        <h4>${s.title}</h4>
-        <ul>${(s.items || []).map(i => `<li>${i}</li>`).join('')}</ul>
-      </div>
-    `).join('');
-  }
-
-  function renderPapers(data, latestDate) {
-    const container = document.getElementById('papers-container');
-    const papers = data?.papers || [];
-    document.getElementById('papers-count').textContent = `${papers.length} papers`;
-
-    if (papers.length === 0) {
-      container.innerHTML = `
-        <div class="empty-state">
-          <div class="empty-icon">📄</div>
-          <h3>No papers yet</h3>
-          <p>Papers will be analysed and annotated here as research progresses.</p>
-        </div>`;
-      return;
-    }
-
-    container.innerHTML = papers.sort((a, b) => (b.dateRead || '').localeCompare(a.dateRead || '')).map(p => {
-      const isNew = latestDate && p.dateRead === latestDate;
-      return `
-      <div class="paper-card${isNew ? ' is-new' : ''}">
-        <div class="paper-meta">
-          <span class="paper-year">${p.year || 'N/A'}</span>
-          <span class="paper-source">${p.source || ''}</span>
-          ${p.dateRead ? `<span class="paper-source">Read: ${p.dateRead}</span>` : ''}
-          ${isNew ? '<span class="new-badge">NEW</span>' : ''}
-        </div>
-        <h3>${p.url ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>` : p.title}</h3>
-        <div class="paper-authors">${p.authors || ''}</div>
-        <div class="paper-analysis">${p.analysis || p.abstract || ''}</div>
-        <div class="paper-tags">
-          ${(p.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}
-          ${p.relevance ? `<span class="tag tag-primary">${p.relevance}</span>` : ''}
-        </div>
-      </div>`;
-    }).join('');
-  }
-
-  function renderThemes(data, latestDate) {
-    const container = document.getElementById('themes-container');
-    const themes = data?.themes || [];
-    document.getElementById('themes-count').textContent = `${themes.length} themes`;
-
-    if (themes.length === 0) {
-      container.innerHTML = `
-        <div class="empty-state">
-          <div class="empty-icon">🧬</div>
-          <h3>Themes emerging</h3>
-          <p>As research progresses, recurring themes and patterns will be identified and tracked here.</p>
-        </div>`;
-      return;
-    }
-
-    container.innerHTML = themes.map(t => {
-      const isNew = latestDate && (t.dateAdded === latestDate || t.lastUpdated === latestDate);
-      return `
-      <div class="theme-card${isNew ? ' is-new' : ''}">
-        <div class="theme-header">
-          <div class="theme-icon" style="background:${t.color || 'var(--accent-soft)'}">${t.icon || '🔍'}</div>
-          <h3>${t.title || t.name}${isNew ? ' <span class="new-badge">NEW</span>' : ''}</h3>
-        </div>
-        <div class="description">${t.description || ''}</div>
-        ${t.keyQuestions ? `
-          <div class="key-questions">
-            <h4>Key Questions</h4>
-            <ul class="rq-list">${t.keyQuestions.map((q, i) => `
-              <li><span class="rq-number">${i + 1}</span>${q}</li>
-            `).join('')}</ul>
-          </div>` : ''}
-        ${t.keyPapers ? `
-          <div class="log-subsection" style="margin-top:1rem">
-            <h4>Key Papers</h4>
-            <ul>${t.keyPapers.map(p => `<li>${paperLink(p)}</li>`).join('')}</ul>
-          </div>` : ''}
-        ${!t.keyPapers && t.relatedPapers && t.relatedPapers.length ? `
-          <div class="theme-papers" style="margin-top:1rem">
-            <div class="sowhat-citations">
-              ${t.relatedPapers.map(pid => {
-                const p = _paperMap[pid];
-                if (!p) return '';
-                return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${p.title}">${p.title.length > 55 ? p.title.substring(0, 52) + '...' : p.title}</a>`;
-              }).join('')}
-            </div>
-          </div>` : ''}
-      </div>`;
-    }).join('');
-  }
-
-  function renderTools(data, latestDate) {
-    const container = document.getElementById('tools-container');
-    const tools = data?.tools || [];
-    document.getElementById('tools-count').textContent = `${tools.length} tools`;
-
-    if (tools.length === 0) {
-      container.innerHTML = `
-        <div class="empty-state">
-          <div class="empty-icon">🔧</div>
-          <h3>Tools landscape</h3>
-          <p>AI trust tools, frameworks, and implementations will be catalogued here.</p>
-        </div>`;
-      return;
-    }
-
-    container.innerHTML = tools.map(t => {
-      const isNew = latestDate && (t.dateAdded === latestDate || t.lastUpdated === latestDate);
-      return `
-      <div class="tool-card${isNew ? ' is-new' : ''}">
-        <div class="tool-icon">${t.icon || '🛠'}</div>
-        <div class="tool-info">
-          <h3>${t.url ? `<a href="${t.url}" target="_blank" rel="noopener">${t.name}</a>` : t.name}${isNew ? ' <span class="new-badge">NEW</span>' : ''}</h3>
-          <div class="tool-desc">${t.description || ''}</div>
-          ${t.tags ? `<div class="paper-tags" style="margin-top:0.75rem">${t.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
-        </div>
-      </div>`;
-    }).join('');
-  }
-
-  function renderRQ(meta) {
-    const container = document.getElementById('rq-container');
-    const questions = meta?.researchQuestions || [];
-
-    if (questions.length === 0) return;
-
-    container.innerHTML = questions.map((q, i) => `
-      <li><span class="rq-number">RQ${i + 1}</span>${q}</li>
-    `).join('');
-  }
-
-  function renderSoWhat(data, papersData, themesData) {
-    const container = document.getElementById('sowhat-container');
-    const updatedEl = document.getElementById('sowhat-updated');
-    if (!container) return;
-
-    const sections = data?.sections || [];
-    if (sections.length === 0) {
-      container.innerHTML = `
-        <div class="empty-state">
-          <div class="empty-icon">🎯</div>
-          <h3>Coming soon</h3>
-          <p>Actionable insights will appear here as the research corpus grows.</p>
-        </div>`;
-      return;
-    }
-
-    const paperMap = {};
-    (papersData?.papers || []).forEach(p => { paperMap[p.id] = p; });
-    const themeMap = {};
-    (themesData?.themes || []).forEach(t => { themeMap[t.id] = t; });
-
-    const urgencyLabel = {
-      'act-now': '🔴 Act Now',
-      'watch': '🟡 Watch',
-      'awareness': '🟢 Awareness'
+  function buildMaps(data) {
+    return {
+      paperMap: Object.fromEntries(data.papers.map((item) => [item.id, item])),
+      themeMap: Object.fromEntries(data.themes.map((item) => [item.id, item])),
+      toolMap: Object.fromEntries(data.tools.map((item) => [item.id, item])),
+      playbookMap: Object.fromEntries(data.playbooks.map((item) => [item.id, item])),
     };
+  }
 
-    const totalAdvice = sections.reduce((sum, s) => sum + (s.advice?.length || 0), 0);
-    document.getElementById('sowhat-count').textContent = `${totalAdvice} recommendations`;
+  function normalizeLog(entries) {
+    return toArray(entries)
+      .map((entry, index) => ({
+        raw: entry,
+        id: entry.id || `session-${entry.date || 'undated'}-${index + 1}`,
+        date: entry.date || '',
+        title: entry.title || entry.session || entry.sessionTitle || `Research Session ${index + 1}`,
+        summary: entry.summary || '',
+        sessionType: entry.sessionType || '',
+        duration: entry.duration || '',
+        researchQuestions: toArray(entry.researchQuestions),
+        sections: toArray(entry.sections || entry.subsections),
+        papersRead: toArray(entry.papersRead || entry.sourcesRead),
+        themesAdded: toArray(entry.themesAdded),
+        toolsAdded: toArray(entry.toolsAdded),
+        adviceAdded: entry.adviceAdded || {},
+      }))
+      .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  }
 
-    container.innerHTML = sections.map(section => `
-      <div class="sowhat-section">
-        <div class="sowhat-section-header">
-          <span class="sowhat-icon">${section.icon || '📌'}</span>
+  function getCurrentThesis(meta, latestSession) {
+    return {
+      statement: 'AI trust is a system of evidence, not a model property.',
+      body: latestSession?.summary
+        ? firstSentence(latestSession.summary)
+        : 'It only holds when provenance, oversight, and monitoring hold.',
+      hypotheses: [
+        {
+          title: 'Claims can certify once',
+          body: 'Some properties are fixed enough to check at a point in time.',
+        },
+        {
+          title: 'Behaviour drifts after deployment',
+          body: 'Once the system enters the real world, context and workflow change the result.',
+        },
+        {
+          title: 'Trust belongs to the institution',
+          body: 'The model matters, but the evidence chain carries the real burden.',
+        },
+      ],
+      falsifiers: [
+        'If monitoring never changes the conclusion, the drift thesis is weak.',
+        'If human review scales cleanly, the oversight argument gets stronger.',
+        'If provenance does not matter, the evidence chain is too heavy.',
+      ],
+    };
+  }
+
+  function renderHome(data, thesis) {
+    const latest = data.latestSession;
+    const implicationSections = toArray(data.sowhat.sections).slice(0, 2);
+
+    $('home-thesis').textContent = thesis.statement;
+    $('home-thesis-body').textContent = 'A living program for institutions that need proof, not posture.';
+    $('home-phase').textContent = data.meta.currentPhase || 'Current phase';
+    $('home-stat-papers').textContent = `${data.meta.stats?.totalPapers || 0} papers`;
+    $('home-stat-themes').textContent = `${data.meta.stats?.totalThemes || 0} themes`;
+    $('home-shift').textContent = latest ? `Latest session · ${firstSentence(latest.summary)}` : thesis.body;
+
+    $('home-insight-list').innerHTML = thesis.hypotheses.slice(0, 3).map((item) => `
+      <li>
+        <strong>${escapeHTML(item.title)}</strong>
+        <span>${escapeHTML(item.body)}</span>
+      </li>
+    `).join('');
+
+    $('home-implications-list').innerHTML = implicationSections.map((section) => {
+      const advice = toArray(section.advice)[0];
+      return `
+        <article class="flat-item">
+          <div class="card-kicker">${escapeHTML(friendlyAudienceTitle(section))}</div>
+          <h3>${escapeHTML(advice?.headline || section.title)}</h3>
+          <p>${escapeHTML(truncate(firstSentence(advice?.body || section.intro || ''), 140))}</p>
+          <div class="item-links">
+            <button class="text-link" data-target-section="implications" data-target-anchor="audience-${slugify(section.id || section.title)}">Open audience view →</button>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    $('home-latest-session').innerHTML = latest ? `
+      <article class="flat-item">
+        <div class="session-meta-line">
+          <span>${escapeHTML(formatDate(latest.date))}</span>
+          ${latest.sessionType ? `<span class="tag">${escapeHTML(latest.sessionType)}</span>` : ''}
+          ${latest.duration ? `<span class="tag">${escapeHTML(latest.duration)}</span>` : ''}
+        </div>
+        <h3>${escapeHTML(latest.title)}</h3>
+        <p>${escapeHTML(truncate(firstSentence(latest.summary), 170))}</p>
+        <div class="item-links">
+          <button class="text-link" data-target-section="thesis">Read the thesis →</button>
+          <button class="text-link" data-target-section="evidence" data-target-tab="sessions" data-target-anchor="session-${escapeHTML(latest.id)}">Open session evidence →</button>
+        </div>
+      </article>
+    ` : '<div class="empty-state">No session data found.</div>';
+  }
+
+  function renderThesis(thesis, data) {
+    $('thesis-statement').textContent = thesis.statement;
+    $('thesis-body').textContent = thesis.body;
+
+    const questions = data.latestSession?.researchQuestions?.length ? data.latestSession.researchQuestions : toArray(data.meta.researchQuestions);
+    $('thesis-questions').innerHTML = questions.map((question) => `
+      <article class="flat-item">
+        <p>${escapeHTML(question)}</p>
+      </article>
+    `).join('');
+
+    $('thesis-hypotheses').innerHTML = thesis.hypotheses.map((item) => `
+      <article class="flat-item">
+        <h4>${escapeHTML(item.title)}</h4>
+        <p>${escapeHTML(item.body)}</p>
+      </article>
+    `).join('');
+
+    $('falsification-list').innerHTML = thesis.falsifiers.map((item) => `
+      <article class="flat-item">
+        <p>${escapeHTML(item)}</p>
+      </article>
+    `).join('');
+
+    const latest = data.latestSession;
+    const anchors = [
+      ...toArray(latest?.papersRead).slice(0, 3).map((id) => ({ type: 'paper', item: data.maps.paperMap[id] })),
+      ...toArray(latest?.themesAdded).slice(0, 2).map((id) => ({ type: 'theme', item: data.maps.themeMap[id] })),
+      ...toArray(latest?.toolsAdded).slice(0, 2).map((id) => ({ type: 'tool', item: data.maps.toolMap[id] })),
+    ].filter((entry) => entry.item);
+
+    $('thesis-evidence-anchors').innerHTML = anchors.length ? anchors.map(({ type, item }) => {
+      const title = type === 'paper' ? item.title : item.name;
+      const summary = type === 'paper' ? item.summary : item.description || item.implications;
+      const tab = type === 'paper' ? 'papers' : type === 'theme' ? 'themes' : 'tools';
+      return `
+        <article class="evidence-row">
+          <div class="card-kicker">${escapeHTML(type)}</div>
+          <h3>${escapeHTML(title)}</h3>
+          <p>${escapeHTML(truncate(summary || '', 200))}</p>
+          <div class="item-links">
+            <button class="text-link" data-target-section="evidence" data-target-tab="${tab}" data-target-anchor="${type}-${escapeHTML(item.id)}">Open in evidence →</button>
+          </div>
+        </article>
+      `;
+    }).join('') : '<div class="empty-state">No evidence anchors available.</div>';
+
+    $('thesis-shift').innerHTML = latest ? `
+      <article class="flat-item">
+        <div class="session-meta-line">
+          <span>${escapeHTML(formatDate(latest.date))}</span>
+          ${latest.sessionType ? `<span class="tag">${escapeHTML(latest.sessionType)}</span>` : ''}
+        </div>
+        <h3>${escapeHTML(latest.title)}</h3>
+        <p>${escapeHTML(truncate(firstSentence(latest.summary), 220))}</p>
+        <div class="item-links">
+          <button class="text-link" data-target-section="evidence" data-target-tab="sessions" data-target-anchor="session-${escapeHTML(latest.id)}">Open source session →</button>
+        </div>
+      </article>
+    ` : '<div class="empty-state">No latest session found.</div>';
+  }
+
+  function renderImplicationCard(item, maps) {
+    const paperLinks = toArray(item.citations).map((id) => maps.paperMap[id]).filter(Boolean).slice(0, 4);
+    const themeLinks = toArray(item.themes).map((id) => maps.themeMap[id]).filter(Boolean).slice(0, 3);
+
+    return `
+      <article class="implication-item">
+        <div class="item-title-row">
           <div>
-            <h3>${section.title}</h3>
-            <p class="sowhat-section-intro">${section.intro}</p>
+            <h4>${escapeHTML(item.headline)}</h4>
+            <div class="badge-row">
+              <span class="${urgencyClass(item.urgency)}">${escapeHTML(urgencyLabel(item.urgency))}</span>
+            </div>
           </div>
         </div>
-        <div class="sowhat-cards">
-          ${(section.advice || []).map(item => `
-            <div class="sowhat-card urgency-${item.urgency || 'watch'}">
-              <div class="sowhat-card-header">
-                <span class="urgency-badge ${item.urgency || 'watch'}">${urgencyLabel[item.urgency] || '🟡 Watch'}</span>
-              </div>
-              <h4>${item.headline}</h4>
-              <p>${item.body}</p>
-              ${item.prompt ? `
-              <div class="sowhat-prompt">
-                <div class="prompt-label">💬 Reflect</div>
-                <p class="prompt-text">${item.prompt}</p>
-              </div>` : ''}
-              <div class="sowhat-citations">
-                ${(item.citations || []).map(cid => {
-                  const p = _paperMap[cid];
-                  if (!p) return '';
-                  return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${p.title}">${p.title.length > 60 ? p.title.substring(0, 57) + '...' : p.title} (${p.year || ''})</a>`;
-                }).join('')}
-              </div>
-              ${(item.themes || []).length > 0 ? `
-                <div class="sowhat-themes">
-                  ${item.themes.map(tid => {
-                    const theme = themeMap[tid];
-                    return theme ? `<span class="tag">${theme.title || theme.name}</span>` : '';
-                  }).join('')}
-                </div>` : ''}
+        <p>${escapeHTML(item.body)}</p>
+        ${item.prompt ? `
+          <details class="mini-details">
+            <summary class="mini-summary"><span>Why this matters in practice</span></summary>
+            <p>${escapeHTML(item.prompt)}</p>
+          </details>
+        ` : ''}
+        <div class="item-links">
+          ${paperLinks.map((paper) => `<button class="link-chip" data-target-section="evidence" data-target-tab="papers" data-target-anchor="paper-${escapeHTML(paper.id)}">${escapeHTML(paper.id)}</button>`).join('')}
+          ${themeLinks.map((theme) => `<button class="link-chip" data-target-section="evidence" data-target-tab="themes" data-target-anchor="theme-${escapeHTML(theme.id)}">${escapeHTML(theme.id)}</button>`).join('')}
+        </div>
+      </article>
+    `;
+  }
+
+  function renderImplications(sections, maps) {
+    $('implications-container').innerHTML = sections.map((section) => {
+      const advice = toArray(section.advice);
+      const primary = advice.slice(0, 2);
+      const secondary = advice.slice(2);
+      const audienceId = `audience-${slugify(section.id || section.title)}`;
+
+      return `
+        <article class="implication-group" id="${audienceId}">
+          <div class="implication-group-header">
+            <div>
+              <div class="card-kicker">${escapeHTML(friendlyAudienceTitle(section))}</div>
+              <h3>${escapeHTML(section.title)}</h3>
             </div>
+            <button class="text-link" data-target-section="evidence" data-target-tab="themes">Open supporting themes →</button>
+          </div>
+          <p class="implication-group-intro">${escapeHTML(section.intro || '')}</p>
+          <div class="dossier-list">
+            ${primary.map((item) => renderImplicationCard(item, maps)).join('')}
+          </div>
+          ${secondary.length ? `
+            <details class="details-block">
+              <summary class="details-summary"><span>See ${secondary.length} more recommendations</span></summary>
+              <div class="dossier-list">
+                ${secondary.map((item) => renderImplicationCard(item, maps)).join('')}
+              </div>
+            </details>
+          ` : ''}
+        </article>
+      `;
+    }).join('');
+  }
+
+  function getEvidenceDataset(tab) {
+    if (tab === 'papers') return state.data.papers.map((item) => ({ kind: 'paper', item }));
+    if (tab === 'themes') return state.data.themes.map((item) => ({ kind: 'theme', item }));
+    if (tab === 'tools') return state.data.tools.map((item) => ({ kind: 'tool', item }));
+    return state.data.sessions.map((item) => ({ kind: 'session', item }));
+  }
+
+  function searchEvidenceItem(entry, query) {
+    const { kind, item } = entry;
+    const haystack = [];
+
+    if (kind === 'session') {
+      haystack.push(item.title, item.summary, item.date, ...item.researchQuestions, ...item.papersRead, ...item.themesAdded, ...item.toolsAdded);
+      item.sections.forEach((section) => {
+        haystack.push(section.title, ...(Array.isArray(section.items) ? section.items : []), section.body);
+      });
+    }
+
+    if (kind === 'paper') {
+      haystack.push(item.id, item.title, item.summary, item.authors, item.date, item.relevance, item.type);
+    }
+
+    if (kind === 'theme') {
+      haystack.push(item.id, item.name, item.description, item.implications, ...(item.papers || []));
+    }
+
+    if (kind === 'tool') {
+      haystack.push(item.id, item.name, item.description, item.source, item.type, item.applicability, item.maturity);
+    }
+
+    return haystack.filter(Boolean).join(' ').toLowerCase().includes(query);
+  }
+
+  function renderEvidence() {
+    const query = state.evidenceQuery.trim().toLowerCase();
+    const dataset = getEvidenceDataset(state.activeEvidenceTab);
+    const filtered = query ? dataset.filter((item) => searchEvidenceItem(item, query)) : dataset;
+
+    document.querySelectorAll('.evidence-tab').forEach((button) => {
+      button.classList.toggle('active', button.dataset.tab === state.activeEvidenceTab);
+    });
+
+    $('evidence-summary').innerHTML = `${filtered.length} ${state.activeEvidenceTab} shown${query ? ` for <span class="mono">${escapeHTML(query)}</span>` : ''}`;
+    $('evidence-container').innerHTML = filtered.length
+      ? filtered.map((entry) => renderEvidenceItem(entry)).join('')
+      : '<div class="empty-state">No entries matched that search.</div>';
+  }
+
+  function renderEvidenceItem(entry) {
+    const { kind, item } = entry;
+    if (kind === 'session') return renderSessionItem(item);
+    if (kind === 'paper') return renderPaperItem(item);
+    if (kind === 'theme') return renderThemeItem(item);
+    return renderToolItem(item);
+  }
+
+  function renderSessionItem(item) {
+    const questionBlock = item.researchQuestions.length ? `
+      <details class="details-block">
+        <summary class="details-summary"><span>Research questions addressed</span></summary>
+        <ul class="bullet-list">${item.researchQuestions.map((question) => `<li>${escapeHTML(question)}</li>`).join('')}</ul>
+      </details>
+    ` : '';
+
+    const sectionBlock = item.sections.length ? `
+      <details class="details-block">
+        <summary class="details-summary"><span>Open session notes</span></summary>
+        <div class="dossier-list">
+          ${item.sections.map((section) => `
+            <article class="evidence-row">
+              <h4>${escapeHTML(section.title || 'Session block')}</h4>
+              ${Array.isArray(section.items) && section.items.length ? `<ul class="bullet-list">${section.items.map((line) => `<li>${escapeHTML(line)}</li>`).join('')}</ul>` : section.body ? `<p>${escapeHTML(section.body)}</p>` : ''}
+            </article>
           `).join('')}
         </div>
-      </div>
-    `).join('');
+      </details>
+    ` : '';
 
-    if (updatedEl && data?.lastUpdated) {
-      updatedEl.textContent = `Last updated: ${data.lastUpdated}`;
-    }
+    return `
+      <article class="evidence-row" id="session-${escapeHTML(item.id)}">
+        <div class="session-meta-line">
+          <span>${escapeHTML(formatDate(item.date))}</span>
+          ${item.sessionType ? `<span class="tag">${escapeHTML(item.sessionType)}</span>` : ''}
+          ${item.duration ? `<span class="tag">${escapeHTML(item.duration)}</span>` : ''}
+        </div>
+        <div class="item-title-row">
+          <div>
+            <h3>${escapeHTML(item.title)}</h3>
+            <p>${escapeHTML(truncate(item.summary, 340))}</p>
+          </div>
+        </div>
+        <div class="badge-row">
+          ${item.papersRead.length ? `<span class="badge">${item.papersRead.length} papers</span>` : ''}
+          ${item.themesAdded.length ? `<span class="badge">${item.themesAdded.length} themes</span>` : ''}
+          ${item.toolsAdded.length ? `<span class="badge">${item.toolsAdded.length} tools</span>` : ''}
+        </div>
+        ${questionBlock}
+        ${sectionBlock}
+        <div class="item-links">
+          ${item.papersRead.slice(0, 4).map((id) => `<button class="link-chip" data-target-section="evidence" data-target-tab="papers" data-target-anchor="paper-${escapeHTML(id)}">${escapeHTML(id)}</button>`).join('')}
+          ${item.themesAdded.slice(0, 4).map((id) => `<button class="link-chip" data-target-section="evidence" data-target-tab="themes" data-target-anchor="theme-${escapeHTML(id)}">${escapeHTML(id)}</button>`).join('')}
+          ${item.toolsAdded.slice(0, 3).map((id) => `<button class="link-chip" data-target-section="evidence" data-target-tab="tools" data-target-anchor="tool-${escapeHTML(id)}">${escapeHTML(id)}</button>`).join('')}
+        </div>
+      </article>
+    `;
   }
 
-  async function showPatterns() {
-    const container = document.getElementById('patterns-container');
-    const countEl = document.getElementById('patterns-count');
-    if (!container) return;
+  function renderPaperItem(item) {
+    return `
+      <article class="evidence-row" id="paper-${escapeHTML(item.id)}">
+        <div class="item-topline">
+          <span>${escapeHTML(item.id)}</span>
+          ${item.date ? `<span>${escapeHTML(item.date)}</span>` : ''}
+          ${item.type ? `<span class="type-pill">${escapeHTML(item.type)}</span>` : ''}
+          ${item.relevance ? `<span class="tag">${escapeHTML(item.relevance)}</span>` : ''}
+        </div>
+        <div class="item-title-row">
+          <div>
+            <h3>${escapeHTML(item.title)}</h3>
+            <p>${escapeHTML(item.authors || '')}</p>
+          </div>
+        </div>
+        <p>${escapeHTML(item.summary || '')}</p>
+        <div class="item-links">
+          ${item.url ? `<a class="text-link" href="${escapeHTML(item.url)}" target="_blank" rel="noopener">Open source →</a>` : ''}
+        </div>
+      </article>
+    `;
+  }
 
-    if (!patternsUnlocked()) {
-      countEl.textContent = 'Private';
-      container.innerHTML = `
-        <div class="pattern-gate">
-          <div class="pattern-gate-badge">Private consultation layer</div>
-          <h3>Reusable Patterns is lightly protected</h3>
-          <p>This tab contains consultation-grade patterns that are meant for direct client use. Enter the password to unlock it on this browser.</p>
-          <form id="patterns-gate-form" class="pattern-gate-form">
-            <input id="patterns-password" type="password" placeholder="Enter password" autocomplete="current-password" />
-            <button type="submit">Unlock</button>
-          </form>
-          <div id="patterns-gate-error" class="pattern-gate-error"></div>
-          <div class="pattern-gate-note">Light privacy only — enough to keep this layer out of casual view.</div>
-        </div>`;
+  function renderThemeItem(item) {
+    return `
+      <article class="evidence-row" id="theme-${escapeHTML(item.id)}">
+        <div class="item-topline">
+          <span>${escapeHTML(item.id)}</span>
+          ${item.dateAdded ? `<span>${escapeHTML(formatDate(item.dateAdded))}</span>` : ''}
+        </div>
+        <div class="item-title-row">
+          <div>
+            <h3>${escapeHTML(item.name)}</h3>
+          </div>
+        </div>
+        <p>${escapeHTML(item.description || '')}</p>
+        ${item.implications ? `<details class="details-block"><summary class="details-summary"><span>Implications</span></summary><p>${escapeHTML(item.implications)}</p></details>` : ''}
+        <div class="item-links">
+          ${toArray(item.papers).slice(0, 5).map((id) => `<button class="link-chip" data-target-section="evidence" data-target-tab="papers" data-target-anchor="paper-${escapeHTML(id)}">${escapeHTML(id)}</button>`).join('')}
+        </div>
+      </article>
+    `;
+  }
 
-      const form = document.getElementById('patterns-gate-form');
-      form?.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const input = document.getElementById('patterns-password');
-        const error = document.getElementById('patterns-gate-error');
-        const value = input?.value || '';
-        const hash = await sha256Hex(value);
-        if (hash === PATTERNS_PASSWORD_HASH) {
-          localStorage.setItem(PATTERNS_STORAGE_KEY, '1');
-          await showPatterns();
-        } else {
-          error.textContent = 'Wrong password.';
-        }
+  function renderToolItem(item) {
+    return `
+      <article class="evidence-row" id="tool-${escapeHTML(item.id)}">
+        <div class="item-topline">
+          <span>${escapeHTML(item.id)}</span>
+          ${item.type ? `<span class="type-pill">${escapeHTML(item.type)}</span>` : ''}
+          ${item.source ? `<span>${escapeHTML(item.source)}</span>` : ''}
+        </div>
+        <div class="item-title-row">
+          <div>
+            <h3>${escapeHTML(item.name)}</h3>
+          </div>
+        </div>
+        <p>${escapeHTML(item.description || '')}</p>
+        <div class="badge-row">
+          ${item.maturity ? `<span class="badge">${escapeHTML(item.maturity)}</span>` : ''}
+          ${item.applicability ? `<span class="badge">${escapeHTML(truncate(item.applicability, 120))}</span>` : ''}
+        </div>
+        <div class="item-links">
+          ${item.url ? `<a class="text-link" href="${escapeHTML(item.url)}" target="_blank" rel="noopener">Open source →</a>` : ''}
+        </div>
+      </article>
+    `;
+  }
+
+  function renderPlaybooks(playbooks) {
+    $('playbooks-container').innerHTML = playbooks.map((item) => `
+      <article class="playbook-item" id="playbook-${escapeHTML(item.id)}">
+        <div class="playbook-topline">
+          <span class="type-pill">${escapeHTML(item.category || 'Pattern')}</span>
+          <span class="tag">${escapeHTML(item.reusability || 'usable')}</span>
+        </div>
+        <h3>${escapeHTML(item.title)}</h3>
+        <p>${escapeHTML(item.summary || '')}</p>
+        ${toArray(item.whenToUse).length ? `<details class="details-block"><summary class="details-summary"><span>When to use it</span></summary><ul class="bullet-list">${toArray(item.whenToUse).slice(0, 3).map((line) => `<li>${escapeHTML(line)}</li>`).join('')}</ul></details>` : ''}
+        <div class="item-links">
+          ${toArray(item.evidencePapers).slice(0, 4).map((id) => `<button class="link-chip" data-target-section="evidence" data-target-tab="papers" data-target-anchor="paper-${escapeHTML(id)}">${escapeHTML(id)}</button>`).join('')}
+          ${toArray(item.themes).slice(0, 3).map((id) => `<button class="link-chip" data-target-section="evidence" data-target-tab="themes" data-target-anchor="theme-${escapeHTML(id)}">${escapeHTML(id)}</button>`).join('')}
+        </div>
+        ${state.playbooksUnlocked ? `
+          <details class="details-block" open>
+            <summary class="details-summary"><span>Detailed runbook</span></summary>
+            ${toArray(item.howToRun).length ? `<div><p class="card-kicker">How to run</p><ul class="bullet-list">${toArray(item.howToRun).map((line) => `<li>${escapeHTML(line)}</li>`).join('')}</ul></div>` : ''}
+            ${toArray(item.outputs).length ? `<div><p class="card-kicker">Outputs</p><ul class="bullet-list">${toArray(item.outputs).map((line) => `<li>${escapeHTML(line)}</li>`).join('')}</ul></div>` : ''}
+            ${toArray(item.clientLines).length ? `<div><p class="card-kicker">Client lines</p><ul class="bullet-list">${toArray(item.clientLines).map((line) => `<li>${escapeHTML(line)}</li>`).join('')}</ul></div>` : ''}
+            ${toArray(item.watchouts).length ? `<div><p class="card-kicker">Watchouts</p><ul class="bullet-list">${toArray(item.watchouts).map((line) => `<li>${escapeHTML(line)}</li>`).join('')}</ul></div>` : ''}
+          </details>
+        ` : ''}
+      </article>
+    `).join('');
+
+    renderPlaybookGate();
+  }
+
+  function renderPlaybookGate() {
+    const gate = $('playbook-gate');
+    if (state.playbooksUnlocked) {
+      gate.innerHTML = `
+        <div class="gate-panel">
+          <p class="card-kicker">Detailed consultation kit</p>
+          <p>The detailed runbook layer is visible above. You can lock it again on this browser if you want summary-only mode.</p>
+          <div class="gate-form">
+            <button class="gate-secondary" id="lock-playbooks">Lock detailed layer</button>
+          </div>
+        </div>
+      `;
+      $('lock-playbooks')?.addEventListener('click', () => {
+        state.playbooksUnlocked = false;
+        localStorage.removeItem(PLAYBOOKS_STORAGE_KEY);
+        renderPlaybooks(state.data.playbooks);
       });
       return;
     }
 
-    const data = await ensurePatternsData();
-    const patterns = data?.patterns || [];
-    countEl.textContent = `${patterns.length} patterns`;
-
-    container.innerHTML = `
-      <div class="patterns-toolbar">
-        <div class="patterns-toolbar-copy">Built for live consultations, workshops, diagnostic interviews, and executive conversations.</div>
-        <button id="patterns-lock" class="patterns-lock-btn">Lock tab</button>
+    gate.innerHTML = `
+      <div class="gate-panel">
+        <p class="card-kicker">Detailed consultation kit</p>
+        <p>Summary cards stay public. Detailed facilitation steps, outputs, client lines, and watchouts stay behind a password.</p>
+        <form class="gate-form" id="playbook-gate-form">
+          <input class="gate-input" id="playbook-password" type="password" autocomplete="current-password" placeholder="Enter password">
+          <button class="gate-button" type="submit">Unlock</button>
+        </form>
+        <div class="gate-error" id="playbook-gate-error"></div>
       </div>
-      <div class="patterns-grid">
-        ${patterns.map(pattern => `
-          <article class="pattern-card">
-            <div class="pattern-card-top">
-              <span class="pattern-category">${pattern.category}</span>
-              <span class="pattern-reuse ${String(pattern.reusability || 'high').replace(/\s+/g, '-').toLowerCase()}">${pattern.reusability || 'high'}</span>
-            </div>
-            <h3>${pattern.title}</h3>
-            <p class="pattern-summary">${pattern.summary}</p>
+    `;
 
-            <div class="pattern-block">
-              <h4>When to use</h4>
-              <ul>${(pattern.whenToUse || []).map(x => `<li>${x}</li>`).join('')}</ul>
-            </div>
-
-            <div class="pattern-block">
-              <h4>How to run it</h4>
-              <ol>${(pattern.howToRun || []).map(x => `<li>${x}</li>`).join('')}</ol>
-            </div>
-
-            <div class="pattern-block">
-              <h4>Useful lines</h4>
-              <div class="pattern-lines">${(pattern.clientLines || []).map(x => `<blockquote>${x}</blockquote>`).join('')}</div>
-            </div>
-
-            <div class="pattern-meta-grid">
-              <div class="pattern-block">
-                <h4>Outputs</h4>
-                <ul>${(pattern.outputs || []).map(x => `<li>${x}</li>`).join('')}</ul>
-              </div>
-              <div class="pattern-block">
-                <h4>Watchouts</h4>
-                <ul>${(pattern.watchouts || []).map(x => `<li>${x}</li>`).join('')}</ul>
-              </div>
-            </div>
-
-            <div class="pattern-footer">
-              <div class="pattern-tags">
-                ${(pattern.themes || []).map(tid => {
-                  const theme = (themesData?.themes || []).find(t => t.id === tid);
-                  return `<span class="tag">${theme?.name || theme?.title || tid}</span>`;
-                }).join('')}
-              </div>
-              <div class="sowhat-citations">
-                ${(pattern.evidencePapers || []).map(pid => {
-                  const p = _paperMap[pid];
-                  if (!p) return `<span class="citation-link">${pid}</span>`;
-                  return `<a href="${p.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${p.title}">${pid}</a>`;
-                }).join('')}
-              </div>
-            </div>
-          </article>
-        `).join('')}
-      </div>`;
-
-    document.getElementById('patterns-lock')?.addEventListener('click', () => {
-      localStorage.removeItem(PATTERNS_STORAGE_KEY);
-      showPatterns();
+    $('playbook-gate-form')?.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const password = $('playbook-password').value;
+      const hash = await sha256Hex(password);
+      if (hash === PLAYBOOKS_PASSWORD_HASH) {
+        state.playbooksUnlocked = true;
+        localStorage.setItem(PLAYBOOKS_STORAGE_KEY, '1');
+        renderPlaybooks(state.data.playbooks);
+      } else {
+        $('playbook-gate-error').textContent = 'Wrong password.';
+      }
     });
   }
 
-  // === THEMES NETWORK GRAPH ===
-  function renderThemesGraph(data, papersData) {
-    const container = document.getElementById('themes-graph-container');
-    if (!container) return;
-    const themes = data?.themes || [];
-    if (themes.length === 0) return;
+  function renderAbout(data) {
+    $('about-container').innerHTML = `
+      <article class="about-item">
+        <p class="card-kicker">What this is</p>
+        <p>A living research program on AI trust, assurance, governance, and accountability, aimed at building evidence that serious institutions can actually defend in practice.</p>
+      </article>
+      <article class="about-item">
+        <p class="card-kicker">How it runs</p>
+        <ul class="about-list">
+          <li>Nightly research sessions pull in papers, standards, tools, and case studies.</li>
+          <li>Findings become themes, implications, and reusable patterns.</li>
+          <li>The site is updated as a living thesis, not a static archive.</li>
+        </ul>
+      </article>
+      <article class="about-item">
+        <p class="card-kicker">Current phase</p>
+        <p>${escapeHTML(data.meta.currentPhase || 'Current phase')}</p>
+        <p>${escapeHTML(data.meta.phaseDescription || '')}</p>
+      </article>
+      <article class="about-item">
+        <p class="card-kicker">Supervisor direction</p>
+        <p>${escapeHTML(data.meta.supervisorFeedback?.feedback || 'No supervisor note available.')}</p>
+      </article>
+      <article class="about-item">
+        <p class="card-kicker">Scope</p>
+        <ul class="about-list">
+          <li>Trust provenance, certification chains, and proxy failure.</li>
+          <li>Meaningful human control for agentic and high-scale systems.</li>
+          <li>Liability design, monitoring architecture, and institutional accountability.</li>
+          <li>Operational assurance for financial services and other regulated contexts.</li>
+        </ul>
+      </article>
+      <article class="about-item">
+        <p class="card-kicker">Next phase goals</p>
+        <ul class="about-list">${toArray(data.meta.nextPhaseGoals).map((goal) => `<li>${escapeHTML(goal)}</li>`).join('')}</ul>
+      </article>
+    `;
+  }
 
-    const confidenceColor = {
-      'very high': '#4ade80',
-      'high': '#60a5fa',
-      'medium-high': '#a78bfa',
-      'medium': '#fbbf24',
-      'low': '#f87171'
+  function setMobileNav(open) {
+    document.body.classList.toggle('nav-open', open);
+    const toggle = document.querySelector('.nav-toggle');
+    if (toggle) toggle.setAttribute('aria-expanded', String(open));
+  }
+
+  function closeMobileNav() {
+    setMobileNav(false);
+  }
+
+  function setActiveSection(sectionId, options = {}) {
+    state.activeSection = sectionId;
+    document.querySelectorAll('.nav-item').forEach((button) => {
+      button.classList.toggle('active', button.dataset.section === sectionId);
+    });
+    document.querySelectorAll('.section').forEach((section) => {
+      section.classList.toggle('active', section.id === sectionId);
+    });
+
+    if (options.tab) {
+      state.activeEvidenceTab = options.tab;
+      renderEvidence();
+    }
+
+    if (!options.skipScroll) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    closeMobileNav();
+
+    if (options.anchorId) {
+      setTimeout(() => {
+        document.getElementById(options.anchorId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  }
+
+  function bindInteractions() {
+    document.querySelector('.nav-toggle')?.addEventListener('click', () => {
+      const isOpen = document.body.classList.contains('nav-open');
+      setMobileNav(!isOpen);
+    });
+
+    document.querySelectorAll('.nav-item').forEach((button) => {
+      button.addEventListener('click', () => setActiveSection(button.dataset.section));
+    });
+
+    document.querySelectorAll('[data-section-link]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        setActiveSection(link.dataset.sectionLink || 'home');
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-target-section]');
+      if (!button) return;
+      setActiveSection(button.dataset.targetSection, {
+        tab: button.dataset.targetTab,
+        anchorId: button.dataset.targetAnchor || null,
+      });
+    });
+
+    document.querySelectorAll('.evidence-tab').forEach((button) => {
+      button.addEventListener('click', () => {
+        state.activeEvidenceTab = button.dataset.tab;
+        renderEvidence();
+      });
+    });
+
+    $('evidence-search')?.addEventListener('input', (event) => {
+      state.evidenceQuery = event.target.value || '';
+      renderEvidence();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 980) closeMobileNav();
+    });
+  }
+
+  async function init() {
+    const [meta, logData, papersData, themesData, toolsData, sowhatData, playbookData] = await Promise.all([
+      loadJSON('meta.json'),
+      loadJSON('research-log.json'),
+      loadJSON('papers.json'),
+      loadJSON('themes.json'),
+      loadJSON('tools.json'),
+      loadJSON('sowhat.json'),
+      loadJSON('reusable-patterns.json'),
+    ]);
+
+    const data = {
+      meta: meta || {},
+      sessions: normalizeLog(logData?.entries || []),
+      papers: toArray(papersData?.papers),
+      themes: toArray(themesData?.themes),
+      tools: toArray(toolsData?.tools),
+      sowhat: sowhatData || { sections: [] },
+      playbooks: toArray(playbookData?.patterns),
     };
 
-    // Build nodes
-    const nodes = themes.map(t => ({
-      id: t.id,
-      name: t.name || t.title,
-      description: t.description || '',
-      evidence: t.evidence || [],
-      implications: t.implications || '',
-      keyQuestions: t.keyQuestions || [],
-      relatedPapers: t.relatedPapers || [],
-      confidence: t.confidence || 'medium',
-      radius: Math.max(12, Math.min(40, 8 + (t.relatedPapers || []).length * 4)),
-      color: confidenceColor[t.confidence] || '#fbbf24'
-    }));
+    data.latestSession = data.sessions[0] || { papersRead: [], themesAdded: [], toolsAdded: [], researchQuestions: [] };
+    data.maps = buildMaps(data);
+    state.data = data;
 
-    // Build edges — themes connected when they share relatedPapers
-    const links = [];
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const shared = nodes[i].relatedPapers.filter(p => nodes[j].relatedPapers.includes(p));
-        if (shared.length > 0) {
-          links.push({ source: nodes[i].id, target: nodes[j].id, weight: shared.length });
-        }
-      }
-    }
+    const thesis = getCurrentThesis(data.meta, data.latestSession);
 
-    // Build graph HTML
-    container.innerHTML = `
-      <div class="themes-graph" id="themes-graph-svg-wrap">
-        <div class="graph-tooltip" id="graph-tooltip"></div>
-      </div>
-      <div class="graph-legend">
-        <div class="graph-legend-item"><div class="graph-legend-dot" style="background:#4ade80"></div>Very High</div>
-        <div class="graph-legend-item"><div class="graph-legend-dot" style="background:#60a5fa"></div>High</div>
-        <div class="graph-legend-item"><div class="graph-legend-dot" style="background:#a78bfa"></div>Medium-High</div>
-        <div class="graph-legend-item"><div class="graph-legend-dot" style="background:#fbbf24"></div>Medium</div>
-        <div class="graph-legend-item"><div class="graph-legend-dot" style="background:#f87171"></div>Low</div>
-        <div class="graph-legend-item" style="margin-left:auto;font-size:0.7rem;color:var(--text-muted)">Node size = paper count · Click a node for details</div>
-      </div>
-      <div id="graph-detail-panel"></div>
-    `;
-
-    const wrap = document.getElementById('themes-graph-svg-wrap');
-    const tooltip = document.getElementById('graph-tooltip');
-    const detailPanel = document.getElementById('graph-detail-panel');
-    const width = wrap.clientWidth || 900;
-    const height = wrap.clientHeight || 600;
-
-    const svg = d3.select(wrap).append('svg')
-      .attr('viewBox', `0 0 ${width} ${height}`)
-      .attr('preserveAspectRatio', 'xMidYMid meet');
-
-    // Simulation
-    const simulation = d3.forceSimulation(nodes)
-      .force('link', d3.forceLink(links).id(d => d.id).distance(120).strength(d => d.weight * 0.15))
-      .force('charge', d3.forceManyBody().strength(-300))
-      .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('collision', d3.forceCollide().radius(d => d.radius + 6))
-      .force('x', d3.forceX(width / 2).strength(0.05))
-      .force('y', d3.forceY(height / 2).strength(0.05));
-
-    // Links
-    const link = svg.append('g')
-      .selectAll('line')
-      .data(links)
-      .join('line')
-      .attr('stroke', 'rgba(124,107,240,0.2)')
-      .attr('stroke-width', d => Math.max(1, d.weight))
-      .attr('stroke-opacity', 0);
-
-    // Nodes
-    const node = svg.append('g')
-      .selectAll('circle')
-      .data(nodes)
-      .join('circle')
-      .attr('r', 0)
-      .attr('fill', d => d.color)
-      .attr('fill-opacity', 0.85)
-      .attr('stroke', d => d.color)
-      .attr('stroke-width', 2)
-      .attr('stroke-opacity', 0.3)
-      .attr('cursor', 'pointer')
-      .call(d3.drag()
-        .on('start', dragstarted)
-        .on('drag', dragged)
-        .on('end', dragended));
-
-    // Labels (short names)
-    const label = svg.append('g')
-      .selectAll('text')
-      .data(nodes)
-      .join('text')
-      .text(d => d.name.length > 25 ? d.name.substring(0, 22) + '...' : d.name)
-      .attr('font-size', '9px')
-      .attr('fill', '#e8e8f0')
-      .attr('fill-opacity', 0)
-      .attr('text-anchor', 'middle')
-      .attr('dy', d => d.radius + 14)
-      .attr('pointer-events', 'none');
-
-    // Animate in
-    node.transition().duration(800).delay((d, i) => i * 30)
-      .attr('r', d => d.radius);
-    link.transition().duration(600).delay(400)
-      .attr('stroke-opacity', 1);
-    label.transition().duration(600).delay(800)
-      .attr('fill-opacity', 0.7);
-
-    // Hover
-    node.on('mouseover', function(event, d) {
-      tooltip.innerHTML = `<strong>${d.name}</strong><div class="tooltip-confidence">${d.confidence} confidence · ${d.relatedPapers.length} papers</div>`;
-      tooltip.classList.add('visible');
-
-      // Highlight connected
-      const connected = new Set();
-      links.forEach(l => {
-        const sid = typeof l.source === 'object' ? l.source.id : l.source;
-        const tid = typeof l.target === 'object' ? l.target.id : l.target;
-        if (sid === d.id) connected.add(tid);
-        if (tid === d.id) connected.add(sid);
-      });
-      connected.add(d.id);
-
-      node.attr('fill-opacity', n => connected.has(n.id) ? 1 : 0.15)
-        .attr('stroke-opacity', n => connected.has(n.id) ? 0.8 : 0.05);
-      link.attr('stroke-opacity', l => {
-        const sid = typeof l.source === 'object' ? l.source.id : l.source;
-        const tid = typeof l.target === 'object' ? l.target.id : l.target;
-        return (sid === d.id || tid === d.id) ? 0.8 : 0.05;
-      });
-      label.attr('fill-opacity', n => connected.has(n.id) ? 1 : 0.1);
-
-      d3.select(this).attr('stroke-width', 4).attr('stroke-opacity', 1);
-    })
-    .on('mousemove', function(event) {
-      const rect = wrap.getBoundingClientRect();
-      tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
-      tooltip.style.top = (event.clientY - rect.top - 10) + 'px';
-    })
-    .on('mouseout', function() {
-      tooltip.classList.remove('visible');
-      node.attr('fill-opacity', 0.85).attr('stroke-width', 2).attr('stroke-opacity', 0.3);
-      link.attr('stroke-opacity', 1);
-      label.attr('fill-opacity', 0.7);
-    });
-
-    // Click — show detail panel
-    node.on('click', function(event, d) {
-      const relatedPaperLinks = d.relatedPapers.map(pid => paperLink(pid, { showYear: true }));
-
-      detailPanel.innerHTML = `
-        <div class="graph-detail-panel">
-          <button class="graph-detail-close" onclick="this.closest('.graph-detail-panel').remove()">Close</button>
-          <h3>${d.name}</h3>
-          <div class="description">${d.description}</div>
-          ${d.keyQuestions.length ? `
-            <div class="detail-section">
-              <h4>Key Questions</h4>
-              <ul>${d.keyQuestions.map(q => `<li>${q}</li>`).join('')}</ul>
-            </div>` : ''}
-          ${d.evidence.length ? `
-            <div class="detail-section">
-              <h4>Evidence</h4>
-              <ul>${d.evidence.map(e => `<li>${e}</li>`).join('')}</ul>
-            </div>` : ''}
-          ${relatedPaperLinks.length ? `
-            <div class="detail-section">
-              <h4>Related Papers (${relatedPaperLinks.length})</h4>
-              <ul>${relatedPaperLinks.map(p => `<li>${p}</li>`).join('')}</ul>
-            </div>` : ''}
-          ${d.implications ? `
-            <div class="detail-section">
-              <h4>Implications</h4>
-              <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.6;padding-left:0">${d.implications}</p>
-            </div>` : ''}
-        </div>`;
-      detailPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
-
-    // Tick
-    simulation.on('tick', () => {
-      // Keep nodes within bounds
-      nodes.forEach(d => {
-        d.x = Math.max(d.radius, Math.min(width - d.radius, d.x));
-        d.y = Math.max(d.radius, Math.min(height - d.radius, d.y));
-      });
-
-      link
-        .attr('x1', d => d.source.x)
-        .attr('y1', d => d.source.y)
-        .attr('x2', d => d.target.x)
-        .attr('y2', d => d.target.y);
-
-      node.attr('cx', d => d.x).attr('cy', d => d.y);
-      label.attr('x', d => d.x).attr('y', d => d.y);
-    });
-
-    function dragstarted(event) {
-      if (!event.active) simulation.alphaTarget(0.3).restart();
-      event.subject.fx = event.subject.x;
-      event.subject.fy = event.subject.y;
-    }
-    function dragged(event) {
-      event.subject.fx = event.x;
-      event.subject.fy = event.y;
-    }
-    function dragended(event) {
-      if (!event.active) simulation.alphaTarget(0);
-      event.subject.fx = null;
-      event.subject.fy = null;
-    }
+    renderHome(data, thesis);
+    renderThesis(thesis, data);
+    renderImplications(toArray(data.sowhat.sections), data.maps);
+    renderEvidence();
+    renderPlaybooks(data.playbooks);
+    renderAbout(data);
+    bindInteractions();
   }
 
-  // === SO WHAT URGENCY MATRIX ===
-  function renderSoWhatMatrix(data, papersData, themesData) {
-    const container = document.getElementById('sowhat-matrix-container');
-    if (!container) return;
-
-    const sections = data?.sections || [];
-    if (sections.length === 0) return;
-
-    const paperMap = {};
-    (papersData?.papers || []).forEach(p => { paperMap[p.id] = p; });
-    const themeMap = {};
-    (themesData?.themes || []).forEach(t => { themeMap[t.id] = t; });
-
-    const sectionMeta = {};
-    sections.forEach(s => { sectionMeta[s.id] = { title: s.title, icon: s.icon || '📌' }; });
-
-    // Flatten all advice with section info
-    const allAdvice = [];
-    sections.forEach(section => {
-      (section.advice || []).forEach(item => {
-        allAdvice.push({ ...item, sectionId: section.id, sectionTitle: section.title, sectionIcon: section.icon || '📌' });
-      });
-    });
-
-    // Group by urgency
-    const byUrgency = { 'act-now': [], 'watch': [], 'awareness': [] };
-    allAdvice.forEach(a => {
-      const u = a.urgency || 'watch';
-      if (!byUrgency[u]) byUrgency[u] = [];
-      byUrgency[u].push(a);
-    });
-
-    // Counts
-    const total = allAdvice.length;
-    const urgencyCounts = { 'act-now': byUrgency['act-now'].length, 'watch': byUrgency['watch'].length, 'awareness': byUrgency['awareness'].length };
-    const audienceCounts = {};
-    sections.forEach(s => { audienceCounts[s.title] = (s.advice || []).length; });
-
-    // Render stats
-    const statsHTML = `
-      <div class="matrix-stats">
-        <div class="matrix-stat">
-          <div class="stat-value" style="color:var(--text-primary)">${total}</div>
-          <div class="stat-label">Total Recs</div>
-        </div>
-        <div class="matrix-stat">
-          <div class="stat-value" style="color:var(--red)">${urgencyCounts['act-now']}</div>
-          <div class="stat-label">Act Now</div>
-        </div>
-        <div class="matrix-stat">
-          <div class="stat-value" style="color:var(--amber)">${urgencyCounts['watch']}</div>
-          <div class="stat-label">Watch</div>
-        </div>
-        <div class="matrix-stat">
-          <div class="stat-value" style="color:var(--green)">${urgencyCounts['awareness']}</div>
-          <div class="stat-label">Awareness</div>
-        </div>
-        ${Object.entries(audienceCounts).map(([title, count]) => `
-          <div class="matrix-stat">
-            <div class="stat-value" style="color:var(--accent)">${count}</div>
-            <div class="stat-label">${title.replace(/^For\s+/i, '').substring(0, 25)}</div>
-          </div>
-        `).join('')}
-      </div>
-    `;
-
-    function renderColumn(urgency, label, items) {
-      // Group items by section
-      const bySec = {};
-      items.forEach(item => {
-        if (!bySec[item.sectionId]) bySec[item.sectionId] = [];
-        bySec[item.sectionId].push(item);
-      });
-
-      const groupsHTML = Object.entries(bySec).map(([secId, items]) => {
-        const meta = sectionMeta[secId] || { title: secId, icon: '📌' };
-        return `
-          <div class="matrix-audience-group">
-            <div class="matrix-audience-label">${meta.icon} ${meta.title.replace(/^For\s+/i, '')}</div>
-            ${items.map(item => {
-              const citationsHTML = (item.citations || []).map(cid => {
-                const paper = paperMap[cid];
-                if (!paper) return '';
-                return `<a href="${paper.url || '#'}" target="_blank" rel="noopener" class="citation-link" title="${paper.title}">${paper.title.length > 50 ? paper.title.substring(0, 47) + '...' : paper.title} (${paper.year || ''})</a>`;
-              }).join('');
-
-              return `
-              <div class="matrix-item" data-item-id="${item.id}">
-                <div class="matrix-item-header">
-                  <span class="matrix-item-icon">${meta.icon}</span>
-                  <span class="matrix-item-headline">${item.headline}</span>
-                </div>
-                <div class="matrix-item-detail">
-                  <p>${item.body}</p>
-                  ${item.prompt ? `
-                    <div class="sowhat-prompt">
-                      <div class="prompt-label">Reflect</div>
-                      <p class="prompt-text">${item.prompt}</p>
-                    </div>` : ''}
-                  ${citationsHTML ? `<div class="sowhat-citations">${citationsHTML}</div>` : ''}
-                </div>
-              </div>`;
-            }).join('')}
-          </div>`;
-      }).join('');
-
-      return `
-        <div class="matrix-column ${urgency}">
-          <div class="matrix-column-header">
-            <span>${label}</span>
-            <span class="col-count">${items.length}</span>
-          </div>
-          <div class="matrix-column-body">
-            ${groupsHTML || '<div style="padding:1rem;color:var(--text-muted);font-size:0.8rem;text-align:center">No items</div>'}
-          </div>
-        </div>`;
-    }
-
-    container.innerHTML = `
-      ${statsHTML}
-      <div class="matrix-columns">
-        ${renderColumn('act-now', 'Act Now', byUrgency['act-now'])}
-        ${renderColumn('watch', 'Watch', byUrgency['watch'])}
-        ${renderColumn('awareness', 'Awareness', byUrgency['awareness'])}
-      </div>
-    `;
-
-    // Click to expand/collapse items
-    container.querySelectorAll('.matrix-item').forEach(el => {
-      el.addEventListener('click', () => {
-        el.classList.toggle('expanded');
-      });
-    });
-  }
-
-  // === VIEW TOGGLE WIRING ===
-  function initViewToggles(onThemesVisual, onSowhatVisual) {
-    setupToggle('themes', 'themes-view-toggle', 'themes-container', 'themes-graph-container', onThemesVisual);
-    setupToggle('sowhat', 'sowhat-view-toggle', 'sowhat-container', 'sowhat-matrix-container', onSowhatVisual);
-  }
-
-  function setupToggle(key, toggleId, listContainerId, visualContainerId, onVisualCb) {
-    const toggle = document.getElementById(toggleId);
-    const listContainer = document.getElementById(listContainerId);
-    const visualContainer = document.getElementById(visualContainerId);
-    if (!toggle || !listContainer || !visualContainer) return;
-
-    const storageKey = `aitrust-view-${key}`;
-    const saved = localStorage.getItem(storageKey);
-
-    function setView(view) {
-      const buttons = toggle.querySelectorAll('button');
-      buttons.forEach(b => b.classList.toggle('active', b.dataset.view === view));
-
-      if (view === 'visual') {
-        if (onVisualCb) onVisualCb();
-        listContainer.style.display = 'none';
-        visualContainer.classList.add('active');
-      } else {
-        listContainer.style.display = '';
-        visualContainer.classList.remove('active');
-      }
-      localStorage.setItem(storageKey, view);
-    }
-
-    // Wire buttons
-    toggle.querySelectorAll('button').forEach(btn => {
-      btn.addEventListener('click', () => setView(btn.dataset.view));
-    });
-
-    // Restore saved view
-    if (saved === 'visual') {
-      setView('visual');
-    }
-  }
-
+  await init();
 })();

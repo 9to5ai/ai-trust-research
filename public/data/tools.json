@@ -8,7 +8,7 @@
       "url": "https://github.com/Trusted-AI/AIF360",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Core tool for any AI assurance practice — enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
+      "relevance": "Core tool for any AI assurance practice \u2014 enables quantitative fairness assessment across demographic groups. Essential for credit scoring, insurance pricing, and lending model validation.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -19,7 +19,7 @@
       "url": "https://github.com/fairlearn/fairlearn",
       "license": "MIT",
       "maturity": "Production-ready",
-      "relevance": "Complementary to AIF360 — different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
+      "relevance": "Complementary to AIF360 \u2014 different philosophical approach to fairness (focuses on constrained optimization). Good for Azure-based deployments.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -40,7 +40,7 @@
       "description": "Open-source evaluation and testing library for LLM agents. Provides transparency, accountability, and helps ensure quality, security, and compliance. Recognized in 2024 GitHub Accelerator.",
       "url": "https://github.com/Giskard-AI/giskard",
       "license": "Apache 2.0",
-      "maturity": "Growing — active community",
+      "maturity": "Growing \u2014 active community",
       "relevance": "Particularly relevant for testing LLM-based applications in financial services (chatbots, advisory tools). Includes hallucination detection and robustness testing.",
       "dateDiscovered": "2026-03-15"
     },
@@ -52,7 +52,7 @@
       "url": "https://github.com/guardrails-ai/guardrails",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Implementation tool for LLM deployment guardrails — directly applicable to financial services deploying customer-facing AI.",
+      "relevance": "Implementation tool for LLM deployment guardrails \u2014 directly applicable to financial services deploying customer-facing AI.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -85,7 +85,7 @@
       "url": "https://mlflow.org/",
       "license": "Apache 2.0",
       "maturity": "Production-ready",
-      "relevance": "Foundation for ML governance infrastructure — model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
+      "relevance": "Foundation for ML governance infrastructure \u2014 model versioning, lineage tracking, and reproducibility are prerequisites for AI assurance.",
       "dateDiscovered": "2026-03-15"
     },
     {
@@ -216,7 +216,7 @@
       "description": "Automated framework for systematically quantifying biases in LLM-as-a-judge applications. Tests for position bias, verbosity bias, self-enhancement bias, and other systematic evaluation errors. Essential for validating LLM-based evaluation pipelines.",
       "url": "https://arxiv.org/abs/2406.07791",
       "license": "Research (open)",
-      "maturity": "Research prototype — active development",
+      "maturity": "Research prototype \u2014 active development",
       "relevance": "Critical for any assurance practice using LLM-based evaluation. Without bias quantification, LLM-as-judge results are unreliable. Builds toward production-grade evaluation validation.",
       "dateDiscovered": "2026-03-17"
     },
@@ -229,7 +229,7 @@
       "url": "https://www.arxiv.org/abs/2506.15740",
       "availability": "partially-open",
       "relevance": "critical",
-      "financialServicesApplicability": "Direct — financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
+      "financialServicesApplicability": "Direct \u2014 financial services sabotage scenarios (banking operations, information security) included. Framework adaptable for sector-specific evaluation.",
       "relatedPapers": [
         "p054"
       ]
@@ -243,7 +243,7 @@
       "url": "https://arxiv.org/abs/2503.14499",
       "availability": "open",
       "relevance": "high",
-      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks — adaptation needed for financial services workflows.",
+      "financialServicesApplicability": "Useful for capability trajectory planning. Extrapolation helps calibrate governance frameworks for future AI capability levels. Currently focused on software tasks \u2014 adaptation needed for financial services workflows.",
       "relatedPapers": [
         "p059"
       ]
@@ -280,7 +280,7 @@
       "description": "Proposed framework combining checkable safety arguments with Safety Performance Indicators (SPIs) for continuous AI safety assurance. Uses LLM-based Delphi method for probability estimation of safety sub-claims. Automates safety case monitoring and triggers reviews when thresholds are breached.",
       "url": "https://arxiv.org/pdf/2412.17618",
       "license": "Research (open)",
-      "maturity": "Research prototype — active development",
+      "maturity": "Research prototype \u2014 active development",
       "relevance": "Represents the frontier of continuous AI safety assurance methodology. The SPI approach is directly applicable to financial services AI monitoring. The LLM-based Delphi method for confidence estimation could transform how safety cases are evaluated.",
       "dateDiscovered": "2026-03-19"
     },
@@ -308,13 +308,13 @@
     },
     {
       "id": "tool028",
-      "name": "ETSI TS 104 008 — Continuous Auditing Based Conformity Assessment (CABCA)",
+      "name": "ETSI TS 104 008 \u2014 Continuous Auditing Based Conformity Assessment (CABCA)",
       "category": "Standards / Continuous Compliance",
       "description": "ETSI's January 2026 technical specification for continuous auditing-based conformity assessment (CABCA) of AI-enabled systems. Defines recurring assessment cycles, automated evidence collection, machine-readable conformity metrics, and dynamic conformity status updates. Supports self-assessment, third-party assessment, and certification use cases. Directly aligned with EU AI Act post-market monitoring obligations. The framework operationalises 'living compliance' for dynamic AI systems that evolve through retraining and data pipeline changes.",
       "url": "https://www.etsi.org/deliver/etsi_ts/104000_104099/104008/01.01.01_60/ts_104008v010101p.pdf",
       "license": "ETSI standard (available via ETSI)",
       "maturity": "Published standard (January 2026)",
-      "relevance": "The technical infrastructure for continuous AI compliance — operationalises post-market monitoring obligations under EU AI Act and replaces point-in-time audit models",
+      "relevance": "The technical infrastructure for continuous AI compliance \u2014 operationalises post-market monitoring obligations under EU AI Act and replaces point-in-time audit models",
       "dateDiscovered": "2026-03-21"
     },
     {
@@ -324,8 +324,8 @@
       "description": "Comprehensive AI risk management toolkit developed by a 24-firm consortium under MAS's Project MindForge, published March 20, 2026. Includes: AI Risk Management Operationalisation Handbook (four sections: scope/oversight, AI risk management, AI lifecycle management, enablers); AI Risk Management Implementation Examples (case studies from financial institutions); AI Risk Management Executive Handbook. Covers traditional AI, generative AI, and agentic AI. Periodically updated through the BuildFin.ai workgroup.",
       "url": "https://www.mas.gov.sg/schemes-and-initiatives/project-mindforge",
       "license": "Public (MAS publication)",
-      "maturity": "Published (March 2026) — updated periodically",
-      "relevance": "Most operationally detailed AI risk management toolkit for financial services globally — applicable directly to Australian bank, insurer, and asset manager AI governance programs",
+      "maturity": "Published (March 2026) \u2014 updated periodically",
+      "relevance": "Most operationally detailed AI risk management toolkit for financial services globally \u2014 applicable directly to Australian bank, insurer, and asset manager AI governance programs",
       "dateDiscovered": "2026-03-21"
     },
     {
@@ -336,7 +336,7 @@
       "url": "https://www.dnv.com/digital-trust/recommended-practices/assurance-of-ai-enabled-systems-dnv-rp-0671/",
       "license": "DNV publication (available via DNV)",
       "maturity": "Current (2024-2026)",
-      "relevance": "Credible independent AI assurance framework from a technically respected institution — provides methodology for sector-specific AI assurance engagements in banking and finance",
+      "relevance": "Credible independent AI assurance framework from a technically respected institution \u2014 provides methodology for sector-specific AI assurance engagements in banking and finance",
       "dateDiscovered": "2026-03-21"
     },
     {
@@ -347,7 +347,7 @@
       "url": "https://www.oecd.org/en/publications/oecd-due-diligence-guidance-for-responsible-ai_41671712-en.html",
       "license": "Public (OECD publication)",
       "maturity": "Published (February 2026)",
-      "relevance": "International baseline for AI due diligence expectations across multinational enterprises — soft law that may harden; relevant for Australian firms with international operations or clients",
+      "relevance": "International baseline for AI due diligence expectations across multinational enterprises \u2014 soft law that may harden; relevant for Australian firms with international operations or clients",
       "dateDiscovered": "2026-03-21"
     },
     {
@@ -357,7 +357,7 @@
       "source": "NIST Center for AI Standards and Innovation (CAISI), March 2026",
       "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-4.pdf",
       "description": "Six-category taxonomy for post-deployment AI monitoring: Functionality (does it work as intended?), Operational (consistent service?), Human Factors (transparent and high quality?), Security (protected from attacks?), Compliance (adheres to regulations?), Large-Scale Impacts (promotes human flourishing?). Includes gaps, barriers, and open questions for each category.",
-      "maturity": "Authoritative — first federal systematic mapping from US national standards body",
+      "maturity": "Authoritative \u2014 first federal systematic mapping from US national standards body",
       "applicability": "AI assurance methodology; post-deployment audit design; monitoring gap assessment",
       "dateAdded": "2026-03-22"
     },
@@ -367,8 +367,8 @@
       "type": "Analytical Framework",
       "source": "arXiv:2505.10426; ICLR 2026 (Cambridge CSER / Oxford Law)",
       "url": "https://arxiv.org/abs/2505.10426",
-      "description": "Formal classification of Human-in-the-Loop setups using computability theory: (1) Trivial monitoring (total functions) — human can only stop the system, no genuine computational influence; (2) Many-one reductions — single endpoint human decision; (3) Turing reductions — rich, iterative human-AI interaction. Used to assess legal adequacy and safety value of HITL designs.",
-      "maturity": "Theoretical — peer-reviewed, ICLR 2026 accepted",
+      "description": "Formal classification of Human-in-the-Loop setups using computability theory: (1) Trivial monitoring (total functions) \u2014 human can only stop the system, no genuine computational influence; (2) Many-one reductions \u2014 single endpoint human decision; (3) Turing reductions \u2014 rich, iterative human-AI interaction. Used to assess legal adequacy and safety value of HITL designs.",
+      "maturity": "Theoretical \u2014 peer-reviewed, ICLR 2026 accepted",
       "applicability": "HITL audit design; regulatory adequacy assessment; liability exposure analysis",
       "dateAdded": "2026-03-22"
     },
@@ -378,8 +378,8 @@
       "type": "Audit Methodology",
       "source": "Florian Jaton, AI & Society (Springer, July 2025)",
       "url": "https://doi.org/10.1007/s44206-025-00197-4",
-      "description": "Methodology for examining algorithms in light of their ground truth datasets. Involves tracing the sociotechnical process by which training labels were assigned — who annotated, what instructions were given, what disagreements were resolved and how, what sociocultural fingerprints are embedded. Provides a 'ground truth studies' research program for assessing the epistemic foundation of AI accuracy claims.",
-      "maturity": "Academic methodology — requires adaptation for commercial use",
+      "description": "Methodology for examining algorithms in light of their ground truth datasets. Involves tracing the sociotechnical process by which training labels were assigned \u2014 who annotated, what instructions were given, what disagreements were resolved and how, what sociocultural fingerprints are embedded. Provides a 'ground truth studies' research program for assessing the epistemic foundation of AI accuracy claims.",
+      "maturity": "Academic methodology \u2014 requires adaptation for commercial use",
       "applicability": "Trust provenance assessment; training data audits; epistemic validity of accuracy metrics",
       "dateAdded": "2026-03-22"
     },
@@ -393,15 +393,15 @@
     },
     {
       "id": "tool036",
-      "name": "Operational Agency Graph (OAG) — Culpability Tracing in AI Systems",
+      "name": "Operational Agency Graph (OAG) \u2014 Culpability Tracing in AI Systems",
       "type": "legal-methodology",
-      "description": "A graphical evidentiary methodology for tracing liability through AI systems. Typed nodes: Natural Person, Juridical Person, AI Agent (non-person profiled via Operational Agency pillars). Edge attributes: Direction (causal flow), Type (qualitative interaction description), Weight (legal significance derived from three OA pillars). Three analytical pillars for AI Agent nodes: (1) Goal-Directedness — proxy for intent (objective functions, reward functions, design choices); (2) Predictive Processing — proxy for foreseeability (AI's own risk logs, red-teaming outputs, embedded training knowledge); (3) Safety Architecture — proxy for standard of care (risk-utility analysis of design choices, availability of reasonable alternatives). Applied to tort, civil rights, constitutional law, and antitrust cases.",
+      "description": "A graphical evidentiary methodology for tracing liability through AI systems. Typed nodes: Natural Person, Juridical Person, AI Agent (non-person profiled via Operational Agency pillars). Edge attributes: Direction (causal flow), Type (qualitative interaction description), Weight (legal significance derived from three OA pillars). Three analytical pillars for AI Agent nodes: (1) Goal-Directedness \u2014 proxy for intent (objective functions, reward functions, design choices); (2) Predictive Processing \u2014 proxy for foreseeability (AI's own risk logs, red-teaming outputs, embedded training knowledge); (3) Safety Architecture \u2014 proxy for standard of care (risk-utility analysis of design choices, availability of reasonable alternatives). Applied to tort, civil rights, constitutional law, and antitrust cases.",
       "source": "Mukherjee & Chang 2026 (arXiv:2602.17932)",
       "applicability": "Post-incident liability analysis, AI governance documentation strategy (safety architecture as legal defence), regulatory investigations of AI-caused harms in financial services"
     },
     {
       "id": "tool037",
-      "name": "Warrant Attestation Levels (WAL-0 to WAL-3) — Trust Provenance Certification Framework",
+      "name": "Warrant Attestation Levels (WAL-0 to WAL-3) \u2014 Trust Provenance Certification Framework",
       "type": "certification-framework",
       "description": "A graduated adoption framework for cryptographic data provenance in AI agent systems, analogous to SLSA build levels for software supply chains. WAL-0: No provenance guarantees (current default for most agent systems). WAL-1: Source identification recorded, post-hoc attribution possible. WAL-2: Sources sign responses with ECDSA/Ed25519; source keys certified by Domain WCA; provenance layer verifies signatures. WAL-3: Full reference monitor properties (complete mediation, tamperproofness, verifiability); all tool calls logged in hash-chained attestation log; non-interference enforced; TLA+-verified self-licensing prevention. Use case table: Exploratory research WAL-0, General info retrieval WAL-1, Business intelligence WAL-2, Medical/Legal/Financial trading WAL-3.",
       "source": "Bondar 2026 (IETF draft-bondar-wca-00)",
@@ -409,17 +409,17 @@
     },
     {
       "id": "tool038",
-      "name": "Runtime Policy Engine Architecture — Path-Level Agent Governance",
+      "name": "Runtime Policy Engine Architecture \u2014 Path-Level Agent Governance",
       "type": "technical-framework",
-      "description": "A formal architecture for runtime AI agent governance based on policy functions πj(agent_identity, partial_path, proposed_action, shared_governance_state) → [0,1]. Key components: (1) Registration Phase: evaluate all path-independent policies (agent integrity, documentation, scheduling) before any task starts; (2) Per-Step Phase: intercept proposed actions, evaluate path-dependent policies, compute fleet violation score, apply decision function (Pass/Steer/Block); (3) Shared Governance State Σ: cross-agent ledger for information barrier enforcement; (4) Audit Trail: deterministic log enabling independent reproduction of all enforcement decisions. Concrete policy templates: PII predecessor requirement, approval before external actions, data exfiltration prevention (graduated), information barrier enforcement (requires Σ), execution bounds. Governance objective: max expected utility subject to E[violation score] ≤ B (risk budget).",
+      "description": "A formal architecture for runtime AI agent governance based on policy functions \u03c0j(agent_identity, partial_path, proposed_action, shared_governance_state) \u2192 [0,1]. Key components: (1) Registration Phase: evaluate all path-independent policies (agent integrity, documentation, scheduling) before any task starts; (2) Per-Step Phase: intercept proposed actions, evaluate path-dependent policies, compute fleet violation score, apply decision function (Pass/Steer/Block); (3) Shared Governance State \u03a3: cross-agent ledger for information barrier enforcement; (4) Audit Trail: deterministic log enabling independent reproduction of all enforcement decisions. Concrete policy templates: PII predecessor requirement, approval before external actions, data exfiltration prevention (graduated), information barrier enforcement (requires \u03a3), execution bounds. Governance objective: max expected utility subject to E[violation score] \u2264 B (risk budget).",
       "source": "Kaptein et al. 2026 (arXiv:2603.16586)",
       "applicability": "Enterprise agentic AI governance; financial services information barrier compliance; EU AI Act Article 9/12/14 implementation; designing runtime governance infrastructure for multi-agent systems"
     },
     {
       "id": "tool039",
-      "name": "NatWest Two-Stage AI Governance Model — Enterprise Implementation Pattern",
+      "name": "NatWest Two-Stage AI Governance Model \u2014 Enterprise Implementation Pattern",
       "type": "governance-pattern",
-      "description": "A pragmatic enterprise AI governance model validated at scale in a major bank. Stage 1: Structured risk assessment template applied to all AI use cases before development (purpose, data sources, potential risks, bias indicators) — provides early visibility and consistency. Stage 2: Weekly cross-functional expert working group (privacy, risk, security, legal) reviews Stage 1 assessments; approved use cases proceed to detailed secondary assessment before production. Key success factors: governance embedded at every stage (not final gate only); cross-functional expertise in review (not just compliance); framework designed as enabler not barrier; results in repeatable, reliable model embedded in business-as-usual processes. Limitations: human-intensive, suited to bounded use cases, not yet adapted for runtime agentic governance.",
+      "description": "A pragmatic enterprise AI governance model validated at scale in a major bank. Stage 1: Structured risk assessment template applied to all AI use cases before development (purpose, data sources, potential risks, bias indicators) \u2014 provides early visibility and consistency. Stage 2: Weekly cross-functional expert working group (privacy, risk, security, legal) reviews Stage 1 assessments; approved use cases proceed to detailed secondary assessment before production. Key success factors: governance embedded at every stage (not final gate only); cross-functional expertise in review (not just compliance); framework designed as enabler not barrier; results in repeatable, reliable model embedded in business-as-usual processes. Limitations: human-intensive, suited to bounded use cases, not yet adapted for runtime agentic governance.",
       "source": "NatWest/Version 1 DataIQ Awards 2025",
       "applicability": "Enterprise AI governance programme design; pre-deployment AI use case assessment; building governance culture and repeatable frameworks; model for APRA CPS 230/234 AI governance requirements"
     },
@@ -497,7 +497,7 @@
       "id": "tool46",
       "name": "Three-Question Audit Diagnostic (Homewood et al.)",
       "type": "Framework",
-      "description": "A diagnostic framework for evaluating whether any AI review — internal audit, external evaluation, vendor self-assessment, or regulatory examination — provides genuine assurance or merely the appearance of it. Three questions: (1) Who is reviewing? — Scope of independence (financial, structural, expertise-based). (2) What are they reviewing? — Depth of assessment (documentation, independent testing, or production observation). (3) What can they actually see? — Access constraints (weights, training data, scaffolding, intermediate states). The framework reveals that most commercial AI reviews score high on scope but low on depth and independence.",
+      "description": "A diagnostic framework for evaluating whether any AI review \u2014 internal audit, external evaluation, vendor self-assessment, or regulatory examination \u2014 provides genuine assurance or merely the appearance of it. Three questions: (1) Who is reviewing? \u2014 Scope of independence (financial, structural, expertise-based). (2) What are they reviewing? \u2014 Depth of assessment (documentation, independent testing, or production observation). (3) What can they actually see? \u2014 Access constraints (weights, training data, scaffolding, intermediate states). The framework reveals that most commercial AI reviews score high on scope but low on depth and independence.",
       "papers": [
         "p144",
         "p142",
@@ -543,7 +543,7 @@
     },
     {
       "id": "tool050",
-      "name": "Solve–Verify Asymmetry Map",
+      "name": "Solve\u2013Verify Asymmetry Map",
       "type": "governance-methodology",
       "description": "A practical method for classifying tasks by whether they are hard to solve and easy to verify, or easy to generate and hard to verify. Used to decide where human review is viable, where abstention is needed, and where workflows should be redesigned.",
       "source": "Zhu 2025 (p154)",
@@ -551,7 +551,7 @@
     },
     {
       "id": "tool051",
-      "name": "Expectation–Realisation Gap Review",
+      "name": "Expectation\u2013Realisation Gap Review",
       "type": "assessment-method",
       "description": "A planning and assurance method that compares forecast productivity gains from agentic AI to realised outcomes after accounting for verification burden, workflow friction, and heterogeneous benefit distribution.",
       "source": "Lobentanzer 2026 (p150)",
@@ -572,7 +572,7 @@
       "id": "t041",
       "name": "Epistemic Compression and Regime Index",
       "category": "technical",
-      "description": "Framework from Lukas et al. for diagnosing when AI model complexity is a liability vs. asset. The Regime Index scores domains on temporal stability, context invariance, data-to-complexity ratio, ground truth quality, and causal prior strength. Scores 3-5 = Shifting Regime (Compression Mandatory — simple models outperform complex); 0-1 = Stable Regime (Complexity Viable — deep learning earns its keep). The key insight: most high-stakes financial services applications are in the Shifting Regime.",
+      "description": "Framework from Lukas et al. for diagnosing when AI model complexity is a liability vs. asset. The Regime Index scores domains on temporal stability, context invariance, data-to-complexity ratio, ground truth quality, and causal prior strength. Scores 3-5 = Shifting Regime (Compression Mandatory \u2014 simple models outperform complex); 0-1 = Stable Regime (Complexity Viable \u2014 deep learning earns its keep). The key insight: most high-stakes financial services applications are in the Shifting Regime.",
       "papers": [
         "p095"
       ],
@@ -744,7 +744,7 @@
       "name": "Baier Goodwill Theory of Trust",
       "type": "philosophical-framework",
       "jurisdiction": "Philosophical",
-      "description": "Annette Baier's philosophical theory distinguishing trust from mere reliance. Trust requires the trustee to have goodwill toward the trustor — the motivation to act in the trustor's interests. Trust creates vulnerability obligations that reliability does not. Used by Carroll (2025) to argue that AI should be reliable not trustworthy. Central to the provenance of trust question.",
+      "description": "Annette Baier's philosophical theory distinguishing trust from mere reliance. Trust requires the trustee to have goodwill toward the trustor \u2014 the motivation to act in the trustor's interests. Trust creates vulnerability obligations that reliability does not. Used by Carroll (2025) to argue that AI should be reliable not trustworthy. Central to the provenance of trust question.",
       "provider": "Baier 1986; Carroll 2025",
       "url": "https://philpapers.org/rec/BAITWA",
       "papersReferenced": [
@@ -835,7 +835,7 @@
       "name": "Learned Hand Formula for AI Negligence",
       "type": "liability-framework",
       "jurisdiction": "International (US origin)",
-      "description": "The Learned Hand formula (B < P × L) defines negligence as when the burden of precautions (B) is less than the probability of harm (P) multiplied by the gravity of loss (L). Applied to AI: B represents the effort required by operators, deployers, or developers to prevent foreseeable risks; P is the probability the AI system will cause harm; L is the magnitude of potential harm. The formula breaks down for AI in two ways: B approaches infinity when AI operates beyond human cognitive capacity (making the formula mathematically void or indicating no negligence); and B is undefined for developers of neural networks, where logic is induced rather than written. For AI liability analysis, the formula's primary value is in shifting the negligence question from 'did a human intervene?' to 'was the precaution burden reasonable given the harm probability and magnitude?'",
+      "description": "The Learned Hand formula (B < P \u00d7 L) defines negligence as when the burden of precautions (B) is less than the probability of harm (P) multiplied by the gravity of loss (L). Applied to AI: B represents the effort required by operators, deployers, or developers to prevent foreseeable risks; P is the probability the AI system will cause harm; L is the magnitude of potential harm. The formula breaks down for AI in two ways: B approaches infinity when AI operates beyond human cognitive capacity (making the formula mathematically void or indicating no negligence); and B is undefined for developers of neural networks, where logic is induced rather than written. For AI liability analysis, the formula's primary value is in shifting the negligence question from 'did a human intervene?' to 'was the precaution burden reasonable given the harm probability and magnitude?'",
       "provider": "Learned Hand / Harvard JOLT (p165)",
       "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
       "papersReferenced": [
@@ -848,7 +848,7 @@
       "name": "Three-Pillar AI Oversight Duty Framework",
       "type": "liability-framework",
       "jurisdiction": "International",
-      "description": "A legal framework for operationalizing AI oversight duties, proposed by Htin (p165), that allocates distinct duties across the AI supply chain. Pillar 1: Deployer's duty to implement genuine Human-Systems Integration (HSI) frameworks — not passive monitoring roles but active human-AI collaboration architectures designed for human cognitive capacity. Pillar 2: Developer's duty to demonstrate technical robustness — including interpretability tooling, testing for known failure modes, and documentation of model behaviour boundaries. Pillar 3: Both parties' duty for post-market monitoring and failure reporting — continuous surveillance of model behaviour in deployment environment, with mandatory reporting of adverse events. This three-way allocation resolves the liability sponge problem by making each party's specific duty legally enforceable, rather than concentrating accountability on the human operator who lacks realistic intervention capacity.",
+      "description": "A legal framework for operationalizing AI oversight duties, proposed by Htin (p165), that allocates distinct duties across the AI supply chain. Pillar 1: Deployer's duty to implement genuine Human-Systems Integration (HSI) frameworks \u2014 not passive monitoring roles but active human-AI collaboration architectures designed for human cognitive capacity. Pillar 2: Developer's duty to demonstrate technical robustness \u2014 including interpretability tooling, testing for known failure modes, and documentation of model behaviour boundaries. Pillar 3: Both parties' duty for post-market monitoring and failure reporting \u2014 continuous surveillance of model behaviour in deployment environment, with mandatory reporting of adverse events. This three-way allocation resolves the liability sponge problem by making each party's specific duty legally enforceable, rather than concentrating accountability on the human operator who lacks realistic intervention capacity.",
       "provider": "Htin / Harvard JOLT (p165)",
       "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
       "papersReferenced": [
@@ -861,7 +861,7 @@
       "name": "Human-Systems Integration (HSI) Frameworks for AI",
       "type": "oversight-design-framework",
       "jurisdiction": "International",
-      "description": "Human-Systems Integration frameworks ensure AI systems are designed for genuine human oversight rather than performative human presence. Multiple HSI frameworks exist; the most directly applicable for AI oversight is the Partnership on AI's Human-AI Collaboration Framework — a 36-question heuristic for designing and assessing human-AI collaborative systems. Key HSI design principles: friction roles (forcing active human deliberation before AI decisions to prevent automation bias), resilience roles (positioning humans as fail-safe sources of contextual judgment at system boundaries), and cognitive handrails (providing uncertainty quantification, saliency indicators, and model confidence signals calibrated for human cognition). HSI frameworks operationalise the first-pillar duty: a deployer who places a human in a loop without HSI-designed interfaces is negligent regardless of whether a human was technically present.",
+      "description": "Human-Systems Integration frameworks ensure AI systems are designed for genuine human oversight rather than performative human presence. Multiple HSI frameworks exist; the most directly applicable for AI oversight is the Partnership on AI's Human-AI Collaboration Framework \u2014 a 36-question heuristic for designing and assessing human-AI collaborative systems. Key HSI design principles: friction roles (forcing active human deliberation before AI decisions to prevent automation bias), resilience roles (positioning humans as fail-safe sources of contextual judgment at system boundaries), and cognitive handrails (providing uncertainty quantification, saliency indicators, and model confidence signals calibrated for human cognition). HSI frameworks operationalise the first-pillar duty: a deployer who places a human in a loop without HSI-designed interfaces is negligent regardless of whether a human was technically present.",
       "provider": "Partnership on AI / HSI research (p165)",
       "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
       "papersReferenced": [
@@ -874,7 +874,7 @@
       "name": "Crootof-Kaminski-Price Human Role Taxonomy",
       "type": "oversight-taxonomy",
       "jurisdiction": "International",
-      "description": "A taxonomy of human roles in AI oversight developed by Crootof, Kaminski, and Price (referenced in p165) to help courts adjudicate whether a human was truly 'in the loop' or was merely a liability sponge. The taxonomy categorises human roles in automated systems, distinguishing meaningful oversight roles from friction roles (designed to force deliberate slowing of AI decisions) and resilience roles (positioning humans as fail-safe sources of contextual judgment). The taxonomy's legal significance is that it provides courts with a framework to distinguish genuine oversight from nominal oversight — helping resolve the accountability gap by identifying whether the human's role was structurally capable of catching the failure that occurred.",
+      "description": "A taxonomy of human roles in AI oversight developed by Crootof, Kaminski, and Price (referenced in p165) to help courts adjudicate whether a human was truly 'in the loop' or was merely a liability sponge. The taxonomy categorises human roles in automated systems, distinguishing meaningful oversight roles from friction roles (designed to force deliberate slowing of AI decisions) and resilience roles (positioning humans as fail-safe sources of contextual judgment). The taxonomy's legal significance is that it provides courts with a framework to distinguish genuine oversight from nominal oversight \u2014 helping resolve the accountability gap by identifying whether the human's role was structurally capable of catching the failure that occurred.",
       "provider": "Crootof, Kaminski, Price (p165)",
       "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
       "papersReferenced": [
@@ -887,7 +887,7 @@
       "name": "Taddeo Trust Quantification",
       "type": "trust-measurement-framework",
       "jurisdiction": "International",
-      "description": "Taddeo's framework (2007, 2010) treats trust as a quantitative property of reliance relations, enabling measurement rather than just qualitative assessment. Trust level is derived from the ratio of monitoring investment to expected gains in the human-AI interaction. High trust: high expected gains with low monitoring costs. Low trust: monitoring costs approach or exceed expected gains. The framework also accommodates trust as either 'monitoring' (investing in verification to compensate for uncertainty) or 'confidence in reliability' (assuming the system is trustworthy without active verification). Applied to AI assurance, this means every high-stakes AI system should have a continuously updated dashboard showing: expected gains from AI use, monitoring investment required to maintain appropriate reliance, and the ratio between them. The goal is appropriate reliance — calibrated trust — not maximal trust.",
+      "description": "Taddeo's framework (2007, 2010) treats trust as a quantitative property of reliance relations, enabling measurement rather than just qualitative assessment. Trust level is derived from the ratio of monitoring investment to expected gains in the human-AI interaction. High trust: high expected gains with low monitoring costs. Low trust: monitoring costs approach or exceed expected gains. The framework also accommodates trust as either 'monitoring' (investing in verification to compensate for uncertainty) or 'confidence in reliability' (assuming the system is trustworthy without active verification). Applied to AI assurance, this means every high-stakes AI system should have a continuously updated dashboard showing: expected gains from AI use, monitoring investment required to maintain appropriate reliance, and the ratio between them. The goal is appropriate reliance \u2014 calibrated trust \u2014 not maximal trust.",
       "provider": "Luciano Taddeo (p166)",
       "url": "https://link.springer.com/article/10.1007/s11023-025-09754-9",
       "papersReferenced": [
@@ -900,7 +900,7 @@
       "name": "EU AI Agent Deployment Taxonomy (Nine Categories)",
       "type": "regulatory-taxonomy",
       "jurisdiction": "EU",
-      "description": "A practical taxonomy of nine AI agent deployment categories developed by Nannini et al. (p171) that maps concrete agent actions to regulatory triggers under the EU AI Act. Each category identifies a different combination of autonomy level, tool-invocation scope, environmental impact, and human oversight requirement. The taxonomy is significant because it provides the first systematic mapping from agentic AI architectural patterns to specific regulatory obligations — allowing providers to identify which EU AI Act articles are triggered by specific agent configurations. The nine categories range from low-autonomy advisory agents to fully autonomous critical infrastructure agents, each with distinct compliance requirements. The taxonomy operationalises the principle that agent governance cannot be one-size-fits-all: different autonomy levels require different oversight architectures.",
+      "description": "A practical taxonomy of nine AI agent deployment categories developed by Nannini et al. (p171) that maps concrete agent actions to regulatory triggers under the EU AI Act. Each category identifies a different combination of autonomy level, tool-invocation scope, environmental impact, and human oversight requirement. The taxonomy is significant because it provides the first systematic mapping from agentic AI architectural patterns to specific regulatory obligations \u2014 allowing providers to identify which EU AI Act articles are triggered by specific agent configurations. The nine categories range from low-autonomy advisory agents to fully autonomous critical infrastructure agents, each with distinct compliance requirements. The taxonomy operationalises the principle that agent governance cannot be one-size-fits-all: different autonomy levels require different oversight architectures.",
       "provider": "Nannini et al. / arXiv (p171)",
       "url": "https://arxiv.org/html/2604.04604v1",
       "papersReferenced": [
@@ -928,7 +928,7 @@
       "name": "Runtime Behavioural Drift Detection",
       "type": "monitoring-methodology",
       "jurisdiction": "International",
-      "description": "A compliance architecture methodology from Nannini et al. (p171) that addresses the boundary between anticipated adaptive AI behaviour and 'substantial modification' under EU AI Act Article 3(23). Runtime behavioural drift detection requires: (1) baseline behavioural characterisation at deployment — defining the expected range of the agent's actions in each context; (2) continuous monitoring of actual versus expected behaviour — detecting when the agent's action patterns diverge from baseline; (3) change-point detection — identifying moments when the agent's strategy shifts discontinuously (the boundary between normal adaptation and substantial modification); (4) documentation and reporting — creating the evidentiary record needed for compliance and liability purposes. This methodology directly addresses the agentic AI governance gap: without runtime drift detection, it is impossible to know whether an agent has crossed from legitimate adaptation into a substantial modification that triggers new regulatory obligations.",
+      "description": "A compliance architecture methodology from Nannini et al. (p171) that addresses the boundary between anticipated adaptive AI behaviour and 'substantial modification' under EU AI Act Article 3(23). Runtime behavioural drift detection requires: (1) baseline behavioural characterisation at deployment \u2014 defining the expected range of the agent's actions in each context; (2) continuous monitoring of actual versus expected behaviour \u2014 detecting when the agent's action patterns diverge from baseline; (3) change-point detection \u2014 identifying moments when the agent's strategy shifts discontinuously (the boundary between normal adaptation and substantial modification); (4) documentation and reporting \u2014 creating the evidentiary record needed for compliance and liability purposes. This methodology directly addresses the agentic AI governance gap: without runtime drift detection, it is impossible to know whether an agent has crossed from legitimate adaptation into a substantial modification that triggers new regulatory obligations.",
       "provider": "Nannini et al. / arXiv (p171)",
       "url": "https://arxiv.org/html/2604.04604v1",
       "papersReferenced": [
@@ -954,7 +954,7 @@
       "name": "Short Trust in Automation Scale (S-TIAS)",
       "type": "measurement-instrument",
       "jurisdiction": "International",
-      "description": "A 3-item psychometrically validated instrument for measuring human trust in AI systems (McGrath et al., 2025, p196). The S-TIAS was developed via factor analysis from the validated 12-item TIAS, retaining three items that capture the two dimensions of trust and distrust as oblique (related but distinct) factors. Validation studies confirm: (1) S-TIAS is valid and reliable across diverse AI applications (self-driving cars, medical diagnosis, virtual assistants); (2) trust measured by S-TIAS significantly predicts behavioural intention to use AI; (3) machine trust propensity (MTP) predicts S-TIAS trust under high-performance conditions. The S-TIAS enables frequent, minimally disruptive trust measurement in organisational settings — critical for longitudinal calibration monitoring under CABCA methodology. Recommended measurement points: deployment, 30 days, 90 days, and annually. Discrepancies between S-TIAS scores and objective system performance data indicate calibration problems requiring governance intervention.",
+      "description": "A 3-item psychometrically validated instrument for measuring human trust in AI systems (McGrath et al., 2025, p196). The S-TIAS was developed via factor analysis from the validated 12-item TIAS, retaining three items that capture the two dimensions of trust and distrust as oblique (related but distinct) factors. Validation studies confirm: (1) S-TIAS is valid and reliable across diverse AI applications (self-driving cars, medical diagnosis, virtual assistants); (2) trust measured by S-TIAS significantly predicts behavioural intention to use AI; (3) machine trust propensity (MTP) predicts S-TIAS trust under high-performance conditions. The S-TIAS enables frequent, minimally disruptive trust measurement in organisational settings \u2014 critical for longitudinal calibration monitoring under CABCA methodology. Recommended measurement points: deployment, 30 days, 90 days, and annually. Discrepancies between S-TIAS scores and objective system performance data indicate calibration problems requiring governance intervention.",
       "papers": [
         "p196"
       ],
@@ -965,7 +965,7 @@
       "name": "Dynamic Authority Reversal (DAR) Framework",
       "type": "governance-framework",
       "jurisdiction": "International (EU AI Act Article 14)",
-      "description": "A governance framework that treats human-AI collaboration as a temporal authority problem with four states: Human-Leader/AI-Follower (HL), AI-Leader/Human-Follower (AL), Co-Leadership (CO), and Mutual Override (MO). Transitions between states are governed by four trigger classes: data superiority, contextual judgment requirements, risk thresholds, and ethics overrides. Key structural features: hysteresis bands (exit thresholds differ from entry thresholds to prevent oscillation between states), safe-exit timers (maximum dwell time in AL state triggers mandatory human review — directly addresses EU AI Act Article 14 meaningful oversight requirement), and the Reversal Register (audit log binding each decision to authority state, triggers, and justifications). The DAR framework is the operational complement to Baum et al.'s causal taxonomy of HITL (p187): where Baum et al. distinguish constitutive from corrective human involvement, DAR specifies the architectural mechanisms for implementing each type at scale.",
+      "description": "A governance framework that treats human-AI collaboration as a temporal authority problem with four states: Human-Leader/AI-Follower (HL), AI-Leader/Human-Follower (AL), Co-Leadership (CO), and Mutual Override (MO). Transitions between states are governed by four trigger classes: data superiority, contextual judgment requirements, risk thresholds, and ethics overrides. Key structural features: hysteresis bands (exit thresholds differ from entry thresholds to prevent oscillation between states), safe-exit timers (maximum dwell time in AL state triggers mandatory human review \u2014 directly addresses EU AI Act Article 14 meaningful oversight requirement), and the Reversal Register (audit log binding each decision to authority state, triggers, and justifications). The DAR framework is the operational complement to Baum et al.'s causal taxonomy of HITL (p187): where Baum et al. distinguish constitutive from corrective human involvement, DAR specifies the architectural mechanisms for implementing each type at scale.",
       "papers": [
         "p195",
         "p187"
@@ -977,7 +977,7 @@
       "name": "CABCA Operationalisation Toolkit",
       "type": "conformity-assessment-methodology",
       "jurisdiction": "EU / International",
-      "description": "Practical implementation guidance for ETSI TS 104 008 Continuous Auditing-Based Conformity Assessment (CABCA). The toolkit operationalises CABCA across five implementation layers: (1) Trigger Definition — defining the events that initiate a reassessment cycle (model drift detection, data distribution shift, hyperparameter change, capability level change, new deployment context); (2) Evidence Collection — automated collection of behavioural data sufficient to demonstrate conformity with applicable requirements, including model performance metrics, fairness indicators, drift statistics, and user trust calibration data; (3) Metric Operationalisation — translating high-level regulatory requirements into measurable, machine-readable specifications (e.g., EU AI Act Article 10 data governance requirements → specific data quality metrics with defined thresholds); (4) Automated Reporting — generating machine-readable conformity reports that map evidence to specific regulatory requirements, enabling regulatory submission without manual report preparation; (5) Continuous Review Cycle — establishing a perpetual review cycle with defined frequency for each property type (behavioural properties: continuous or weekly; structural properties: quarterly or upon triggering event). Note: TS 104 008 is a Technical Specification, not a Harmonised Standard — it provides methodology benefits but no legal presumption of conformity under EU AI Act (Smith, p199).",
+      "description": "Practical implementation guidance for ETSI TS 104 008 Continuous Auditing-Based Conformity Assessment (CABCA). The toolkit operationalises CABCA across five implementation layers: (1) Trigger Definition \u2014 defining the events that initiate a reassessment cycle (model drift detection, data distribution shift, hyperparameter change, capability level change, new deployment context); (2) Evidence Collection \u2014 automated collection of behavioural data sufficient to demonstrate conformity with applicable requirements, including model performance metrics, fairness indicators, drift statistics, and user trust calibration data; (3) Metric Operationalisation \u2014 translating high-level regulatory requirements into measurable, machine-readable specifications (e.g., EU AI Act Article 10 data governance requirements \u2192 specific data quality metrics with defined thresholds); (4) Automated Reporting \u2014 generating machine-readable conformity reports that map evidence to specific regulatory requirements, enabling regulatory submission without manual report preparation; (5) Continuous Review Cycle \u2014 establishing a perpetual review cycle with defined frequency for each property type (behavioural properties: continuous or weekly; structural properties: quarterly or upon triggering event). Note: TS 104 008 is a Technical Specification, not a Harmonised Standard \u2014 it provides methodology benefits but no legal presumption of conformity under EU AI Act (Smith, p199).",
       "papers": [
         "p070",
         "p199"
@@ -989,7 +989,7 @@
       "name": "AI Trust Calibration Audit Protocol",
       "type": "audit-methodology",
       "jurisdiction": "International",
-      "description": "An audit methodology for assessing whether organisational reliance on AI systems is appropriately calibrated to actual system performance. Based on Lugato and Floridi's appropriate reliance framework (p166) and McGrath's S-TIAS measurement (p196), the protocol has four steps: (1) Measure — administer S-TIAS to representative users of each AI system, collecting trust scores at multiple time points; (2) Compare — obtain objective system performance data (accuracy, calibration, fairness metrics, drift statistics) for the same period; (3) Calculate Calibration Error — compute the gap between measured trust and expected trust given system performance, identifying over-trust or under-trust; (4) Intervene — if calibration error exceeds defined thresholds, trigger governance intervention (user re-training, system modification, deployment restriction, or enhanced monitoring). The protocol is designed for integration with CABCA continuous monitoring and for use as the primary audit instrument for appropriate reliance assessment under the appropriate reliance framework.",
+      "description": "An audit methodology for assessing whether organisational reliance on AI systems is appropriately calibrated to actual system performance. Based on Lugato and Floridi's appropriate reliance framework (p166) and McGrath's S-TIAS measurement (p196), the protocol has four steps: (1) Measure \u2014 administer S-TIAS to representative users of each AI system, collecting trust scores at multiple time points; (2) Compare \u2014 obtain objective system performance data (accuracy, calibration, fairness metrics, drift statistics) for the same period; (3) Calculate Calibration Error \u2014 compute the gap between measured trust and expected trust given system performance, identifying over-trust or under-trust; (4) Intervene \u2014 if calibration error exceeds defined thresholds, trigger governance intervention (user re-training, system modification, deployment restriction, or enhanced monitoring). The protocol is designed for integration with CABCA continuous monitoring and for use as the primary audit instrument for appropriate reliance assessment under the appropriate reliance framework.",
       "papers": [
         "p166",
         "p196",
@@ -1002,12 +1002,105 @@
       "name": "Trajectory Logging Infrastructure Specification",
       "type": "liability-compliance-infrastructure",
       "jurisdiction": "International (EU AI Liability Directive March 2026)",
-      "description": "A technical specification for the trajectory logging infrastructure required by trajectory-based liability frameworks (Bommarito et al., p192). The specification requires: (1) comprehensive action logging — every AI action (tool invocation, decision output, environmental interaction) logged with timestamp, inputs, outputs, and the decision state that produced it; (2) trajectory reconstruction capability — sufficient log granularity to reconstruct the full behavioural trajectory of the AI system for any time period, enabling regulators and courts to assess whether trajectories stayed within permissible bounds; (3) trajectory classification — automated classification of trajectories as within-bounds or out-of-bounds against defined behavioural specifications, with flagged trajectories escalated for human review; (4) audit access — secure, immutable log storage with regulated access protocols enabling authorised third-party review (regulators, courts) without exposing commercially sensitive model details. The March 2026 AI Liability Directive burden-of-proof shift makes trajectory logging infrastructure a legal necessity for deployers of autonomous AI systems, not merely a governance best practice.",
+      "description": "A technical specification for the trajectory logging infrastructure required by trajectory-based liability frameworks (Bommarito et al., p192). The specification requires: (1) comprehensive action logging \u2014 every AI action (tool invocation, decision output, environmental interaction) logged with timestamp, inputs, outputs, and the decision state that produced it; (2) trajectory reconstruction capability \u2014 sufficient log granularity to reconstruct the full behavioural trajectory of the AI system for any time period, enabling regulators and courts to assess whether trajectories stayed within permissible bounds; (3) trajectory classification \u2014 automated classification of trajectories as within-bounds or out-of-bounds against defined behavioural specifications, with flagged trajectories escalated for human review; (4) audit access \u2014 secure, immutable log storage with regulated access protocols enabling authorised third-party review (regulators, courts) without exposing commercially sensitive model details. The March 2026 AI Liability Directive burden-of-proof shift makes trajectory logging infrastructure a legal necessity for deployers of autonomous AI systems, not merely a governance best practice.",
       "papers": [
         "p192"
       ],
       "dateIdentified": "2026-04-10"
+    },
+    {
+      "id": "tool088",
+      "name": "Reversal Register",
+      "type": "accountability-instrument",
+      "jurisdiction": "International (EU AI Act Article 14)",
+      "description": "The primary governance artifact from the Dynamic Authority Reversal (DAR) framework (Westover et al., p195). A Reversal Register is an auditable log that binds each AI-assisted decision to: (1) the prevailing authority state at the time of decision (HL, AL, CO, or MO); (2) the trigger conditions that caused any state transition; (3) the actors (human or AI) in each role; (4) the thresholds used to evaluate trigger conditions; (5) the explanation delivered to relevant parties; (6) the action taken. The Reversal Register transforms accountability from a static property (who signed off) into a dynamic property (which authority state produced each decision, and why). It is the operational artifact that makes EU AI Act Article 14's 'meaningful oversight' requirement specific and auditable. In financial services, the Reversal Register provides the evidentiary basis for demonstrating proportionate human supervisory involvement under the three-pillar liability framework and for satisfying post-market monitoring obligations.",
+      "papers": [
+        "p195",
+        "p007",
+        "p005"
+      ],
+      "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "tool089",
+      "name": "Short Trust in Automation Scale (S-TIAS)",
+      "type": "measurement-instrument",
+      "jurisdiction": "International",
+      "description": "A 3-item psychometrically validated instrument for measuring human trust in AI systems (McGrath et al., 2025, p004/p196). The S-TIAS captures the two dimensions of trust and distrust as oblique (related but distinct) factors. Validation studies confirm: (1) S-TIAS is valid and reliable across diverse AI applications; (2) trust measured by S-TIAS significantly predicts behavioural intention to use AI; (3) machine trust propensity (MTP) predicts S-TIAS trust under high-performance conditions. The S-TIAS enables frequent, minimally disruptive trust measurement in organisational settings \u2014 critical for longitudinal calibration monitoring. Recommended measurement points: deployment, 30 days, 90 days, and annually. Discrepancies between S-TIAS scores and objective system performance data indicate calibration problems requiring governance intervention.",
+      "papers": [
+        "p004",
+        "p196",
+        "p100"
+      ],
+      "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "tool090",
+      "name": "Dynamic Authority Reversal (DAR) Framework",
+      "type": "governance-framework",
+      "jurisdiction": "International (EU AI Act Article 14)",
+      "description": "A governance framework treating human-AI collaboration as a temporal authority problem with four states: Human-Leader/AI-Follower (HL), AI-Leader/Human-Follower (AL), Co-Leadership (CO), and Mutual Override (MO). Transitions between states are governed by four trigger classes: data superiority, contextual judgment requirements, risk thresholds, and ethics overrides. Key structural features: hysteresis bands (exit thresholds differ from entry thresholds to prevent oscillation), safe-exit timers (maximum dwell time in AL state triggers mandatory human review \u2014 directly addresses EU AI Act Article 14 meaningful oversight requirement), and the Reversal Register (audit log binding each decision to authority state, triggers, and justifications). The DAR framework operationalises meaningful human oversight without requiring human review of every AI action.",
+      "papers": [
+        "p195",
+        "p014",
+        "p004"
+      ],
+      "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "tool091",
+      "name": "Resolution-Matched Supervision Architecture",
+      "type": "oversight-architecture",
+      "jurisdiction": "International",
+      "description": "An architectural approach to human oversight of agentic AI systems where the scope and intensity of oversight is calibrated to the consequence profile of AI actions, not the volume. The key operational insight is that agentic AI generates too many actions for human review, but the distribution of consequences is highly skewed \u2014 most actions are low-consequence, a small fraction are medium-consequence, and a tiny fraction are high-consequence. Resolution-matched supervision means: (1) ensuring high-consequence actions are always subject to human review or pre-approval; (2) having automated alerting for medium-consequence exceptions; (3) accepting that low-consequence actions will be taken by AI without human review, with appropriate monitoring. The key concept is 'resolution bandwidth' \u2014 human oversight infrastructure has limited capacity, and that capacity must be allocated to the highest-resolution decisions.",
+      "papers": [
+        "p014",
+        "p195",
+        "p004",
+        "p007"
+      ],
+      "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "tool092",
+      "name": "AI Trust Calibration Audit Protocol",
+      "type": "audit-methodology",
+      "jurisdiction": "International",
+      "description": "An audit methodology for assessing whether organisational reliance on AI systems is appropriately calibrated to actual system performance. Based on Lugato and Floridi's appropriate reliance framework (p166) and McGrath's S-TIAS measurement (p004/p196), the protocol has four steps: (1) Measure \u2014 administer S-TIAS to representative users of each AI system; (2) Compare \u2014 obtain objective system performance data (accuracy, calibration, fairness metrics, drift statistics) for the same period; (3) Calculate Calibration Error \u2014 compute the gap between measured trust and expected trust given system performance, identifying over-trust or under-trust; (4) Intervene \u2014 if calibration error exceeds defined thresholds, trigger governance intervention. The protocol enables continuous trust calibration monitoring as the primary assurance instrument.",
+      "papers": [
+        "p166",
+        "p004",
+        "p196",
+        "p100"
+      ],
+      "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "tool093",
+      "name": "Trajectory Logging Infrastructure Specification",
+      "type": "liability-compliance-infrastructure",
+      "jurisdiction": "International (EU AI Liability Directive March 2026)",
+      "description": "A technical specification for the trajectory logging infrastructure required by trajectory-based liability frameworks (Bommarito et al., p192). The specification requires: (1) comprehensive action logging \u2014 every AI action (tool invocation, decision output, environmental interaction) logged with timestamp, inputs, outputs, and the decision state that produced it; (2) trajectory reconstruction capability \u2014 sufficient log granularity to reconstruct the full behavioural trajectory for any time period; (3) trajectory classification \u2014 automated classification of trajectories as within-bounds or out-of-bounds against defined behavioural specifications; (4) audit access \u2014 secure, immutable log storage with regulated access protocols. The March 2026 AI Liability Directive burden-of-proof shift makes trajectory logging infrastructure a legal necessity for deployers of autonomous AI systems.",
+      "papers": [
+        "p192",
+        "p005",
+        "p007"
+      ],
+      "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "tool094",
+      "name": "Constitutive Knowledge Source Mapping",
+      "type": "epistemic-grounding-methodology",
+      "jurisdiction": "International",
+      "description": "A methodology for grounding AI outputs in institutional constitutive knowledge sources \u2014 regulatory standards, diagnostic criteria, and legal frameworks that carry recognised epistemic authority within their domain (Gazit et al., p003). The methodology has four steps: (1) Constitutive Source Identification \u2014 for each high-stakes decision domain, identify the institutional sources that constitute what counts as valid within that domain (e.g., APRA/EBA regulatory standards for creditworthiness, clinical diagnostic criteria for medical AI); (2) Source Mapping \u2014 document which AI outputs are grounded in which institutional standards; (3) Consistency Verification \u2014 evidence that the AI system is producing outputs consistent with those sources; (4) Divergence Monitoring \u2014 a protocol for detecting when AI outputs diverge from constitutive source requirements. This is not a transparency requirement; it is an institutional grounding requirement that is auditable and proportionate.",
+      "papers": [
+        "p003",
+        "p015",
+        "p012"
+      ],
+      "dateIdentified": "2026-04-11"
     }
   ],
-  "total": 87
+  "total": 94
 }

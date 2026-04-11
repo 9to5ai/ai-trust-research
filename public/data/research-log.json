@@ -1268,7 +1268,108 @@
           "r34"
         ]
       }
+    },
+    {
+      "id": "rl019",
+      "date": "2026-04-11",
+      "title": "First Principles of AI Trust \u2014 Provenance, HITL at Scale, Liability, and Success Cases",
+      "summary": "Deep session on Ray's supervisor feedback: first principles of trust (provenance of ground truth vs assumptions vs proxies), meaningful HITL at agentic AI scale, liability/accountability restructuring, and success case studies. Key findings: (1) trust certification chains contain three epistemic layers \u2014 ground truth (unknowable), assumptions (degrade), and proxies (what's actually measured); (2) proxy-to-ground-truth gap is the structural failure mode; (3) HITL fails at agentic AI scale mathematically, not just organisationally \u2014 resolution-matched supervision is the architectural fix; (4) liability frameworks must shift from individual actions to behavioural trajectories; (5) institutional epistemic trust requires social warrant structures, not just technical accuracy; (6) DBS, NatWest, CBA are the reference success cases. Formulated two original hypotheses: H1 on proxy-to-ground-truth assumption gaps as the primary certification failure mode; H2 on systematic calibration divergence between user trust and system performance as the leading indicator of AI-related harm.",
+      "sections": [
+        {
+          "id": "s01",
+          "title": "First Principles of Trust Provenance",
+          "items": [
+            "Ground truth vs assumptions vs proxies \u2014 the three-layer certification chain",
+            "Proxy-to-ground-truth assumption gap is the structural failure mode in AI trust",
+            "What degrades: model drift (data/concept/covariate), calibration decay, proxy validity",
+            "Certified once vs continuous monitoring \u2014 structural vs behavioural properties"
+          ]
+        },
+        {
+          "id": "s02",
+          "title": "Meaningful HITL at Agentic AI Scale",
+          "items": [
+            "Oversight fatigue cascade \u2014 four stages to HITL failure at scale",
+            "Resolution-matched supervision: consequence-tiered, not frequency-tiered",
+            "Dynamic Authority Reversal (DAR) framework \u2014 four authority states with safe-exit timers",
+            "Reversal Register as the accountability artifact"
+          ]
+        },
+        {
+          "id": "s03",
+          "title": "Liability and Accountability Restructuring",
+          "items": [
+            "Three-pillar liability: deployer HSI duty, developer standards duty, shared post-market duty",
+            "Trajectory-based liability \u2014 from individual actions to behavioural trajectories",
+            "March 2026 AI Liability Directive burden-of-proof shift to deployers",
+            "Design adequacy standard replacing individual negligence"
+          ]
+        },
+        {
+          "id": "s04",
+          "title": "Success Cases",
+          "items": [
+            "DBS Bank (Harvard case study) \u2014 governance as competitive advantage",
+            "NatWest \u2014 human-intensive AI design and workforce AI literacy",
+            "CBA \u2014 enterprise-wide governance formalisation with measurable outcomes",
+            "Mastercard Agent Pay \u2014 production agentic AI governance in Australian financial services"
+          ]
+        },
+        {
+          "id": "s05",
+          "title": "Original Hypotheses",
+          "items": [
+            "H1: Proxy-to-ground-truth assumption gap is the primary structural failure mode in AI trust certification \u2014 certified proxies are treated as ground truth and degrade without detection",
+            "H2: AI trust failures are better predicted by calibration divergence between user trust and system performance than by any individual model property"
+          ]
+        }
+      ],
+      "papersAdded": [
+        "p003",
+        "p004",
+        "p005",
+        "p006",
+        "p007",
+        "p008",
+        "p009",
+        "p010",
+        "p011",
+        "p012",
+        "p013",
+        "p014",
+        "p015"
+      ],
+      "themesAdded": [
+        "t099",
+        "t100",
+        "t101",
+        "t102"
+      ],
+      "toolsAdded": [
+        "tool088",
+        "tool089",
+        "tool090",
+        "tool091",
+        "tool092",
+        "tool093",
+        "tool094"
+      ],
+      "adviceAdded": {
+        "trust-professionals": [
+          "ta037",
+          "ta038",
+          "ta039"
+        ],
+        "executives": [
+          "ex033",
+          "ex034"
+        ],
+        "regulators": [
+          "r035",
+          "r036"
+        ]
+      }
     }
   ],
-  "total": 18
+  "total": 19
 }

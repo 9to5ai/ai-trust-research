@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-10",
+  "lastUpdated": "2026-04-11",
   "sections": [
     {
       "id": "trust-professionals",
@@ -698,6 +698,61 @@
           ],
           "urgency": "watch",
           "prompt": "What are the single points of failure in each high-stakes AI system \u2014 the errors that could produce catastrophic disproportionate trust damage? Has your design review assessed catastrophic error prevention as a distinct workstream from general model risk management?"
+        },
+        {
+          "id": "ta037",
+          "headline": "Stop certifying proxies as ground truth \u2014 make the assumption chain explicit in every AI assurance statement",
+          "body": "The structural failure in AI trust certification is that documents certify proxies (accuracy on a validation dataset, measured at a point in time) while users assume they certify ground truth. Balarabe's drift taxonomy (p013) shows that model properties degrade continuously through data drift, concept drift, and covariate drift \u2014 making the proxy-to-ground-truth gap a time-varying quantity, not a fixed one. Gazit et al. (p003) establish that institutional epistemic trust requires socially embedded warrant structures, not just technical accuracy. The operational response: every AI assurance statement should explicitly declare: what proxy was measured; under what conditions; what assumptions connect the proxy to actual performance; what the known degradation rate is; and what the monitoring frequency is. This is not additional bureaucracy \u2014 it is the difference between a certificate that creates liability and one that manages it.",
+          "citations": [
+            "p003",
+            "p013",
+            "p166",
+            "p012"
+          ],
+          "themes": [
+            "t099",
+            "t102",
+            "t082"
+          ],
+          "urgency": "act-now",
+          "prompt": "In your next AI assurance engagement, can you explicitly map the proxy-to-ground-truth assumption chain for the primary trust property being assessed? What is the measured proxy, what assumptions connect it to actual performance, and what is the degradation rate?"
+        },
+        {
+          "id": "ta038",
+          "headline": "Implement S-TIAS trust calibration measurement as a continuous governance instrument, not a one-off survey",
+          "body": "McGrath et al. (p004, p196) provide a psychometrically validated 3-item instrument (S-TIAS) for measuring whether user trust in AI systems is calibrated to actual system performance. The critical discovery from the appropriate reliance literature (p166) is that calibration is the central mediating variable: over-trust produces automation bias and missed anomalies; under-trust produces deskilling and failure to capture AI's genuine value. Neither is stable \u2014 calibration erodes as models drift and as user trust adjusts to surface-level patterns rather than deep performance properties. The operational recommendation: deploy S-TIAS at multiple time points (deployment, 30 days, 90 days, annually) and treat calibration error as a primary governance metric alongside technical performance metrics. When calibration error exceeds defined thresholds, trigger governance intervention \u2014 not technical retraining alone, but user communication, expectation management, and if necessary deployment restrictions.",
+          "citations": [
+            "p004",
+            "p196",
+            "p166",
+            "p100"
+          ],
+          "themes": [
+            "t100",
+            "t079",
+            "t092"
+          ],
+          "urgency": "act-now",
+          "prompt": "Are you currently measuring whether your users' trust in your AI systems matches actual system performance? If not, how do you know whether they are over-relying or under-relying on AI guidance?"
+        },
+        {
+          "id": "ta039",
+          "headline": "Redesign human oversight as resolution-matched architecture, not frequency-matched review",
+          "body": "The most important architectural insight from this session: human oversight fails at agentic AI scale not because humans are insufficiently capable but because the resolution of human oversight is mismatched to the resolution of AI action (p014, p195). Humans can meaningfully oversee decisions that are discrete, low-frequency, and high-stakes \u2014 the traditional HITL model. Agentic AI produces decisions that are continuous, high-frequency, and varied in stakes \u2014 exceeding human processing capacity at every point. The architectural fix is resolution-matched supervision: for each class of AI action, design the minimal human oversight intervention that maintains accountability without requiring human review of every token. For financial services agentic applications (Mastercard Agent Pay p012 is the leading example), this means: high-consequence actions require human pre-approval or same-day review; medium-consequence actions require automated alerting with defined escalation thresholds; low-consequence actions require continuous monitoring with periodic audit. Implement the Reversal Register (tool088) as the accountability artifact that makes this architecture auditable.",
+          "citations": [
+            "p014",
+            "p195",
+            "p012",
+            "p007"
+          ],
+          "themes": [
+            "t101",
+            "t075",
+            "t076",
+            "t091"
+          ],
+          "urgency": "act-now",
+          "prompt": "What is the minimum oversight architecture that maintains accountability for each class of AI action in your portfolio? Over-scoping oversight wastes resources and produces rubber-stamping. Under-scoping produces accountability voids. Are you measuring which failure mode you are in?"
         }
       ]
     },
@@ -1296,6 +1351,40 @@
           ],
           "urgency": "watch",
           "prompt": "Has your organisation benchmarked its AI governance maturity against the CBA model? Do you have an Agent Pay strategy for the emerging AI agent transaction ecosystem? The competitive and regulatory trajectory is clear \u2014 institutions without formal enterprise AI governance will face increasing structural disadvantage."
+        },
+        {
+          "id": "ex033",
+          "headline": "Treat AI trust calibration as an enterprise risk metric \u2014 it is more actionable than 'AI trustworthiness'",
+          "body": "The concept of 'trustworthy AI' is the wrong target for enterprise risk management: it implies a binary property of the AI system when the actual risk comes from the calibration of organisational reliance to AI performance. Lugato and Floridi (p166) establish that appropriate reliance has three components \u2014 appropriateness (within capability boundaries), efficiency (monitoring costs proportionate to value), and calibration (trust level matches performance). McGrath (p196) validates measurement instruments for the calibration component. The enterprise risk insight: calibration failure is the leading indicator of AI-related harm. Over-trusting AI produces automation bias failures (the AI is wrong but no one catches it). Under-trusting produces deskilling and productivity losses. Both are detectable and manageable through S-TIAS measurement. Executive visibility should be on calibration trends across the AI portfolio, not on individual model accuracy scores.",
+          "citations": [
+            "p166",
+            "p196",
+            "p004",
+            "p100"
+          ],
+          "themes": [
+            "t100",
+            "t087"
+          ],
+          "urgency": "act-now",
+          "prompt": "Do you have visibility into whether your organisation's reliance on AI systems is calibrated to actual system performance? If not, you are flying blind on the leading indicator of AI-related harm in your portfolio."
+        },
+        {
+          "id": "ex034",
+          "headline": "The EU AI Act August 2026 enforcement date requires continuous conformity assessment infrastructure now",
+          "body": "The EU AI Act applies from 2 August 2026 for high-risk systems. Point-in-time audits are structurally insufficient for dynamic AI systems \u2014 this is no longer a theoretical concern but a documented empirical finding (Balarabe p013, CABCA p070). The critical regulatory gap is methodology: CABCA (ETSI TS 104 008) provides the operational framework but is a Technical Specification, not a Harmonised Standard \u2014 it offers no legal presumption of conformity. Boards and executive teams need to understand: (1) which of their AI systems will be classified as high-risk under EU AI Act Annex III; (2) what continuous monitoring infrastructure is required to demonstrate conformity between audit cycles; (3) what the liability exposure is if AI-related harm occurs and the organisation cannot produce evidence of continuous conformity. The Australian context matters:\u91d1\u878d\u670d\u52a1 organisations with EU operations or EU counterparties face direct EU AI Act obligations, and the regulatory architecture being established in the EU is becoming the de facto global standard.",
+          "citations": [
+            "p070",
+            "p013",
+            "p012"
+          ],
+          "themes": [
+            "t081",
+            "t085",
+            "t083"
+          ],
+          "urgency": "act-now",
+          "prompt": "Which of your AI systems will be high-risk under EU AI Act Annex III? Do you have continuous conformity assessment infrastructure for those systems? What will you present to regulators at the August 2026 enforcement date as evidence of ongoing compliance?"
         }
       ]
     },
@@ -1965,6 +2054,40 @@
           ],
           "urgency": "watch",
           "prompt": "Does your deployment authorisation process for high-stakes AI require formal constitutive source grounding documentation? If not, what epistemic basis are you relying on for deployment approval? The Gazit framework provides a proportionate, auditable, institutionally-grounded alternative to algorithmic transparency requirements."
+        },
+        {
+          "id": "r035",
+          "headline": "Define 'meaningful human oversight' operationally using the Dynamic Authority Reversal framework before August 2026",
+          "body": "EU AI Act Article 14 requires 'meaningful human oversight' for high-risk AI systems but does not operationalise what this means for agentic AI. The Dynamic Authority Reversal (DAR) framework (Westover p195) provides the missing operationalisation: meaningful oversight means an architecture with four specified authority states (HL, AL, CO, MO), defined trigger conditions for state transitions, hysteresis bands to prevent oscillation, safe-exit timers guaranteeing human review after maximum AI-lead dwell time, and a Reversal Register binding each decision to its authority state and justification. Regulators should adopt DAR as the reference architecture for meaningful oversight: firms that implement DAR have an auditable artifact demonstrating meaningful oversight; firms that cannot produce a Reversal Register cannot demonstrate it. This converts aspirational regulatory language into engineering requirements that can be audited, enforced, and used as the evidentiary basis for liability determinations.",
+          "citations": [
+            "p195",
+            "p014",
+            "p005"
+          ],
+          "themes": [
+            "t075",
+            "t076",
+            "t101"
+          ],
+          "urgency": "act-now",
+          "prompt": "Can your guidance on 'meaningful human oversight' be converted into engineering specifications that can be audited against actual system behaviour? If not, the guidance is aspirational rather than enforceable. What would the equivalent of a Reversal Register look like in your regulatory framework?"
+        },
+        {
+          "id": "r036",
+          "headline": "Require constitutive knowledge source grounding as a condition of high-stakes AI deployment authorisation",
+          "body": "Gazit et al. (p003) identify the epistemic architecture that makes AI trust possible without algorithmic transparency: AI systems in high-stakes domains should ground their outputs in institutional constitutive knowledge sources \u2014 regulatory standards, diagnostic criteria, and legal frameworks that carry recognised epistemic authority within their domain. This is not a transparency requirement; it is an institutional grounding requirement. Regulators should require as a condition of high-stakes AI deployment authorisation: a formal constitutive source mapping showing which AI outputs are grounded in which institutional standards; evidence that the AI system is actually producing outputs consistent with those sources; and a monitoring protocol for detecting when AI outputs diverge from constitutive source requirements. This requirement is auditable, proportionate, and directly addresses the opacity problem without requiring algorithmic disclosure.",
+          "citations": [
+            "p003",
+            "p015",
+            "p012"
+          ],
+          "themes": [
+            "t102",
+            "t077",
+            "t099"
+          ],
+          "urgency": "watch",
+          "prompt": "Does your deployment authorisation process for high-stakes AI require formal constitutive source grounding documentation? If not, what epistemic basis are you relying on for deployment approval?"
         }
       ]
     }
