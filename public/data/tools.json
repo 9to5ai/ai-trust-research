@@ -1016,8 +1016,8 @@
       "description": "The primary governance artifact from the Dynamic Authority Reversal (DAR) framework (Westover et al., p195). A Reversal Register is an auditable log that binds each AI-assisted decision to: (1) the prevailing authority state at the time of decision (HL, AL, CO, or MO); (2) the trigger conditions that caused any state transition; (3) the actors (human or AI) in each role; (4) the thresholds used to evaluate trigger conditions; (5) the explanation delivered to relevant parties; (6) the action taken. The Reversal Register transforms accountability from a static property (who signed off) into a dynamic property (which authority state produced each decision, and why). It is the operational artifact that makes EU AI Act Article 14's 'meaningful oversight' requirement specific and auditable. In financial services, the Reversal Register provides the evidentiary basis for demonstrating proportionate human supervisory involvement under the three-pillar liability framework and for satisfying post-market monitoring obligations.",
       "papers": [
         "p195",
-        "p007",
-        "p005"
+        "p205",
+        "p203"
       ],
       "dateIdentified": "2026-04-11"
     },
@@ -1026,9 +1026,9 @@
       "name": "Short Trust in Automation Scale (S-TIAS)",
       "type": "measurement-instrument",
       "jurisdiction": "International",
-      "description": "A 3-item psychometrically validated instrument for measuring human trust in AI systems (McGrath et al., 2025, p004/p196). The S-TIAS captures the two dimensions of trust and distrust as oblique (related but distinct) factors. Validation studies confirm: (1) S-TIAS is valid and reliable across diverse AI applications; (2) trust measured by S-TIAS significantly predicts behavioural intention to use AI; (3) machine trust propensity (MTP) predicts S-TIAS trust under high-performance conditions. The S-TIAS enables frequent, minimally disruptive trust measurement in organisational settings \u2014 critical for longitudinal calibration monitoring. Recommended measurement points: deployment, 30 days, 90 days, and annually. Discrepancies between S-TIAS scores and objective system performance data indicate calibration problems requiring governance intervention.",
+      "description": "A 3-item psychometrically validated instrument for measuring human trust in AI systems (McGrath et al., 2025, p202/p196). The S-TIAS captures the two dimensions of trust and distrust as oblique (related but distinct) factors. Validation studies confirm: (1) S-TIAS is valid and reliable across diverse AI applications; (2) trust measured by S-TIAS significantly predicts behavioural intention to use AI; (3) machine trust propensity (MTP) predicts S-TIAS trust under high-performance conditions. The S-TIAS enables frequent, minimally disruptive trust measurement in organisational settings \u2014 critical for longitudinal calibration monitoring. Recommended measurement points: deployment, 30 days, 90 days, and annually. Discrepancies between S-TIAS scores and objective system performance data indicate calibration problems requiring governance intervention.",
       "papers": [
-        "p004",
+        "p202",
         "p196",
         "p100"
       ],
@@ -1042,8 +1042,8 @@
       "description": "A governance framework treating human-AI collaboration as a temporal authority problem with four states: Human-Leader/AI-Follower (HL), AI-Leader/Human-Follower (AL), Co-Leadership (CO), and Mutual Override (MO). Transitions between states are governed by four trigger classes: data superiority, contextual judgment requirements, risk thresholds, and ethics overrides. Key structural features: hysteresis bands (exit thresholds differ from entry thresholds to prevent oscillation), safe-exit timers (maximum dwell time in AL state triggers mandatory human review \u2014 directly addresses EU AI Act Article 14 meaningful oversight requirement), and the Reversal Register (audit log binding each decision to authority state, triggers, and justifications). The DAR framework operationalises meaningful human oversight without requiring human review of every AI action.",
       "papers": [
         "p195",
-        "p014",
-        "p004"
+        "p212",
+        "p202"
       ],
       "dateIdentified": "2026-04-11"
     },
@@ -1054,10 +1054,10 @@
       "jurisdiction": "International",
       "description": "An architectural approach to human oversight of agentic AI systems where the scope and intensity of oversight is calibrated to the consequence profile of AI actions, not the volume. The key operational insight is that agentic AI generates too many actions for human review, but the distribution of consequences is highly skewed \u2014 most actions are low-consequence, a small fraction are medium-consequence, and a tiny fraction are high-consequence. Resolution-matched supervision means: (1) ensuring high-consequence actions are always subject to human review or pre-approval; (2) having automated alerting for medium-consequence exceptions; (3) accepting that low-consequence actions will be taken by AI without human review, with appropriate monitoring. The key concept is 'resolution bandwidth' \u2014 human oversight infrastructure has limited capacity, and that capacity must be allocated to the highest-resolution decisions.",
       "papers": [
-        "p014",
+        "p212",
         "p195",
-        "p004",
-        "p007"
+        "p202",
+        "p205"
       ],
       "dateIdentified": "2026-04-11"
     },
@@ -1066,10 +1066,10 @@
       "name": "AI Trust Calibration Audit Protocol",
       "type": "audit-methodology",
       "jurisdiction": "International",
-      "description": "An audit methodology for assessing whether organisational reliance on AI systems is appropriately calibrated to actual system performance. Based on Lugato and Floridi's appropriate reliance framework (p166) and McGrath's S-TIAS measurement (p004/p196), the protocol has four steps: (1) Measure \u2014 administer S-TIAS to representative users of each AI system; (2) Compare \u2014 obtain objective system performance data (accuracy, calibration, fairness metrics, drift statistics) for the same period; (3) Calculate Calibration Error \u2014 compute the gap between measured trust and expected trust given system performance, identifying over-trust or under-trust; (4) Intervene \u2014 if calibration error exceeds defined thresholds, trigger governance intervention. The protocol enables continuous trust calibration monitoring as the primary assurance instrument.",
+      "description": "An audit methodology for assessing whether organisational reliance on AI systems is appropriately calibrated to actual system performance. Based on Lugato and Floridi's appropriate reliance framework (p166) and McGrath's S-TIAS measurement (p202/p196), the protocol has four steps: (1) Measure \u2014 administer S-TIAS to representative users of each AI system; (2) Compare \u2014 obtain objective system performance data (accuracy, calibration, fairness metrics, drift statistics) for the same period; (3) Calculate Calibration Error \u2014 compute the gap between measured trust and expected trust given system performance, identifying over-trust or under-trust; (4) Intervene \u2014 if calibration error exceeds defined thresholds, trigger governance intervention. The protocol enables continuous trust calibration monitoring as the primary assurance instrument.",
       "papers": [
         "p166",
-        "p004",
+        "p202",
         "p196",
         "p100"
       ],
@@ -1083,8 +1083,8 @@
       "description": "A technical specification for the trajectory logging infrastructure required by trajectory-based liability frameworks (Bommarito et al., p192). The specification requires: (1) comprehensive action logging \u2014 every AI action (tool invocation, decision output, environmental interaction) logged with timestamp, inputs, outputs, and the decision state that produced it; (2) trajectory reconstruction capability \u2014 sufficient log granularity to reconstruct the full behavioural trajectory for any time period; (3) trajectory classification \u2014 automated classification of trajectories as within-bounds or out-of-bounds against defined behavioural specifications; (4) audit access \u2014 secure, immutable log storage with regulated access protocols. The March 2026 AI Liability Directive burden-of-proof shift makes trajectory logging infrastructure a legal necessity for deployers of autonomous AI systems.",
       "papers": [
         "p192",
-        "p005",
-        "p007"
+        "p203",
+        "p205"
       ],
       "dateIdentified": "2026-04-11"
     },
@@ -1093,11 +1093,11 @@
       "name": "Constitutive Knowledge Source Mapping",
       "type": "epistemic-grounding-methodology",
       "jurisdiction": "International",
-      "description": "A methodology for grounding AI outputs in institutional constitutive knowledge sources \u2014 regulatory standards, diagnostic criteria, and legal frameworks that carry recognised epistemic authority within their domain (Gazit et al., p003). The methodology has four steps: (1) Constitutive Source Identification \u2014 for each high-stakes decision domain, identify the institutional sources that constitute what counts as valid within that domain (e.g., APRA/EBA regulatory standards for creditworthiness, clinical diagnostic criteria for medical AI); (2) Source Mapping \u2014 document which AI outputs are grounded in which institutional standards; (3) Consistency Verification \u2014 evidence that the AI system is producing outputs consistent with those sources; (4) Divergence Monitoring \u2014 a protocol for detecting when AI outputs diverge from constitutive source requirements. This is not a transparency requirement; it is an institutional grounding requirement that is auditable and proportionate.",
+      "description": "A methodology for grounding AI outputs in institutional constitutive knowledge sources \u2014 regulatory standards, diagnostic criteria, and legal frameworks that carry recognised epistemic authority within their domain (Gazit et al., p201). The methodology has four steps: (1) Constitutive Source Identification \u2014 for each high-stakes decision domain, identify the institutional sources that constitute what counts as valid within that domain (e.g., APRA/EBA regulatory standards for creditworthiness, clinical diagnostic criteria for medical AI); (2) Source Mapping \u2014 document which AI outputs are grounded in which institutional standards; (3) Consistency Verification \u2014 evidence that the AI system is producing outputs consistent with those sources; (4) Divergence Monitoring \u2014 a protocol for detecting when AI outputs diverge from constitutive source requirements. This is not a transparency requirement; it is an institutional grounding requirement that is auditable and proportionate.",
       "papers": [
-        "p003",
-        "p015",
-        "p012"
+        "p201",
+        "p213",
+        "p210"
       ],
       "dateIdentified": "2026-04-11"
     }
