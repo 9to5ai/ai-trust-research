@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-11",
+  "lastUpdated": "2026-04-14",
   "sections": [
     {
       "id": "trust-professionals",
@@ -753,6 +753,74 @@
           ],
           "urgency": "act-now",
           "prompt": "What is the minimum oversight architecture that maintains accountability for each class of AI action in your portfolio? Over-scoping oversight wastes resources and produces rubber-stamping. Under-scoping produces accountability voids. Are you measuring which failure mode you are in?"
+        },
+        {
+          "id": "ta040",
+          "headline": "The phrase 'meaningful human review' is legally ambiguous \u2014 get specific or accept liability exposure",
+          "body": "Chiodo et al. (ICLR 2026) prove that 'human-in-the-loop' spans three computationally distinct setups with radically different safety profiles. Most regulatory requirements for 'human review' of AI decisions only require trivial monitoring \u2014 the human can halt the process but cannot meaningfully interpret or influence the AI's reasoning. When harm occurs, courts will ask whether meaningful human oversight was actually possible. If your client's HITL setup is a Turing reduction (genuine co-reasoning), they have genuine protection. If it's trivial monitoring, the human has been made a 'moral crumple zone' absorbing liability for technical failures beyond their comprehension. Audit the computational setup, not just the compliance checkbox.",
+          "citations": [
+            "p216"
+          ],
+          "themes": [
+            "t054",
+            "t058"
+          ],
+          "urgency": "act-now",
+          "prompt": "When a client says 'humans review all high-risk AI decisions' \u2014 ask: what computational setup is that review? Can the human actually evaluate the AI's reasoning, or are they rubber-stamping outputs? If the latter, they have liability exposure without protection."
+        },
+        {
+          "id": "ta041",
+          "headline": "Stop assessing AI model properties \u2014 assess institutional governance quality",
+          "body": "The philosophical literature is converged: epistemic trust in AI is grounded in institutional authority, not technical transparency (Oltedal 2025). AI systems that appear explainable may still provide misleading rationales; AI systems that appear opaque may be trusted because authoritative institutions have certified the governance framework within which they operate. The practical implication: your assurance engagements should evaluate the quality of the deploying institution's governance processes \u2014 conformity assessment, audit practices, institutional certification chains \u2014 not the AI's internal properties. This is what Singapore's IMDA framework and DPR+ principles actually assess. Model properties are downstream of governance quality.",
+          "citations": [
+            "p218"
+          ],
+          "themes": [
+            "t056"
+          ],
+          "urgency": "act-now",
+          "prompt": "When a client asks you to assess their AI model's trustworthiness, ask instead: what institutional governance framework certifies this model's outputs? Can you audit that framework? If they can't answer the second question, the first is meaningless."
+        },
+        {
+          "id": "ta042",
+          "headline": "Stop calling it 'trustworthy AI' \u2014 you're licensing dangerous vulnerability",
+          "body": "Baier's Goodwill Theory (applied to AI by Oltedal et al. 2025) reveals that 'trustworthy' implies moral agency \u2014 acting in users' interests with capacity for goodwill. AI systems can be reliable but cannot be trustworthy in this full sense. The danger: when organisations call their AI 'trustworthy', they calibrate user vulnerability accordingly \u2014 users trust more than they should. The correct framing: reliable AI with strong institutional governance. This isn't semantics \u2014 it changes how users and boards understand their risk exposure. Assurance practice should systematically correct 'trustworthy AI' language in client communications.",
+          "citations": [
+            "p219"
+          ],
+          "themes": [
+            "t057"
+          ],
+          "urgency": "act-now",
+          "prompt": "How does your client describe their AI to users and boards? If they use 'trustworthy AI' without distinguishing reliability from moral agency, their risk calibration is probably wrong. Help them articulate what they actually mean \u2014 and what they don't."
+        },
+        {
+          "id": "ta043",
+          "headline": "Point-in-time AI certification is a legal fiction \u2014 build continuous proxy monitoring",
+          "body": "The capability-identity gap (ArXiv 2603.14332) proves that AI agents can silently acquire new capabilities post-certification while certificates remain valid. The institutional epistemic trust literature (Oltedal) shows that even institutionally certified outputs degrade as AI citation practices fail. The calibration divergence hypothesis (supervisor H2) shows that the gap between user trust and system performance grows over time. The conclusion: any certification conducted at a point in time is a historical document by the time it's used. Build continuous monitoring: capability-bound cryptographic certificates for agentic AI, calibration drift detection for all AI systems, institutional warrant audits on a defined cycle.",
+          "citations": [
+            "p216",
+            "p217",
+            "p218"
+          ],
+          "themes": [
+            "t055"
+          ],
+          "urgency": "act-now",
+          "prompt": "When you certify an AI system, what is the degradation detection mechanism? If the answer is 'we re-assess annually', you have a false assurance problem. The certification chain must include continuous proxy validity monitoring."
+        },
+        {
+          "id": "ta044",
+          "headline": "Agentic AI governance requires cryptographic infrastructure \u2014 not policy documents",
+          "body": "For agentic AI systems (AI that acquires tools and acts autonomously), policy documents are insufficient. The capability-identity gap (ArXiv 2603.14332) shows that existing frameworks \u2014 identity platforms, authorisation frameworks, runtime gateways, governance platforms \u2014 all fail at least one of three requirements: capability integrity, behavioural verifiability, or interaction auditability. The only adequate response is cryptographic: capability-bound X.509 certificates (capability changes invalidate credentials), reproducibility commitments (post-hoc verification), and verifiable interaction ledgers (forensic reconstruction). For financial services deploying agentic AI, this is not optional \u2014 EU AI Act Articles 12, 43, and 72 mandate traceability, logging, and conformity assessment that policy alone cannot satisfy.",
+          "citations": [
+            "p217"
+          ],
+          "themes": [
+            "t055"
+          ],
+          "urgency": "act-now",
+          "prompt": "What is your client's governance infrastructure for agentic AI? If the answer is 'we have an AI governance policy', they are not prepared. Agentic AI requires cryptographic governance infrastructure. Help them understand the gap and how to close it."
         }
       ]
     },
@@ -1385,6 +1453,53 @@
           ],
           "urgency": "act-now",
           "prompt": "Which of your AI systems will be high-risk under EU AI Act Annex III? Do you have continuous conformity assessment infrastructure for those systems? What will you present to regulators at the August 2026 enforcement date as evidence of ongoing compliance?"
+        },
+        {
+          "id": "ex035",
+          "headline": "The DBS pattern is replicable: governance infrastructure built before mandatory operation pays compounding returns",
+          "body": "DBS Bank (Harvard Business School case study, 2024) scaled to 800+ AI models across 350 use cases with SGD 1B+ measured economic impact \u2014 by building governance infrastructure before it was operationally mandatory. NatWest won a DataIQ award for AI governance by treating governance as an enabler, not a compliance cost. Both banks built centralised cross-functional governance, tiered risk assessment, and proactive regulatory engagement before GenAI arrived. The pattern is: organisations with governance infrastructure scaled AI faster and more safely. organisations retrofitting governance are paying more for less. If your AI programme is ahead of your governance programme, you are accumulating systemic risk at speed.",
+          "citations": [],
+          "themes": [
+            "t059"
+          ],
+          "urgency": "act-now",
+          "prompt": "Is your AI governance infrastructure ahead of or behind your AI deployment pace? If behind \u2014 what is your plan to close the gap before a governance failure becomes an operational failure?"
+        },
+        {
+          "id": "ex036",
+          "headline": "The 'meaningful human review' in your AI approvals is probably legally\u65e0\u6548 (invalid)",
+          "body": "UK and EU legal frameworks (Chiodo et al. ICLR 2026) focus on HITL setups that don't achieve the outcomes regulators assume. When a regulator asks 'was there human oversight?', the answer depends on what computational setup that oversight actually is. If your executives are approving AI decisions under 'human review' processes where the human cannot meaningfully interpret the AI's reasoning \u2014 and most human review processes meet this description \u2014 your organisation has regulatory form without regulatory substance. Post-incident, courts and regulators will examine whether meaningful human oversight was computationally possible. Prepare now.",
+          "citations": [
+            "p216"
+          ],
+          "themes": [
+            "t054",
+            "t058"
+          ],
+          "urgency": "act-now",
+          "prompt": "If an AI system your organisation approved causes material harm, can your executives demonstrate that meaningful human oversight was computationally feasible? If not, the 'human review' process provides no legal protection."
+        },
+        {
+          "id": "ex037",
+          "headline": "After December 2026, your EU-market AI faces strict product liability \u2014 are you ready?",
+          "body": "The EU Product Liability Directive (2024/2853) introduces strict liability for defective AI systems placed on the EU market from December 2026. 'Product' now explicitly includes AI systems and software. The definition of 'defect' includes the product's ability to continue learning and acquiring new features post-market \u2014 directly relevant for AI that updates post-deployment. However, the PLD covers strict liability only. Fault-based liability (the primary mode for most financial services harm) remains in national law. Your EU exposure depends on which jurisdiction's courts hear the claim. Get a liability mapping done before December 2026.",
+          "citations": [],
+          "themes": [
+            "t058"
+          ],
+          "urgency": "act-now",
+          "prompt": "Which of your AI systems touch EU markets or EU customers? Are your contracts with AI vendors clear on liability allocation? If an EU customer is harmed by your AI system, who bears strict liability \u2014 you, the vendor, or both?"
+        },
+        {
+          "id": "ex038",
+          "headline": "AI Live Testing with the FCA is a competitive advantage, not a regulatory burden",
+          "body": "The FCA AI Live Testing programme (second cohort launching April 2026) gives firms regulatory visibility into AI deployment \u2014 with direct FCA engagement on model validation, bias detection, and system robustness. Industry respondents uniformly reported that Live Testing overcame 'proof of concept paralysis' and developed shared understanding of complex AI issues. Firms participating in Live Testing have a structured path to regulatory comfort on novel AI deployments. Your competitors who participate will have a documented evidence base for regulatory compliance you don't. Recommend your FCA-regulated clients apply for the next cohort.",
+          "citations": [],
+          "themes": [
+            "t059"
+          ],
+          "urgency": "watch",
+          "prompt": "Does your FCA-regulated client have a strategy for engaging with FCA AI Live Testing? If they're deploying novel AI without regulatory engagement, they're accumulating unsupervised risk."
         }
       ]
     },
@@ -2088,6 +2203,55 @@
           ],
           "urgency": "watch",
           "prompt": "Does your deployment authorisation process for high-stakes AI require formal constitutive source grounding documentation? If not, what epistemic basis are you relying on for deployment approval?"
+        },
+        {
+          "id": "r037",
+          "headline": "HITL requirements in current regulations assume a computational setup that doesn't exist in practice",
+          "body": "Chiodo et al. (ICLR 2026) demonstrate that most 'human review' processes in deployed AI systems are computationally trivial monitoring \u2014 the human can halt the machine but cannot meaningfully interpret or influence its reasoning. Yet Article 14 of the EU AI Act and Article 22 of GDPR assume meaningful human intervention is always possible. Regulators should update guidance to distinguish between computationally trivial monitoring and genuine human co-reasoning, and adjust liability expectations accordingly. Requiring humans to review AI decisions they cannot interpret is regulatory theatre that protects neither the human nor the public.",
+          "citations": [
+            "p216"
+          ],
+          "themes": [
+            "t054",
+            "t058"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your regulatory framework distinguish between different computational types of HITL? If 'human review' is required, what is the minimum computational setup for that review to be legally meaningful?"
+        },
+        {
+          "id": "r038",
+          "headline": "The AILD withdrawal left a structural gap in fault-based AI liability \u2014 national tort systems are not ready",
+          "body": "The EU's withdrawal of the AI Liability Directive in early 2025 left fault-based AI liability entirely to national tort systems. These systems \u2014 designed for individual human negligence \u2014 were not designed for AI. Proving causation between AI behaviour and harm, establishing the relevant standard of care, and assigning liability across complex AI supply chains are all issues national courts are working through without guidance. The PLD's strict liability for defective products covers only part of the harm landscape. Regulators and policymakers should address the AILD gap through industry-specific guidance before litigation fills the vacuum with inconsistent precedents.",
+          "citations": [],
+          "themes": [
+            "t058"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your jurisdiction have guidance on how fault-based liability applies to AI systems? If not, harm victims will face disproportionate proof burdens and inconsistent judicial outcomes."
+        },
+        {
+          "id": "r039",
+          "headline": "Continuous AI monitoring requirements need technical specification, not just regulatory intent",
+          "body": "Both the EU AI Act and the UK's principles-based approach require ongoing monitoring of AI systems in operation. But 'continuous monitoring' is not operationally defined. The capability-identity gap (ArXiv 2603.14332) shows what this means technically: cryptographic certificate binding that invalidates on capability changes, reproducibility commitments for post-hoc verification, and verifiable interaction ledgers for forensic audit. Regulators should specify what 'continuous monitoring' means technically, or it will be satisfied with periodic human reviews that don't detect degradation. Vague monitoring requirements create false assurance.",
+          "citations": [
+            "p217"
+          ],
+          "themes": [
+            "t055"
+          ],
+          "urgency": "act-now",
+          "prompt": "When you specify 'continuous monitoring' for AI systems in your jurisdiction \u2014 have you specified what technical mechanisms constitute adequate continuous monitoring? Without technical specificity, regulated entities will define it themselves, probably inadequately."
+        },
+        {
+          "id": "r040",
+          "headline": "DBS and NatWest prove governance infrastructure enables rather than constrains AI innovation",
+          "body": "Two independent success cases \u2014 DBS Bank (Harvard Business School case) and NatWest (DataIQ Award) \u2014 demonstrate the same pattern: organisations with mature AI governance infrastructure scaled AI faster and more safely than those without. DBS went from early AI adoption to 800+ models and #1 global AI strategy ranking. NatWest won an award for governance that enabled rather than slowed AI innovation. The policy implication: prescriptive rules that treat governance as a constraint will be outperformed by principles-based approaches that treat governance as infrastructure. Regulators should communicate governance as a competitive enabler.",
+          "citations": [],
+          "themes": [
+            "t059"
+          ],
+          "urgency": "awareness",
+          "prompt": "Does your regulatory communication help firms see governance as a competitive advantage, or as a compliance burden? The framing shapes whether firms build governance proactively or only when forced."
         }
       ]
     }

@@ -1100,6 +1100,72 @@
         "p210"
       ],
       "dateIdentified": "2026-04-11"
+    },
+    {
+      "id": "tool072",
+      "name": "Oracle Machine HITL Assessment Framework",
+      "category": "Governance Assessment",
+      "description": "Based on Chiodo et al. (ICLR 2026), this framework classifies Human-in-the-Loop setups across three computational types: trivial monitoring (total functions), endpoint action (many-one reductions), and involved interaction (Turing reductions). Each type has different safety implications, legal validity, and practical effectiveness. The framework also maps six documented failure modes and the unavoidable trade-off between responsibility attribution and interpretability. Used to audit whether an organisation's HITL setup is genuine or performative.",
+      "url": "https://openreview.net/forum?id=KR8viVTrX4",
+      "license": "CC BY 4.0",
+      "maturity": "Research-grade formalisation",
+      "relevance": "Essential for assessing whether client HITL claims are legally valid and practically effective. Most 'human review' processes will classify as trivial monitoring \u2014 this changes liability exposure dramatically.",
+      "dateDiscovered": "2026-04-14"
+    },
+    {
+      "id": "tool073",
+      "name": "Cryptographic Agent Governance Framework (Capability-Bound Certificates + Reproducibility Commitments + Verifiable Ledgers)",
+      "category": "Technical Governance Infrastructure",
+      "description": "Three-mechanism cryptographic framework from ArXiv 2603.14332: (1) Capability-bound X.509 v3 certificates embedding SHA-256 commitment to agent's complete tool configuration, invalidating on any tool change; (2) Reproducibility commitments enabling post-hoc verification of agent behaviour through LLM near-determinism; (3) Verifiable interaction ledgers providing hash-linked signed records for forensic multi-agent reconstruction. Satisfies three governance requirements simultaneously: G1 (Capability Integrity), G2 (Behavioural Verifiability), G3 (Interaction Auditability). 97\u00b5s certificate verification overhead.",
+      "url": "https://arxiv.org/html/2603.14332v1",
+      "license": "Open research",
+      "maturity": "Prototype (Rust implementation validated)",
+      "relevance": "Provides the technical architecture for continuous trust monitoring in agentic AI deployments. Essential for financial services firms deploying multi-agent systems where regulatory traceability is required (EU AI Act Articles 12, 43, 72).",
+      "dateDiscovered": "2026-04-14"
+    },
+    {
+      "id": "tool074",
+      "name": "Institutional Epistemic Trust Assessment",
+      "category": "Trust Evaluation Framework",
+      "description": "Based on Oltedal (2025), this framework shifts AI trust assessment from model properties to institutional governance quality. Evaluates: (1) constitutive knowledge sources \u2014 whether the institution creates recognised normative frameworks within which AI operates; (2) citation and warrant practices \u2014 whether AI outputs are grounded in institutionally validated sources; (3) institutional embedding \u2014 whether AI outputs are certified by authoritative institutions rather than self-reported. Replaces explainability-focused assessment with institutional quality audit.",
+      "url": "https://link.springer.com/article/10.1007/s43681-025-00930-2",
+      "license": "Springer",
+      "maturity": "Academic framework",
+      "relevance": "Reframes AI assurance engagements: instead of assessing AI model properties, assess institutional governance quality. Particularly relevant for clients claiming 'trustworthy AI' \u2014 the evaluation should focus on governance process, not model outputs.",
+      "dateDiscovered": "2026-04-14"
+    },
+    {
+      "id": "tool075",
+      "name": "Baier Goodwill Theory Audit (Reliability vs Trustworthiness Distinction)",
+      "category": "Philosophical Audit Framework",
+      "description": "Applies Annette Baier's Goodwill Theory of Trust to audit whether AI systems claim trustworthiness without possessing the required properties: goodwill (acting in users' interests), absence of motive to deceive, and capacity for moral judgement. The audit distinguishes legitimate reliability claims from normative trustworthiness claims that imply moral agency \u2014 and flags where organisations may be creating dangerous user vulnerability through inappropriate trust claims.",
+      "url": "https://link.springer.com/article/10.1007/s13347-025-00881-w",
+      "license": "Springer",
+      "maturity": "Academic framework",
+      "relevance": "Use in client communications to correct misleading 'trustworthy AI' claims. Helps clients understand the difference between reliable AI and AI that actively cares about their interests \u2014 and why the former with good governance is preferable to the latter.",
+      "dateDiscovered": "2026-04-14"
+    },
+    {
+      "id": "tool076",
+      "name": "EU Product Liability Directive 2024/2853 Assessment",
+      "category": "Legal & Regulatory Compliance",
+      "description": "Framework for analysing liability exposure under the new EU PLD (applicable from December 2026). Covers: strict liability for defective AI products including software; definition of defect including ability to learn/acquire new features post-market; complex supply chain liability allocation; open-source software exception and its narrow construction; interaction with national tort law for fault-based claims. Key gap: PLD covers strict product liability but leaves fault-based negligence to national systems \u2014 creating the AILD gap for financial services harm claims.",
+      "url": "https://iclg.com/practice-areas/product-liability-laws-and-regulations/01-the-new-eu-product-liability-directive",
+      "license": "Legal analysis",
+      "maturity": "Regulatory (applicable December 2026)",
+      "relevance": "Essential for financial services clients with EU market exposure. Maps liability allocation across AI developers, deployers, and operators. Identifies the gap between strict liability (covered by PLD) and fault-based negligence (national law only, post-AILD withdrawal).",
+      "dateDiscovered": "2026-04-14"
+    },
+    {
+      "id": "tool077",
+      "name": "FCA AI Lab Framework (Live Testing + Spotlight + Sprint)",
+      "category": "Regulatory Engagement",
+      "description": "The FCA's AI Lab provides a structured approach to responsible AI experimentation: Supercharged Sandbox (high-performance computing access for AI testing), AI Live Testing (controlled real-world market trials with regulator visibility), AI Spotlight (showcasing real-world implementation examples), AI Sprint (multi-stakeholder collaboration on complex AI issues), and AI Input Zone (ongoing stakeholder input). The FCA published its 2026/27 work programme confirming no AI-specific rules planned but active monitoring.",
+      "url": "https://www.fca.org.uk/firms/innovation/ai-lab",
+      "license": "FCA",
+      "maturity": "Operational regulatory programme",
+      "relevance": "UK financial services clients should use FCA AI Lab proactively. Live Testing provides regulatory visibility and shared understanding of model validation and bias detection \u2014 reducing proof-of-concept paralysis. Recommend clients participate in AI Live Testing cohorts.",
+      "dateDiscovered": "2026-04-14"
     }
   ],
   "total": 94

@@ -5198,7 +5198,104 @@
       ],
       "relevance": "Provides the measurement instrument for operationalising the appropriate reliance framework",
       "dateRead": "2026-04-11"
+    },
+    {
+      "id": "p216",
+      "title": "Formalising Human-in-the-Loop: Computational Reductions, Failure Modes, and Legal\u2013Moral Responsibility",
+      "authors": [
+        "Maurice Chiodo",
+        "Dennis M\u00fcller",
+        "Paul Siewert",
+        "Jean-Luc Wetherall",
+        "Zoya Yasmine",
+        "John Burden"
+      ],
+      "year": 2026,
+      "source": "ICLR 2026 (OpenReview)",
+      "url": "https://openreview.net/forum?id=KR8viVTrX4",
+      "analysis": "Chiodo et al. provide a landmark computational formalisation of Human-in-the-Loop (HITL) using oracle machines from computability theory. The key insight is that 'HITL' is not a single concept but a spectrum across three distinct computational setups: trivial monitoring (total functions, where humans can only halt the machine), endpoint action (many-one reductions, where humans make single point decisions), and involved interaction (Turing reductions, where humans co-reason with the machine across multiple steps). Each setup has radically different safety properties and legal implications. The paper demonstrates that legal frameworks (EU AI Act Article 14, GDPR Article 22) only contemplate HOTL/HITL under a simplistic view that doesn't account for this variety. Critically, the authors prove an unavoidable trade-off between responsibility attribution and technical explainability: setups where humans can genuinely influence outcomes are those where the reasoning is most opaque to them. The paper identifies six concrete failure modes and coins the term 'moral crumple zone' for humans absorbing accountability while having no technical agency. For financial services, the implications are severe: organisations claiming HITL compliance under current frameworks may have neither the technical setup nor the legal protection they assume. The concept of trivial monitoring is particularly important: most 'human review' of AI decisions in practice is computationally trivial \u2014 humans process outputs they cannot meaningfully interpret and are legally exposed accordingly.",
+      "tags": [
+        "HITL",
+        "formalisation",
+        "accountability",
+        "EU AI Act",
+        "computability theory",
+        "oracle machines",
+        "liability",
+        "meaningful human control"
+      ],
+      "relevance": "Directly answers supervisor Q2 (meaningful HITL at scale). Provides the theoretical architecture for distinguishing genuine from performative human oversight. Essential for liability analysis in Q3.",
+      "dateRead": "2026-04-14"
+    },
+    {
+      "id": "p217",
+      "title": "Governing Dynamic Capabilities: Cryptographic Binding and Reproducibility Verification for AI Agent Tool Use",
+      "authors": [
+        "Anonymous Authors"
+      ],
+      "year": 2026,
+      "source": "ArXiv (cs.CG)",
+      "url": "https://arxiv.org/html/2603.14332v1",
+      "analysis": "This paper identifies and solves the 'capability-identity gap' in AI agent governance: existing frameworks authenticate who an agent is and authorise what it may access, but none detect when the agent's capabilities have changed post-authorisation. Through MCP and A2A protocols, modern AI agents can dynamically acquire new tools at runtime \u2014 yet certificates remain valid regardless. The authors propose three cryptographic mechanisms: capability-bound X.509 v3 certificates embedding a SHA-256 commitment to the agent's complete tool configuration, where any tool change invalidates the certificate; reproducibility commitments leveraging LLM near-determinism for post-hoc behavioural verification; and a verifiable interaction ledger providing hash-linked signed records for forensic multi-agent reconstruction. The framework formalises three Agent Governance Requirements: G1 (Capability Integrity), G2 (Behavioural Verifiability), and G3 (Interaction Auditability). Evaluation across 9 models from 7 providers shows 4.7\u00d7 separation between same-provider and cross-provider outputs, with 97\u00b5s certificate verification overhead. Critically, the paper shows that existing identity platforms, authorisation frameworks, runtime gateways, and governance platforms all fail at least one of G1\u2013G3 in isolation \u2014 only cryptographic composition closes the gap. For consulting practice, this provides the technical specification for what 'continuous trust monitoring' actually means at the infrastructure level, and why the capability-identity gap is the primary failure mode for agentic AI governance in financial services.",
+      "tags": [
+        "agentic AI",
+        "cryptographic governance",
+        "capability integrity",
+        "MCP",
+        "A2A",
+        "reproducibility",
+        "verifiable ledgers",
+        "EU AI Act traceability"
+      ],
+      "relevance": "Addresses supervisor Q1 (trust provenance, capability change detection) and Q3 (forensic accountability infrastructure). Provides technical architecture for continuous trust monitoring.",
+      "dateRead": "2026-04-14"
+    },
+    {
+      "id": "p218",
+      "title": "Constitutive knowledge sources: an institutional approach to epistemic trust in opaque AI systems",
+      "authors": [
+        "Olav Oltedal"
+      ],
+      "year": 2025,
+      "source": "AI and Ethics (Springer)",
+      "url": "https://link.springer.com/article/10.1007/s43681-025-00930-2",
+      "analysis": "Oltedal advances a landmark thesis: that epistemic trust in AI systems is warranted not through technical transparency or explainability, but through institutional authority \u2014 what he terms 'constitutive knowledge sources'. The argument is rooted in social epistemology: knowledge in complex domains depends on social and institutional structures rather than individual comprehension. When AI systems provide outputs, users face an 'epistemic gap' \u2014 they must accept results without understanding the reasoning. Traditional responses (technical explainability and reference-based justification) both fail: explainability sacrifices performance and often produces misleading post-hoc rationales, while citation-based approaches simulate warrant without providing it (the paper documents systematic failure modes in AI citation practices: fabricated bibliographic details, mismatched source attributions, selective quotation obscuring uncertainty). The alternative is institutional embedding: AI outputs are trusted not because we understand them but because authoritative institutions certify the frameworks within which they operate. The paper argues for two modes of AI engagement with constitutive sources: systems that retrieve and cite existing sources, and institutional processes that validate AI outputs as constitutive. This directly explains why Singapore's IMDA framework emphasises governance process over AI transparency, and why DPR+ principles focus on institutional accountability rather than model interpretability. The consulting implication is profound: assurance should assess the quality of an organisation's institutional governance, not the AI system's internal properties. Only institutional embedding provides genuine epistemic warrant.",
+      "tags": [
+        "epistemic trust",
+        "institutional trust",
+        "explainability",
+        "constitutive knowledge",
+        "social epistemology",
+        "opacity",
+        "citation failure",
+        "warrant"
+      ],
+      "relevance": "Addresses supervisor Q1 (provenance of trust, ground truth vs proxies). Provides philosophical grounding for why institutional governance quality determines trust validity.",
+      "dateRead": "2026-04-14"
+    },
+    {
+      "id": "p219",
+      "title": "Artificial Goodwill and Human Vulnerability: The Case for Building Merely Reliable, Rather than Trustworthy, Artificial Intelligence Technologies",
+      "authors": [
+        "Sanjay Oltedal",
+        "Nina A. Nart"
+      ],
+      "year": 2025,
+      "source": "Philosophy & Technology (Springer)",
+      "url": "https://link.springer.com/article/10.1007/s13347-025-00881-w",
+      "analysis": "This paper applies Annette Baier's Goodwill Theory of Trust \u2014 developed for interpersonal trust \u2014 to AI systems, producing a counterintuitive and uncomfortable conclusion: we should build AI that is merely reliable, not trustworthy. The authors draw three definitions of trustworthiness from Baier's framework: AI that has goodwill (acts in users' interests), AI that has no motive to deceive, and AI that exercises moral judgement. They argue all three are technically possible to achieve in AI systems \u2014 but uniquely undesirable, because doing so makes humans uniquely vulnerable to these systems. The key philosophical move is distinguishing trust (an attitude involving vulnerability and normative expectation of care) from reliability (a property of consistent performance). Unlike reliable tools, trusted entities can betray us. Building AI that actively considers human interests \u2014 trustworthy AI \u2014 means making ourselves vulnerable to systems that could exploit that trust. The paper's most important contribution is reframing the 'trustworthy AI' discourse: the term conflates two distinct concepts (reliability and moral agency), and organisations claiming their AI is 'trustworthy' are either misusing the term or committing users to a dangerous vulnerability. For financial services, the implication is clear: organisations should seek merely reliable AI with robust governance oversight, not AI marketed as actively benevolent. What the industry calls 'trustworthy AI' is often just 'reliable AI with good PR'. Assurance practice should resist the normative weight the term 'trustworthy' carries and focus on what can actually be measured and governed.",
+      "tags": [
+        "trustworthiness",
+        "reliability",
+        "Baier Goodwill Theory",
+        "vulnerability",
+        "normative trust",
+        "AI ethics",
+        "philosophy of trust"
+      ],
+      "relevance": "Addresses supervisor Q1 (what trust is vs what it isn't). Challenges the foundational concept of 'trustworthy AI' as commonly used in industry and regulatory discourse.",
+      "dateRead": "2026-04-14"
     }
   ],
-  "total": 235
+  "total": 239
 }

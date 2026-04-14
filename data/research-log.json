@@ -1369,7 +1369,109 @@
           "r036"
         ]
       }
+    },
+    {
+      "id": "rl020",
+      "date": "2026-04-14",
+      "title": "First Principles of AI Trust \u2014 Chiodo Oracle Machine HITL Formalism + Cryptographic Agent Governance + Institutional Epistemic Trust",
+      "summary": "Continued first principles deep research following supervisor direction. Key advances: (1) Chiodo et al. ICLR 2026 provides computational formalisation of HITL using oracle machines \u2014 trivial monitoring, endpoint action, involved interaction \u2014 proving most regulatory HITL is computationally trivial with no genuine safety or legal protection value; (2) ArXiv 2603.14332 solves the capability-identity gap in agentic AI governance through cryptographic certificates, reproducibility commitments, and verifiable ledgers; (3) Oltedal (2025) grounds epistemic trust in institutional constitutive authority, not technical transparency; (4) Baier Goodwill Theory reveals 'trustworthy AI' as dangerous misnomer; (5) EU PLD 2024/2853 creates strict liability for AI products from Dec 2026 but leaves fault-based gap post-AILD withdrawal; (6) DBS and NatWest success cases confirm governance-as-competitive-advantage pattern. Formulated H3 and H4 as extensions to supervisor hypotheses.",
+      "sections": [
+        {
+          "id": "s01",
+          "title": "Q1: Trust Provenance \u2014 Ground Truth, Proxies, and Degradation",
+          "items": [
+            "Epistemic trust in AI is institutionally grounded through constitutive knowledge sources, not technically derived",
+            "AI citation practices systematically fail \u2014 fabricated bibliographic details, mismatched source attributions",
+            "Institutional warrant degrades over time without continuous re-certification",
+            "Capability-identity gap: agents acquire new tools post-certification while certificates remain valid",
+            "H3: Proxy-to-ground-truth assumption gap is primary structural failure mode \u2014 certified proxies treated as ground truth and degrade without detection"
+          ]
+        },
+        {
+          "id": "s02",
+          "title": "Q2: Meaningful HITL at Agentic AI Scale \u2014 Oracle Machine Formalism",
+          "items": [
+            "Chiodo et al. ICLR 2026: HITL is a spectrum across three oracle machine setups \u2014 trivial monitoring, endpoint action, involved interaction",
+            "Most regulatory HITL requirements are computationally trivial \u2014 human can halt but not meaningfully interpret",
+            "Involved interaction (Turing reduction): human is most dependent on AI reasoning \u2014 interpretability/responsibility trade-off unavoidable",
+            "Moral crumple zone: humans absorb accountability for technical failures beyond their control",
+            "Structural answer: cryptographic capability binding + reproducibility commitments + forensic ledgers, not human review per decision"
+          ]
+        },
+        {
+          "id": "s03",
+          "title": "Q3: Liability and Accountability \u2014 Post-AILD Withdrawal Landscape",
+          "items": [
+            "EU AILD withdrawal early 2025: fault-based AI liability left entirely to national tort systems",
+            "EU PLD 2024/2853: strict product liability for defective AI from December 2026 \u2014 includes ability to learn post-market",
+            "PLD strict liability covers product defects; fault-based negligence (primary financial services harm mode) not harmonised",
+            "UK/EU legal frameworks only contemplate HOTL/HITL under simplistic view \u2014 misses computational complexity",
+            "Enterprise-level liability with proportionate recourse needed; mandatory AI E&O insurance for high-risk deployments"
+          ]
+        },
+        {
+          "id": "s04",
+          "title": "Q4: Success Cases \u2014 DBS and NatWest",
+          "items": [
+            "DBS Bank: Harvard Business School case, ranked #1 globally AI Strategy Leadership, 800+ models, SGD 1B+ economic impact",
+            "DBS pattern: governance built before mandatory operation, centralised cross-functional governance, proactive regulatory engagement",
+            "NatWest: DataIQ Award, two-stage governance framework (structured template + cross-functional expert review)",
+            "Both banks: governance as competitive enabler, not compliance cost; governance infrastructure preceded GenAI"
+          ]
+        },
+        {
+          "id": "s05",
+          "title": "Hypotheses H3 and H4",
+          "items": [
+            "H3: Proxy-to-ground-truth assumption gap is primary structural failure mode \u2014 certified proxies treated as ground truth and degrade without detection; compounded by institutional warrant decay without revocation",
+            "H4: AI trust failures better predicted by calibration divergence between user trust and system performance than by any individual model property \u2014 divergence is the leading indicator"
+          ]
+        }
+      ],
+      "papersAdded": [
+        "p216",
+        "p217",
+        "p218",
+        "p219"
+      ],
+      "themesAdded": [
+        "t054",
+        "t055",
+        "t056",
+        "t057",
+        "t058",
+        "t059"
+      ],
+      "toolsAdded": [
+        "tool072",
+        "tool073",
+        "tool074",
+        "tool075",
+        "tool076",
+        "tool077"
+      ],
+      "adviceAdded": {
+        "trust-professionals": [
+          "ta040",
+          "ta041",
+          "ta042",
+          "ta043",
+          "ta044"
+        ],
+        "executives": [
+          "ex035",
+          "ex036",
+          "ex037",
+          "ex038"
+        ],
+        "regulators": [
+          "r037",
+          "r038",
+          "r039",
+          "r040"
+        ]
+      }
     }
   ],
-  "total": 19
+  "total": 20
 }

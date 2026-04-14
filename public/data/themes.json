@@ -1517,6 +1517,106 @@
       "implications": "Assurance engagements should be scoped around institutional governance capacity, not model performance metrics alone. The assessment question is: does this organisation's governance of this AI system justify the reliance stakeholders are placing in it? This requires evaluating decision-rights allocation, escalation paths, monitoring investment, and institutional accountability structures \u2014 not just technical model properties.",
       "dateIdentified": "2026-04-11",
       "confidence": "high"
+    },
+    {
+      "id": "t054",
+      "name": "The Oracle Machine Spectrum: HITL is Not a Binary Concept",
+      "description": "Chiodo et al. (ICLR 2026) formalise Human-in-the-Loop as a spectrum across three computational setups: trivial monitoring (total functions \u2014 humans can only halt), endpoint action (many-one reductions \u2014 single decision points), and involved interaction (Turing reductions \u2014 genuine co-reasoning). Current regulatory frameworks treat HITL as a binary property ('human present' vs 'human absent') when it is actually a multidimensional space with radically different safety profiles. The practical implication: 'we have HITL' is meaningless without specifying which of the three computational setups is deployed.",
+      "evidence": [
+        "Chiodo et al. ICLR 2026 oracle machine formalisation",
+        "EU AI Act Article 14 treats HITL simplistically",
+        "GDPR Article 22 assumes meaningful human intervention is always possible"
+      ],
+      "implications": "Consulting engagements must ask: what computational setup does the client's 'HITL' actually instantiate? Most will be trivial monitoring. The regulatory protection assumed from HITL is largely illusory for involved AI interaction.",
+      "relatedPapers": [
+        "p216"
+      ],
+      "dateIdentified": "2026-04-14",
+      "confidence": "very high"
+    },
+    {
+      "id": "t055",
+      "name": "Proxy Degradation: Certified Trust Properties Decay Without Detection",
+      "description": "The supervisor's H1 hypothesis is confirmed across multiple sources: certified proxies are treated as ground truth and degrade without detection. The capability-identity gap (p217) shows agents acquire new capabilities post-certification while certificates remain valid. Jaton's ground truth tracings show human-grounded criteria decay as systems scale. The Chiodo paper shows interpretability degrades as AI reasoning complexity increases. The Oltedal paper shows institutional warrant degrades as AI citation practices produce fabricated sources. The practical implication: trust certification is not a stable state. Assurance must be continuous and the certification chain must include degradation detection.",
+      "evidence": [
+        "Chiodo et al. \u2014 interpretability degrades with AI complexity",
+        "ArXiv 2603.14332 \u2014 capability changes post-certification undetected",
+        "Jaton ground truth tracings \u2014 criteria decay at scale",
+        "Oltedal epistemic trust \u2014 institutional warrant degrades with AI citation failures"
+      ],
+      "implications": "Point-in-time certification is misleading. The certification should include continuous monitoring of proxy validity. The proxy-to-ground-truth gap is the primary structural failure mode.",
+      "relatedPapers": [
+        "p216",
+        "p217",
+        "p218"
+      ],
+      "dateIdentified": "2026-04-14",
+      "confidence": "high"
+    },
+    {
+      "id": "t056",
+      "name": "Institutional Epistemic Trust: Governance Quality Determines Warrant Validity",
+      "description": "Oltedal (2025) establishes that epistemic trust in AI is grounded in institutional authority, not technical transparency. The key insight is that 'constitutive knowledge sources' \u2014 institutions that create normative realities \u2014 provide the warrant for AI outputs, not the AI systems themselves. This reframes AI trust: what matters is the quality of the deploying institution's governance, not the AI's internal properties. Assurance practice should assess institutional governance quality \u2014 audit practices, conformity assessment processes, human oversight structures \u2014 not just model performance. This explains why Singapore's IMDA framework and DPR+ work: they focus on institutional process quality.",
+      "evidence": [
+        "Oltedal 2025 \u2014 institutional epistemic trust vs technical transparency",
+        "AI citation failures documented in Oltedal \u2014 mere citation simulates warrant without providing it",
+        "Singapore IMDA governance-process focus",
+        "DPR+ principles \u2014 institutional accountability focus"
+      ],
+      "implications": "The 'trustworthy AI' framing is misleading. What assurance clients actually need is evidence of institutional governance quality. Assessment frameworks should evaluate institutions, not algorithms.",
+      "relatedPapers": [
+        "p218"
+      ],
+      "dateIdentified": "2026-04-14",
+      "confidence": "high"
+    },
+    {
+      "id": "t057",
+      "name": "The Reliability/Trust Distinction: Why 'Trustworthy AI' Is a Dangerous Miscoception",
+      "description": "Baier and extended theories of trust reveal that trust involves vulnerability and normative expectation of care \u2014 properties only applicable to moral agents. AI systems can be reliable (consistent performance) but cannot be trustworthy in the full sense (having goodwill, exercising moral judgement). The dangerous consequence: calling AI 'trustworthy' licenses users to be uniquely vulnerable to it. The correct target is reliability with governance \u2014 building AI that performs consistently and governing it robustly, without implying moral agency. For financial services, this distinction matters: clients who believe they are using 'trustworthy AI' are actually relying on reliable AI and may have inappropriately calibrated their risk tolerance.",
+      "evidence": [
+        "Baier Goodwill Theory \u2014 trust requires vulnerability and normative expectation",
+        "Oltedal paper \u2014 reliability vs trust distinction in AI context",
+        "AI self-reported reasoning unreliability (Chiodo)"
+      ],
+      "implications": "Consulting engagements should correct the terminology: 'trustworthy AI' is a misnomer. Clients need reliable AI with strong governance. The normative weight of 'trustworthy' should not substitute for proper governance assessment.",
+      "relatedPapers": [
+        "p219"
+      ],
+      "dateIdentified": "2026-04-14",
+      "confidence": "high"
+    },
+    {
+      "id": "t058",
+      "name": "Legal Architecture Gap: HITL as Liability Shield vs Genuine Safeguard",
+      "description": "The AILD withdrawal in early 2025 left a fragmented liability landscape. The new EU Product Liability Directive (2024/2853) provides strict liability for defective AI products (from December 2026) but does not address fault-based negligence \u2014 which is the primary liability mode for most financial services AI harm. UK and EU legal frameworks focus on HITL setups that may not achieve desired outcomes (Chiodo et al.). The structural gap: when humans cannot meaningfully intervene (involved interaction, Turing reduction), the 'human oversight' requirement becomes a legal fiction \u2014 it satisfies regulatory form but provides no genuine safeguard. Organisations relying on HITL as liability protection may find this protection invalid when harm occurs through a setup where meaningful human intervention was computationally impossible.",
+      "evidence": [
+        "Chiodo et al. \u2014 legal frameworks miss HITL complexity",
+        "EU AILD withdrawal 2025 \u2014 fault-based liability gap",
+        "PLD 2024/2853 \u2014 strict product liability but no fault harmonisation",
+        "IAPP analysis \u2014 product vs service liability divide"
+      ],
+      "implications": "Legal liability for AI in financial services will be determined by national tort law, not harmonised EU rules. Organisations should seek enterprise-level liability frameworks and mandatory AI errors-and-omissions insurance for high-risk deployments.",
+      "relatedPapers": [
+        "p216"
+      ],
+      "dateIdentified": "2026-04-14",
+      "confidence": "high"
+    },
+    {
+      "id": "t059",
+      "name": "The DBS-NatWest Pattern: Governance Infrastructure as Competitive Advantage",
+      "description": "Two independent success cases (DBS Bank and NatWest) reveal a consistent pattern: organisations that built AI governance infrastructure before it was operationally mandatory achieved superior outcomes. DBS scaled to 800+ models and SGD 1B+ economic impact; NatWest won a DataIQ award for AI governance. Both used a centralised governance function with cross-functional expert review, tiered risk-based assessment, and proactive regulatory engagement. Crucially, neither treated governance as a compliance cost \u2014 both identified governance as a competitive advantage enabling faster, safer AI scaling.",
+      "evidence": [
+        "DBS Harvard Business School case study \u2014 governance as enabler, 800+ models, #1 AI strategy globally",
+        "NatWest DataIQ Award \u2014 two-stage governance framework enabling safe scaling",
+        "FCA AI Lab sandbox \u2014 governance as innovation enabler",
+        "Both banks: governance infrastructure preceded GenAI, not retrofitted"
+      ],
+      "implications": "First-mover advantage in AI governance is real and measurable. organisations that build governance infrastructure now will scale AI faster and more safely than those who treat governance as a constraint. The consulting opportunity: help clients see governance as a competitive investment, not a compliance burden.",
+      "relatedPapers": [],
+      "dateIdentified": "2026-04-14",
+      "confidence": "high"
     }
   ],
   "total": 102
