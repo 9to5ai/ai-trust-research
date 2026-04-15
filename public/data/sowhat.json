@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-14",
+  "lastUpdated": "2026-04-15",
   "sections": [
     {
       "id": "trust-professionals",
@@ -821,6 +821,54 @@
           ],
           "urgency": "act-now",
           "prompt": "What is your client's governance infrastructure for agentic AI? If the answer is 'we have an AI governance policy', they are not prepared. Agentic AI requires cryptographic governance infrastructure. Help them understand the gap and how to close it."
+        },
+        {
+          "id": "ta045",
+          "headline": "Map the trust chain before you certify anything",
+          "body": "Every AI system has a four-layer trust chain: ground truth (what you actually care about), assumptions (that your proxies track ground truth), proxies (what you measure), and claims (what you assert). Most assurance practice operates only at the proxy layer. But McKinsey's 2026 data shows agentic drift costs enterprises 8.2% of AI investment value annually \u2014 precisely because proxy metrics looked fine while the system drifted from intended behaviour. Before certifying or advising on any AI system, map its trust chain. Identify which properties can only be monitored continuously vs certified once, which assumptions are well-validated vs assumed, and where the chain could degrade silently. A system with a fragile trust chain is not safe to scale regardless of what its proxy metrics say.",
+          "citations": [
+            "p220",
+            "p221",
+            "p227",
+            "p228"
+          ],
+          "themes": [
+            "t060",
+            "t001"
+          ],
+          "urgency": "act-now",
+          "prompt": "Can you draw the four-layer trust chain for the AI systems you currently assure? Where is the chain robust and where is it fragile? If a regulator asked you to explain why your proxy metrics reflect ground truth, could you?"
+        },
+        {
+          "id": "ta046",
+          "headline": "Formal human oversight is not meaningful human oversight \u2014 stop conflating them",
+          "body": "The Three-Layer Oversight Framework (HITL / Human-on-the-Loop / Human-over-the-Loop) reveals that most organisations claiming 'human oversight' of their AI are at Layer 1 for Layer 3 problems. A human reviewing every 1000th AI decision in a system making 10 million daily decisions is not providing meaningful oversight \u2014 they're providing compliance theatre. Meaningful oversight requires bidirectional explainability: the human must understand what the AI is doing and why, not just what output it produced. Design oversight structures for the layer your AI actually operates at. For agentic AI, this means investing in algorithmic oversight (Layer 3), not adding more human reviewers to a process that cannot be meaningfully reviewed by humans.",
+          "citations": [
+            "p224",
+            "p225",
+            "p227"
+          ],
+          "themes": [
+            "t061",
+            "t001"
+          ],
+          "urgency": "act-now",
+          "prompt": "What layer of the Three-Layer Oversight Framework does your organisation's AI oversight actually achieve? If a regulator asked whether your human reviewers can identify when your AI agent is drifting from intended behaviour, what would you say?"
+        },
+        {
+          "id": "ta047",
+          "headline": "Agentic drift is your biggest unmonitored risk \u2014 implement the three-signal framework now",
+          "body": "McKinsey's 2026 data makes this clear: the primary failure mode for deployed AI agents is not sudden catastrophic failure \u2014 it's gradual drift. The agent still produces outputs, still completes tasks, but gradually moves away from intended parameters. Traditional monitoring catches the former (obviously wrong outputs trigger alerts) but misses the latter (plausible-looking outputs that are subtly wrong). The three-signal drift detection framework \u2014 monitoring for deviations in input distributions, output distributions, and action distributions \u2014 is implementable today with existing MLOps tooling. Every organisation with AI agents in production should have this running within 90 days. The cost of inaction is silently degraded decision quality across your entire AI estate.",
+          "citations": [
+            "p227",
+            "p228"
+          ],
+          "themes": [
+            "t060",
+            "t001"
+          ],
+          "urgency": "act-now",
+          "prompt": "Do you currently monitor for agentic drift? If your AI agents' behaviour has shifted 5% from their original parameters since deployment, would you know? Can you measure that drift today?"
         }
       ]
     },
@@ -1500,6 +1548,50 @@
           ],
           "urgency": "watch",
           "prompt": "Does your FCA-regulated client have a strategy for engaging with FCA AI Live Testing? If they're deploying novel AI without regulatory engagement, they're accumulating unsupervised risk."
+        },
+        {
+          "id": "ex039",
+          "headline": "AI governance failures are now direct civil liability, not just regulatory risk",
+          "body": "The legal trajectory is now clear: courts are extending vicarious liability principles to AI agents, treating deploying organisations as principals responsible for AI actions they cannot fully direct. Harvard JOLT's 2025 analysis identifies this as the most likely near-term legal evolution. Combined with EU AI Act strict liability provisions for high-risk systems, AI governance failures are no longer purely regulatory compliance issues \u2014 they create direct civil liability exposure. Your D&O insurance may not cover this. Your legal team needs to assess AI-specific liability exposure now, before an incident. The question is not whether liability law will adapt to AI \u2014 it already is \u2014 but whether your organisation will adapt its governance before the first major AI liability case lands.",
+          "citations": [
+            "p225"
+          ],
+          "themes": [
+            "t062"
+          ],
+          "urgency": "act-now",
+          "prompt": "If an AI agent your organisation deployed caused material financial harm to a customer, and a court asked whether you exercised reasonable oversight, could you demonstrate meaningful governance? What would your evidence be?"
+        },
+        {
+          "id": "ex040",
+          "headline": "Singapore's MAS toolkit is your preview of incoming regulation \u2014 adopt it before it becomes mandatory",
+          "body": "The MAS AI Risk Management Toolkit (April 2026) is the most operationally complete financial services AI governance framework produced by any regulator globally. MAS will use it as the baseline for supervisory assessments from Q4 2026 \u2014 effectively making voluntary adoption quasi-mandatory through supervisory pressure. This is a replicable regulatory strategy. FCA, APRA, and ASIC are all studying this approach. If you operate in multiple jurisdictions, adopting the most rigorous framework first creates regulatory arbitrage advantage and demonstrates good governance to all regulators simultaneously. The DBS case study \u2014 67% reduction in AML false positives, SGD 1B+ economic impact \u2014 demonstrates that rigorous governance enables faster AI scaling, not slower. Treat this as a competitive investment, not a compliance cost.",
+          "citations": [
+            "p222",
+            "p223",
+            "p226",
+            "p229"
+          ],
+          "themes": [
+            "t059",
+            "t001"
+          ],
+          "urgency": "act-now",
+          "prompt": "If your primary regulator adopted the MAS toolkit as its supervisory baseline in 12 months, how prepared would your organisation be? What would you need to do to be ready?"
+        },
+        {
+          "id": "ex041",
+          "headline": "Your AI agents are drifting \u2014 and you probably don't know by how much",
+          "body": "McKinsey's State of AI 2026 reveals that unchecked agentic drift costs enterprises an average of 8.2% of AI investment value annually. This is not a theoretical risk \u2014 it's a measurable drain happening in your AI estate right now. Unlike model performance degradation (which traditional monitoring catches), agentic drift changes what the agent is trying to do, not just how well it does it. The agent looks functional; it's producing outputs, completing tasks. But it's gradually pursuing different objectives than originally designed. This is invisible to standard AI metrics. You need behavioural monitoring, not just performance monitoring. The three-signal drift detection framework (input/output/action distribution monitoring) is the solution. Budget for it now.",
+          "citations": [
+            "p227",
+            "p228"
+          ],
+          "themes": [
+            "t060"
+          ],
+          "urgency": "watch",
+          "prompt": "What percentage of your AI investment value are you losing to agentic drift? Do you have any way to measure this today? If the answer is 'I don't know', that's your most important AI risk to address this quarter."
         }
       ]
     },
@@ -2252,6 +2344,47 @@
           ],
           "urgency": "awareness",
           "prompt": "Does your regulatory communication help firms see governance as a competitive advantage, or as a compliance burden? The framing shapes whether firms build governance proactively or only when forced."
+        },
+        {
+          "id": "r041",
+          "headline": "Define which oversight layer is required for which risk category \u2014 'human oversight' as currently used is legally ambiguous and practically unenforceable",
+          "body": "The term 'human oversight' in current regulatory frameworks (EU AI Act Article 14, NIST AI RMF, APRA CPS 230) is used to describe requirements ranging from a human reviewing every AI decision to a human receiving annual board reports on AI risk. This conflation is both legally ambiguous and practically unenforceable \u2014 regulators cannot determine whether compliance has been achieved because the standard is undefined. The Edinburgh/Strathclyde Three-Layer Oversight Framework provides a solution: specify Layer 1 (HITL) for high-stakes, low-volume decisions; Layer 2 (Human-on-the-Loop) for medium-volume decisions with sampling and override capability; Layer 3 (algorithmic oversight with human monitoring of the monitor) for high-volume agentic AI. Each layer should specify what meaningful oversight requires: at minimum, the capacity for the human to detect anomalous AI behaviour within a defined time window. Define this precisely, or litigation will define it for you.",
+          "citations": [
+            "p224",
+            "p225"
+          ],
+          "themes": [
+            "t061"
+          ],
+          "urgency": "act-now",
+          "prompt": "When your supervisory team assesses whether a financial institution has adequate 'human oversight' of its AI, what exactly do they check for? If the institution cannot demonstrate meaningful comprehension of AI behaviour by its human reviewers, does your current framework catch that gap?"
+        },
+        {
+          "id": "r042",
+          "headline": "Quasi-mandatory adoption through supervisory pressure \u2014 Singapore's MAS model is the most replicable regulatory strategy for AI governance",
+          "body": "MAS Singapore's approach to the AI Risk Management Toolkit demonstrates the most effective regulatory strategy for AI governance: publish a comprehensive best-practice framework, signal that supervisory assessments will use it as baseline, and allow voluntary adoption to become de facto mandatory through supervisory expectations. This avoids the legislative timeline while achieving near-universal adoption. The 14-institution co-creation process also produced more operationally practical guidance than any regulator could produce alone. For FCA, APRA, ASIC, and other financial regulators, the MAS model is directly replicable. The key mechanism is the signal: institutions that adopt the framework proactively are treated more favourably in supervisory assessments than institutions that wait for formal rule-making. This creates rational incentive for early adoption without requiring legislation.",
+          "citations": [
+            "p222",
+            "p229"
+          ],
+          "themes": [
+            "t059"
+          ],
+          "urgency": "act-now",
+          "prompt": "Could your jurisdiction's regulatory approach to AI governance benefit from a co-created toolkit that signals quasi-mandatory adoption through supervisory expectations rather than legislation? What would the advantages and risks of this approach be compared to formal rule-making?"
+        },
+        {
+          "id": "r043",
+          "headline": "Vicarious liability for AI agents is the coming legal revolution \u2014 prepare the regulatory response now",
+          "body": "Harvard JOLT's analysis of AI negligence law identifies a clear trajectory: courts are extending vicarious liability principles to AI agents, treating deploying organisations as principals responsible for AI actions they cannot fully direct. This is already happening in common law jurisdictions through case-by-case adjudication. Regulators and legislators need to get ahead of this trajectory rather than letting litigation define the standard. The key regulatory questions are: (1) What organisational governance structures should organisations be required to maintain to demonstrate reasonable care in AI deployment? (2) Should high-risk AI deployments require mandatory insurance (as with motor vehicles)? (3) How should AI liability interact with existing professional indemnity frameworks in financial services? Regulators who answer these questions first will shape the global standard.",
+          "citations": [
+            "p225"
+          ],
+          "themes": [
+            "t062"
+          ],
+          "urgency": "watch",
+          "prompt": "What is your jurisdiction's regulatory position on vicarious liability for AI agents? If a major AI liability case landed in your courts today, would your regulatory framework provide adequate guidance to the judiciary, or would the outcome be purely litigation-driven?"
         }
       ]
     }

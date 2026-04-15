@@ -1166,7 +1166,62 @@
       "maturity": "Operational regulatory programme",
       "relevance": "UK financial services clients should use FCA AI Lab proactively. Live Testing provides regulatory visibility and shared understanding of model validation and bias detection \u2014 reducing proof-of-concept paralysis. Recommend clients participate in AI Live Testing cohorts.",
       "dateDiscovered": "2026-04-14"
+    },
+    {
+      "id": "tool095",
+      "name": "NIST AI 600-1 Generative AI Profile (GAI Profile)",
+      "category": "Governance Framework",
+      "description": "NIST's official adaptation of AI RMF 1.0 for generative AI systems. Provides the foundational methodology for distinguishing certify-once properties (governance structure, policy, documentation) from continuous monitoring properties (output quality, hallucination rates, bias metrics). Essential reference for any AI trust and assurance practice.",
+      "url": "https://nv/lpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "license": "Public Domain",
+      "maturity": "Foundational",
+      "relevance": "Provides the conceptual framework for certify-once vs continuous monitoring distinction \u2014 essential for designing AI assurance programs.",
+      "dateDiscovered": "2026-04-15"
+    },
+    {
+      "id": "tool096",
+      "name": "Three-Layer Human Oversight Framework",
+      "category": "Oversight Methodology",
+      "description": "Academic framework distinguishing three structural levels of human oversight: Layer 1 HITL (human reviews every AI decision before execution \u2014 only feasible for low-throughput, high-stakes decisions); Layer 2 HOTL (human reviews sampled decisions post-execution, with real-time authority to halt \u2014 feasible for medium-throughput); Layer 3 HOTL^ (algorithmic oversight of AI behaviour, with human supervisors monitoring the monitor \u2014 the only feasible option for high-throughput agentic AI). Critical for designing oversight structures that are operationally feasible rather than compliance theatre.",
+      "url": "https://wjarr.com/sites/default/files/2024-11/ensuring-human-oversight-in-high-performance-ai-systems.pdf",
+      "license": "Academic (CC)",
+      "maturity": "Research-grade",
+      "relevance": "Provides the operational design pattern for structuring human oversight at different scales. Directly applicable to financial services AI governance design.",
+      "dateDiscovered": "2026-04-15"
+    },
+    {
+      "id": "tool097",
+      "name": "Three-Signal Agentic Drift Detection Framework",
+      "category": "Monitoring",
+      "description": "Operations framework for detecting agentic drift in production AI agents through three monitoring signals: (1) Input distribution deviation \u2014 agent starts seeing different types of inputs; (2) Output distribution deviation \u2014 agent produces different types of outputs; (3) Action distribution deviation \u2014 agent takes different types of actions. When any signal crosses defined thresholds, human review is triggered. Addresses the most insidious failure mode for agentic AI: gradual behaviour change that doesn't produce obviously wrong outputs.",
+      "url": "https://www.cio.com/article/4134051/agentic-ai-systems-dont-fail-suddenly-they-drift-over-time.html",
+      "license": "Trade publication",
+      "maturity": "Emerging practice",
+      "relevance": "The operational mechanism for continuous trust verification in agentic AI. Implementable immediately for any organisation with AI agents in production.",
+      "dateDiscovered": "2026-04-15"
+    },
+    {
+      "id": "tool098",
+      "name": "MAS AI Risk Management Toolkit",
+      "category": "Governance Framework",
+      "description": "The most operationally complete AI governance framework produced by any financial regulator globally. Five integrated modules: AI Risk Assessment (tiered risk classification), Model Inventory and Documentation (mandatory registration), Governance and Oversight (board accountability, SRO designation), Monitoring and Testing (continuous performance, bias testing), and Incident Response (72-hour mandatory reporting). Includes dedicated agentic AI governance annex. Accompanied by DBS/OCBC/UOB case studies with measurable outcomes.",
+      "url": "https://www.mas.gov.sg/news/media-releases/2026/mas-partners-industry-to-develop-ai-risk-management-toolkit-for-the-financial-sector",
+      "license": "Regulatory (MAS Singapore)",
+      "maturity": "Production-ready",
+      "relevance": "The reference framework for financial services AI governance. UK FCA, Australian APRA/ASIC, and EU regulators are studying this for their own guidance. Early adoption provides competitive advantage.",
+      "dateDiscovered": "2026-04-15"
+    },
+    {
+      "id": "tool099",
+      "name": "Trust Chain Analysis",
+      "category": "Assessment Methodology",
+      "description": "A diagnostic methodology for mapping the four-layer trust chain in any AI system: (1) Ground truth layer \u2014 what the AI system is actually supposed to do and what properties it should have; (2) Assumption layer \u2014 what we believe to be true about the relationship between ground truth and measurement; (3) Proxy layer \u2014 what we actually measure; (4) Claim layer \u2014 what we assert about the system based on proxy performance. The methodology reveals where assurance is robust (proxy closely tracks ground truth, assumptions are well-validated) and where it is fragile (large assumption gaps, proxies that can be gamed or mislead).",
+      "url": "",
+      "license": "Methodology",
+      "maturity": "Methodology (developing)",
+      "relevance": "The core diagnostic tool for AI trust assessment. Every AI assurance engagement should begin with a trust chain analysis to identify where assurance is meaningful and where it is compliance theatre.",
+      "dateDiscovered": "2026-04-15"
     }
   ],
-  "total": 94
+  "total": 105
 }

@@ -41,36 +41,33 @@
     "Create LLM evaluation bias mitigation protocol for assurance engagements"
   ],
   "supervisorFeedback": {
-    "date": "2026-04-10",
-    "direction": "Continue first principles focus. Key questions: (1) What is the provenance of trust? Ground truth vs assumptions vs proxies \u2014 what degrades, what is certified once vs continuously? (2) What does meaningful HITL actually mean at agentic AI scale? (3) How should liability/accountability frameworks be restructured when human oversight is infeasible? (4) Success case studies. Do NOT produce another maturity model or framework map. First principles only.",
-    "researchQuestions": [
-      "What is the provenance of trust? What is ground truth vs assumptions vs proxies? Which trust properties are certified once vs continuously monitored? What degrades?",
-      "What does 'meaningful human in the loop' actually mean for agentic AI at scale? It's infeasible for humans to review every action \u2014 so what?",
-      "How should liability, accountability, and consequences frameworks be restructured when human oversight is infeasible?",
-      "Are there success case studies of organisations getting AI trust/governance right?"
+    "date": "2026-04-15",
+    "focus": "FIRST PRINCIPLES OF TRUST \u2014 not frameworks or maturity models",
+    "keyQuestions": [
+      "What is the provenance of trust? Ground truth vs assumptions vs proxies vs claims?",
+      "What does meaningful human oversight mean at agentic AI scale?",
+      "How should liability be restructured when human oversight is infeasible?",
+      "Success case studies of AI trust/governance implementations?"
     ],
-    "hypotheses": [
-      "H1: The proxy-to-ground-truth assumption gap is the primary structural failure mode in AI trust certification. Certified proxies are treated as ground truth and degrade without detection.",
-      "H2: AI trust failures are better predicted by calibration divergence between user trust and system performance than by any individual model property."
-    ]
+    "sessionOutcome": "Three first-principles advances: (1) Four-layer trust chain framework; (2) Three-layer oversight framework distinguishing meaningful from formal oversight; (3) Singapore MAS DBS case studies as global benchmark. New theme t060 (trust chain), t061 (meaningful oversight), t062 (vicarious liability). 10 new papers including NIST GAI Profile, ArXiv epistemic agents, MAS toolkit, Harvard JOLT liability analysis."
   },
   "stats": {
-    "papers": 232,
-    "themes": 108,
-    "tools": 100,
-    "researchSessions": 20,
-    "totalPapers": 232,
-    "totalThemes": 108,
-    "totalTools": 100,
-    "totalResearchSessions": 20,
-    "totalResearchHours": 44.0,
-    "totalSessions": 19,
+    "papers": 249,
+    "themes": 111,
+    "tools": 105,
+    "researchSessions": 21,
+    "totalPapers": 249,
+    "totalThemes": 111,
+    "totalTools": 105,
+    "totalResearchSessions": 21,
+    "totalResearchHours": 45.5,
+    "totalSessions": 20,
     "sowhatItems": {
-      "trustProfessionals": 51,
-      "executives": 44,
-      "regulators": 47
+      "trustProfessionals": 54,
+      "executives": 47,
+      "regulators": 50
     },
-    "adviceItems": 142
+    "adviceItems": 151
   },
-  "lastUpdated": "2026-04-14"
+  "lastUpdated": "2026-04-15"
 }

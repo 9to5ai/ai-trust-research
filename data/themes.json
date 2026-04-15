@@ -1617,7 +1617,62 @@
       "relatedPapers": [],
       "dateIdentified": "2026-04-14",
       "confidence": "high"
+    },
+    {
+      "id": "t060",
+      "name": "The Trust Chain: Ground Truth, Assumptions, Proxies, and Degradation",
+      "description": "Trust in deployed AI operates through a four-layer chain: (1) Ground truth \u2014 the actual property being assured, often inaccessible (e.g., 'is this model fair?', 'is this decision correct?'); (2) Assumptions \u2014 the propositions we treat as true about the relationship between ground truth and what we can measure (e.g., 'fairness metrics capture actual fairness', 'test data is representative'); (3) Proxies \u2014 the operational metrics we actually measure (accuracy, false positive rate, demographic parity); (4) Trust claims \u2014 the assertions we make about the AI system based on proxy performance. Each layer introduces potential degradation: assumptions may be wrong (the proxy doesn't capture the property), proxies may be gaming (adversarial inputs, distributional shift), trust claims may be overstated (confidence intervals ignored). This framework explains why certifications are inherently limited: they certify at the proxy layer, not the ground truth layer. The practical implication is that assurance practice must map and monitor the entire trust chain, not just the proxy metrics.",
+      "evidence": [
+        "NIST AI 600-1 GAI Profile distinction between certify-once and continuous monitoring",
+        "ArXiv p221 'Architecting Trust in Artificial Epistemic Agents' \u2014 three-layer trust architecture",
+        "McKinsey State of AI 2026 \u2014 agentic drift as trust chain degradation",
+        "CIO p228 \u2014 three-signal drift detection framework"
+      ],
+      "implications": "All assurance engagements should map the trust chain for the specific AI system under review. Which properties are certified once vs continuously monitored? Which assumptions are being made? Which proxies are used and how could they mislead? This analysis reveals where assurance is robust and where it is fragile.",
+      "relatedPapers": [
+        "p220",
+        "p221",
+        "p227",
+        "p228"
+      ],
+      "dateIdentified": "2026-04-15",
+      "confidence": "high"
+    },
+    {
+      "id": "t061",
+      "name": "Meaningful Human Oversight is Structurally Different from Formal Human-in-the-Loop",
+      "description": "The research consistently distinguishes two concepts that regulators, frameworks, and organisations routinely conflate: (1) Formal HITL \u2014 a human is technically in the loop (reviews outputs, approves actions, signs off), satisfying compliance requirements; (2) Meaningful oversight \u2014 the human actually understands what they are reviewing and can identify errors, anomalies, or risks. Formal HITL can be satisfied through checkbox compliance even when meaningful oversight is impossible \u2014 particularly for complex agentic AI. The consequences of this conflation are significant: organisations believe they have adequate oversight when they have formal oversight, regulators believe they are protecting against AI harms when they are merely documenting human involvement, and the actual risk of autonomous AI errors goes unmitigated. The Three-Layer Oversight Framework (HITL / Human-on-the-Loop / Human-over-the-Loop) proposed by Edinburgh/Strathclyde research provides the structural solution: specify which oversight layer is required for which risk category, rather than treating 'human oversight' as undifferentiated.",
+      "evidence": [
+        "Edinburgh/Strathclyde paper p224 \u2014 Three-Layer Human Oversight Framework",
+        "Harvard JOLT p225 \u2014 negligence doctrine breaks down when formal vs meaningful oversight conflates",
+        "McKinsey State of AI 2026 p227 \u2014 68% enterprises have AI in production but only 23% have agentic governance frameworks",
+        "Galileo AI \u2014 meaningful oversight requires bidirectional explainability"
+      ],
+      "implications": "Regulatory frameworks that require 'human oversight' without specifying what that oversight must achieve (comprehension, error detection, corrigibility) create compliance theatre. Practitioners should assess actual comprehension capacity, not just formal approval chains. The shift from 'human in the loop' to 'human on the loop' to 'human over the loop' must be deliberate and risk-based.",
+      "relatedPapers": [
+        "p224",
+        "p225",
+        "p227"
+      ],
+      "dateIdentified": "2026-04-15",
+      "confidence": "high"
+    },
+    {
+      "id": "t062",
+      "name": "Liability Law is Adapting: From Negligence to Vicarious Liability for AI",
+      "description": "Traditional AI liability analysis focuses on negligence doctrine: did the deploying organisation exercise reasonable care? This framework is breaking down because its foundational premise \u2014 that the organisation could have prevented the harm through feasible oversight \u2014 is increasingly false for agentic AI. Three alternative liability models are emerging in case law, regulation, and legal scholarship: (1) Vicarious liability expansion \u2014 courts treating AI agents as analogues of human employees, making deploying organisations liable for AI actions as principals; (2) Strict liability for high-risk systems \u2014 EU AI Act and proposed US legislation imposing automatic liability for designated high-risk AI deployments regardless of care taken; (3) Mandatory insurance \u2014 insurers pricing AI risk and creating incentive structures for good governance. The vicarious liability trajectory is the most legally mature and likely near-term outcome. The implication for financial services is significant: AI deployment creates liability exposure that is not fully captured by existing professional indemnity or cyber insurance frameworks, and governance failures that were previously merely regulatory compliance issues now create direct civil liability.",
+      "evidence": [
+        "Harvard JOLT p225 \u2014 vicarious liability as most likely near-term AI accountability mechanism",
+        "EU AI Act high-risk system liability provisions",
+        "APRA CPS 230 \u2014 operational risk including AI failures creating direct board liability"
+      ],
+      "implications": "AI governance frameworks must now be designed with liability risk management as a primary objective, not just regulatory compliance. Legal review of AI deployment agreements, vendor contracts, and AI agent authority levels should be standard practice. Directors and officers should understand their personal liability exposure for AI governance failures.",
+      "relatedPapers": [
+        "p225"
+      ],
+      "dateIdentified": "2026-04-15",
+      "confidence": "high"
     }
   ],
-  "total": 102
+  "total": 111
 }

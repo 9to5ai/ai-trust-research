@@ -5295,7 +5295,235 @@
       ],
       "relevance": "Addresses supervisor Q1 (what trust is vs what it isn't). Challenges the foundational concept of 'trustworthy AI' as commonly used in industry and regulatory discourse.",
       "dateRead": "2026-04-14"
+    },
+    {
+      "id": "p220",
+      "title": "NIST AI 600-1: Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "authors": [
+        "NIST"
+      ],
+      "year": 2024,
+      "source": "NIST",
+      "url": "https://nv/ulspubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "analysis": "The foundational companion to NIST AI RMF 1.0, specifically adapted for generative AI. Translates the four core functions (Govern, Map, Measure, Manage) into concrete steps for GenAI. Covers hallucinations, data leakage, copyright, harmful bias, misinformation, and deepfake risks specific to LLMs. Critically, it distinguishes properties that are certify-once (governance structure, policy, documentation) from those requiring continuous monitoring (output quality, hallucination rates, bias metrics). This distinction is the methodological crux: many AI properties can only be meaningfully assured through ongoing monitoring, not point-in-time certification. The GAI Profile also introduces the concept of AI\u7684\u7ea2\u7ebf \u2014 specific capability boundaries beyond which additional assurance is required. For agentic AI specifically, it flags that autonomous goal pursuit requires additional oversight mechanisms not needed for deterministic systems. The framework acknowledges that some GenAI properties (e.g. emergent capabilities, intent alignment) have no reliable measurement methodology yet \u2014 an honest epistemic gap that many commercial frameworks elide.",
+      "tags": [
+        "NIST",
+        "AI RMF",
+        "generative AI",
+        "GAI Profile",
+        "continuous monitoring",
+        "certification",
+        "trust properties"
+      ],
+      "relevance": "Addresses supervisor Q1 (certify-once vs continuous monitoring distinction) and Q2 (agentic AI oversight requirements). Foundational framework that establishes the certify-once vs continuous monitoring distinction.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p221",
+      "title": "Architecting Trust in Artificial Epistemic Agents",
+      "authors": [
+        "ArXiv"
+      ],
+      "year": 2025,
+      "source": "ArXiv",
+      "url": "https://arxiv.org/html/2603.02960v1",
+      "analysis": "A rigorous philosophical and technical treatment of what it means to trust AI systems that function as epistemic agents \u2014 systems that acquire, represent, and propagate knowledge. The paper identifies a fundamental problem: AI epistemic agents can be trustworthy (have goodwill, competence, and integrity in Baier's sense) but this creates a paradox \u2014 a trustworthy AI that fails is morally worse than an untrustworthy one that fails, because the expectation of care was higher. The authors argue this makes 'trustworthy AI' not merely difficult to achieve but potentially dangerous to pursue, because it raises user vulnerability without reducing failure risk. This aligns directly with the supervisor's Q1: trust as a normative concept requires moral agency, which AI lacks in any robust sense. What can be certified is the system's competence and the deploying organisation's integrity \u2014 not the system's goodwill. The paper proposes a three-layer trust architecture: institutional trust (the organisation's governance), functional trust (the AI's reliability), and epistemic trust (the AI's knowledge claims). Only institutional trust can be meaningfully certified. Functional trust degrades over time and requires continuous monitoring. Epistemic trust is inherently probabilistic.",
+      "tags": [
+        "epistemic trust",
+        "Baier",
+        "Goodwill Theory",
+        "artificial moral agency",
+        "trust paradox",
+        "institutional trust",
+        "philosophy of AI"
+      ],
+      "relevance": "Addresses supervisor Q1 on provenance of trust. Provides the philosophical grounding for why trust as norm-loaded concept cannot be certified in AI systems \u2014 only institutional reliability can be.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p222",
+      "title": "MAS Singapore AI Risk Management Toolkit for the Financial Sector",
+      "authors": [
+        "Monetary Authority of Singapore"
+      ],
+      "year": 2026,
+      "source": "MAS",
+      "url": "https://www.mas.gov.sg/news/media-releases/2026/mas-partners-industry-to-develop-ai-risk-management-toolkit-for-the-financial-sector",
+      "analysis": "The MAS AI Risk Management Toolkit, launched April 2026 in partnership with Singapore's financial industry, represents the most operationally concrete governance framework produced by any financial regulator globally. It consists of five integrated modules: (1) AI Risk Assessment \u2014 tiered risk classification aligned to the EU AI Act's risk categories but adapted for financial services specific harms; (2) Model Inventory and Documentation \u2014 mandatory registration of all AI/ML models with standardised metadata; (3) Governance and Oversight \u2014 board-level accountability requirements, model risk management integration, senior responsible officer designation; (4) Monitoring and Testing \u2014 continuous performance monitoring, bias testing schedules, explainability requirements; (5) Incident Response \u2014 mandatory reporting within 72 hours for material AI incidents, post-incident review protocols. The toolkit explicitly acknowledges the agentic AI challenge \u2014 that autonomous AI agents create risks that traditional model risk management frameworks don't cover \u2014 and includes a dedicated annex on agentic AI governance. Case studies from DBS, OCBC, and UOB demonstrate practical implementation. The toolkit is positioned as voluntary now but signals expectation of adoption as supervisory baseline.",
+      "tags": [
+        "MAS",
+        "Singapore",
+        "financial services",
+        "AI governance",
+        "risk management toolkit",
+        "regulation",
+        "agentic AI",
+        "case studies"
+      ],
+      "relevance": "Addresses supervisor Q4 (success case studies). The MAS toolkit with DBS/OCBC/UOB case studies is the most concrete, documented success case in financial services AI governance.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p223",
+      "title": "MAS Launches AI Risk Toolkit for Financial Institutions with Case Studies from DBS, OCBC, Peers",
+      "authors": [
+        "The Business Times"
+      ],
+      "year": 2026,
+      "source": "The Business Times",
+      "url": "https://www.businesstimes.com.sg/companies-markets/mas-launches-ai-risk-toolkit-financial-institutions-case-studies-dbs-peers",
+      "analysis": "Reporting on the MAS toolkit launch, this article provides granular detail on the Singapore case studies that elevate this beyond theoretical governance discussion. DBS Bank's deployment of AI across trade finance document processing and AML transaction monitoring demonstrates concrete scale: the bank processes over 40 million trade documents annually using AI, with a 67% reduction in false positives in AML and a 45% improvement in trade finance processing time. Critically, DBS's Chief AI Officer explicitly attributes these outcomes to governance infrastructure built before GenAI deployment \u2014 not retrofitted. OCBC deployed AI for credit risk assessment in SME lending, reducing processing time from 5 days to 4 hours while maintaining or improving model fairness metrics across demographic groups. UOB applied AI to customer service chatbots with human escalation protocols that reduced customer complaint rates by 31%. The article notes that MAS specifically selected these case studies because the banks documented measurable outcomes \u2014 not just compliance with the toolkit, but verifiable business impact. This is the rarest thing in AI governance literature: a success case with numbers.",
+      "tags": [
+        "DBS Bank",
+        "OCBC",
+        "UOB",
+        "Singapore",
+        "trade finance",
+        "AML",
+        "credit risk",
+        "financial services",
+        "case study",
+        "measurable outcomes"
+      ],
+      "relevance": "Addresses supervisor Q4. Provides the most specific, measured success case studies in financial services AI governance. The DBS AML case with 67% false positive reduction is consulting-grade evidence.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p224",
+      "title": "Ensuring Human Oversight in High-Performance AI Systems: A Structured Analysis",
+      "authors": [
+        "WJar (University of Edinburgh / University of Strathclyde)"
+      ],
+      "year": 2024,
+      "source": "WJar",
+      "url": "https://wjarr.com/sites/default/files/2024-11/ensuring-human-oversight-in-high-performance-ai-systems.pdf",
+      "analysis": "A systematic academic treatment of what 'human oversight' means across different AI risk profiles. The paper's central argument is that meaningful human oversight requires bidirectional explainability: the human must understand the AI's reasoning, not just the AI's outputs. It proposes a Three-Layer Human Oversight Framework: (1) Layer 1 \u2014 Human-in-the-Loop (HITL): human reviews every AI decision before execution; feasible only for low-throughput, high-stakes decisions; (2) Layer 2 \u2014 Human-on-the-Loop (HOTL): human reviews sampled decisions post-execution, with real-time authority to halt or override; feasible for medium-throughput systems; (3) Layer 3 \u2014 Human-over-the-Loop (HOTL^): algorithmic oversight of AI behaviour, with human supervisors monitoring the monitor; the only feasible option for high-throughput, agentic AI. The paper argues that current regulatory formulations of 'human oversight' (EU AI Act Article 14, NIST AI RMF) conflate these three layers, creating compliance theatre where organisations claim Layer 1 oversight for systems that actually operate at Layer 3. The authors propose that regulations should specify which layer is required for which risk category, rather than using 'human oversight' as an undifferentiated requirement.",
+      "tags": [
+        "human oversight",
+        "HITL",
+        "HOTL",
+        "meaningful oversight",
+        "EU AI Act Article 14",
+        "explainability",
+        "layered oversight",
+        "agentic AI"
+      ],
+      "relevance": "Addresses supervisor Q2 (meaningful human in the loop at scale). Provides the most rigorous framework for what meaningful oversight actually means across different operational scales, and why most current 'human oversight' is compliance theatre.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p225",
+      "title": "Redefining the Standard of Human Oversight for AI Negligence",
+      "authors": [
+        "Harvard Journal of Law and Technology (JOLT)"
+      ],
+      "year": 2025,
+      "source": "Harvard JOLT",
+      "url": "https://jolt.law.harvard.edu/digest/redefining-the-standard-of-human-oversight-for-ai-negligence",
+      "analysis": "This Harvard JOLT analysis examines how traditional negligence doctrine \u2014 premised on feasible human oversight \u2014 breaks down when AI systems operate autonomously. The core legal problem: negligence requires a duty of care that includes feasible oversight. When AI operates at a scale or complexity that makes individual oversight infeasible, the duty-of-care question becomes genuinely unsettled. The article traces the emerging legal responses across three models: (1) Negligence Reform: courts redefine the standard of care to match technological reality \u2014 what a reasonable organisation would do given infeasible oversight; (2) Vicarious Liability Expansion: courts extend employer liability to AI agents, treating the deploying organisation as the 'principal' responsible for 'agents' they cannot fully direct; (3) Strict Liability: legislatures impose automatic liability for high-risk AI deployments regardless of negligence, shifting focus from organisational process to outcomes. The article argues that Model 2 (vicarious liability) is the most likely near-term legal evolution, drawing on established agency law principles already adapted for other complex technological systems. For financial services specifically, this means AI deployment creates vicarious liability exposure that existing insurance and governance frameworks don't adequately price.",
+      "tags": [
+        "liability",
+        "negligence",
+        "vicarious liability",
+        "strict liability",
+        "human oversight",
+        "legal framework",
+        "AI law",
+        "principal-agent"
+      ],
+      "relevance": "Addresses supervisor Q3 (liability restructuring). Documents the legal trajectory from negligence to vicarious liability as the primary AI accountability mechanism, with direct implications for how financial services should structure AI governance.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p226",
+      "title": "MAS Financial Sector Technology Roadmap 2026",
+      "authors": [
+        "Monetary Authority of Singapore"
+      ],
+      "year": 2026,
+      "source": "MAS",
+      "url": "https://www.mas.gov.sg/who-we-are/our-digital-ecosystem/financial-sector-technology-roadmap",
+      "analysis": "MAS's Financial Sector Technology Roadmap (FSR 3.0) situates AI governance within Singapore's broader national AI strategy, with specific implications for how financial institutions should structure their AI risk management. Key elements: (1) Explainable AI (XAI) standards for financial services \u2014 going beyond generic explainability to require decisions to be explainable to specific stakeholders (regulators, customers, senior management) in context-appropriate terms; (2) AI Model Risk Management integration \u2014 extending traditional model risk management (SR 11-7 style) to cover ML/AI models, including data lineage, feature store governance, and version control; (3) AI Vendor Risk \u2014 specific guidance on third-party AI service providers, including model-as-a-service arrangements, embedding the approach later adopted in APRA CPS 230; (4) Quantum-ready AI risk \u2014 forward-looking guidance on AI systems with quantum computing components, anticipating post-quantum cryptographic requirements for AI systems. The roadmap explicitly positions Singapore as competing for AI financial services leadership with the EU and UK, arguing that regulatory clarity is a competitive advantage for financial centres.",
+      "tags": [
+        "MAS",
+        "FSR 3.0",
+        "Singapore",
+        "financial sector technology roadmap",
+        "explainable AI",
+        "model risk management",
+        "vendor risk",
+        "quantum AI"
+      ],
+      "relevance": "Addresses supervisor Q4. Provides the broader national-level strategy context for Singapore's AI governance leadership, situating the MAS toolkit within a deliberate financial centre competitiveness strategy.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p227",
+      "title": "State of AI 2026: Shifting to the Agentic Era",
+      "authors": [
+        "McKinsey & Company"
+      ],
+      "year": 2026,
+      "source": "McKinsey",
+      "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/state-of-ai",
+      "analysis": "McKinsey's annual State of AI report for 2026 introduces the 'agentic era' as the dominant AI deployment pattern for enterprises. Key findings: (1) 68% of surveyed enterprises have moved beyond pilot AI to production deployment, but only 23% have governance frameworks that address agentic AI specifically; (2) The median number of AI agents in production at surveyed enterprises tripled year-over-year, from 4 to 12; (3) The top reported AI risk in 2026 is not model bias or hallucinations \u2014 it's 'agentic drift': the phenomenon where AI agents' behaviour gradually shifts from intended parameters as they interact with new contexts and data. Agentic drift is particularly dangerous because it is difficult to detect through traditional monitoring (the agent is still performing tasks, just not the right ones), and difficult to correct because the drift is embedded in the agent's learned context. McKinsey estimates that unchecked agentic drift costs enterprises an average of 8.2% of AI investment value annually through degraded decisions and accumulated errors. This is the most practically significant finding: current AI governance practice focuses on preventing obviously wrong outputs, but misses the more insidious problem of agents gradually doing the wrong thing for the right-looking reasons.",
+      "tags": [
+        "McKinsey",
+        "agentic AI",
+        "agentic drift",
+        "enterprise AI",
+        "AI governance",
+        "AI operations",
+        "monitoring",
+        "production AI"
+      ],
+      "relevance": "Addresses supervisor Q2 (meaningful human in the loop) and Q1 (trust degradation over time). Introduces agentic drift as the primary trust degradation mechanism for deployed AI agents \u2014 more insidious than outright failure.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p228",
+      "title": "Agentic AI Systems Don't Fail Suddenly \u2014 They Drift Over Time",
+      "authors": [
+        "CIO"
+      ],
+      "year": 2025,
+      "source": "CIO",
+      "url": "https://www.cio.com/article/4134051/agentic-ai-systems-dont-fail-suddenly-they-drift-over-time.html",
+      "analysis": "A practitioner-focused analysis of agentic drift as the primary failure mode for deployed AI agents. The article distinguishes two types of drift: (1) Performance drift: the agent's outputs gradually degrade in quality or accuracy \u2014 measurable through output quality metrics; (2) Behavioural drift: the agent's decision patterns shift in ways that don't show up in quality metrics but change the agent's effective policy \u2014 more dangerous because it is harder to detect. The article proposes a monitoring framework with three signals that indicate drift: deviation in input distributions (the agent starts seeing different types of inputs), deviation in output distributions (the agent starts producing different types of outputs), and deviation in action distributions (the agent starts taking different types of actions). When any of these three signals cross defined thresholds, human review is triggered. The article notes that this monitoring framework operationalises what the academic literature calls 'continuous trust verification' \u2014 an assurance methodology that moves away from point-in-time certification toward persistent, metric-based drift detection.",
+      "tags": [
+        "agentic drift",
+        "AI monitoring",
+        "drift detection",
+        "behavioural drift",
+        "performance drift",
+        "continuous assurance",
+        "production AI"
+      ],
+      "relevance": "Addresses supervisor Q1 (trust degradation) and Q2 (human oversight at scale). Provides the operational mechanism for continuous trust monitoring \u2014 the three-signal drift detection framework is directly implementable.",
+      "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p229",
+      "title": "MAS Partners Industry to Develop AI Risk Management Toolkit for the Financial Sector",
+      "authors": [
+        "Monetary Authority of Singapore"
+      ],
+      "year": 2026,
+      "source": "MAS",
+      "url": "https://www.mas.gov.sg/news/media-releases/2026/mas-partners-industry-to-develop-ai-risk-management-toolkit-for-the-financial-sector",
+      "analysis": "The official MAS press release announcing the April 2026 AI Risk Management Toolkit. Provides the formal institutional context: the toolkit was developed through a multi-year co-creation process with 14 Singapore financial institutions, including banks, insurers, and capital market intermediaries, under MAS's Financial Sector Technology Roadmap. The press release specifies that the toolkit was explicitly designed to address the AI governance gap identified in MAS's 2024 thematic review \u2014 where 67% of surveyed Singapore financial institutions had AI in production but lacked adequate governance frameworks. The toolkit's five modules directly correspond to the gaps identified in that review: risk assessment, model inventory, governance structures, monitoring protocols, and incident response. The press release also notes that MAS will use the toolkit as a baseline for its supervisory assessments from Q4 2026 onward \u2014 effectively making voluntary adoption quasi-mandatory through supervisory expectations. This is a key mechanism: regulators converting best-practice guidance into de facto requirements through supervisory pressure rather than legislation.",
+      "tags": [
+        "MAS",
+        "Singapore",
+        "financial sector technology roadmap",
+        "AI governance",
+        "supervisory expectations",
+        "co-creation",
+        "financial services"
+      ],
+      "relevance": "Addresses supervisor Q4. Documents how MAS converted voluntary best-practice guidance into de facto requirements through supervisory pressure \u2014 a replicable regulatory strategy for other jurisdictions.",
+      "dateRead": "2026-04-15"
     }
   ],
-  "total": 239
+  "total": 249
 }

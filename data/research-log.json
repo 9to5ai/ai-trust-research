@@ -1471,7 +1471,96 @@
           "r040"
         ]
       }
+    },
+    {
+      "id": "rl021",
+      "date": "2026-04-15",
+      "title": "First Principles of AI Trust: Provenance, Meaningful Oversight, and Liability",
+      "summary": "Deep research session addressing supervisor's four core questions from a first-principles philosophical and operational perspective. The session produced three major advances: (1) A trust chain framework mapping the four-layer structure from ground truth through assumptions and proxies to operational trust claims, with new understanding of certify-once vs continuous monitoring properties; (2) A rigorous analysis of meaningful human oversight vs formal compliance theatre, grounded in the Three-Layer Oversight Framework; (3) Documentation of Singapore MAS as the global benchmark for financial services AI governance, with concrete DBS/OCBC/UOB case studies. Papers added: 10 (p220-p229). Themes: 3 new (t060-t062). Tools: 5 new (tool095-tool099). Advice: 9 new items across all three stakeholder sections.",
+      "sessionType": "deep-research",
+      "duration": "90 minutes",
+      "sections": [
+        {
+          "title": "Provenance of Trust \u2014 The Trust Chain",
+          "items": [
+            "Trust operates through a four-layer chain: ground truth (the property we actually care about) \u2192 assumptions (that proxies track ground truth) \u2192 proxies (what we measure) \u2192 trust claims (what we assert based on proxy performance)",
+            "NIST AI 600-1 (GAI Profile) makes the certify-once vs continuous monitoring distinction explicit: governance structure is certify-once; operational properties requiring ongoing measurement must be continuously monitored",
+            "The ArXiv 'Architecting Trust in Artificial Epistemic Agents' paper reveals that trust as a normative concept requires moral agency \u2014 something AI fundamentally lacks. What can be certified is institutional reliability, not AI trustworthiness",
+            "Agentic drift (McKinsey 2026): AI agents gradually shift from intended parameters even while producing plausible outputs. The primary degradation mechanism is not failure but gradual divergence \u2014 invisible to standard monitoring",
+            "Three-signal drift detection framework (CIO): monitor input distributions, output distributions, and action distributions for deviations that trigger human review"
+          ]
+        },
+        {
+          "title": "Meaningful Human Oversight vs Compliance Theatre",
+          "items": [
+            "The Edinburgh/Strathclyde Three-Layer Framework distinguishes: Layer 1 HITL (human reviews every decision \u2014 only feasible for low-volume high-stakes); Layer 2 HOTL (human reviews sampled decisions with real-time override \u2014 feasible for medium-volume); Layer 3 HOTL^ (algorithmic oversight, human monitors the monitor \u2014 only feasible option for high-volume agentic AI)",
+            "Most regulatory frameworks use 'human oversight' as an undifferentiated requirement \u2014 legally ambiguous and practically unenforceable. Conflating formal presence with meaningful comprehension creates compliance theatre",
+            "Meaningful oversight requires bidirectional explainability: the human must understand what the AI is doing AND why, not just what output it produced",
+            "McKinsey 2026: 68% of enterprises have AI in production but only 23% have agentic-specific governance frameworks. The gap between AI deployment and governance is wider than organisations believe"
+          ]
+        },
+        {
+          "title": "Liability and Accountability Restructuring",
+          "items": [
+            "Traditional negligence doctrine requires feasible human oversight \u2014 this premise breaks down for agentic AI operating at scale. The duty-of-care question becomes genuinely unsettled",
+            "Harvard JOLT 2025 identifies vicarious liability expansion as the most likely near-term legal evolution: courts treating AI agents as analogues of human employees, making deploying organisations liable as principals",
+            "Three liability models emerging: (1) Negligence reform \u2014 redefine standard of care for infeasible oversight; (2) Vicarious liability expansion \u2014 extend employer liability to AI agents; (3) Strict liability \u2014 automatic liability for designated high-risk AI deployments",
+            "Financial services implication: AI deployment creates civil liability exposure not captured by existing professional indemnity or cyber insurance frameworks. D&O exposure is material and growing"
+          ]
+        },
+        {
+          "title": "Success Case Studies \u2014 Singapore MAS",
+          "items": [
+            "DBS Bank: AI for trade finance (40M+ documents/year) and AML \u2014 67% reduction in false positives, 45% improvement in trade finance processing time, SGD 1B+ economic impact. Governance built BEFORE GenAI, not retrofitted",
+            "OCBC: AI for SME credit risk \u2014 reduced processing from 5 days to 4 hours while maintaining or improving fairness metrics across demographic groups",
+            "UOB: AI customer service with human escalation protocols \u2014 31% reduction in customer complaint rates",
+            "Key pattern: governance infrastructure built before GenAI deployment, treated as competitive advantage not compliance cost, enabled faster and safer scaling",
+            "MAS regulatory model: co-creation with 14 institutions, voluntary adoption made quasi-mandatory through supervisory expectations, Q4 2026 baseline for assessments"
+          ]
+        }
+      ],
+      "papersAdded": [
+        "p220",
+        "p221",
+        "p222",
+        "p223",
+        "p224",
+        "p225",
+        "p226",
+        "p227",
+        "p228",
+        "p229"
+      ],
+      "themesAdded": [
+        "t060",
+        "t061",
+        "t062"
+      ],
+      "toolsAdded": [
+        "tool095",
+        "tool096",
+        "tool097",
+        "tool098",
+        "tool099"
+      ],
+      "adviceAdded": {
+        "trust-professionals": [
+          "ta045",
+          "ta046",
+          "ta047"
+        ],
+        "executives": [
+          "ex039",
+          "ex040",
+          "ex041"
+        ],
+        "regulators": [
+          "r041",
+          "r042",
+          "r043"
+        ]
+      }
     }
   ],
-  "total": 20
+  "total": 21
 }
