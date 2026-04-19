@@ -5523,7 +5523,187 @@
       ],
       "relevance": "Addresses supervisor Q4. Documents how MAS converted voluntary best-practice guidance into de facto requirements through supervisory pressure \u2014 a replicable regulatory strategy for other jurisdictions.",
       "dateRead": "2026-04-15"
+    },
+    {
+      "id": "p250",
+      "title": "OWASP Top 10 for Agentic Applications 2026",
+      "authors": [
+        "OWASP"
+      ],
+      "year": 2026,
+      "source": "OWASP",
+      "url": "https://owasp.org/www-project/top-10-for-agentic-applications/",
+      "analysis": "The first globally peer-reviewed security taxonomy specifically for agentic AI applications, released 2026. Establishes the definitive risk landscape: critical concerns include Memory Poisoning (corrupting agent long-term memory to alter future behaviour), Tool Misuse (weaponising agent tool-calling capabilities for unintended purposes), and Privilege Compromise (exploiting the expanded permission surfaces that agents require to operate). The framework reflects that agentic AI introduces fundamentally different risk dynamics from traditional AI: agents actively plan, chain multiple tools, maintain state across interactions, and operate with delegated authority. This creates attack surfaces that don't exist for stateless, passive AI systems. Palo Alto Networks' analysis confirms these risks materialise in enterprise environments through supply chain attacks on agent tooling, memory side-channel attacks, and model extraction via agent interaction patterns. The HUMAN Security research adds that agents with hijacked goals can execute sophisticated multi-step attacks that appear legitimate in isolation. Microsoft's response in Copilot Studio demonstrates one vendor's approach: architectural mitigations including least-privilege tool access, explicit user confirmation for sensitive operations, and memory integrity verification. For financial services specifically, the OWASP framework implies that existing security controls designed for predictive AI or stateless GenAI are inadequate for agentic deployments. An agent accessing multiple banking systems, maintaining transaction memory, and executing trades autonomously requires a governance architecture that treats the agent itself as a privileged insider with expanded attack surface. This is the world's first globally peer-reviewed security framework for the most rapidly deploying class of AI.",
+      "tags": [
+        "agentic-AI",
+        "security",
+        "OWASP",
+        "threat-model",
+        "memory-poisoning",
+        "tool-misuse",
+        "enterprise"
+      ],
+      "relevance": "Essential - the authoritative security threat taxonomy for agentic AI. Every financial services institution deploying AI agents needs a threat model built on this framework.",
+      "dateRead": "2026-04-19"
+    },
+    {
+      "id": "p251",
+      "title": "AI Trust: Provenance, Certification, and Continuous Monitoring State of Play 2026",
+      "authors": [
+        "McKinsey",
+        "NIST",
+        "OneTrust",
+        "Trantor",
+        "Various"
+      ],
+      "year": 2026,
+      "source": "Web Search Synthesis",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "analysis": "Synthesises the current state of AI trust infrastructure from multiple 2026 sources. McKinsey's State of AI Trust survey identifies a critical shift: as organisations enter the agentic era, trust requirements are evolving from static compliance (was the model fair at deployment?) to continuous assurance (is the system behaving as intended in production?). NIST AI RMF 2025 updates formalise this with mandatory continuous monitoring and anomaly detection requirements baked into the Govern function - a significant departure from the original framework's event-driven approach. The EU AI Transparency Act (effective January 2026) creates legal obligations for generative AI training data disclosure, establishing the regulatory backbone for provenance claims. C2PA and digital watermarking standards from the Coalition for Content Provenance and Authenticity are maturing as technical mechanisms for content origin verification, enabling a provenance chain from training data through model to outputs. Trantor's enterprise implementation research shows digital provenance enabling audit trails that satisfy both regulatory requirements and internal risk management. The arXiv AI Trust OS framework proposes continuous governance architecture where certification is not a binary state but a living score updated from production telemetry. The key insight: the shift from point-in-time certification to continuous monitoring isn't just a technical upgrade - it's a fundamental redesign of what AI assurance means.",
+      "tags": [
+        "provenance",
+        "certification",
+        "continuous-monitoring",
+        "C2PA",
+        "watermarking",
+        "trust-infrastructure",
+        "AI-Transparency-Act"
+      ],
+      "relevance": "High - maps the emerging infrastructure for AI trust verification and documents the shift from point-in-time to continuous certification.",
+      "dateRead": "2026-04-19"
+    },
+    {
+      "id": "p252",
+      "title": "Meaningful Human Oversight in the Agentic AI Era: Scalability, Liability, and Architectural Frameworks",
+      "authors": [
+        "OneReach AI",
+        "Galileo AI",
+        "MIT Sloan",
+        "OECD",
+        "SiliconAngle"
+      ],
+      "year": 2026,
+      "source": "Web Search Synthesis",
+      "url": "https://oecd.ai/en/ai-principles",
+      "analysis": "The human-in-the-loop (HITL) paradigm is hitting a wall. The numbers are stark: 35% of organisations deployed AI agents in 2025, projected to reach 86% by 2027, yet traditional HITL assumes a human reviews each AI decision - a model physically impossible to sustain at agentic scale. OneReach AI's 2026 analysis identifies that meaningful oversight requires architectural redesign, not just more reviewers: risk-tiered escalation paths, identity-bound intervention rights, and time-bounded approvals replace flat per-action review. Galileo AI's research on confidence thresholds and escalation frameworks demonstrates that at scale, only decisions crossing defined risk boundaries trigger human attention - a model that preserves human oversight capacity while accommodating agentic throughput. MIT Sloan's research adds a critical organisational dimension: treating AI like employees for oversight purposes (onboarding, performance review, accountability assignment) provides a workable management framework for agentic deployments. The liability attribution problem remains unresolved - when an agent makes 10,000 decisions autonomously and one causes harm, who is responsible? OECD's February 2026 landscape paper on agentic AI acknowledges this gap explicitly, framing it as a priority area requiring international coordination. The core insight from this research stream: 'human in the loop' is no longer a governance answer - it is a governance question that requires architectural specification.",
+      "tags": [
+        "HITL",
+        "agentic-AI",
+        "scalable-oversight",
+        "liability",
+        "escalation",
+        "MIT-Sloan",
+        "OECD"
+      ],
+      "relevance": "High - directly addresses the scalability of human oversight for agentic AI, which is the central governance challenge for financial services.",
+      "dateRead": "2026-04-19"
+    },
+    {
+      "id": "p253",
+      "title": "AI Governance Success Patterns: Enterprise Evidence from Financial Services 2025-2026",
+      "authors": [
+        "Deloitte",
+        "Nvidia",
+        "PwC",
+        "Forbes",
+        "Citizens Bank"
+      ],
+      "year": 2026,
+      "source": "Web Search Synthesis",
+      "url": "https://www.deloitte.com/",
+      "analysis": "The enterprise AI governance evidence base is accumulating. Deloitte's State of AI Enterprise 2026 reveals that companies with 40%+ of AI projects in production doubled their AI workforce access in 2025 alone - and these are the same organisations reporting the strongest governance maturity. Nvidia's survey of 3,200+ financial services respondents (August-December 2025) confirms that governance maturity differentiates deployment success: institutions with mature AI risk frameworks report significantly higher AI ROI. Citizens Bank's data is concrete: 35% average AI ROI in 2025 against a 41% target, with the gap attributable to implementation friction from immature governance. PwC documents a 15 percentage point improvement from AI in front-to-back-office banking - achievable only where governance frameworks reduce friction rather than add it. Forbes' analysis cuts to the key insight: enterprises are stuck between AI pilots and provable impact, and governance is identified as the mechanism that bridges this gap. The pattern that emerges across all sources: governance-by-design accelerates AI deployment rather than impeding it. Institutions that treat governance as a prerequisite infrastructure investment - not a compliance checkbox - are the ones achieving ROI. The implication for consulting: the pitch isn't 'we'll help you slow down' - it's 'we'll help you deploy faster by building trust infrastructure that reduces rework, regulatory friction, and failure risk.",
+      "tags": [
+        "governance-maturity",
+        "AI-ROI",
+        "financial-services",
+        "Deloitte",
+        "Nvidia",
+        "PwC",
+        "success-patterns",
+        "enterprise-evidence"
+      ],
+      "relevance": "High - empirical evidence that governance maturity drives AI deployment success, not deployment friction. Critical for consulting positioning.",
+      "dateRead": "2026-04-19"
+    },
+    {
+      "id": "p254",
+      "title": "EU AI Act Financial Services Enforcement: Timeline, Requirements, and Australian Institutional Exposure",
+      "authors": [
+        "EBA",
+        "Fenergo",
+        "Squire Patton Boggs",
+        "HyphenX Solutions"
+      ],
+      "year": 2026,
+      "source": "Web Search Synthesis",
+      "url": "https://ai-act-service-desk.ec.europa.eu/",
+      "analysis": "EU AI Act enforcement for financial services is not a future problem - it is approximately 110 days away. Full enforcement begins August 2, 2026, with the EBA (European Banking Authority) as the lead coordinator for AI Act implementation in banking and payments. Financial services is explicitly captured under Annex III high-risk AI: credit scoring, chatbots interacting with customers, and AI-based risk assessment systems are all in scope. The shift from broad compliance expectations to targeted enforcement strategies is already visible in how national competent authorities are preparing. Squire Patton Boggs confirms that any financial services entity seated in the EU is directly subject to the AI Act regardless of sector-specific regulations already in place - the AI Act is an additional layer, not a replacement. Fenergo's analysis of enforcement posture notes that regulators are moving from 'please demonstrate compliance' to 'prove it or face consequences' - a qualitative shift in supervisory tone. For Australian financial institutions with EU exposure (which includes essentially every Australian bank with international operations), the implications are immediate: the AI inventory requirement, conformity assessment obligations, and CE marking requirements for high-risk AI apply. The GPAI guidelines published July 2025 provide additional obligations for general-purpose AI. The 110-day window is insufficient for institutions that haven't started - making this one of the most urgent consulting opportunities in the current landscape.",
+      "tags": [
+        "EU-AI-Act",
+        "enforcement",
+        "financial-services",
+        "EBA",
+        "credit-scoring",
+        "high-risk",
+        "August-2026",
+        "Australian-FS"
+      ],
+      "relevance": "Critical urgency - EU AI Act full financial services enforcement in ~110 days. Every Australian FI with EU operations needs immediate compliance assessment.",
+      "dateRead": "2026-04-19"
+    },
+    {
+      "id": "p255",
+      "title": "APRA's Evolving AI Prudential Framework: 2026 Consultation and Australia's Principles-Based Approach",
+      "authors": [
+        "APRA",
+        "Clayton Utz",
+        "NAIC",
+        "Allens",
+        "National Law Review"
+      ],
+      "year": 2026,
+      "source": "Web Search Synthesis",
+      "url": "https://www.apra.gov.au/",
+      "analysis": "Australia's prudential regulator is in the process of its first substantive recalibration of the prudential framework for AI - and the timing matters. APRA's Corporate Plan 2025-26 confirms targeted supervisory engagements with larger financial institutions on AI practices, signalling that APRA's current position ('existing prudential standards are fit for purpose') is under active review. Clayton Utz's analysis of the APRA recalibration implications identifies what is changing: updated prudential standards and guidance for formal consultation expected early 2026, with a revised framework likely to emerge from that process. The NAIC's Guidance for AI Adoption (published October 17, 2025) represents the national-level framework for responsible AI innovation in Australia - a coordinated federal-state approach that fills gaps in APRA's principles-based stance. Allens' analysis of ASIC and APRA's joint strategic priorities 2025-26 confirms that both regulators view AI as a supervisory priority but are choosing to use existing frameworks rather than create new AI-specific legislation. The gap this creates: there is no dedicated APRA AI prudential framework yet - governance reforms are in progress, with early 2026 expected to bring formal consultation. For consulting, this represents a narrow window: institutions that engage with APRA's upcoming consultation process can shape the framework that will govern them. The Australian approach - principles-based rather than prescriptive like the EU AI Act - means the specific expectations will emerge from engagement, not from reading a rulebook.",
+      "tags": [
+        "APRA",
+        "Australia",
+        "prudential-framework",
+        "AI-governance",
+        "consultation",
+        "principles-based",
+        "NAIC",
+        "Clayton-Utz"
+      ],
+      "relevance": "High - APRA's first substantive AI prudential recalibration is imminent. Early engagement with the consultation shapes the framework.",
+      "dateRead": "2026-04-19"
+    },
+    {
+      "id": "p256",
+      "title": "NIST AI RMF Implementation in Financial Services: US Treasury's 230 Control Objectives and Sector Adoption",
+      "authors": [
+        "US Treasury",
+        "Cyber Risk Institute",
+        "ABA",
+        "Lowenstein",
+        "BizTech Magazine"
+      ],
+      "year": 2026,
+      "source": "Web Search Synthesis",
+      "url": "https://home.treasury.gov/",
+      "analysis": "The US Treasury's February 2026 release of AI risk management resources for financial institutions represents the most operationally detailed implementation guidance available in any jurisdiction. The core output - a 230-control-objective framework aligned to NIST AI RMF's four functions (Govern, Map, Measure, Manage) - translates abstract AI risk principles into exam-ready control expectations. The Cyber Risk Institute's financial sector-specific alignment is notable: 230 control objectives mapped specifically to financial services AI risks, meaning bank examiners can reference these directly during supervisory reviews. Lowenstein's analysis identifies the defining question for 2026: not whether AI is being used but whether outcomes are provable - a significant shift from process documentation to outcome evidence. ABA's billion-dollar investment figure in NIST RMF integration signals that major US financial institutions are treating this as capital infrastructure, not compliance overhead. BizTech Magazine's practitioner coverage documents the balance institutions must strike: AI innovation velocity versus regulatory scrutiny, data protection obligations, and operational risk management. The key insight for Australian practice: this framework will shape US supervisory expectations, and by extension, influence what APRA and ASIC consider reasonable practice for Australian institutions with US operations or ambitions. The 230-control framework provides a ready-made gap analysis template.",
+      "tags": [
+        "NIST-AI-RMF",
+        "financial-services",
+        "US-Treasury",
+        "230-control-objectives",
+        "CRI",
+        "ABA",
+        "implementation"
+      ],
+      "relevance": "High - the most detailed sector-specific implementation of NIST AI RMF. Provides operational template for any financial services AI governance engagement.",
+      "dateRead": "2026-04-19"
     }
   ],
-  "total": 249
+  "total": 256
 }

@@ -1560,7 +1560,74 @@
           "r043"
         ]
       }
+    },
+    {
+      "id": "rl008",
+      "date": "2026-04-19",
+      "title": "Session 8: Dispatch-Driven Research \u2014 EU Enforcement Clock, OWASP Agentic AI, and Sector Accountability Convergence",
+      "summary": "Processed 10 staged search queries covering: AI trust provenance/certification (McKinsey, NIST updates, C2PA), HITL scalability and liability in agentic era (OneReach AI, MIT Sloan, OECD), sector-based accountability routing (White House March 2026), financial services AI governance success patterns (Deloitte, Nvidia, Citizens Bank), EU AI Act financial services enforcement (110 days to August 2026), APRA prudential recalibration (consultation imminent), NIST AI RMF financial sector implementation (US Treasury 230 controls), AI trust failure patterns (75% enterprise failure rates), transparency/explainability requirements, and OWASP Top 10 for Agentic AI. Added 7 new papers (p250-p256), 3 new themes (t063-t065), 3 new sowhat advice items (ta55-ta57). Key finding: EU AI Act enforcement clock is the most immediate consulting urgency (110 days), OWASP Top 10 for Agentic AI fills a critical threat model gap, and sector-based accountability routing is confirmed as the dominant global governance model.",
+      "sessionType": "dispatch-driven",
+      "duration": "1.5 hours",
+      "sections": [
+        {
+          "title": "Search Query Processing",
+          "items": [
+            "Q1 (Provenance/Certification): NIST AI RMF 2025 updates mandate continuous monitoring; EU AI Transparency Act effective Jan 2026; McKinsey State of AI Trust 2026 identifies agentic era shift; C2PA/digital watermarking as provenance mechanisms",
+            "Q2 (HITL Scalability): 35% deployed AI agents 2025 \u2192 86% projected 2027; HITL physically impossible at scale; OneReach AI, Galileo AI propose architectural escalation frameworks; MIT Sloan employee-analogue model; liability attribution gap unresolved",
+            "Q3 (Accountability Routing): White House March 2026 routes through existing agencies (SEC/FDA); sector-based approach beats horizontal AI agency model; Harvard Law, Nelson Mullins confirm convergence",
+            "Q4 (Enterprise Success Patterns): Deloitte/Nvidia empirical data; governance maturity differentiates AI success; Citizens Bank 35% ROI vs 41% target gap attributable to governance immaturity; governance-as-accelerant narrative confirmed",
+            "Q5 (EU AI Act Enforcement): August 2, 2026 full enforcement; EBA as coordinator; credit scoring, chatbots, risk assessment in scope; enforcement posture shift to 'prove it or face consequences'; 110 days urgency",
+            "Q6 (APRA Recalibration): APRA Corporate Plan 2025-26 confirms supervisory engagement; formal consultation early 2026; NAIC guidance Oct 2025; principles-based vs EU prescriptive",
+            "Q7 (NIST FS RMF): US Treasury February 2026; 230 control objectives; Cyber Risk Institute alignment; ABA billion-dollar investment; implementation template for any FS jurisdiction",
+            "Q8 (AI Trust Failures): 75% double-digit failure rate; 25% complete AI job failure; integration failures dominate; trust erosion as core outcome; OWASP Top 10 for Agentic AI needed",
+            "Q9 (Transparency): CFA Institute, FCA/Bank of England AI Consortium, EU requirements converging; multi-agent monitoring as 2026 trend; 20-point governance checklist documented",
+            "Q10 (OWASP Agentic AI): Globally peer-reviewed first-edition 2026; Memory Poisoning, Tool Misuse, Privilege Compromise as top 3; fundamental risk surface difference from traditional AI"
+          ]
+        },
+        {
+          "title": "Key Findings",
+          "items": [
+            "EU AI Act enforcement is the most urgent immediate consulting opportunity: 110 days to full financial services enforcement",
+            "OWASP Top 10 for Agentic AI fills a critical gap in financial services AI security threat modelling",
+            "Sector-based accountability routing (SEC for finance, FDA for health) confirmed as dominant global model",
+            "Governance maturity as deployment accelerant: empirical evidence from multiple independent sources",
+            "HITL paradigm is architecturally inadequate for agentic scale - requires redesign, not headcount increases",
+            "NIST AI RMF financial sector implementation (230 controls) provides the most detailed operational template available"
+          ]
+        },
+        {
+          "title": "New Papers Added",
+          "items": [
+            "p250: OWASP Top 10 for Agentic Applications 2026 - authoritative global security taxonomy for agentic AI",
+            "p251: AI Trust provenance/certification state of play 2026 - continuous certification paradigm",
+            "p252: HITL scalability and liability in agentic era - architectural oversight frameworks",
+            "p253: Enterprise AI governance success patterns - governance maturity drives deployment success",
+            "p254: EU AI Act financial services enforcement - 110-day urgency",
+            "p255: APRA AI prudential recalibration - consultation imminent, principles-based approach",
+            "p256: NIST AI RMF financial sector implementation - 230 control objectives template"
+          ]
+        },
+        {
+          "title": "New Themes",
+          "items": [
+            "t063: Continuous certification replacing point-in-time audits - fundamental business model shift for assurance practices",
+            "t064: HITL hitting the wall - scalable oversight requires architectural solutions, not volumetric ones",
+            "t065: Sector-based accountability routing confirmed as dominant model globally - horizontal AI agencies have failed"
+          ]
+        },
+        {
+          "title": "Priority Actions",
+          "items": [
+            "Flag EU AI Act enforcement as immediate client communication priority",
+            "Add OWASP Top 10 for Agentic AI to AI security assessment methodology",
+            "Update consulting pitch: governance as accelerant, not compliance brake",
+            "Monitor APRA consultation timeline - prepare engagement strategy",
+            "Map NIST FS AI RMF 230 controls to existing Australian regulatory framework for gap analysis"
+          ]
+        }
+      ]
     }
   ],
-  "total": 21
+  "total": 21,
+  "lastUpdated": "2026-04-19"
 }

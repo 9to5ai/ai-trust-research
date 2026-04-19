@@ -52,22 +52,24 @@
     "sessionOutcome": "Three first-principles advances: (1) Four-layer trust chain framework; (2) Three-layer oversight framework distinguishing meaningful from formal oversight; (3) Singapore MAS DBS case studies as global benchmark. New theme t060 (trust chain), t061 (meaningful oversight), t062 (vicarious liability). 10 new papers including NIST GAI Profile, ArXiv epistemic agents, MAS toolkit, Harvard JOLT liability analysis."
   },
   "stats": {
-    "papers": 249,
-    "themes": 111,
+    "papers": 256,
+    "themes": 114,
     "tools": 105,
     "researchSessions": 21,
-    "totalPapers": 249,
-    "totalThemes": 111,
+    "totalPapers": 256,
+    "totalThemes": 114,
     "totalTools": 105,
     "totalResearchSessions": 21,
     "totalResearchHours": 45.5,
     "totalSessions": 20,
     "sowhatItems": {
-      "trustProfessionals": 54,
+      "trustProfessionals": 57,
       "executives": 47,
       "regulators": 50
     },
-    "adviceItems": 151
+    "adviceItems": 154
   },
-  "lastUpdated": "2026-04-15"
+  "lastUpdated": "2026-04-19",
+  "totalPapers": 256,
+  "totalThemes": 114
 }

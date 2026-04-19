@@ -1,0 +1,57 @@
+{
+  "date": "2026-04-19",
+  "research_focus": "current research phase",
+  "supervisor_feedback": "NONE",
+  "items": [
+    {
+      "query": "AI trust provenance certification continuous monitoring 2025 2026",
+      "query_num": 1,
+      "result": "Key sources: McKinsey 2026 State of AI Trust survey (agentic era shift); NIST AI RMF 2025 updates (continuous monitoring + anomaly detection); OneTrust (AI Transparency Act taking effect Jan 1 2026, generative AI training data disclosure); Trantor (digital provenance via C2PA/watermarking for enterprise AI content origin); arXiv AI Trust OS framework (continuous governance). Themes: certification standards, provenance chains, ongoing compliance monitoring vs one-time audits."
+    },
+    {
+      "query": "meaningful human in the loop agentic AI scalable oversight liability 2025 2026",
+      "query_num": 2,
+      "result": "Key sources: OneReach AI (HitL for high-stakes agentic oversight 2026); Galileo AI (confidence thresholds, escalation frameworks, architectural patterns); SiliconAngle (HITL hit the wall — AI overseeing AI emerging); MIT Sloan (agentic enterprise — treat AI like employees for oversight); OECD (agentic AI landscape paper Feb 2026). Core tension: 35% orgs deploying AI agents in 2025, 86% projected by 2027 — scalability makes traditional HITL infeasible. Liability attribution for autonomous AI decisions remains unresolved. Sam Burrett (LinkedIn): 'human in the loop isn't enough — need actual human oversight at right points, not AI babysitters.'"
+    },
+    {
+      "query": "AI accountability frameworks human oversight infeasible restructuring 2025 2026",
+      "query_num": 3,
+      "result": "Key sources: White House National AI Policy Framework (March 20 2026 — routes oversight through existing agencies: SEC for financial AI, FDA for health); Harvard Law CorpGov (Glass Lewis AI oversight questions 2024-25); Frontiers in AI (delegated moral authority + scale + abstraction renders human accountability opaque without explicit institutional constraints); Nelson Mullins (sector-specific routing vs centralized regulator). Frameworks emerging: sector-based accountability rather than horizontal AI agencies. The accountability gap widens as AI agents operate beyond human review capacity."
+    },
+    {
+      "query": "AI governance success cases enterprise financial services 2025 2026",
+      "query_num": 4,
+      "result": "Key sources: Forbes (enterprises stuck between AI pilots and provable impact — governance is the solution); Deloitte State of AI Enterprise 2026 (50% worker access increase in 2025, companies with 40%+ projects in production set to double); Microsoft (5 AI transformation predictors for financial services 2026); Nvidia State of AI report (Aug-Dec 2025 survey, 3200+ respondents across financial services); PwC (15 percentage point improvement from front-to-back-office AI in banking); Citizens Bank (35% average AI ROI in 2025 vs 41% target). Success drivers: clear criteria — losses reduced, decisions sped up, ops leaner, risk managed. Governance maturity differentiates successful deployments."
+    },
+    {
+      "query": "EU AI Act enforcement financial services 2025 2026",
+      "query_num": 5,
+      "result": "Key sources: EU AI Act full enforcement August 2 2026; EBA (European Banking Authority) activities 2026/2027 for AI Act implementation in banking/payments sector (published Nov 2025); Fenergo (regulators shifting from broad compliance expectations to targeted enforcement strategies 2026); Squire Patton Boggs (AI Act directly applies to EU-seated financial service entities); speednetsoftware (mobile banking AI credit scoring + chatbot transparency requirements); HyphenX Solutions (enforcement cycle decisive phase Aug 2026). Financial services specific provisions: credit scoring, chatbots, risk assessment systems classified as high-risk. GPAI guidelines published July 2025 clarify obligations."
+    },
+    {
+      "query": "APRA AI prudential governance framework 2025 2026",
+      "query_num": 6,
+      "result": "Key sources: APRA Corporate Plan 2025-26 (first substantive recalibration of prudential framework); Clayton Utz (APRA recalibration implications for financial services); NAIC Guidance for AI Adoption (Oct 17 2025 — national framework for responsible AI innovation in Australia); National Law Review (APRA proposes reforms — updated prudential standards and guidance for formal consultation early 2026, revised framework scheduled); Allens (ASIC and APRA strategic priorities 2025-26). Gap: no dedicated APRA AI prudential framework yet — governance reforms in progress, early 2026 consultation expected. Australia taking principles-based approach vs EU AI Act prescriptive requirements."
+    },
+    {
+      "query": "NIST AI Risk Management Framework implementation financial sector 2025 2026",
+      "query_num": 7,
+      "result": "Key sources: US Treasury (released two new resources for financial institutions — common language for AI + tailored risk management framework); Cyber Risk Institute (Financial Services AI RMF aligned with NIST AI RMF, 230 control objectives); Lowenstein (defining question for 2026: not whether AI is being used but whether outcomes are provable); ABA (billion-dollar investments in integrating NIST RMF core functions into enterprise); BizTech Magazine (balancing AI innovation with regulatory scrutiny, data protection, operational risk); Cooley Finsights (questionnaire for AI adoption progress + 230 control objectives matrix). NIST AI RMF 2025 updates call for continuous monitoring and anomaly detection. Financial sector leading adoption."
+    },
+    {
+      "query": "AI trust failures incidents enterprise 2025 2026",
+      "query_num": 8,
+      "result": "Key sources: Forbes Tech Council (5 failure modes: compounding and reinforcing each other); Valuebound (2026 reality check — integration failures); Medium (biggest AI disasters of 2025 — over-hyped robotics demos, trust erosion in physical AI systems); DRJ (75% enterprises report double-digit AI failure rates, 25%+ failure meaning 1 in 4 AI jobs fail); LinkedIn Raj Grover (35+ incidents revealing foundational gaps — most AI failures are not model failures); CIO (enterprise AI stack missing trust layer — static compliance checks can't keep up with drift/new data/emerging failure modes); YouTube (AI coding agents deleting production data, chatbot failures with real-world consequences). Trust erosion as the core outcome of failure patterns."
+    },
+    {
+      "query": "AI transparency explainability financial services case studies 2025 2026",
+      "query_num": 9,
+      "result": "Key sources: CFA Institute Research (transparent, explainable AI crucial in finance for compliance, trust, risk governance — human oversight still essential); UK Parliament (FCA + Bank of England AI Consortium established May 2025 to gather views from financial services + tech); Treasury (new resources for AI use in financial services — strengthening common terminology + risk management); Saifr (2026 trends: multi-agent systems, real-time monitoring, balancing innovation with regulatory demands); PwC (banks must design for transparency, fairness, explainability, compliance across use cases); Askajay (9 regulatory frameworks, 6 use cases with governance requirements, 5 real enforcement cases, 20-point governance checklist). Transparency and explainability increasingly mandated by regulators, not just desired."
+    },
+    {
+      "query": "owasp agentic AI top risks enterprise governance 2025 2026",
+      "query_num": 10,
+      "result": "Key sources: OWASP Top 10 for Agentic Applications 2026 (globally peer-reviewed, most critical security risks facing agentic AI); Palo Alto Networks (agentic AI introduces new risks across tools, identities, supply chains, memory); HUMAN Security (autonomous traffic with hijacked goals, memory poisoning, tool misuse, privilege compromise as top concerns); Lasso Security (top 3 concerns: Memory Poisoning, Tool Misuse, Privilege Compromise); Microsoft (addressing OWASP Top 10 in Copilot Studio — architectural mitigations); OWASP GenAI Data Security Risks 2026 (forward-looking data security landscape for agentic AI). Enterprise governance Implication: agentic AI risk surface fundamentally different from traditional AI — requires new governance playbook, not just extension of existing controls."
+    }
+  ]
+}

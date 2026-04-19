@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15",
+  "lastUpdated": "2026-04-19",
   "sections": [
     {
       "id": "trust-professionals",
@@ -869,6 +869,50 @@
           ],
           "urgency": "act-now",
           "prompt": "Do you currently monitor for agentic drift? If your AI agents' behaviour has shifted 5% from their original parameters since deployment, would you know? Can you measure that drift today?"
+        },
+        {
+          "id": "ta55",
+          "headline": "The OWASP Top 10 for Agentic AI is the new threat model standard - build on it or be exposed",
+          "body": "The first globally peer-reviewed security framework specifically for agentic AI applications establishes Memory Poisoning, Tool Misuse, and Privilege Compromise as the three critical risk categories. If you're deploying AI agents in financial services without a threat model derived from this framework, you're flying blind. The attack surfaces it identifies - expanded permission surfaces, persistent state/memory, tool-chaining capabilities - are structurally different from traditional AI risks. Your existing security controls, designed for stateless predictive AI or passive GenAI, don't cover this terrain. Microsoft's architectural mitigations in Copilot Studio provide one vendor's response; the OWASP framework gives you the threat model to design your own.",
+          "citations": [
+            "p250"
+          ],
+          "themes": [
+            "t063",
+            "t003",
+            "t013"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your current AI security assessment include the OWASP Top 10 for Agentic AI threat categories? Have you assessed your agentic AI deployments for memory poisoning, tool misuse, and privilege expansion risks?"
+        },
+        {
+          "id": "ta56",
+          "headline": "The EU AI Act enforcement clock is at 110 days - every Australian FI with EU exposure needs an immediate gap assessment",
+          "body": "Full enforcement of EU AI Act high-risk provisions begins August 2, 2026. Financial services AI - credit scoring, chatbots, risk assessment - is explicitly in scope under Annex III. The EBA is coordinating enforcement for banking and payments. This is not a future planning problem - it is a current operational compliance emergency for any Australian institution with EU operations. The minimum required: AI inventory (what high-risk AI systems do you have in EU operations?), conformity assessment (can you demonstrate compliance with Annex III requirements?), CE marking requirements, and post-market monitoring documentation. Institutions that haven't started face a significant crunch. The regulatory posture has shifted from 'please demonstrate compliance' to 'prove it or face consequences' as national authorities prepare enforcement strategies.",
+          "citations": [
+            "p254"
+          ],
+          "themes": [
+            "t065",
+            "t001"
+          ],
+          "urgency": "act-now",
+          "prompt": "What is your EU AI Act compliance gap for your financial services operations? Do you have a complete AI inventory for Annex III high-risk systems? If enforcement started today, what would you need to demonstrate?"
+        },
+        {
+          "id": "ta57",
+          "headline": "Governance maturity drives AI deployment success - pitch governance as an accelerant, not a brake",
+          "body": "The empirical evidence from Deloitte, Nvidia (3,200+ FS respondents), and Citizens Bank is consistent: governance maturity is the primary differentiator between AI deployments that achieve ROI and those that don't. Citizens Bank's concrete data - 35% AI ROI vs 41% target, with the gap attributable to implementation friction from immature governance - quantifies the cost of governance failure. Deloitte's finding that companies with 40%+ of AI projects in production doubled their AI workforce access in 2025 confirms that governance maturity enables scale, not just safety. The pitch to executives is therefore not 'governance will slow you down' but 'governance is the infrastructure that lets you scale without catastrophic failure risk.' This reframing is essential for breaking through the executive attitude that AI governance is a compliance burden.",
+          "citations": [
+            "p253"
+          ],
+          "themes": [
+            "t001",
+            "t002",
+            "t029"
+          ],
+          "urgency": "act-now",
+          "prompt": "Can you demonstrate to your executive clients that governance maturity correlates with AI deployment success? Do you have concrete data showing the ROI cost of governance immaturity to support the business case for governance investment?"
         }
       ]
     },

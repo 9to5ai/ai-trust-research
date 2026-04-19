@@ -1672,7 +1672,69 @@
       ],
       "dateIdentified": "2026-04-15",
       "confidence": "high"
+    },
+    {
+      "id": "t063",
+      "name": "Continuous Certification is Replacing Point-in-Time Audits as the Trust Architecture",
+      "description": "The paradigm of AI assurance as a point-in-time audit is being superseded by continuous certification models. NIST AI RMF 2025 updates mandate continuous monitoring and anomaly detection as core components of the Govern function. The EU AI Act Article 51 requires post-market monitoring for high-risk AI systems. CABCA (Continuous Auditing-Based Conformity Assessment, ETSI TS 104 008) operationalises this as a technical standard with automated evidence collection producing dynamic conformity status. The arXiv AI Trust OS framework treats certification as a living score updated from production telemetry rather than a binary state achieved at deployment. McKinsey's 2026 State of AI Trust survey confirms the shift in market expectation: as organisations deploy agentic AI, static compliance checks cannot keep pace with system changes driven by retraining, data pipeline updates, and configuration drift. This has profound implications for assurance practice revenue models: point-in-time audits bill once; continuous monitoring services bill recurring.",
+      "evidence": [
+        "NIST AI RMF 2025 continuous monitoring mandates",
+        "EU AI Act Article 51 post-market monitoring requirements",
+        "ETSI TS 104 008 CABCA standard January 2026",
+        "McKinsey State of AI Trust 2026 agentic era findings",
+        "arXiv AI Trust OS continuous governance architecture"
+      ],
+      "implications": "Assurance practices must develop continuous monitoring service lines or risk becoming irrelevant for high-risk AI clients. The shift from audit to monitoring represents a fundamental business model change, not just a methodology upgrade.",
+      "relatedPapers": [
+        "p250",
+        "p251",
+        "p090"
+      ],
+      "dateIdentified": "2026-04-19",
+      "confidence": "very high"
+    },
+    {
+      "id": "t064",
+      "name": "HITL is Hitting the Wall - Scalable Oversight Requires Architectural, Not Volumetric, Solutions",
+      "description": "The human-in-the-loop paradigm is encountering its physical limits. With 86% of organisations projected to deploy AI agents by 2027 and individual agents executing thousands of decisions per hour, the arithmetic of per-action human review is impossible. The research from this session confirms what first-principles analysis demands: meaningful oversight requires architecture, not headcount. Risk-tiered escalation paths (only high-risk decisions trigger human attention), identity-bound intervention rights (technically enforced stop-power), and time-bounded approvals (human review must occur within operationally meaningful windows) are the structural components of scalable oversight. This represents a fundamental shift: from oversight as a human resource problem (how many reviewers do we need?) to oversight as an engineering problem (how do we design intervention capacity into the system?). MIT Sloan's employee-analogue framework provides the organisational model: assign AI agents accountability roles, define their decision authority boundaries, and hold them to account through performance metrics just as with human employees.",
+      "evidence": [
+        "OneReach AI 2026 HITL for high-stakes agentic oversight analysis",
+        "Galileo AI confidence thresholds and escalation frameworks",
+        "MIT Sloan treating AI like employees for scalable oversight",
+        "OECD agentic AI landscape paper Feb 2026 on liability attribution gap",
+        "SiliconAngle HITL limitations in agentic era"
+      ],
+      "implications": "Consulting engagements should assess oversight architectures, not reviewer headcount. The question is never 'is there a human in the loop?' but 'does the system have technically enforced intervention capacity at the right risk thresholds?'",
+      "relatedPapers": [
+        "p252",
+        "p063",
+        "p070",
+        "p111"
+      ],
+      "dateIdentified": "2026-04-19",
+      "confidence": "very high"
+    },
+    {
+      "id": "t065",
+      "name": "Sector-Based Accountability Routing is the Dominant Global Model - Horizontal AI Agencies Have Failed",
+      "description": "The architecture of AI governance globally is converging on sector-based accountability routing rather than horizontal AI agencies. The White House National AI Policy Framework (March 2026) explicitly routes oversight through existing regulators: SEC for financial AI, FDA for health AI, FTC for consumer AI. The EU AI Act creates a new regulatory infrastructure but delegates enforcement to existing national competent authorities. The FCA uses Consumer Duty, SM&CR, and operational resilience - existing frameworks - to govern AI. APRA is adapting CPS 230 rather than creating an AI-specific prudential standard. This stands in contrast to the earlier wave of proposals for dedicated AI regulators (UK's proposed AI Authority, various national AI acts). The pattern: political appetite for new regulatory bureaucracy is limited, existing regulators have sector-specific expertise, and AI risks materialise differently across sectors. For financial services specifically, this means APRA and ASIC are the AI regulators, and engaging with them through existing channels is more productive than waiting for new AI-specific regulation.",
+      "evidence": [
+        "White House National AI Policy Framework March 2026",
+        "EU AI Act enforcement via national competent authorities",
+        "FCA principles-based approach via existing frameworks",
+        "APRA CPS 230 as AI vehicle without new standard",
+        "Nelson Mullins sector-specific routing analysis"
+      ],
+      "implications": "Consulting practices should focus expertise on how existing financial services regulatory frameworks apply to AI, not on navigating new AI-specific regulation. The AI governance expertise that matters is translating existing obligations into AI-specific controls.",
+      "relatedPapers": [
+        "p003",
+        "p007",
+        "p254",
+        "p255"
+      ],
+      "dateIdentified": "2026-04-19",
+      "confidence": "high"
     }
   ],
-  "total": 111
+  "total": 114
 }
