@@ -56,11 +56,11 @@
     "themes": 114,
     "tools": 105,
     "researchSessions": 21,
-    "totalPapers": 256,
-    "totalThemes": 114,
+    "totalPapers": 261,
+    "totalThemes": 115,
     "totalTools": 105,
-    "totalResearchSessions": 21,
-    "totalResearchHours": 45.5,
+    "totalResearchSessions": 22,
+    "totalResearchHours": 47.0,
     "totalSessions": 20,
     "sowhatItems": {
       "trustProfessionals": 57,
@@ -69,7 +69,7 @@
     },
     "adviceItems": 154
   },
-  "lastUpdated": "2026-04-19",
-  "totalPapers": 256,
-  "totalThemes": 114
+  "lastUpdated": "2026-04-21",
+  "totalPapers": 261,
+  "totalThemes": 115
 }

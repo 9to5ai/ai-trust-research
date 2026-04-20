@@ -5703,6 +5703,111 @@
       ],
       "relevance": "High - the most detailed sector-specific implementation of NIST AI RMF. Provides operational template for any financial services AI governance engagement.",
       "dateRead": "2026-04-19"
+    },
+    {
+      "id": "p257",
+      "title": "OWASP Top 10 for Agentic Applications 2026",
+      "authors": [
+        "OWASP Gen AI Security Project"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://owasp.org/agentic-top-10/",
+      "analysis": "The first globally peer-reviewed framework specifically cataloguing critical security risks in agentic AI applications, published 2026. Three of the top four risks centre on tools, identities, and delegated trust \u2014 none at the model layer. Key risks: tool poisoning (adversarial corruption of AI tool definitions), excessive agency (AI taking actions beyond scope), privilege escalation, unintended trust delegation, and hallucinated context injected into agent prompts. The critical insight: if AI governance programs focus only on model-layer controls (alignment, bias, fairness), they miss the actual attack surface in agentic deployments. Enterprise security teams are mostly securing the wrong things \u2014 the architectural risks of how agents chain tools, use identities, and delegate authority are systematically underappreciated. The mitigation guidance from OWASP Gen AI Security Project provides the starting point for agentic security assessments. For financial services deploying AI agents for customer service, trading, or back-office automation, this framework identifies an entirely new risk category that no existing governance framework adequately covers. This is not a theoretical exercise \u2014 tool poisoning attacks on RAG systems and privilege escalation through over-privileged agent roles have been demonstrated in production environments.",
+      "tags": [
+        "agentic-AI",
+        "security",
+        "OWASP",
+        "tool-use",
+        "risk-management",
+        "enterprise"
+      ],
+      "relevance": "Essential \u2014 first comprehensive security framework for agentic AI. Identifies risk surface that model-centric governance frameworks miss entirely.",
+      "dateRead": "2026-04-21"
+    },
+    {
+      "id": "p258",
+      "title": "McKinsey State of AI 2026: Trust and Governance Findings",
+      "authors": [
+        "McKinsey & Company"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://www.mckinsey.com/featured-insights/mckinsey-explainers/ai-trust",
+      "analysis": "McKinsey's 2026 State of AI Trust survey finds progress in AI trust maturity across organisations but persistent structural gaps in strategy and governance. The headline finding: most enterprises have improved their AI governance paperwork (policies, frameworks, documentation) but the actual implementation quality \u2014 meaningful oversight, continuous monitoring, real accountability \u2014 lags significantly behind. This is the governance gap made quantitative. The survey also finds that 'trust infrastructure' platforms (compliance proof, continuous monitoring, audit trail systems) are emerging as a distinct vendor category \u2014 a market signal that organisations are moving beyond point-in-time audits. The AI Transparency Act and Generative AI Training Data Transparency Act (both effective Jan 1, 2026) add regulatory urgency for US-exposed firms. For consulting, the key insight is that the governance gap is not closing fast enough \u2014 organisations that can demonstrably close it will have a significant and time-limited market advantage.",
+      "tags": [
+        "governance",
+        "McKinsey",
+        "trust-maturity",
+        "compliance",
+        "enterprise",
+        "AI-transparency-act"
+      ],
+      "relevance": "High \u2014 quantitative evidence of governance gap persistence. Useful for client pitches.",
+      "dateRead": "2026-04-21"
+    },
+    {
+      "id": "p259",
+      "title": "White House National AI Policy Framework (March 2026)",
+      "authors": [
+        "White House"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://www.whitehouse.gov/ai/",
+      "analysis": "The White House National AI Policy Framework released March 20, 2026, represents the most significant US federal AI policy statement since the AI Bill of Rights. Combined with the earlier EU AI Act movement from draft to enforceable law in 2026, global AI governance is entering a retrenchment phase \u2014 the first generation of comprehensive frameworks are being reviewed, stress-tested, and in some cases revised. Boards and C-suites are now explicitly raising AI accountability, liability, and insurability questions at the executive level. Glass Lewis posed AI oversight questions in 2024-25 proxy policy. Forbes March 2026 identifies insuring AI as a key board concern. The convergence of executive attention (boards asking about AI liability) and regulatory retrenchment (frameworks being revised) creates a specific consulting opportunity: helping boards understand their actual exposure when human oversight is structurally infeasible and existing liability frameworks haven't caught up with agentic deployment reality.",
+      "tags": [
+        "regulation",
+        "US",
+        "policy",
+        "liability",
+        "accountability",
+        "board-governance"
+      ],
+      "relevance": "High \u2014 US federal AI policy direction signals where global governance is heading. Board-level attention to AI liability is a new and specific consulting driver.",
+      "dateRead": "2026-04-21"
+    },
+    {
+      "id": "p260",
+      "title": "AI Trust Failures and Enterprise Incidents 2025-2026",
+      "authors": [
+        "Multiple Sources"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://www.forbes.com/ai/",
+      "analysis": "Synthesis of documented AI failures in enterprise financial services 2025-2026. Key failure modes: (1) Algorithmic mislabeling \u2014 models applied in the wrong context causing regulatory violations; (2) Real-time data gaps \u2014 organisations lack live data quality monitoring for production AI; (3) Semantic clarity failures \u2014 AI systems interpret objectives differently than intended in production; (4) Guardrail gaps for agentic AI \u2014 insufficient controls on autonomous actions; (5) Platformization trap \u2014 organisations adopted AI platforms without governance maturity to match, leading to uncontrolled scaling of AI across the enterprise. Gartner data: 60% of AI projects without AI-ready data abandoned by 2026. S&P Global: 42% of companies scrapped most AI projects. Forbes March 2026 identifies five reasons for enterprise AI failures, with platformization as a key 2026 driver. $35-40B flooded US businesses for gen AI tools by mid-2025 \u2014 much of it without adequate governance infrastructure. The pattern: organisations bought AI capability faster than they built the governance to operate it safely. This is the empirical evidence of the governance gap in action \u2014 not hypothetical, but actual failures with actual costs.",
+      "tags": [
+        "AI-failures",
+        "enterprise",
+        "governance-gaps",
+        "data-quality",
+        "platformization",
+        "financial-services"
+      ],
+      "relevance": "High \u2014 empirical evidence of governance gap costs. Useful for ROI calculations on governance investment.",
+      "dateRead": "2026-04-21"
+    },
+    {
+      "id": "p261",
+      "title": "NIST AI RMF Financial Sector Profile and Implementation 2026",
+      "authors": [
+        "NIST / US Treasury"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://csrc.nist.gov/AI/AI-RMF",
+      "analysis": "US Treasury released new resources in April 2026 to guide AI use in financial services, structurally aligned with NIST AI RMF. The Cyber Risk Institute's Financial Services AI RMF expands NIST's framework with 230 Control Objectives \u2014 the most comprehensive financial-services-specific AI risk framework available in the US regulatory environment. Lowenstein's analysis identifies the key question for 2026: how to operationalise 230 control objectives before the market wakes up to the risk. BizTech Magazine April 2026 coverage positions this as a strategic advantage for institutions that move early. The key insight is the alignment architecture: NIST AI RMF provides the common language, and the Financial Services profile provides the sector-specific implementation guidance. For Australian financial institutions with US operations or US counterparties, this creates an immediate compliance consideration \u2014 and for consulting practices, it provides a detailed implementation template that can be adapted for APRA/ASIC requirements.",
+      "tags": [
+        "NIST",
+        "financial-services",
+        "risk-management",
+        "US-Treasury",
+        "control-objectives",
+        "governance"
+      ],
+      "relevance": "High \u2014 the 230 Control Objectives provide the most detailed implementation blueprint for financial services AI governance using NIST framework.",
+      "dateRead": "2026-04-21"
     }
   ],
   "total": 256

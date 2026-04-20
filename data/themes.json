@@ -1734,6 +1734,26 @@
       ],
       "dateIdentified": "2026-04-19",
       "confidence": "high"
+    },
+    {
+      "id": "t067",
+      "name": "Agentic AI Security Risks Are Architectural, Not Model-Level \u2014 OWASP Framework Exposes the Gap",
+      "description": "The OWASP Top 10 for Agentic Applications 2026 is the first globally peer-reviewed security framework specifically for agentic AI. Its key finding is devastating for model-centric governance: the top risks (tool poisoning, excessive agency, privilege escalation, trust delegation) are all architectural, not at the model layer. Current AI governance programs that focus on model alignment, bias, and fairness are securing the wrong attack surface. In agentic deployments, the actual risk is in how tools are defined, how identities are delegated, how authority boundaries are set, and how agents chain actions. Tool poisoning of RAG systems, over-privileged agent roles, and hallucinated context injection have all been demonstrated in production. Financial services deploying AI agents for customer service, trading, or back-office operations are exposed to risks that no existing governance framework adequately addresses.",
+      "evidence": [
+        "OWASP Top 10 for Agentic Applications 2026",
+        "Agent tool poisoning demonstrated in production RAG deployments",
+        "Enterprise security teams securing wrong layer per OWASP findings",
+        "Financial services agent deployments accelerating (86% planned by 2027 per HITL research)"
+      ],
+      "implications": "AI governance practices need a completely new security assessment methodology for agentic deployments. The OWASP framework provides the taxonomy. The methodology for actually assessing agentic security in financial services is a significant white space \u2014 and a consulting differentiation opportunity.",
+      "relatedPapers": [
+        "p257",
+        "p003",
+        "p017",
+        "p028"
+      ],
+      "dateIdentified": "2026-04-21",
+      "confidence": "very high"
     }
   ],
   "total": 114

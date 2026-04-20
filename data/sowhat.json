@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19",
+  "lastUpdated": "2026-04-21",
   "sections": [
     {
       "id": "trust-professionals",
@@ -913,6 +913,19 @@
           ],
           "urgency": "act-now",
           "prompt": "Can you demonstrate to your executive clients that governance maturity correlates with AI deployment success? Do you have concrete data showing the ROI cost of governance immaturity to support the business case for governance investment?"
+        },
+        {
+          "id": "ta58",
+          "headline": "Your security program is probably securing the wrong layer of your AI agents",
+          "body": "The OWASP Top 10 for Agentic Applications 2026 makes a devastating finding for enterprise security teams: the critical risks in agentic AI \u2014 tool poisoning, excessive agency, privilege escalation, unintended trust delegation \u2014 are all architectural, not model-level. Yet most AI security programs focus their attention on model alignment, bias checks, and output validation. If your organisation is deploying AI agents (for customer service, trading, back-office automation, etc.) and your security team is running the same controls they use for traditional ML models, you have an undetected gap. Tool poisoning of RAG systems has been demonstrated in production. Over-privileged agent roles have enabled privilege escalation. The attack surface is in how tools are defined, how identities are delegated, and how agent actions are bounded \u2014 not in whether the model's outputs are fair. Conduct an agentic security architecture review now, using the OWASP Agentic Top 10 as your taxonomy.",
+          "citations": [
+            "p257"
+          ],
+          "themes": [
+            "t067"
+          ],
+          "urgency": "act-now",
+          "prompt": "When your security team assesses AI agents, are they reviewing the model's alignment and output quality \u2014 or are they also examining the agent's tool definitions, identity delegations, action boundaries, and trust delegation chains? If the answer is 'we assess the model,' you have a structural gap in your security coverage."
         }
       ]
     },

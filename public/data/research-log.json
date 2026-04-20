@@ -1626,6 +1626,79 @@
           ]
         }
       ]
+    },
+    {
+      "id": "rl021",
+      "date": "2026-04-21",
+      "title": "Phase 2 Session 6: Trust Provenance, Scalable Oversight, and Success Case Studies",
+      "summary": "Phase 2 deep-dive covering trust provenance (C2PA gaps), meaningful human oversight at agentic scale (HITL hitting scalability wall), accountability restructuring (White House framework, EU AI Act, boards raising liability questions), success cases (NVIDIA/IDC Frontier Firms, MAS DBS), and OWASP Agentic AI security framework as the first comprehensive agentic security taxonomy. Key finding: the governance gap is real \u2014 42% of companies scrapped most AI projects (S&P), 60% abandoned without AI-ready data (Gartner). But the MAS DBS case studies show governance-by-design accelerates AI deployment, not impedes it. OWASP Agentic Top 10 exposes that enterprise security teams are securing the wrong layer \u2014 the actual agentic risk surface (tool poisoning, excessive agency, privilege escalation) is architectural, not model-level.",
+      "sessionType": "deep-research",
+      "duration": "1.5 hours",
+      "sections": [
+        {
+          "title": "Trust Provenance and Certification",
+          "items": [
+            "C2PA cryptographic provenance proof doesn't survive CDN transit \u2014 not sufficient for EU AI Act requirements",
+            "Continuous monitoring vs one-time audits is the operational gap \u2014 trust infrastructure platforms emerging as vendor category",
+            "AI Transparency Act and Generative AI Training Data Transparency Act effective Jan 1 2026, requiring disclosure",
+            "Trust infrastructure and compliance proof platforms are a new vendor category"
+          ]
+        },
+        {
+          "title": "Human in the Loop at Agentic Scale",
+          "items": [
+            "~35% organisations planned AI agent deployment in 2025, projected 86% by 2027 \u2014 HITL structurally insufficient at this scale",
+            "HITL has hit a scalability wall \u2014 AI-to-AI automated oversight emerging as complement",
+            "Key distinction: 'human in the loop' is insufficient, actual human oversight at right moments required",
+            "Trained humans must retain decision authority over high-risk actions \u2014 but at agentic scale, defining 'right moments' is itself governance",
+            "OneReach AI, Galileo, Strata.io published 2026 HITL architecture guides \u2014 early vendor ecosystem for scalable oversight"
+          ]
+        },
+        {
+          "title": "Accountability and Liability Restructuring",
+          "items": [
+            "White House National AI Policy Framework March 20 2026 \u2014 most significant US federal AI policy since AI Bill of Rights",
+            "EU AI Act moved from draft to enforceable law in 2026 \u2014 global governance retrenchment, first generation of frameworks being reviewed",
+            "Boards and C-suites explicitly raising AI accountability, liability, insurability questions in 2026 \u2014 executive-level attention is new",
+            "Glass Lewis posing AI oversight questions in 2024-25 proxy season \u2014 governance pressure from shareholders",
+            "Forbes: insuring AI now a key board concern \u2014 liability and insurance intersection",
+            "First generation of AI liability frameworks being stress-tested by agentic deployment scale"
+          ]
+        },
+        {
+          "title": "Success Cases and Enterprise Evidence",
+          "items": [
+            "Microsoft/IDC Frontier Firms report (Nov 2025): ~3x returns on AI investments for governance-mature firms vs laggards",
+            "Deloitte State of AI Enterprise 2026: worker AI access rose 50% in 2025, companies with \u226540% AI projects in production set to double",
+            "NVIDIA State of AI 2026 (Aug-Dec 2025 survey, 3200+ respondents): governance maturity is the differentiator between scaling and stalling",
+            "MAS DBS case studies: governance-by-design accelerates AI deployment, not impedes it \u2014 the counter-narrative to governance-as-friction",
+            "But 42% of companies scrapped most AI projects (S&P), 60% abandoned without AI-ready data (Gartner) \u2014 governance gap has real costs"
+          ]
+        },
+        {
+          "title": "OWASP Agentic AI Security \u2014 The Architectural Risk Gap",
+          "items": [
+            "OWASP Top 10 for Agentic Applications 2026 \u2014 first globally peer-reviewed security framework specifically for agentic AI",
+            "Top risks: tool poisoning, excessive agency, privilege escalation, unintended trust delegation, hallucinated context \u2014 all architectural, NOT model-level",
+            "Enterprise security teams are mostly securing the wrong things \u2014 agentic architecture risks systematically underappreciated",
+            "Tool poisoning: adversarial corruption of AI tool definitions in RAG systems \u2014 demonstrated in production",
+            "Excessive agency: AI taking actions beyond its authorised scope \u2014 the key risk in financial services agent deployments",
+            "If AI governance programs focus only on model layer (alignment, bias, fairness), they miss the actual attack surface",
+            "Financial services deploying AI agents for customer service, trading, back-office are exposed to risks no existing framework adequately covers"
+          ]
+        }
+      ],
+      "papersAdded": [
+        "p257",
+        "p258",
+        "p259",
+        "p260",
+        "p261"
+      ],
+      "themesUpdated": [
+        "t067"
+      ],
+      "sowhatUpdates": []
     }
   ],
   "total": 21,
