@@ -1,0 +1,67 @@
+{
+  "date": "2026-04-22",
+  "research_focus": "Phase 2: First Principles of AI Trust — trust provenance, meaningful oversight, accountability restructuring, success case studies",
+  "supervisor_feedback": {
+    "date": "2026-04-15",
+    "focus": "FIRST PRINCIPLES OF TRUST — not frameworks or maturity models",
+    "keyQuestions": [
+      "What is the provenance of trust? Ground truth vs assumptions vs proxies vs claims?",
+      "What does meaningful human oversight mean at agentic AI scale?",
+      "How should liability be restructured when human oversight is infeasible?",
+      "Success case studies of AI trust/governance implementations?"
+    ],
+    "sessionOutcome": "Three first-principles advances: (1) Four-layer trust chain framework; (2) Three-layer oversight framework distinguishing meaningful from formal oversight; (3) Singapore MAS DBS case studies as global benchmark."
+  },
+  "items": [
+    {
+      "query": "AI trust provenance certification continuous monitoring 2025 2026",
+      "query_num": 1,
+      "result": "C2PA provides cryptographic proof of AI-generated content provenance but doesn't survive CDN transit or satisfy EU AI Act requirements. McKinsey 2026 State of AI Trust survey finds progress in trust maturity but persistent gaps in strategy/governance. Effective AI governance in 2026 requires continuous monitoring vs one-time audits. AI Transparency Act and Generative AI Training Data Transparency Act took effect Jan 1 2026, requiring disclosure. Trust infrastructure/compliance proof platforms emerging as a category."
+    },
+    {
+      "query": "meaningful human in the loop agentic AI scalable oversight liability 2025 2026",
+      "query_num": 2,
+      "result": "In 2025, 35% of organizations planned to deploy AI agents, projected to reach 86% by 2027. Human-in-the-loop for agentic AI is shifting from checkpoint approval to continuous oversight with escalation frameworks. Key insight: 'human in the loop' is insufficient — actual human oversight at the right moments is required (Sam Burrett). IQVIA frames it as 'human-at-the-helm' for regulatory affairs. Confidence thresholds and architectural patterns for oversight are being formalised. Liability for agentic AI actions remains unresolved — courts are developing doctrines independently of regulation."
+    },
+    {
+      "query": "AI accountability frameworks human oversight infeasible restructuring liability 2025 2026",
+      "query_num": 3,
+      "result": "White House National Policy Framework for AI released March 20 2026. Global pattern of AI regulatory retrenchment in 2025/early 2026 — courts developing liability doctrines independent of regulation. Courts establishing that organizations—not AI systems—bear liability for algorithmic errors. EU AI Act moving from draft to enforceable law. Harvard Law Corporate Governance blog covers AI oversight through investor expectations, S&P 100 analysis, and company-specific lenses. Gap: when human oversight is structurally infeasible at agentic scale, liability architecture has no clear answer."
+    },
+    {
+      "query": "AI governance success cases enterprise financial services 2025 2026",
+      "query_num": 4,
+      "result": "Microsoft/IDC November 2025 study: Frontier Firms report ~3x returns on AI investments vs peers. $50B regional bank invested $25M in AI infrastructure, achieved $180M annual benefits through fraud detection. Deloitte 2026 State of AI report: worker access to AI rose 50% in 2025, scale expectations high. Forbes March 2026: without mature governance, most enterprises stuck between pilots and provable impact. AI governance is the solution to the outcomes gap. Key success predictor: moving from pilot to scale with governance infrastructure in place."
+    },
+    {
+      "query": "EU AI Act enforcement financial services 2025 2026",
+      "query_num": 5,
+      "result": "EU AI Act entered into force Aug 1 2024, fully applicable Aug 2 2026. EBA undertaking specific activities 2026-2027 to support implementation in EU banking and payments sector. July 2025 EC published draft GPAI guidelines. Regulators shifting from broad compliance expectations to targeted enforcement strategies in 2026. Fenergo: financial institutions must act now. Two Birds: AI and financial institutions interplay is a live regulatory area. Key dates: prohibited practices already applicable; high-risk provisions kick in Aug 2026."
+    },
+    {
+      "query": "APRA AI prudential governance framework 2025 2026",
+      "query_num": 6,
+      "result": "APRA Corporate Plan 2025-26 published. APRA finalising reforms to its governance framework, maintaining macroprudential policy settings amid economic uncertainties. APRA and ASIC announced joint strategic priorities for 2025-26. Clayton Utz analysis: APRA's Corporate Plan represents an important juncture for Australia's financial services sector. No standalone APRA AI-specific prudential standard yet — AI governance sits within existing prudential framework (CPS 220, SPS 220 equivalent). Gap: no dedicated APRA guidance on AI risk despite growing supervisory focus."
+    },
+    {
+      "query": "NIST AI Risk Management Framework implementation financial sector 2025 2026",
+      "query_num": 7,
+      "result": "NIST AI RMF is the foundational US framework. US Treasury released two new resources (April 2026) to guide AI use in financial services — described as establishing 'common language for AI and tailored framework for managing AI risks'. Cyber Risk Institute developed Financial Services AI RMF structurally aligned with NIST AI RMF with 230 Control Objectives. Lowenstein: 'the defining question for 2026 would no longer be whether AI is being used but how it is being governed.' BizTech Magazine: financial institutions must balance innovation with regulatory scrutiny, data protection, and operational risk."
+    },
+    {
+      "query": "AI trust failures incidents enterprise 2025 2026",
+      "query_num": 8,
+      "result": "ISACA: biggest AI failures of 2025 weren't technical — they were organizational: weak controls, unclear ownership, misplaced trust. CNBC March 2026: 'autonomous systems don't always fail loudly — it's often silent failure at scale.' McKinsey 2026: organizations without clear accountability, robust controls, and effective monitoring face slower adoption and higher costs. LinkedIn analysis: failures driven less by 'rogue AI' and more by weak governance, unclear accountability, misplaced human trust. Key pattern: trust failures at enterprise scale are systemic, not spectacular."
+    },
+    {
+      "query": "AI transparency explainability financial services case studies 2025 2026",
+      "query_num": 9,
+      "result": "CFA Institute Research and Policy Center report on Explainable AI in Finance (2025): transparent, explainable AI is crucial in finance for compliance, trust, and risk governance. AI spending in financial services exceeded $35B in 2026, up from $26.67B in 2025 (24.5% CAGR). Top use cases: credit risk scoring, fraud detection, trading automation, compliance monitoring. US Treasury (April 2026): two new resources to guide AI use in financial services, strengthening common terminology and risk management practices. Automated tools help but human oversight remains essential for explainability in high-stakes decisions."
+    },
+    {
+      "query": "owasp agentic AI top risks enterprise governance 2025 2026",
+      "query_num": 10,
+      "result": "OWASP Top 10 for Agentic Applications 2026 published — globally peer-reviewed framework for most critical security risks in agentic AI. Key insight: three of top four risks centre on tools, identities, and delegated trust — none live at the model layer. If AI governance is model-centric, it misses the actual risk surface. December 2025 OWASP GenAI Security Project released Top 10 Risks and Mitigations for Agentic AI Security. LinkedIn analysis: most enterprises are securing the wrong things. NHIMG complete guide: authoritative reference for security teams managing agentic risk surface. Data security risks and mitigations also published 2026."
+    }
+  ]
+}

@@ -1754,6 +1754,64 @@
       ],
       "dateIdentified": "2026-04-21",
       "confidence": "very high"
+    },
+    {
+      "id": "t103",
+      "name": "Agentic AI Risk Surface Is at the Tool Layer, Not the Model Layer",
+      "description": "OWASP Top 10 for Agentic Applications 2026 reveals that 3 of the top 4 risks centre on tools, identities, and delegated trust \u2014 none live at the model layer. Current model-centric governance is addressing the wrong risk surface. The actual agentic AI attack surface includes: tool manipulation, identity spoofing, privilege escalation through delegated trust, prompt injection via tool calls, and resource exhaustion. For financial services deploying AI agents in customer service, trading, and back-office automation, the security controls that matter are at the integration layer, not the model layer.",
+      "evidence": [
+        "OWASP Top 10 for Agentic Applications 2026",
+        "OWASP GenAI Security Project Top 10 (Dec 2025)",
+        "NIST AI 100-2 E2025 agent-based deployment risks",
+        "Agent poisoning research (context assembly attacks)"
+      ],
+      "implications": "AI governance frameworks and security assessments must shift from model-centric to integration-centric. Red-teaming agentic AI requires testing tool interactions, identity controls, and privilege escalation paths \u2014 not just model alignment properties. This is a fundamental recalibration of where governance attention should go.",
+      "relatedPapers": [
+        "p270",
+        "p263",
+        "p268"
+      ],
+      "dateIdentified": "2026-04-22",
+      "confidence": "very high"
+    },
+    {
+      "id": "t104",
+      "name": "Courts Are Outpacing Legislators on AI Liability \u2014 Creating Regulatory Uncertainty",
+      "description": "A global pattern of 'regulatory retrenchment' has emerged in 2025/early 2026 \u2014 after rapid AI policy development in 2023-2024, many jurisdictions are consolidating existing frameworks rather than introducing new ones. Meanwhile, courts are developing AI liability doctrines independently of regulation. The White House National AI Policy Framework (March 2026) notes this pattern explicitly. Courts are establishing that organisations \u2014 not AI systems \u2014 bear liability for algorithmic errors, but the doctrine is being developed case-by-case without legislative guidance. The critical gap: when human oversight is structurally infeasible at agentic scale, liability architecture has no clear answer. For financial services, this means waiting for regulation is not a risk mitigation strategy \u2014 courts are creating the liability precedent now.",
+      "evidence": [
+        "White House National AI Policy Framework March 2026",
+        "EU Product Liability Directive 2024/2853",
+        "Harvard JOLT three-pillar framework (Htin 2026)",
+        "Business Judgment Rule 2.0 developments"
+      ],
+      "implications": "Boards and executives cannot wait for regulatory clarity on AI liability \u2014 courts are creating that clarity now through case law. The correct strategy is to proactively design governance for accountability and document decision rationale, not to wait for prescriptive rules. This is both legal protection and good governance.",
+      "relatedPapers": [
+        "p263",
+        "p264",
+        "p265"
+      ],
+      "dateIdentified": "2026-04-22",
+      "confidence": "high"
+    },
+    {
+      "id": "t105",
+      "name": "Governance Infrastructure Is the Predictor of AI ROI \u2014 The Success Case Evidence Is In",
+      "description": "Multiple sources now confirm that AI governance infrastructure is the key differentiator between AI investments that generate returns and those that stall at pilot stage. Microsoft/IDC Frontier Firms report: leading firms achieve 3x returns on AI investments. The $50B regional bank invested $25M in AI infrastructure and achieved $180M annual benefits from fraud detection alone. ISACA's analysis of 2025 AI failures: biggest failures were organisational (weak controls, unclear ownership, misplaced trust) \u2014 not technical. Forbes (March 2026): 'without mature governance, most enterprises are stuck between pilots and provable impact.' The pattern is clear: governance-by-design accelerates AI value; governance-as-friction creates the pilot trap.",
+      "evidence": [
+        "Microsoft/IDC Frontier Firms report November 2025",
+        "$50B regional bank $180M fraud detection case",
+        "Deloitte 2026 State of AI: worker AI access up 50%",
+        "Forbes March 2026: governance as solution to outcomes gap",
+        "ISACA 2025 AI failure analysis"
+      ],
+      "implications": "The business case for AI governance investment is now empirically grounded. Boards that see AI governance as compliance overhead are missing the strategic point: governance infrastructure enables AI value extraction. This should be the primary board-level message for AI strategy.",
+      "relatedPapers": [
+        "p267",
+        "p266",
+        "p269"
+      ],
+      "dateIdentified": "2026-04-22",
+      "confidence": "high"
     }
   ],
   "total": 114

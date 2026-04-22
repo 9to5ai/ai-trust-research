@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-21",
+  "lastUpdated": "2026-04-22",
   "sections": [
     {
       "id": "trust-professionals",
@@ -926,6 +926,49 @@
           ],
           "urgency": "act-now",
           "prompt": "When your security team assesses AI agents, are they reviewing the model's alignment and output quality \u2014 or are they also examining the agent's tool definitions, identity delegations, action boundaries, and trust delegation chains? If the answer is 'we assess the model,' you have a structural gap in your security coverage."
+        },
+        {
+          "id": "ta59",
+          "headline": "OWASP Top 10 for Agentic AI proves governance is model-centric and missing the real risk surface",
+          "body": "The OWASP Top 10 for Agentic Applications 2026 is the definitive security reference for the field \u2014 and its key finding should alarm every AI governance practitioner: three of the top four risks centre on tools, identities, and delegated trust, none at the model layer. Current model-centric governance is addressing the wrong surface. If your AI security assessment doesn't include tool interaction testing, identity controls, and privilege escalation paths, you're not actually assessing agentic AI risk. The AI agent attack surface is at the integration layer \u2014 tool manipulation, identity spoofing, prompt injection via tool calls, resource exhaustion. Your governance frameworks need to be integration-centric, not model-centric.",
+          "citations": [
+            "p270"
+          ],
+          "themes": [
+            "t103"
+          ],
+          "urgency": "act-now",
+          "prompt": "Does your current AI governance assessment include testing tool interactions, identity controls, and privilege escalation paths for agentic AI systems? Or are you still assessing only model weights and alignment properties?"
+        },
+        {
+          "id": "ta60",
+          "headline": "Courts are building AI liability doctrine faster than regulators \u2014 waiting for regulation is not a strategy",
+          "body": "The White House National AI Policy Framework (March 2026) notes a global pattern of 'regulatory retrenchment' in 2025/early 2026 \u2014 jurisdictions consolidating existing frameworks rather than creating new AI legislation. Meanwhile, courts are developing AI liability doctrines independently of regulation, case by case. Courts are establishing that organisations \u2014 not AI systems \u2014 bear liability for algorithmic errors. But the critical gap: when human oversight is infeasible at agentic scale, liability architecture has no clear answer. For financial services, this means waiting for regulatory clarity is not risk mitigation \u2014 courts are creating the precedent now. Boards need to proactively design governance for accountability with documented decision rationale, not wait for prescriptive rules that may not arrive.",
+          "citations": [
+            "p263",
+            "p264",
+            "p265"
+          ],
+          "themes": [
+            "t104"
+          ],
+          "urgency": "act-now",
+          "prompt": "If a court had to decide today whether your organisation's AI oversight was adequate, would your documentation show a proactive, well-reasoned governance design \u2014 or would it show the absence of a clear framework?"
+        },
+        {
+          "id": "ta61",
+          "headline": "Governance infrastructure is the ROI multiplier \u2014 use the empirical evidence to get board investment",
+          "body": "The business case for AI governance investment is now empirically grounded. Microsoft/IDC's Frontier Firms report (Nov 2025) found leading firms achieve 3x returns on AI investments \u2014 with governance infrastructure as the key differentiator. The $50B regional bank: $25M in AI infrastructure investment yielded $180M annual fraud detection benefits. ISACA's 2025 analysis: the biggest AI failures were organisational (weak controls, unclear ownership, misplaced trust) \u2014 not technical. Forbes (Mar 2026): without mature governance, enterprises are stuck between pilots and provable impact. The message for boards: governance is not compliance overhead, it's the infrastructure that enables AI value extraction. When you're making the case for AI governance investment, lead with the ROI data, not the risk data.",
+          "citations": [
+            "p267",
+            "p266",
+            "p269"
+          ],
+          "themes": [
+            "t105"
+          ],
+          "urgency": "act-now",
+          "prompt": "When you present AI governance investment to a board, do you frame it as risk mitigation \u2014 or as the infrastructure that determines whether AI investments generate 3x returns or stall at pilot stage? Which framing is more likely to get investment approved?"
         }
       ]
     },

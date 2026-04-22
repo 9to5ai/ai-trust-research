@@ -5808,6 +5808,183 @@
       ],
       "relevance": "High \u2014 the 230 Control Objectives provide the most detailed implementation blueprint for financial services AI governance using NIST framework.",
       "dateRead": "2026-04-21"
+    },
+    {
+      "id": "p262",
+      "title": "C2PA Provenance Standards and AI Transparency Act \u2014 Cryptographic Content Provenance and Regulatory Disclosure Requirements (2026)",
+      "authors": [
+        "C2PA Consortium",
+        "US Congress"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://c2pa.org/",
+      "analysis": "C2PA (Coalition for Content Provenance and Authenticity) provides cryptographic proof of AI-generated content provenance \u2014 a technical standard for authenticating media authenticity. However, C2PA doesn't survive CDN transit and doesn't satisfy EU AI Act requirements for training data disclosure. The AI Transparency Act and Generative AI Training Data Transparency Act both took effect January 1, 2026, mandating disclosure of training data sources for AI systems. Together, these represent a move from voluntary provenance to mandatory disclosure. Trust infrastructure and compliance proof platforms are emerging as a new market category. The critical gap: C2PA proves 'this content was AI-generated' but doesn't prove 'this AI was trained on ethically sourced data.' For financial services, provenance standards matter for customer-facing AI content (financial advice, marketing, disclosures) but are distinct from model governance. The EU AI Act's training data transparency requirements under Article 12 will drive adoption of AI Bills of Materials as the operational mechanism for disclosure.",
+      "tags": [
+        "provenance",
+        "transparency",
+        "C2PA",
+        "AI-Transparency-Act",
+        "disclosure",
+        "training-data"
+      ],
+      "relevance": "High \u2014 C2PA and AI Transparency Act are operationalising what 'AI transparency' means in practice. Relevant for AI content governance in financial services customer communications.",
+      "dateRead": "2026-04-22"
+    },
+    {
+      "id": "p263",
+      "title": "White House National AI Policy Framework (March 2026)",
+      "authors": [
+        "White House"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://www.whitehouse.gov/",
+      "analysis": "The White House released its National AI Policy Framework on March 20, 2026 \u2014 the most significant US AI policy statement since the 2023 Executive Order. The framework establishes a coordinated whole-of-government approach to AI governance across agencies including DOD, DHS, DOE, and HHS. For financial services, the framework signals continued US preference for sector-specific guidance (as seen with the US Treasury FS AI RMF in February 2026) rather than horizontal AI legislation. The framework also highlights a global pattern of 'regulatory retrenchment' \u2014 after a period of rapid AI policy development in 2023-2024, many jurisdictions are consolidating existing frameworks rather than introducing new ones. Courts are increasingly developing AI liability doctrines independently of regulation \u2014 filling gaps that legislatures haven't addressed. The critical unresolved question: when human oversight is structurally infeasible at agentic scale, what does the liability architecture look like? Courts are developing doctrine on this question without regulatory guidance.",
+      "tags": [
+        "US-policy",
+        "national-AI-framework",
+        "regulation",
+        "liability",
+        "agentic-AI"
+      ],
+      "relevance": "High \u2014 signals US regulatory direction and confirms courts are outpacing legislators on AI liability in several key areas.",
+      "dateRead": "2026-04-22"
+    },
+    {
+      "id": "p264",
+      "title": "EU AI Act Enforcement in Financial Services \u2014 EBA Implementation Roadmap 2026-2027",
+      "authors": [
+        "European Banking Authority",
+        "European Commission"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://www.eba.europa.eu/",
+      "analysis": "The EU AI Act entered into force August 1, 2024, with full applicability from August 2, 2026. The EBA (European Banking Authority) has specific activities planned for 2026-2027 to support implementation in the EU banking and payments sector \u2014 meaning financial services AI will receive targeted supervisory attention. Key dates: prohibited practices (already applicable), GPAI rules (applicable), high-risk provisions (kicking in August 2026). Financial institutions must act now \u2014 regulators are shifting from broad compliance expectations to targeted enforcement strategies in 2026. For Australian financial institutions with EU operations or EU-facing AI systems, this is an urgent compliance imperative. The provider/deployer distinction is critical: if a bank substantially modifies a vendor AI system, it gets reclassified as a provider with heavier obligations. The conformity assessment requirements for high-risk AI systems are unprecedented in financial services and will require significant operational investment.",
+      "tags": [
+        "EU-AI-Act",
+        "enforcement",
+        "EBA",
+        "financial-services",
+        "high-risk",
+        "compliance",
+        "banking"
+      ],
+      "relevance": "Critical \u2014 EBA's 2026-2027 implementation timeline means Australian banks with EU operations face compliance obligations within months.",
+      "dateRead": "2026-04-22"
+    },
+    {
+      "id": "p265",
+      "title": "APRA and ASIC Joint Strategic Priorities 2025-2026 \u2014 AI Governance Without Dedicated Standards",
+      "authors": [
+        "APRA",
+        "ASIC"
+      ],
+      "year": 2025,
+      "source": "web_search",
+      "url": "https://www.apra.gov.au/",
+      "analysis": "APRA and ASIC announced joint strategic priorities for 2025-2026, with APRA's Corporate Plan confirming no standalone APRA AI-specific prudential standard \u2014 AI governance continues to sit within existing prudential frameworks (CPS 220, SPS 220 equivalent). APRA's approach is deliberately principles-based: rather than creating new AI-specific rules, they apply existing frameworks. Clayton Utz analysis confirms this is an 'important juncture' for Australia's financial services sector \u2014 the absence of dedicated APRA guidance on AI risk is notable given growing supervisory focus on AI. APRA is conducting targeted supervisory engagements with larger financial institutions on AI practices, signalling active attention without formal guidance. ASIC's technology-neutral approach means existing AFSL obligations apply to AI \u2014 but there's a growing gap between what the regulators expect and what the industry has clear guidance to achieve. For consulting, this gap between supervisory expectation and clear compliance pathway is where value lives.",
+      "tags": [
+        "APRA",
+        "ASIC",
+        "Australia",
+        "regulation",
+        "governance",
+        "prudential",
+        "joint-priorities"
+      ],
+      "relevance": "Very high \u2014 confirms Australia's lighter-touch AI regulatory approach while APRA/ASIC supervisory attention intensifies.",
+      "dateRead": "2026-04-22"
+    },
+    {
+      "id": "p266",
+      "title": "US Treasury AI Risk Management Resources and NIST AI RMF Implementation in Financial Services (April 2026)",
+      "authors": [
+        "US Treasury",
+        "NIST",
+        "Cyber Risk Institute"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://home.treasury.gov/",
+      "analysis": "The US Treasury released two new resources in April 2026 to guide AI use in financial services \u2014 establishing 'common language for AI and tailored framework for managing AI risks.' The Cyber Risk Institute's Financial Services AI RMF, structurally aligned with NIST AI RMF, contains 230 control objectives across NIST's four functions (Govern, Map, Measure, Manage). Lowenstein's observation is sharp: 'the defining question for 2026 would no longer be whether AI is being used but how it is being governed.' For Australian financial institutions with US operations or ambitions, the US Treasury's framework will become a de facto examination standard. APRA and ASIC will likely reference it in supervisory expectations. For consulting, the 230-control structure provides a comprehensive assessment baseline: gap analysis against the FS AI RMF \u2192 remediation roadmap \u2192 implementation support \u2192 ongoing assurance. This is a multi-year engagement model.",
+      "tags": [
+        "US-Treasury",
+        "NIST",
+        "FS-AI-RMF",
+        "financial-services",
+        "230-control-objectives",
+        "implementation"
+      ],
+      "relevance": "High \u2014 US Treasury framework with 230 control objectives becomes the de facto examination standard for AI governance in FS globally.",
+      "dateRead": "2026-04-22"
+    },
+    {
+      "id": "p267",
+      "title": "CFA Institute Research and Policy Center \u2014 Explainable AI in Finance (2025)",
+      "authors": [
+        "CFA Institute Research and Policy Center"
+      ],
+      "year": 2025,
+      "source": "web_search",
+      "url": "https://www.cfainstitute.org/",
+      "analysis": "The CFA Institute Research and Policy Center report on Explainable AI in Finance (2025) makes the case that transparent, explainable AI is crucial in financial services for compliance, trust, and risk governance. Financial services AI spending exceeded $35B in 2026, up from $26.67B in 2025 (24.5% CAGR). Top use cases: credit risk scoring, fraud detection, trading automation, compliance monitoring. The report confirms that while automated explainability tools help, human oversight remains essential for high-stakes decisions \u2014 a finding that aligns with the first-principles research on meaningful oversight vs. procedural HITL. US Treasury's April 2026 resources also emphasised common terminology for AI risk management in financial services, reinforcing that explainability is not just a technical requirement but a governance communication standard. For consulting, the CFA Institute report provides authoritative backing for explainability as a board-level governance requirement, not just a technical checkbox.",
+      "tags": [
+        "explainability",
+        "XAI",
+        "CFA-Institute",
+        "financial-services",
+        "governance",
+        "credit-risk",
+        "compliance"
+      ],
+      "relevance": "High \u2014 confirms XAI as a governance and compliance essential in financial services, with $35B+ annual spend driving urgency.",
+      "dateRead": "2026-04-22"
+    },
+    {
+      "id": "p268",
+      "title": "OWASP Top 10 for Agentic Applications 2026",
+      "authors": [
+        "OWASP"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://owasp.org/www-project-top-10-for-agentic-applications/",
+      "analysis": "The OWASP Top 10 for Agentic Applications 2026 is a globally peer-reviewed framework for the most critical security risks in agentic AI \u2014 the definitive security reference for the field. Key insight that should reshape every AI governance engagement: three of the top four risks centre on tools, identities, and delegated trust \u2014 none live at the model layer. If AI governance is model-centric, it misses the actual risk surface. The December 2025 OWASP GenAI Security Project Top 10 Risks and Mitigations for Agentic AI Security provides complementary guidance. For financial services deploying AI agents, this framework is the threat model foundation. The model-centric governance approach that dominates current practice is addressing the wrong risk surface. AI agents interact with external tools, execute financial transactions, access customer data, and operate with delegated authority \u2014 the security and governance risks are in those interactions, not in the model weights. This is consistent with the first-principles research on the trust certification chain: the failure modes are at the deployment and integration layers, not the model layer.",
+      "tags": [
+        "OWASP",
+        "agentic-AI",
+        "security",
+        "top-10",
+        "governance",
+        "tool-security",
+        "risk-surface"
+      ],
+      "relevance": "Critical \u2014 peer-reviewed definitive framework for agentic AI security risks. Confirms that model-centric governance misses the actual risk surface.",
+      "dateRead": "2026-04-22"
+    },
+    {
+      "id": "p269",
+      "title": "Enterprise AI Governance Success Cases \u2014 From Pilot to Scale with Governance Infrastructure (Forbes, March 2026)",
+      "authors": [
+        "Forbes"
+      ],
+      "year": 2026,
+      "source": "web_search",
+      "url": "https://www.forbes.com/",
+      "analysis": "Forbes' analysis (March 2026) documents that without mature governance, most enterprises are stuck between AI pilots and provable impact. AI governance is identified as the solution to the outcomes gap. Microsoft/IDC's Frontier Firms report (November 2025) found that leading firms achieve approximately 3x returns on AI investments compared to peers \u2014 with governance infrastructure as the key differentiator. The $50B regional bank case is instructive: $25M invested in AI infrastructure, $180M in annual benefits through fraud detection alone. Deloitte's 2026 State of AI report found that worker access to AI rose 50% in 2025, with scale expectations high but governance often lagging. ISACA's analysis of AI failures in 2025 is equally instructive: the biggest failures weren't technical \u2014 they were organisational: weak controls, unclear ownership, misplaced trust. The pattern is consistent: governance infrastructure enables scale; without it, AI investments stall at pilot stage. This is the empirical validation that the DBS Bank and Scotiabank case studies suggested \u2014 governance-by-design accelerates AI value, governance-as-friction creates the pilot trap.",
+      "tags": [
+        "success-cases",
+        "enterprise-AI",
+        "governance",
+        "ROI",
+        "scale",
+        "Fraud-detection",
+        "Frontier-Firms"
+      ],
+      "relevance": "High \u2014 empirical evidence that governance infrastructure is the predictor of AI ROI. The $180M fraud detection case and 3x returns data provide concrete business case support.",
+      "dateRead": "2026-04-22"
     }
   ],
   "total": 256

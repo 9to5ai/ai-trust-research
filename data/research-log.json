@@ -1699,8 +1699,70 @@
         "t067"
       ],
       "sowhatUpdates": []
+    },
+    {
+      "id": "rl22",
+      "date": "2026-04-22",
+      "title": "Session 22: Phase 2 Dispatch 4 \u2014 Agentic Risk Surfaces, Liability Gaps, and Success Case Evidence",
+      "summary": "Dispatch 4 processing focused on Phase 2's first-principles questions: trust provenance, meaningful oversight, and accountability restructuring. Key findings: (1) OWASP Top 10 for Agentic Applications confirms agentic AI risk surface is at the tool/integration layer, not the model layer \u2014 model-centric governance misses the actual attack surface. (2) Global regulatory retrenchment pattern \u2014 courts developing AI liability faster than legislators create new rules, leaving a liability gap when human oversight is infeasible at agentic scale. (3) ROI evidence for governance infrastructure is now empirical \u2014 3x AI returns for governance-mature firms, $180M fraud detection benefit from $25M infrastructure investment. (4) EU AI Act enforcement is imminent (August 2026), EBA implementing for banking sector specifically. (5) US Treasury April 2026 resources provide 230-control framework becoming global de facto standard. Added 8 new papers (p262-p269), 3 new themes (t103-t105), 3 new sowhat advice items (ta59-ta61). Total corpus: 269 papers, 105 themes.",
+      "sessionType": "deep-research",
+      "duration": "1 hour",
+      "sections": [
+        {
+          "title": "Trust Provenance and Certification Chain",
+          "items": [
+            "C2PA provides cryptographic AI content provenance but gaps: doesn't survive CDN transit, doesn't satisfy EU AI Act training data disclosure",
+            "AI Transparency Act and Generative AI Training Data Transparency Act took effect Jan 1 2026 \u2014 mandatory training data disclosure now law",
+            "Trust infrastructure/compliance proof platforms emerging as new category to bridge voluntary provenance to mandatory disclosure",
+            "Critical distinction: C2PA proves content was AI-generated but doesn't prove AI was trained ethically",
+            "AI Bills of Materials (SPDX 3.0) emerging as operational mechanism for training data disclosure under EU AI Act Article 12"
+          ]
+        },
+        {
+          "title": "Agentic AI Risk Surface \u2014 Tool Layer, Not Model Layer",
+          "items": [
+            "OWASP Top 10 for Agentic Applications 2026: 3 of top 4 risks are tools, identities, delegated trust \u2014 none at model layer",
+            "Current model-centric governance is addressing the wrong risk surface",
+            "Agentic AI attack surface includes: tool manipulation, identity spoofing, privilege escalation, prompt injection via tool calls, resource exhaustion",
+            "Red-teaming agentic AI requires testing tool interactions, identity controls, privilege escalation \u2014 not just model alignment properties",
+            "New theme t103: Agentic AI Risk Surface Is at the Tool Layer"
+          ]
+        },
+        {
+          "title": "Liability and Accountability \u2014 Courts Outpacing Legislators",
+          "items": [
+            "White House National AI Policy Framework (March 20 2026): global pattern of regulatory retrenchment in 2025/2026",
+            "Courts developing AI liability doctrines independently \u2014 creating liability precedent without legislative guidance",
+            "Courts establishing organisations bear liability for algorithmic errors \u2014 not AI systems",
+            "Critical gap: when human oversight structurally infeasible at agentic scale, liability architecture has no clear answer",
+            "Harvard JOLT three-pillar framework and EU Product Liability Directive 2024 provide partial frameworks",
+            "New theme t104: Courts Are Outpacing Legislators on AI Liability"
+          ]
+        },
+        {
+          "title": "Success Cases and Governance ROI Evidence",
+          "items": [
+            "Microsoft/IDC Frontier Firms report: leading firms achieve 3x returns on AI investments vs peers",
+            "$50B regional bank: $25M AI infrastructure \u2192 $180M annual fraud detection benefits",
+            "ISACA 2025: biggest AI failures were organisational (weak controls, unclear ownership, misplaced trust) \u2014 not technical",
+            "Forbes March 2026: without mature governance, most enterprises stuck between pilots and provable impact",
+            "Deloitte 2026 State of AI: worker access to AI rose 50% in 2025, governance lagging adoption",
+            "New theme t105: Governance Infrastructure Is the Predictor of AI ROI"
+          ]
+        },
+        {
+          "title": "Regulatory Updates",
+          "items": [
+            "EU AI Act: high-risk provisions kick in August 2026 \u2014 less than 4 months away",
+            "EBA undertaking specific activities 2026-2027 to support EU AI Act implementation in banking/payments sector",
+            "US Treasury April 2026: two new resources establishing common AI terminology and risk management for financial services",
+            "APRA/ASIC joint strategic priorities 2025-2026: no standalone AI prudential standard \u2014 AI continues under existing frameworks",
+            "APRA conducting targeted supervisory engagements on AI with larger financial institutions despite no dedicated guidance"
+          ]
+        }
+      ]
     }
   ],
   "total": 21,
-  "lastUpdated": "2026-04-19"
+  "lastUpdated": "2026-04-22"
 }
